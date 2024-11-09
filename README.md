@@ -2,13 +2,14 @@
 Last Updated: 2024-10-21 by Nicole Wilson &lt;n.wilson@uleth.ca&gt;
 
 Notes:
+
 [Todd Across The Mountain] Player and NPC
 
 [Nikita Evtushenko]Enviorment and KeyForTrain
 
 [Colby Hanna] Game and Interaction and Inventory and Items Inside of the UML
 
-[Jem Pineda] Puzzle and PuzzelneedingItem
+[Jem Pineda] Puzzle and PuzzleItem
 
 Everyone also Contributed to the Class Descriptions in the Large Project Document.
 
