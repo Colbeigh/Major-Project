@@ -1,11 +1,10 @@
 # Template for CPSC2720 Major Project: Text Based Adventure Game
 Last Updated: 2024-10-21 by Nicole Wilson &lt;n.wilson@uleth.ca&gt;
 
-Notes:
+Notes:  
+[Todd Across The Mountain] Player and NPC  
 
-[Todd Across The Mountain] Player and NPC
-
-[Nikita Evtushenko]Enviorment and KeyForTrain
+[Nikita Evtushenko] Enviorment and KeyForTrain
 
 [Colby Hanna] Game and Interaction and Inventory and Items Inside of the UML
 
