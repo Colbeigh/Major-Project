@@ -11,4 +11,4 @@ class NPC {
   virtual ~NPC(); //destructor
 };
 
-#endif 
+#endif
