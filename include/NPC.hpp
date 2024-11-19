@@ -7,8 +7,8 @@
 #define NPC_HPP_INCLUDED
 class NPC {
  public:
- NPC(); //default constructor
- virtual ~NPC(); //destructor
+  NPC(); //default constructor
+  virtual ~NPC(); //destructor
 };
 
-#endif NPC_HPP_INCLUDED
+#endif 
