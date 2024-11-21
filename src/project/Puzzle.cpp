@@ -7,5 +7,7 @@
 #include "Puzzle.hpp"
 
 Puzzle::Puzzle(){
-puzzleID = 0;
+}
+
+Puzzle::~Puzzle(){
 }

@@ -4,6 +4,7 @@
  */
 
 #include <iostream> 
+#include <fstream>
 
 #ifndef PUZZLE_HPP_INCLUDED
 #define PUZZLE_HPP_INCLUDED
@@ -22,9 +23,24 @@ class Puzzle{
 
 #endif //Puzzle_hpp_included
 
-class Puzzle1:public Puzzle{
 
-int getID(int puzzleID) override; 
+class ticketPuzzle: public Puzzle{
+public:
 
+void startPuzzle(){
+std::ifstream file;
+std::string filename;
+int puzzleText;
+
+
+};
+void failPuzzle();
+void solution();
+int giveReward();
+bool solved();
+
+int getId(int puzzleID){
+  return puzzleID = 1;
+};
 
 };
