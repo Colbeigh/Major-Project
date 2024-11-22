@@ -2,23 +2,23 @@
 
 
 
-class Game{ 
+class Game{
  public:
-  Game(){
+  Game() {
     currentEnvironment = Environment(environments.front()) 
   }
 
-  virtual ~Game(){
+  virtual ~Game() {
     delete currentEnvironment;
   }
 
-  void Start(){
+  void Start() {
   }
 
-  bool isrunning(){
+  bool isrunning() {
   }
 
-  void changeEnvironment(){
+  void changeEnvironment() {
     if (currentEnvironment != nullptr) {
       delete currentEnvironment;
       currentEnvironment = nullptr;
