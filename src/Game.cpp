@@ -1,6 +1,7 @@
 #include <Game.hpp>
 
 
+
 class Game{ 
  public:
   Game(){
@@ -35,5 +36,4 @@ class Game{
   std::list<std::string> environments{"Passenger", "Dining", "Gambling",
   "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"}
 };
-
 #endif
