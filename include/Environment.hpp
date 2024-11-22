@@ -9,7 +9,7 @@ class Item;
 class NPC;
 
 class Environment {
-    public: 
+ public: 
     Environment();
     virtual ~Environment();
     virtual void Description();
@@ -25,8 +25,4 @@ class Environment {
     std::list<std::shared_ptr<Item>> lootableItems;
     std::list<std::shared_ptr<Puzzle>> puzzles;
 };
-
-
-
-
 #endif //ENVIRONMENT_H_INCLUDED

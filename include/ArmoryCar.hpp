@@ -4,10 +4,10 @@
 #include "TrainCart.hpp"
 
 class ArmoryCar : public TrainCart {
-    public:
-        ArmoryCar();
-        virtual ~ArmoryCar();
-        void Description() override;
+ public:
+    ArmoryCar();
+    virtual ~ArmoryCar();
+    void Description() override;
 };
 
 #endif //ARMORYCAR_HPP
