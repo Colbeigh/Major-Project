@@ -25,4 +25,5 @@ class Environment {
     std::list<std::shared_ptr<Item>> lootableItems;
     std::list<std::shared_ptr<Puzzle>> puzzles;
 };
+
 #endif //ENVIRONMENT_H_INCLUDED

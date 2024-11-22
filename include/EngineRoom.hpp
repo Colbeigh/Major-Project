@@ -10,5 +10,4 @@ class EngineRoom : public TrainCart {
     void Description() override;
 };
 
-
 #endif //ENGINEROOM_HPP

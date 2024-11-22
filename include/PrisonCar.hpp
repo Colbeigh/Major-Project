@@ -4,7 +4,7 @@
 #include "TrainCart.hpp"
 
 class PrisonCar : public TrainCart {
-public:
+ public:
     PrisonCar();
     virtual ~PrisonCar();
     void Description() override;
