@@ -1,0 +1,49 @@
+Sherrif going on vacation. Back story is he locked away this gang years ago
+
+
+Passenger Car
+    Ticket Master - Get our ticket punched, passes it back to you, you turn it around and notice the words Help 
+    you look up and hes gone
+    Choice to go investigate, if you choose not to train blows up and you die.
+
+Dining Car
+    to go into the next cart you need a special
+    Rich Lady - Sweet talk to get ticket, or steal. Gives us a lucky quarter if you sweet talk
+    Bouncer - Must have ticket to get into next gambling car or distract and sneak pass
+
+
+Gambling Car
+    Helpful Passenger - Lets you know which die to pick to beat the outlaw
+    Gambling Outlaw - lets you pass if you beat him in a dice game. He uses loaded dice. At the start he lets you choose 2 dice from 4, you must figure out 
+        which dice are loaded and select them.
+
+Luggage Car
+    Search the car we find the gangs symbols of ta gang you locked away years ago
+    We also have a choice between three items ( player must pick the right one to escape later)
+    
+Between cars
+    As you are leaving the car you get hit in the back of the head, knocked out
+
+Prison car
+    we wake up here, you are hurt
+    search room and find a lock we can pick with the quarter if we have it, if not we lose
+
+Medical Car
+    Nurse - Tell Nurse what symptoms the poisoned npc has and they'll tell you what medicine to get
+    Poisoned NPC - Talk to nurse to figure out what medicine to get 
+    Nurse bandages us since we got hurt earlier, option to ignore both things if we do we lose
+
+Armory Car
+    Ticket Master tied up in corner - actually a bad guy, says he has key to Armory
+    Option to release or frisk,
+    frisk gets key and paper with colors and numbers.
+
+    if released when you leave the room he shoots you, we find out he was the person who knocked us out earlier
+    get gun from armory
+
+Engine Room
+    Gang leader - He was the gang leader, you locked away years ago out for revenge against you
+    Talk him down, or shoot him. he if you choose to talk him down he kills you. You must shoot him to win
+
+    Puzzle Defuse bomb
+    Must cut wires in order 
