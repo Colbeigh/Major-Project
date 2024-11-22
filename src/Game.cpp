@@ -27,13 +27,8 @@ class Game{
     currentEnvironment = Environment(environments.front())
   }
 
-
-
-
-
   player Player;
   currentEnvironment* = nullptr;
   std::list<std::string> environments{"Passenger", "Dining", "Gambling",
   "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"}
 };
-#endif
