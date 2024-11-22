@@ -9,7 +9,7 @@ class Item;
 class NPC;
 
 class Environment {
- public: 
+ public:
     Environment();
     virtual ~Environment();
     virtual void Description();
