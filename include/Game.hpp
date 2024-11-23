@@ -2,6 +2,7 @@
 #include <string>
 #include <list>
 #include <Environment.hpp>
+#include <InteractEnvironment.hpp>
 #include <Interact_Puzzle.hpp>
 #include <Player.hpp>
 
@@ -13,13 +14,16 @@ class Game {
   Game();
   virtual ~Game();
   void Start();
-  bool isrunning();
+  void gameLoop;
+  bool isRunning();
   void changeEnvironment();
-  void setcurrentEnvironment();
 
   player Player;
   currentEnvironment* = nullptr;
-  Environment list
+  std::list<std::string> environments;
+  interactEnvironment intenv;
+  interactPuzzle intpuz;
+  Vector<int> puzzles;
 };
 
 #endif
