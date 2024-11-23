@@ -12,10 +12,11 @@ class Game{
   }
 
   void GameLoop{
+
     cout << "You have entered into a new cart " << interact.getname()\n;
     cout << interact.getDesc()\n;
     puzzles = interact.getPuzzles;
-      for(int i = 0; i , vec.size(); ++i){
+      for(int i = 0; i < vec.size(); ++i){
         cout << i + 1 << ") " << puzzles[i] <<.\n
       }
       cin << int userinput;
