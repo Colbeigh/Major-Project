@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <list>
 #include <Inventory.hpp>
 
 #ifndef Player_H_INCLUDED
@@ -10,11 +9,12 @@ class Game {
  public:
   Player();
   virtual ~Player();
-  
+  void getItem(int itemid);
+  void addItem(int itemid);
+  void remItem(int itemid);
 
-  player Player;
-  currentEnvironment* = nullptr;
-  Environment list
+  Inventory Player("Player");
+  string name;
 };
 
 #endif
