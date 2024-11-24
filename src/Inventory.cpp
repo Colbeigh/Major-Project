@@ -55,6 +55,6 @@ class Inventory{
     item = new Item(itemid);
   }
 
-  vector<int> items;
+  std::vector<int> items;
   Item* item = nullptr;
 };
