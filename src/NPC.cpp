@@ -27,3 +27,7 @@ void NPC::initializeDialogueOptions() {
     dialogue[SAD] = "This dialogue is sad";
     dialogue[ANGRY] = "This dialogue is angry";
 }
+
+void NPC::displayDialogue(dialogueOptions option) {
+    std::cout << dialogue[option] << std::endl;
+}
