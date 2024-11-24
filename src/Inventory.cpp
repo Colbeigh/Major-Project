@@ -3,13 +3,13 @@
 class Inventory {
  public:
 
-  Inventory() : item(nullptr) {}
+  Inventory::Inventory() : item(nullptr) {}
 
-  virtual ~Inventory() {
+  virtual Inventory::~Inventory() {
     delete item;
   }
 
-  bool hasItem(int itemid) {
+  bool Inventory::hasItem(int itemid) {
     for (int i = 0; i < items.size(); ++i) {
         if (itemid == items[i]){
             return true;
@@ -19,7 +19,7 @@ class Inventory {
     return false;
   }
   
-  void addItem(int itemid) {
+  void Inventory::addItem(int itemid) {
     if(hasItem(itemid)) {
         std::cout << "You already have " << getName(itemid) <<"\n";
         return;
@@ -28,7 +28,7 @@ class Inventory {
     std:: cout << "Added " << getName(itemid) << " to inventory\n";
   }
 
-  void remItem(int itemid){
+  void Inventory::remItem(int itemid){
     for (int i = 0; i < items.size(); ++i) {
         if (itemid == items[i]){
             items.erase(items.begin() + i);
@@ -39,7 +39,7 @@ class Inventory {
     std::cout << "You do not have" << getName(itemid) <<"\n";
   }
   
-  std::string getName(int itemid){
+  std::string Inventory::getName(int itemid){
     createItem(itemid);
     std::string name;
     name = item -> getName();
@@ -48,7 +48,7 @@ class Inventory {
     return name;
   }
 
-  void createItem(int itemid) {
+  void Inventory::createItem(int itemid) {
     if (item != nullptr) {
       delete item;
       item = nullptr;
