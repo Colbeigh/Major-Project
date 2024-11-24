@@ -1,6 +1,6 @@
 #include "Player.hpp"
 
-Player::Player() {}
+Player::Player() : name("Default") {}
 
 Player::~Player() {}
 
@@ -15,6 +15,3 @@ void Player::addItem(int itemid) {
 void Player::remItem(int itemid) {
   playerinv.remItem(itemid);
 }
-
-Inventory playerinv;
-std::string name = "Default";
