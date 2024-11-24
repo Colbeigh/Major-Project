@@ -12,15 +12,20 @@ class Game{
     delete currentpuzzle;
   }
 
-  void GameLoop{  
-    changeEnvironment();
+  void Start{
+    cout << prologue << "\n"
+    gameLoop();
+  }
+
+  void gameLoop{  
     cout << "You have entered into a new cart " << interact.getname()\n;
-    cout << interact.getDesc()\n;
+    cout << interact.getDesc() << "\n";
     puzzles = interact.getPuzzles;
     promptuser(puzzles);
     userinput = userInput(puzzles.size() + 2);
     createPuzzle(userinput);
-    intpuz.startPuzzle(puzzles[userinput], &player, &puzzles);
+    intpuz.startPuzzle(&player, &puzzles, &changeenv);
+    checkchangeEnvironment
   }
 
   void promptPuzzles(vector<int> puzzles){
@@ -30,7 +35,7 @@ class Game{
       cout << puzzles.size() + 2 << ") Help\n";
   }
 
-  void userInput(int length){
+  int userInput(int length){
     while(true){
       std::cin >> userinput;
       if (std::cin.fail()) {
@@ -60,6 +65,7 @@ class Game{
       currentpuzzle = nullptr;
     }
     currentpuzzle = new Puzzle(puzzles[userinput]);
+    intpuz.setPuzzle(currentpuzzle);
   }
 
   void changeEnvironment() {
@@ -73,6 +79,12 @@ class Game{
         environments.erase(environments.begin());
   }
 
+  void ischangeEnv(){
+    if(changeenv == true){
+      changeEnvironment();
+      changeenv = false;
+    }
+  }
 
   Player player;
   currentenvironment* = nullptr;
@@ -83,4 +95,5 @@ class Game{
   interactEnvironment intenv;
   interactPuzzle intpuz;
   std::Vector<int> puzzles;
+  bool changeenv = false;
 };

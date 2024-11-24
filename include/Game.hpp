@@ -16,10 +16,11 @@ class Game {
   void Start();
   void gameLoop();
   void promptPuzzles(vector<int> puzzles);
-  void userInput(int length);
+  int userInput(int length);
   bool isRunning();
   void createPuzzle();
   void changeEnvironment();
+  void ischangeEnv();
 
   player Player;
   currentEnvironment* = nullptr;
@@ -27,6 +28,7 @@ class Game {
   interactEnvironment intenv;
   interactPuzzle intpuz;
   Vector<int> puzzles;
+  bool changeenv;
 };
 
 #endif
