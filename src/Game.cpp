@@ -3,21 +3,21 @@
 
 class Game{
  public:
-  Game() {
+  Game::Game() {
     currentenvironment = new Environment(environments.front());
   }
 
-  virtual ~Game() {
+  virtual Game::~Game() {
     delete currentenvironment;
     delete currentpuzzle;
   }
 
-  void Start() {
+  void Game::Start() {
     cout << prologue << "\n";
     gameLoop();
   }
 
-  void gameLoop() {  
+  void Game::gameLoop() {  
     cout << "You have entered into a new cart " << intenv.getName() << "\n";
     cout << intenv.getDesc() << "\n";
     puzzles = intenv.getPuzzles();
@@ -28,14 +28,14 @@ class Game{
     ischangeEnv();
   }
 
-  void promptPuzzles(std::vector<int> puzzles){
+  void Game::promptPuzzles(std::vector<int> puzzles){
     for(int i = 0; i < puzzles.size(); ++i){
         cout << i + 1 << ") " << puzzles[i] <<"\n";
       }
       cout << puzzles.size() + 2 << ") Help\n";
   }
 
-  int userInput(int length){
+  int Game::userInput(int length){
     while(true){
       int userinput;
       std::cin >> userinput;
@@ -58,7 +58,7 @@ class Game{
     }
   }
 
-  void createPuzzle(int userinput){
+  void Game::createPuzzle(int userinput){
     if (currentpuzzle != nullptr) {
       delete currentpuzzle;
       currentpuzzle = nullptr;
@@ -67,7 +67,7 @@ class Game{
     intpuz.setPuzzle(currentpuzzle);
   }
 
-  void changeEnvironment() {
+  void Game::changeEnvironment() {
     if (currentenvironment != nullptr) {
       delete currentenvironment;
       currentenvironment = nullptr;
@@ -79,7 +79,7 @@ class Game{
     }
   }
 
-  void ischangeEnv(){
+  void Game::ischangeEnv(){
     if(changeenv == true){
       changeEnvironment();
       changeenv = false;

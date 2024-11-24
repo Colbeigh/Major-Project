@@ -17,7 +17,7 @@ class Game {
   void gameLoop();
   void promptPuzzles(vector<int> puzzles);
   int userInput(int length);
-  bool isRunning();
+  //bool isRunning();
   void createPuzzle()  ;
   void changeEnvironment();
   void ischangeEnv();
