@@ -2,6 +2,6 @@
 
 int main() {
     Game game;
-    game.start();
+    game.Start();
     return 0;
 }
