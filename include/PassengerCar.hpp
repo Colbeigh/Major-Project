@@ -1,14 +1,11 @@
 #ifndef PASSENGERCAR_HPP
 #define PASSENGERCAR_HPP
-
-#include <iostream>
 #include "TrainCart.hpp"
 
-class Passengercar : public TrainCart {
+class PassengerCar : public Environment {
  public:
-    Passengercar();
-    virtual ~Passengercar();
-    void Description() override;
+  PassengerCar();
+  std::string getEnviroment() override;
 };
 
 #endif //PASSENGERCAR_HPP

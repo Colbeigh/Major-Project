@@ -1,13 +1,12 @@
 #ifndef DININGCAR_HPP
 #define DININGCAR_HPP
 
-#include "TrainCart.hpp"
+#include "Environment.hpp"
 
-class DiningCar : public TrainCart {
+class DiningCar : public Environment {
  public:
     DiningCar();
-    virtual ~DiningCar();
-    void Description() override;
+    std::string getEnviroment() override;
 };
 
 #endif //DININGCAR_HPP

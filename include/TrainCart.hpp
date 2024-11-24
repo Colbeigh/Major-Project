@@ -8,9 +8,7 @@ class TrainCart : public Environment {
     TrainCart();
     virtual ~TrainCart();
     void Description() override;
-    void addEnemyNPC(std::shared_ptr<NPC> npc);
-    void listEnemies();
-    std::string trainName;
 };
 
 #endif //TRAINCART_HPP
+// I don't think I even need Traincart.hpp anymore.
