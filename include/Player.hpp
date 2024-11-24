@@ -9,11 +9,11 @@ class Player {
  public:
   Player();
   virtual ~Player();
-  void getItem(int itemid);
+  bool hasItem(int itemid);
   void addItem(int itemid);
   void remItem(int itemid);
 
-  Inventory player;
+  Inventory playerinv;
   std::string name;
 };
 
