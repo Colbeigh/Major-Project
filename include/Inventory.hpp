@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <Items.hpp>
-#include <Player.hpp>
+#include <string>
+#include "Items.hpp"
+#include "Player.hpp"
 
 #ifndef INVENTORY_H_INCLUDED
 #define INVENTORY_H_INCLUDED
@@ -10,10 +11,14 @@ class Inventory {
  public:
   Inventory();
   virtual ~Inventory();
-  void listItems();
+  int getItem(int itemid);
+  void additem(int itemid);
+  void remItem(int itemid);
+  std::string getName(int itemid);
+  void createItem(int itemid);
 
   vector<int> items;
-
+  Item* item;
 };
 
 #endif
