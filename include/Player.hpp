@@ -14,7 +14,7 @@ class Player {
   void remItem(int itemid);
 
   Inventory player;
-  string name;
+  std::string name;
 };
 
 #endif
