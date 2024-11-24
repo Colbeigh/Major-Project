@@ -10,8 +10,8 @@ class Item {
   virtual ~Item();
   std::string getName();
   
- std::string name;
- int itemid;
+  std::string name;
+  int itemid;
 };
 
 class Ticket : public Item {
