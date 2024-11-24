@@ -1,5 +1,4 @@
 #include "DiningCar.hpp"
-#include <vector>
 
 DiningCar::DiningCar() {
     name = "Dining Car";

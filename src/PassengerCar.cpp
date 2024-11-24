@@ -1,6 +1,6 @@
 
 #include "PassengerCar.hpp"
-#include <vector>
+
 PassengerCar::PassengerCar() {
     name = "Passenger Car";
     environmentDescription = "Looking around the environment, "
