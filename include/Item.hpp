@@ -9,7 +9,7 @@ class Item {
   Item();
   virtual ~Item();
   std::string getName();
-  
+
   std::string name;
   int itemid;
 };
