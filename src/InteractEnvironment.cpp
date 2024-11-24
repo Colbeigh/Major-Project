@@ -1,33 +1,46 @@
-#include <InteractEnvironment>
+#include "InteractEnvironment.hpp"
 
 class InteractEnvironment {
  public:
-  InteractEnvironment(){
+  InteractEnvironment::InteractEnvironment() {
     Environment* environment = nullptr;
   }
   
-  virtual ~InteractEnvironment(){
+  virtual InteractEnvironment::~InteractEnvironment() {
     delete environment;
   }
 
-  void setEnvironment(Environment env){
+  void InteractEnvironment::setEnvironment(Environment env) {
+    delete environment;
     environment = env;
   }
 
-  string getName(){
+  std::string InteractEnvironment::getName(){
+    if (environment != nullptr) {
+      delete environment;
+    }
     return environment ->getName();
   }
 
-  void getDesc(){
+  std::string InteractEnvironment::getDesc() {
+    if (environment == nullptr){
+      return "";
+    }
     return environment ->getDesc();
   }
 
-  vector<int> getPuzzles(Environment env){
-    return environment -> getPuzzles;
+  std::string InteractEnvironment::getHelp() {
+        if (environment == nullptr){
+      return "";
+    }
+    return environment ->getHelp();
   }
-
-  void remPuzzle(Environment env, int puzzleid);
-
+  std::vector<int> InteractEnvironment::getPuzzles() {
+    if (environment == nullptr){
+      return "";
+    }
+    return environment -> getPuzzles();
+  }
 };
 
 #endif
