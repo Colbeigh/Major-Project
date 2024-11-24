@@ -5,14 +5,14 @@
 
 class Player {
  public:
-  Player::Player(
-     name = "Bill";
-  ) {}
+  Player::Player() {
+    name = "Bill";
+  }
 
   Player::~Player() {}
 
   bool Player::hasItem(int itemid) {
-    return playerinv.hasItem(itemid)
+    return playerinv.hasItem(itemid);
   }
 
   void Player::addItem(int itemid) {
