@@ -5,7 +5,7 @@ class InteractEnvironment {
   InteractEnvironment::InteractEnvironment() {
     Environment* environment = nullptr;
   }
-  
+
   virtual InteractEnvironment::~InteractEnvironment() {
     delete environment;
   }
@@ -23,20 +23,20 @@ class InteractEnvironment {
   }
 
   std::string InteractEnvironment::getDesc() {
-    if (environment == nullptr){
+    if (environment == nullptr) {
       return "";
     }
     return environment ->getDesc();
   }
 
   std::string InteractEnvironment::getHelp() {
-        if (environment == nullptr){
+        if (environment == nullptr) {
       return "";
     }
     return environment ->getHelp();
   }
   std::vector<int> InteractEnvironment::getPuzzles() {
-    if (environment == nullptr){
+    if (environment == nullptr) {
       return "";
     }
     return environment -> getPuzzles();
