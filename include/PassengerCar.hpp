@@ -1,6 +1,7 @@
 #ifndef PASSENGERCAR_HPP
 #define PASSENGERCAR_HPP
 #include "Environment.hpp"
+#include <string>
 
 class PassengerCar : public Environment {
  public:
