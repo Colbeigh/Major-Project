@@ -18,10 +18,10 @@ class Game{
   }
 
     Game::Game(const Game&) = delete;
-    
+
     Game& operator=(const Game&) = delete;
 
-  void Game::gameLoop() {  
+  void Game::gameLoop() {
     cout << "You have entered into a new cart " << intenv.getName() << "\n";
     cout << intenv.getDesc() << "\n";
     puzzles = intenv.getPuzzles();
@@ -33,14 +33,14 @@ class Game{
   }
 
   void Game::promptPuzzles(std::vector<int> puzzles) {
-    for(int i = 0; i < puzzles.size(); ++i){
+    for (int i = 0; i < puzzles.size(); ++i) {
         cout << i + 1 << ") " << puzzles[i] <<"\n";
       }
       cout << puzzles.size() + 2 << ") Help\n";
   }
 
   int Game::userInput(int length) {
-    while(true){
+    while (true) {
       int userinput;
       std::cin >> userinput;
       if (std::cin.fail()) {
@@ -53,10 +53,10 @@ class Game{
         std::cout << "Invalid input. Please enter an integer between 1 and " <<
        length << ".\n";
       }
-      else if (userinput == length){
+      else if (userinput == length) {
       std::cout << intenv.help() << "\n";
       }
-      else{
+      else {
         return userinput;
       }
     }
@@ -84,7 +84,7 @@ class Game{
   }
 
   void Game::ischangeEnv() {
-    if(changeenv == true){
+    if (changeenv == true) {
       changeEnvironment();
       changeenv = false;
     }
