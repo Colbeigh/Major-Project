@@ -17,6 +17,10 @@ class Game{
     gameLoop();
   }
 
+    Game::Game(const Game&) = delete;
+    
+    Game& operator=(const Game&) = delete;
+
   void Game::gameLoop() {  
     cout << "You have entered into a new cart " << intenv.getName() << "\n";
     cout << intenv.getDesc() << "\n";

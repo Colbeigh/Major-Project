@@ -14,6 +14,8 @@ class Game {
   Game();
   virtual ~Game();
   void Start();
+  Game(const Game&);
+  Game& operator=(const Game&);
   void gameLoop();
   void promptPuzzles(vector<int> puzzles);
   int userInput(int length);
