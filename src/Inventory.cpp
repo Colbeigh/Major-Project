@@ -28,7 +28,7 @@ class Inventory {
     std:: cout << "Added " << getName(itemid) << " to inventory\n";
   }
 
-  void Inventory::remItem(int itemid){
+  void Inventory::remItem(int itemid) {
     for (int i = 0; i < items.size(); ++i) {
         if (itemid == items[i]){
             items.erase(items.begin() + i);
@@ -39,7 +39,7 @@ class Inventory {
     std::cout << "You do not have" << getName(itemid) <<"\n";
   }
   
-  std::string Inventory::getName(int itemid){
+  std::string Inventory::getName(int itemid) {
     createItem(itemid);
     std::string name;
     name = item -> getName();

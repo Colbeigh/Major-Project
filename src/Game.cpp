@@ -28,14 +28,14 @@ class Game{
     ischangeEnv();
   }
 
-  void Game::promptPuzzles(std::vector<int> puzzles){
+  void Game::promptPuzzles(std::vector<int> puzzles) {
     for(int i = 0; i < puzzles.size(); ++i){
         cout << i + 1 << ") " << puzzles[i] <<"\n";
       }
       cout << puzzles.size() + 2 << ") Help\n";
   }
 
-  int Game::userInput(int length){
+  int Game::userInput(int length) {
     while(true){
       int userinput;
       std::cin >> userinput;
@@ -58,7 +58,7 @@ class Game{
     }
   }
 
-  void Game::createPuzzle(int userinput){
+  void Game::createPuzzle(int userinput) {
     if (currentpuzzle != nullptr) {
       delete currentpuzzle;
       currentpuzzle = nullptr;
@@ -79,7 +79,7 @@ class Game{
     }
   }
 
-  void Game::ischangeEnv(){
+  void Game::ischangeEnv() {
     if(changeenv == true){
       changeEnvironment();
       changeenv = false;
