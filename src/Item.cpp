@@ -1,6 +1,8 @@
 #include "Item.hpp"
 
-Item::Item() : name("Unknown"), itemid(-1) {}
+Item::Item(int id) : itemid(id) {
+  name = "Unknown";
+}
 
 Item::~Item() {}
 
@@ -8,7 +10,6 @@ std::string Item::getName() {
   return name;
 }
 
-Ticket::Ticket() {
+Ticket::Ticket() : Item(1) {
   name = "Train Ticket";
-  itemid = 1;
 }

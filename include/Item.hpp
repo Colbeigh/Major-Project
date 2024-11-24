@@ -6,7 +6,7 @@
 
 class Item {
  public:
-  Item(int itemid) : itemid(itemid) {}
+  Item(int id);
   virtual ~Item();
   std::string getName();
 
