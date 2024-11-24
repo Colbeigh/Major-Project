@@ -3,6 +3,7 @@
 #include <string>
 #include <memory>
 #include <iostream>
+#include <vector>
 #include "NPC.hpp"
 
 class Puzzle;
@@ -20,11 +21,10 @@ class Environment {
     std::string getName();
     virtual std::string getEnviroment();
     virtual void help();
-    std::string name;  
+    std::string name;
     std::string environmentDescription;
     std::string helpInfo;
     std::vector<Puzzle> puzzles;
-    
 };
 
 #endif //ENVIRONMENT_H_INCLUDED

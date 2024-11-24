@@ -3,8 +3,9 @@
 #include <vector>
 PassengerCar::PassengerCar() {
     name = "Passenger Car";
-    environmentDescription = "Looking around the environment,you see passeneger, and a ticket master walking around";
-    puzzle = {"puzzle1"};
+    environmentDescription = "Looking around the environment, "
+    "you see passeneger, and a ticket master walking around";
+    puzzles = {"puzzle2", "puzzle3"};
 }
 
 
