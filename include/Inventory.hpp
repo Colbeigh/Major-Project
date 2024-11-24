@@ -10,8 +10,8 @@ class Inventory {
  public:
   Inventory();
   virtual ~Inventory();
-  int getItem(int itemid);
-  void additem(int itemid);
+  bool hasItem(int itemid);
+  void addItem(int itemid);
   void remItem(int itemid);
   std::string getName(int itemid);
   void createItem(int itemid);
