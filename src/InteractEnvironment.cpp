@@ -37,7 +37,7 @@ std::string InteractEnvironment::getDesc() {
 
 std::vector<int> InteractEnvironment::getPuzzles() {
   if (environment == nullptr) {
-     return;
+     return std::vector<int>();
   }
   return environment -> getPuzzles();
 }
