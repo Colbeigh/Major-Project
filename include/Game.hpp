@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <list>
+#include <vector>
 #include <Environment.hpp>
 #include <InteractEnvironment.hpp>
 #include <Interact_Puzzle.hpp>
@@ -18,6 +18,7 @@ class Game {
   void promptPuzzles(vector<int> puzzles);
   void userInput(int length);
   bool isRunning();
+  void createPuzzle();
   void changeEnvironment();
 
   player Player;

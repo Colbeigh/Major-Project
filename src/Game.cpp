@@ -4,7 +4,7 @@
 class Game{
  public:
   Game() {
-    currentenvironment = Environment(environments.front()) 
+    currentenvironment = new Environment(environments.front()) 
   }
 
   virtual ~Game() {
@@ -19,9 +19,8 @@ class Game{
     puzzles = interact.getPuzzles;
     promptuser(puzzles);
     userinput = userInput(puzzles.size() + 2);
-    userinput = userinput();
-    currentpuzzle = new Puzzle(puzzles[userinput - 1]);
-    intpuz.startPuzzle(puzzles[i-1], &player, &puzzles);
+    createPuzzle(userinput);
+    intpuz.startPuzzle(puzzles[userinput], &player, &puzzles);
   }
 
   void promptPuzzles(vector<int> puzzles){
@@ -55,6 +54,13 @@ class Game{
 
   bool isrunning() {
   }
+  void createPuzzle(int userinput){
+    if (currentpuzzle != nullptr) {
+      delete currentpuzzle;
+      currentpuzzle = nullptr;
+    }
+    currentpuzzle = new Puzzle(puzzles[userinput]);
+  }
 
   void changeEnvironment() {
     if (currentenvironment != nullptr) {
@@ -62,19 +68,19 @@ class Game{
       currentenvironment = nullptr;
     }
     if (!environments.empty()) {
-        currentEenvironment = new Environment(environments.front());
+        currentEnvironment = new Environment(environments.front());
         intenv.setEnvironment(currentenvironment);
-        environments.pop_front();
+        environments.erase(environments.begin());
   }
 
 
   Player player;
   currentenvironment* = nullptr;
-  std::list<std::string> environments{"Passenger", "Dining", "Gambling",
+  std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
   "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"}
   
   Puzzle* currentpuzzle = nullptr;
   interactEnvironment intenv;
   interactPuzzle intpuz;
-  Vector<int> puzzles;
+  std::Vector<int> puzzles;
 };
