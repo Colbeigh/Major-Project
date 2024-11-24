@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-#include <Inventory.hpp>
+#include "Inventory.hpp"
 
 #ifndef Player_H_INCLUDED
 #define Player_H_INCLUDED
 
-class Game {
+class Player {
  public:
   Player();
   virtual ~Player();
@@ -13,7 +13,7 @@ class Game {
   void addItem(int itemid);
   void remItem(int itemid);
 
-  Inventory Player("Player");
+  Inventory player;
   string name;
 };
 

@@ -1,38 +1,26 @@
-#include <iostream>
+#include "Player.cpp"
 
 #ifndef Player_H_INCLUDED
 #define Player_H_INCLUDED
 
-class Game {
+class Player {
  public:
   Player::Player() {}
 
   Player::~Player() {}
 
-  int getItem(int itemid);
-    for (int i = 0; i < vec.size(); ++i) {
-        if (itemid == playerinv[i]){
-            return playerinv[i];
-        }
-        else {
-            cout << "You do not have " << playerinv[i] << "\n";
-        }
-      }
-
-  void addItem(int itemid){
-    playerinv.insert(itemid);
+  bool Player::hasItem(int itemid){
+    return playerinv.hasItem(itemid)
   }
 
-  void remItem(int itemid){
-    for (int i = 0; i , vec.size(); ++i) {
-        if (itemid == playerinv[i]){
-            playerinv.erase[i];
-        }
-        else {
-            cout << "You do not have " << itemid << "\n";
-        }
+  void Player::addItem(int itemid){
+    playerinv.addItem(itemid);
   }
+
+  void Player:remItem(int itemid){
+    playerinv.remItem(itemid);
   }
+  
   Inventory playerinv;
   std::string name = "Bill";
 };
