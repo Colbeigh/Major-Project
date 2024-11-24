@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <Environment.hpp>
-#include <InteractEnvironment.hpp>
-#include <Interact_Puzzle.hpp>
-#include <Player.hpp>
+#include "Environment.hpp"
+#include "InteractEnvironment.hpp"
+#include "Interact_Puzzle.hpp"
+#include "Player.hpp"
 
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
@@ -18,7 +18,7 @@ class Game {
   void promptPuzzles(vector<int> puzzles);
   int userInput(int length);
   bool isRunning();
-  void createPuzzle();
+  void createPuzzle()  ;
   void changeEnvironment();
   void ischangeEnv();
 
