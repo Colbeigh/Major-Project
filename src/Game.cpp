@@ -48,15 +48,12 @@ class Game{
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Invalid input. Please enter an integer between 1 " <<
             "and " << length << ".\n";
-        }
-      else if (userinput < 1 || userinput > length) {
+        } else if (userinput < 1 || userinput > length) {
         std::cout << "Invalid input. Please enter an integer between 1 and " <<
        length << ".\n";
-      }
-      else if (userinput == length) {
+      } else if (userinput == length) {
       std::cout << intenv.help() << "\n";
-      }
-      else {
+      } else {
         return userinput;
       }
     }
@@ -95,7 +92,7 @@ class Game{
   std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
   "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"
   };
-  
+
   Puzzle* currentpuzzle = nullptr;
   interactEnvironment intenv;
   interactPuzzle intpuz;
