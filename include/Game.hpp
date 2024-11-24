@@ -3,7 +3,7 @@
 #include <vector>
 #include "Environment.hpp"
 #include "InteractEnvironment.hpp"
-#include "Interact_Puzzle.hpp"
+//#include "Interact_Puzzle.hpp"
 #include "Player.hpp"
 
 #ifndef GAME_H_INCLUDED
@@ -14,22 +14,22 @@ class Game {
   Game();
   virtual ~Game();
   void Start();
-  Game(const Game&);
-  Game& operator=(const Game&);
+  Game(const Game&) = delete;
+  Game& operator=(const Game&) = delete;
   void gameLoop();
-  void promptPuzzles(vector<int> puzzles);
+  void promptPuzzles(std::vector<int> puzzles);
   int userInput(int length);
   //bool isRunning();
   void createPuzzle();
   void changeEnvironment();
   void ischangeEnv();
 
-  player Player;
-  currentEnvironment* = nullptr;
+  Player player;
+  Environment currentEnvironment;
   std::vector<std::string> environments;
-  interactEnvironment intenv;
-  interactPuzzle intpuz;
-  Vector<int> puzzles;
+  InteractEnvironment intenv;
+  //interactPuzzle intpuz;
+  std::vector<int> puzzles;
   bool changeenv;
 };
 
