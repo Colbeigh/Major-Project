@@ -7,7 +7,7 @@ class TrainCart : public Environment {
  public:
     TrainCart();
     virtual ~TrainCart();
-    void Description() override;
+    //std::string getDescription() override
 };
 
 #endif //TRAINCART_HPP

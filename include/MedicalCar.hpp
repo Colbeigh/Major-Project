@@ -7,7 +7,7 @@ class MedicalCar : public TrainCart {
  public:
     MedicalCar();
     virtual ~MedicalCar();
-    void Description() override;
+    //std::string getDescription() override
 };
 
 #endif //MEDICALCAR_HPP
