@@ -1,6 +1,6 @@
 #include "Player.hpp"
 
-class Player {
+class Player{
  public:
   Player::Player() {}
 
