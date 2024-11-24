@@ -20,13 +20,13 @@ class Game {
   void promptPuzzles(vector<int> puzzles);
   int userInput(int length);
   //bool isRunning();
-  void createPuzzle()  ;
+  void createPuzzle();
   void changeEnvironment();
   void ischangeEnv();
 
   player Player;
   currentEnvironment* = nullptr;
-  std::list<std::string> environments;
+  std::vector<std::string> environments;
   interactEnvironment intenv;
   interactPuzzle intpuz;
   Vector<int> puzzles;
