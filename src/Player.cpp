@@ -1,8 +1,5 @@
 #include "Player.hpp"
 
-#ifndef Player_H_INCLUDED
-#define Player_H_INCLUDED
-
 class Player {
  public:
   Player::Player() {
@@ -27,4 +24,3 @@ class Player {
   std::string name;
 };
 
-#endif
