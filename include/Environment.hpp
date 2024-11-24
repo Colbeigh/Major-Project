@@ -6,10 +6,6 @@
 #include <vector>
 #include "NPC.hpp"
 
-class Puzzle;
-class Item;
-
-
 class Environment {
  public:
     Environment();
@@ -17,17 +13,17 @@ class Environment {
     std::string getDescription();
     int getNPCPuzzle(int PuzzleID);
     void addLootableItem(std::string item);
-    std::vector<Puzzle> getPuzzles();
+    std::vector<std::string> getPuzzles();
     std::string getName();
     virtual std::string getEnviroment();
     virtual void help();
     std::string name;
     std::string environmentDescription;
     std::string helpInfo;
-    std::vector<Puzzle> puzzles;
+    std::vector<std::string> puzzles;
 };
 
 #endif //ENVIRONMENT_H_INCLUDED
 
     //std::list<NPC> npcs;
-    //void addNPC(const std::string& npc);
+    //void addNPC(const std::string& npc)
