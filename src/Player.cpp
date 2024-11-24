@@ -1,4 +1,4 @@
-#include "Player.cpp"
+#include "Player.hpp"
 
 #ifndef Player_H_INCLUDED
 #define Player_H_INCLUDED
@@ -20,7 +20,7 @@ class Player {
   void Player:remItem(int itemid){
     playerinv.remItem(itemid);
   }
-  
+
   Inventory playerinv;
   std::string name = "Bill";
 };
