@@ -11,7 +11,7 @@ std::string Environment::getDescription() {
     return environmentDescription;
 }
 
-std::vector<std::string> Environment::getPuzzles() {
+std::vector<int> Environment::getPuzzles() {
     return puzzles;
 }
 

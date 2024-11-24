@@ -13,14 +13,14 @@ class Environment {
     std::string getDescription();
     int getNPCPuzzle(int PuzzleID);
     void addLootableItem(std::string item);
-    std::vector<std::string> getPuzzles();
+    std::vector<int> getPuzzles();
     std::string getName();
     virtual std::string getEnviroment();
     virtual void help();
     std::string name;
     std::string environmentDescription;
     std::string helpInfo;
-    std::vector<std::string> puzzles;
+    std::vector<int> puzzles;
 };
 
 #endif //ENVIRONMENT_H_INCLUDED
