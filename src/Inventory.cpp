@@ -1,6 +1,6 @@
 #include "Inventory.hpp"
 
-class Inventory {
+class Inventory{
  public:
   Inventory::Inventory() : item(nullptr) {}
 
