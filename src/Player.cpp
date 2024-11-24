@@ -5,7 +5,9 @@
 
 class Player {
  public:
-  Player::Player() {}
+  Player::Player(
+     name = "Bill";
+  ) {}
 
   Player::~Player() {}
 
@@ -22,7 +24,7 @@ class Player {
   }
 
   Inventory playerinv;
-  std::string name = "Bill";
+  std::string name;
 };
 
 #endif
