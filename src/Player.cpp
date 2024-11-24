@@ -2,9 +2,7 @@
 
 class Player {
  public:
-  Player::Player() {
-    name = "Bill";
-  }
+  Player::Player() {}
 
   Player::~Player() {}
 
@@ -21,6 +19,6 @@ class Player {
   }
 
   Inventory playerinv;
-  std::string name;
+  std::string name = "Default";
 };
 
