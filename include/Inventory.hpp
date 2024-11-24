@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 #include "Item.hpp"
-#include "Player.hpp"
 
 #ifndef INVENTORY_H_INCLUDED
 #define INVENTORY_H_INCLUDED
