@@ -2,7 +2,6 @@
 
 class Inventory {
  public:
-
   Inventory::Inventory() : item(nullptr) {}
 
   virtual Inventory::~Inventory() {
@@ -11,16 +10,16 @@ class Inventory {
 
   bool Inventory::hasItem(int itemid) {
     for (int i = 0; i < items.size(); ++i) {
-        if (itemid == items[i]){
+        if (itemid == items[i]) {
             return true;
         }
     }
     std::cout << "You do not have " << getName(itemid) << "\n";
     return false;
   }
-  
+
   void Inventory::addItem(int itemid) {
-    if(hasItem(itemid)) {
+    if (hasItem(itemid)) {
         std::cout << "You already have " << getName(itemid) <<"\n";
         return;
     }
@@ -30,7 +29,7 @@ class Inventory {
 
   void Inventory::remItem(int itemid) {
     for (int i = 0; i < items.size(); ++i) {
-        if (itemid == items[i]){
+        if (itemid == items[i]) {
             items.erase(items.begin() + i);
             std::cout << "Used " << getName(itemid) << "\n";
             return;
@@ -38,7 +37,7 @@ class Inventory {
     }
     std::cout << "You do not have" << getName(itemid) <<"\n";
   }
-  
+
   std::string Inventory::getName(int itemid) {
     createItem(itemid);
     std::string name;
