@@ -22,21 +22,21 @@ std::string InteractEnvironment::getName() {
 }
 
 std::string InteractEnvironment::getDesc() {
- if (environment == nullptr) {
+  if (environment == nullptr) {
      return "";
   }
   return environment ->getDescription();
   }
 
 //std::string InteractEnvironment::getHelp() {
-  //     if (environment == nullptr) {
-   // return ""
-  //}
-  //return environment -> getHelp()
+//     if (environment == nullptr) {
+// return ""
+//}
+//return environment -> getHelp()
 //}
 
 std::vector<int> InteractEnvironment::getPuzzles() {
-   if (environment == nullptr) {
+  if (environment == nullptr) {
      return;
   }
   return environment -> getPuzzles();

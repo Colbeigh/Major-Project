@@ -10,7 +10,8 @@ virtual Game::~Game() {
 }
 
 void Game::Start() {
-   cout << prologue << "\n";
+  std::string prologue = "This is the prologue";
+  cout << prologue << "\n";
   gameLoop();
 }
 
@@ -20,7 +21,7 @@ void Game::Start() {
 
 void Game::gameLoop() {
   cout << "You have entered into a new cart " << intenv.getName() << "\n";
-   cout << intenv.getDesc() << "\n";
+  cout << intenv.getDesc() << "\n";
   puzzles = intenv.getPuzzles();
   promptPuzzles(puzzles);
   int userinput = userInput(puzzles.size() + 2);
@@ -34,7 +35,7 @@ void Game::promptPuzzles(std::vector<int> puzzles) {
       cout << i + 1 << ") " << puzzles[i] <<"\n";
     }
     cout << puzzles.size() + 2 << ") Help\n";
- }
+}
 
 int Game::userInput(int length) {
   while (true) {
@@ -61,7 +62,7 @@ void Game::createPuzzle(int userinput) {
      delete currentpuzzle;
     currentpuzzle = nullptr;
   }
-   currentpuzzle = new Puzzle(puzzles[userinput]);
+  currentpuzzle = new Puzzle(puzzles[userinput]);
   intpuz.setPuzzle(currentpuzzle);
 }
 
@@ -78,7 +79,7 @@ void Game::changeEnvironment() {
 }
 
 void Game::ischangeEnv() {
-   if (changeenv == true) {
+  if (changeenv == true) {
     changeEnvironment();
     changeenv = false;
   }
@@ -95,5 +96,4 @@ interactEnvironment intenv;
 interactPuzzle intpuz;
 std::vector<int> puzzles;
 bool changeenv = false;
-std::string prologue = "This is the prologue";
 
