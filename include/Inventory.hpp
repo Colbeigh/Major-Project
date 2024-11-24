@@ -17,7 +17,7 @@ class Inventory {
   std::string getName(int itemid);
   void createItem(int itemid);
 
-  vector<int> items;
+  std::vector<int> items;
   Item* item;
 };
 
