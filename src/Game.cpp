@@ -21,6 +21,7 @@ void Game::gameLoop() {
   puzzles = intenv.getPuzzles();
   promptPuzzles(puzzles);
   int userinput = userInput(puzzles.size() + 2);
+  std::cout << userinput << std::endl;
   //createPuzzle(userinput);
   //intpuz.startPuzzle(&player, &puzzles, &changeenv);
   ischangeEnv();
