@@ -15,7 +15,7 @@ class InteractEnvironment {
     environment = env;
   }
 
-  std::string InteractEnvironment::getName(){
+  std::string InteractEnvironment::getName() {
     if (environment != nullptr) {
       delete environment;
     }
@@ -43,4 +43,3 @@ class InteractEnvironment {
   }
 };
 
-#endif
