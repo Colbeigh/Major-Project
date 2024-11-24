@@ -1,4 +1,5 @@
 
+#include <string>
 #include "PassengerCar.hpp"
 
 PassengerCar::PassengerCar() {
