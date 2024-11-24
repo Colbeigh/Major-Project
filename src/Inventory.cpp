@@ -19,7 +19,7 @@ class Inventory {
     return false;
   }
   
-  void additem(int itemid) {
+  void addItem(int itemid) {
     if(hasItem(itemid)) {
         std::cout << "You already have " << getName(itemid) <<"\n";
         return;
