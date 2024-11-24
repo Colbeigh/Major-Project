@@ -14,7 +14,9 @@ class Game {
   Game();
   virtual ~Game();
   void Start();
-  void gameLoop;
+  void gameLoop();
+  void promptPuzzles(vector<int> puzzles);
+  void userInput(int length);
   bool isRunning();
   void changeEnvironment();
 
