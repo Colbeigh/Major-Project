@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Items.hpp"
+#include "Item.hpp"
 #include "Player.hpp"
 
 #ifndef INVENTORY_H_INCLUDED
