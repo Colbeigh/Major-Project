@@ -67,7 +67,7 @@ int Game::userInput(int length) {
   }
 }
 
-bool isRunning() {
+bool Game::isRunning() {
   return player-> isAlive();
 }
 
