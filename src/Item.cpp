@@ -18,6 +18,18 @@ std::string Item::getDesc() {
 
 Ticket::Ticket(){
   name = "Train Ticket";
-  desc = "unpunched ticket";
+  desc = "Unpunched ticket";
   itemid = 1;
+}
+
+PunchedTicket::PunchedTicket(){
+  name = "Punched Train Ticket";
+  desc = "The words help are punched into it";
+  itemid = 2;
+}
+
+Quarter::Quarter(){
+  name = "Lucky Quarter";
+  desc = "It's just an ordinary quarter, it kinda smells";
+  itemid = 3;
 }
