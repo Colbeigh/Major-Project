@@ -46,8 +46,13 @@ richLady::richLady() {
 richLady::~richLady() {}
 
 void richLady::initializeDialogueOptions() {
-    dialogueLines.push_back("Oh you're so sweet, you do know how to make a lady blush");
-    dialogueLines.push_back("Were you just trying to steal my lucky quarter? How dare you!");
+    dialogueLines.push_back("Oh you're so sweet, you do know "
+                             "how to make a lady blush");
+    dialogueLines.push_back("Here take this ticket to the gambling car, and "
+                            "my lucky quarter. It's brought me much "
+                            "luck I hope it does the same for you");
+    dialogueLines.push_back("Were you just trying to steal my lucky "
+                             "quarter? How dare you!");
 }
 
 //Bouncher implementations
