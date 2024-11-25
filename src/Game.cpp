@@ -2,7 +2,8 @@
 
 Game::Game() {
   curenv = FactEnv.createEnvironment(*environments.begin());
-  changeenv = false;
+  changeenv = new bool(false);
+  player = new Player();
 }
 
 Game::~Game() {
@@ -66,7 +67,7 @@ int Game::userInput(int length) {
   }
 }
 
-bool isRunning() {
+bool Game::isRunning() {
   return player-> isAlive();
 }
 
@@ -100,7 +101,7 @@ void Game::ischangeEnv() {
   }
 }
 
-Player* player = new Player;
+Player* player;
 Environment* curenv = nullptr;
 std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
 "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"

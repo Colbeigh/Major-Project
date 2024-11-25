@@ -28,8 +28,14 @@ PunchedTicket::PunchedTicket() {
   itemid = 2;
 }
 
+GamblingTicket::GamblingTicket() {
+  name = "Gambling Ticket";
+  desc = "VIP Access to the gambling car";
+  itemid = 3;
+}
+
 Quarter::Quarter() {
   name = "Lucky Quarter";
   desc = "It's just an ordinary quarter, it kinda smells";
-  itemid = 3;
+  itemid = 4;
 }

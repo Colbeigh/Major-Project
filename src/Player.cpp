@@ -1,6 +1,8 @@
 #include "Player.hpp"
 
-Player::Player() : name("Default") {}
+Player::Player() : name("Default") {
+  addItem("Ticket");
+}
 
 Player::~Player() {}
 
