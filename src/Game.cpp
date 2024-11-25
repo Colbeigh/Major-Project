@@ -1,11 +1,12 @@
 #include "Game.hpp"
 
 Game::Game() {
-  currentenvironment = new Environment(environments.front());
+  curenv = new PassengerCar();
+  curenv -> getName();
 }
 
 Game::~Game() {
-  delete currentenvironment;
+  delete curenv;
   //delete currentpuzzle;
 }
 
@@ -22,8 +23,8 @@ void Game::gameLoop() {
   promptPuzzles(puzzles);
   int userinput = userInput(puzzles.size() + 2);
   std::cout << userinput << std::endl;
-  //createPuzzle(userinput);
-  //intpuz.startPuzzle(&player, &puzzles, &changeenv);
+  createPuzzle(userinput);
+  intpuz.startPuzzle(&player, &puzzles, &changeenv);
   ischangeEnv();
 }
 
@@ -64,13 +65,13 @@ int Game::userInput(int length) {
 //}
 
 void Game::changeEnvironment() {
-  if (currentenvironment != nullptr) {
-     delete currentenvironment;
-    currentenvironment = nullptr;
+  if (curenv != nullptr) {
+     delete curenv;
+    curenv = nullptr;
   }
   if (!environments.empty()) {
-      currentenvironment = new Environment(environments.front());
-      intenv.setEnvironment(currentenvironment);
+      curenv = FactEnv.createEnvironment(environments.begin());
+      intenv.setEnvironment(curenv);
        environments.erase(environments.begin());
   }
 }
@@ -83,13 +84,14 @@ void Game::ischangeEnv() {
 }
 
 Player player;
-Environment* currentenvironment = nullptr;
+Environment* curenv = nullptr;
 std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
 "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"
 };
 
 //Puzzle* currentpuzzle = nullptr;
 InteractEnvironment intenv;
+FactoryEnvironment FactEnv;
 //interactPuzzle intpuz;
 std::vector<int> puzzles;
 bool changeenv = false;

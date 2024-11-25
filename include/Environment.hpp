@@ -14,7 +14,7 @@ class Environment {
     int getNPCPuzzle(int PuzzleID);
     void addLootableItem(std::string item);
     std::vector<int> getPuzzles();
-    std::string getName();
+    virtual std::string getName();
     virtual std::string getEnviroment();
     virtual void help();
     std::string name;
