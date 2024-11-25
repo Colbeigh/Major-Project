@@ -15,9 +15,9 @@
     delete chest;
   }
 
-  void sweetTalkPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
-  bool* changeenv) {
-    p= puzzles;
+  void sweetTalkPuzzle::startPuzzle(Player *player,
+  std::vector<std::string >* puzzles, bool* changeenv) {
+    p = puzzles;
     event(player);
   }
 
@@ -63,7 +63,7 @@
                 std::cout << " " << std::endl;
         } else {
             player->addItem("GamblingTicket");
-            std::cout << "You pick up the ticket\n"; 
+            std::cout << "You pick up the ticket\n";
             break;
             }
     }
@@ -71,7 +71,7 @@
     solved("sweetTalkPuzzle");
   }
 
-  void sweetTalkPuzzle::solution(Player* player) { 
+  void sweetTalkPuzzle::solution(Player* player) {
     std::cout << "You decided to sweet talk the Rich Lady\n";
     RL->displayDialogue(0);
     std::cout << "She hands you the ticket and her lucky coin\n";

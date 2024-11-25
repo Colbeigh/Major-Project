@@ -58,7 +58,6 @@ void ticketPuzzle::solution(Player* player) {
 std::cout << "You give him the ticket\n";
     if (player->hasItem("Ticket") == false) {
         std::cout << "No item is found!\n";
-        
     } else {
         player->remItem("Ticket");
         std::cout <<"You watch him punch the ticket and hands back it to you\n";
