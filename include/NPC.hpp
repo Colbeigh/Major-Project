@@ -27,6 +27,6 @@ class ticketMaster : public NPC {
   ticketMaster(); //constructor
   ~ticketMaster(); //destructor
   void initializeDialogueOptions() override;
-  void displayDialogue(int index) override;  
+  void displayDialogue(int index) override;
 };
 #endif

@@ -36,6 +36,5 @@ void ticketMaster::displayDialogue(int index) {
         std::cout << dialogueLines[index];
     } else {
         std::cout << "That dialogue line doesn't exist" << std::endl;
-    }
-    
+    }    
 }
