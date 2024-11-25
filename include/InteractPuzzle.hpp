@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Player.hpp"
 #include "Puzzle.hpp"
 
 #ifndef INTERACT_PUZZLE_H_INCLUDED
@@ -11,7 +12,8 @@ class InteractPuzzle {
   InteractPuzzle();
   virtual ~InteractPuzzle();
   void setPuzzle(Puzzle* puz);
-  void startPuzzle(&player, &puzzles, &changeenv);
+  void startPuzzle(Player &player, 
+  std::vector<std::string> &puzzles, bool &changeenv);
 
   Puzzle* puzzle;
 };

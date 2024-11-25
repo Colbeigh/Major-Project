@@ -6,17 +6,18 @@ InteractPuzzle::InteractPuzzle() {
 }
 
 InteractPuzzle::~InteractPuzzle() {
-  delete Puzzle;
+  delete puzzle;
 }
 
 void InteractPuzzle::setPuzzle(Puzzle* puz) {
-  delete Puzzle;
+  delete puzzle;
 puzzle = puz;
   }
 
-void InteractPuzzle::startPuzzle(&player, &puzzles, &changeenv) {
-  if (Puzzle != nullptr) {
-    delete Puzzle;
+void InteractPuzzle::startPuzzle(Player &player, 
+std::vector<std::string> &puzzles, bool &changeenv) {
+  if (puzzle != nullptr) {
+    delete puzzle;
   }
    puzzle ->Start();
 }
