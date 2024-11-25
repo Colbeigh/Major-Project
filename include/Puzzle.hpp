@@ -17,8 +17,8 @@ class Puzzle {
  public:
   Puzzle() {}
   virtual ~Puzzle() {}
-  virtual void startPuzzle(Player *player, std::vector<std::string >* puzzles
-  , bool *changeenv) = 0;
+  virtual void startPuzzle(Player* player, std::vector<std::string >* puzzles
+  , bool* changeenv) = 0;
   virtual void event(Player *player) = 0;
   virtual void failPuzzle(Player *player) = 0;
   virtual void solution(Player *player) = 0;
@@ -31,11 +31,11 @@ public:
 ticketPuzzle();
 ~ticketPuzzle();
 void startPuzzle(Player *player, std::vector<std::string >* puzzles,
-bool *changeenv) override;
-void event (Player *player) override;
-void failPuzzle(Player *player) override;
-void solution(Player *player) override;
-void giveReward(Player *player) override;
+bool* changeenv) override;
+void event (Player* player) override;
+void failPuzzle(Player* player) override;
+void solution(Player* player) override;
+void giveReward(Player* player) override;
 bool solved();
 
 private:

@@ -14,12 +14,12 @@ ticketPuzzle::~ticketPuzzle(){
     delete TM;
     delete chest;
 }
-void ticketPuzzle::startPuzzle(Player *player, std::vector<std::string> *puzzles
-, bool *changeenv) {
+void ticketPuzzle::startPuzzle(Player* player, std::vector<std::string>* puzzles
+, bool* changeenv) {
 event(player);
 }
 
-void ticketPuzzle::event(Player *player){
+void ticketPuzzle::event(Player* player){
 int playerchoice;
 std::cout << "The TicketMaster Approaches you\n";
 TM->displayDialogue(0); 
@@ -43,14 +43,14 @@ std::cout <<"What would you like to do?\n"<<
     }
 }
 
-void ticketPuzzle::failPuzzle(Player *player) {
+void ticketPuzzle::failPuzzle(Player* player) {
 std::cout << "You refuse to give him the ticket and\n" <<
  " Ticket Master leaves you alone." <<
  " A few minutes later the train explodes.\n";
 player->setKill();
 }
 
-void ticketPuzzle::solution(Player *player) {
+void ticketPuzzle::solution(Player* player) {
 std::cout << "You give him the ticket\n"; 
 player->remItem("Ticket");
 std::cout <<"You watch him punch the ticket and hands back it to you\n";
@@ -62,7 +62,7 @@ player->setAlive();
 solved();
 }
 
-void ticketPuzzle::giveReward(Player *player) {
+void ticketPuzzle::giveReward(Player* player) {
 player->addItem("PunchedTicket");
 
 }
