@@ -13,8 +13,6 @@ class NPC {
   NPC(const std::string NPCname); //name constructor
   virtual ~NPC(); //destructor
   std::string getName();
-  
-
   //pure virtual functions that must be impleneted by derived classes
   virtual void displayDialogue(int index) = 0;
   virtual void initializeDialogueOptions() = 0;
@@ -31,5 +29,4 @@ class ticketMaster : public NPC {
   void initializeDialogueOptions() override;
   void displayDialogue(int index) override;  
 };
-
 #endif

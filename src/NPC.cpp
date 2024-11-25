@@ -34,7 +34,8 @@ void ticketMaster::initializeDialogueOptions() {
 void ticketMaster::displayDialogue(int index) {
     if (index >= 0 && index < dialogueLines.size()) {
         std::cout << dialogueLines[index];
+    } else {
+        std::cout << "That dialogue line doesn't exist" << std::endl;
     }
-    else 
-    std::cout << "That dialogue line doesn't exist" << std::endl;
+    
 }
