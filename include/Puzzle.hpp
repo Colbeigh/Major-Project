@@ -61,14 +61,14 @@ class sweetTalkPuzzle: public Puzzle {
   bool solved(const std::string& puzzleId);
 
  private:
- NPC* RL;
- Inventory* chest;
- std::vector<std::string>* p;
+  NPC* RL;
+  Inventory* chest;
+  std::vector<std::string>* p;
 };
 
 class bouncerPuzzle: public Puzzle {
  public:
- bouncerPuzzle();
+  bouncerPuzzle();
   ~bouncerPuzzle();
   void startPuzzle(Player *player, std::vector<std::string >* puzzles,
   bool* changeenv) override;
@@ -79,8 +79,8 @@ class bouncerPuzzle: public Puzzle {
   bool solved(const std::string& puzzleId);
 
  private:
- NPC* B;
- Inventory* chest;
- std::vector<std::string>* p;
- bool** change;
+  NPC* B;
+  Inventory* chest;
+  std::vector<std::string>* p;
+  bool** change;
 };
