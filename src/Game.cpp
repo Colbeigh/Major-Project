@@ -17,15 +17,18 @@ void Game::Start() {
 }
 
 void Game::gameLoop() {
+
   std::cout << "You have entered into a new cart " << intenv.getName() << "\n";
   std::cout << intenv.getDesc() << "\n";
   puzzles = intenv.getPuzzles();
-  promptPuzzles(puzzles);
-  std::string userinput = puzzles[userInput(puzzles.size() + 2)];
-  std::cout << userinput << std::endl;
-  createPuzzle(userinput);
-  intpuz.startPuzzle(player, puzzles, changeenv);
-  ischangeEnv();
+  while (ischangeEnv == false){
+    promptPuzzles(puzzles);
+    std::string userinput = puzzles[userInput(puzzles.size() + 1)];
+    std::cout << userinput << std::endl;
+    createPuzzle(userinput);
+    intpuz.startPuzzle(player, puzzles, changeenv);
+    ischangeEnv();
+  }
 }
 
 void Game::promptPuzzles(std::vector<std::string> puzzles) {
@@ -47,11 +50,19 @@ int Game::userInput(int length) {
      } else if (userinput < 1 || userinput > length) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
          length << ".\n";
-      } else if (userinput == length) {
-         //std::cout << intenv.help() << "\n"
+      } else if (userinput == length - 1) {
+         std::cout << intenv.getHelp() << "\n";
       } else {
           return userinput;
     }
+  }
+}
+
+bool isRunning{
+  if (player.alive == false) {
+    return false;
+  } else{
+    return true;
   }
 }
 
