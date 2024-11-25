@@ -26,6 +26,11 @@ class PunchedTicket : public Item {
   PunchedTicket();
 };
 
+class GamblingTicket : public Item {
+ public:
+  GamblingTicket();
+};
+
 class Quarter : public Item {
  public:
   Quarter();
