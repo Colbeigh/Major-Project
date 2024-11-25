@@ -4,71 +4,34 @@
  */
 
 #include <iostream> 
-#include <fstream>
 #include <string>
+#include<limits>
 
 #ifndef PUZZLE_HPP_INCLUDED
 #define PUZZLE_HPP_INCLUDED
 
 class Puzzle {
  public:
-  Puzzle() {
-    std::cout << "hi\n";
-  }
-  virtual ~Puzzle() {
-    std::cout <<"bye\n";
-  }
+  Puzzle() {};
+  virtual ~Puzzle() {};
   virtual void startPuzzle() =0;
+  virtual void event() = 0;
   virtual void failPuzzle() = 0;
   virtual void solution() = 0;
   virtual int giveReward() = 0;
   
 };
 
-#endif //Puzzle_hpp_included
-
-
 class ticketPuzzle: public Puzzle {
 public:
 
-void startPuzzle() override {
-  //open file
-  std::ifstream file ("beginPuz.txt");
-  if(file.fail()) {
-    std::cout <<"file did not open\n";
-
-  } else {
-      std::string paragraph;
-      while (std::getline(file, paragraph, '$')) {
-        if (paragraph.find ("II.") == 0){
-        std::cout << paragraph << '\n';
-        }  
-        else { break; }
-      }
-
-    }
-  file.close();
-
-}
-
-void failPuzzle() {
-
-}
-void solution() {
-
-}
-int giveReward() {
-
-}
-bool solved() {
-
-}
+void startPuzzle() override;
+void event () override;
+void failPuzzle() override;
+void solution() override;
+int giveReward() override;
+bool solved();
 
 };
 
-int main() {
-
-ticketPuzzle first; 
-first.startPuzzle();
-  return 0;
-}
+#endif //Puzzle_hpp_included
