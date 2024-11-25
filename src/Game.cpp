@@ -17,7 +17,8 @@ void Game::Start() {
 }
 
 void Game::gameLoop() {
-  while (isRunning) {
+  player.setAlive();
+  while (player.isAlive()) {
     std::cout << "You have entered into a new cart " << intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
     puzzles = intenv.getPuzzles();
