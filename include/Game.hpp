@@ -22,7 +22,7 @@ class Game {
   void gameLoop();
   void promptPuzzles(std::vector<std::string> puzzles);
   int userInput(int length);
-  //bool isRunning();
+  bool isRunning();
   void createPuzzle(std::string userinput);
   void changeEnvironment();
   void ischangeEnv();
