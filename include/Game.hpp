@@ -27,12 +27,18 @@ class Game {
   void ischangeEnv();
 
   Player* player;
-  Environment currentEnvironment;
+  Environment currenv;
   std::vector<std::string> environments;
+
+  Puzzle* currentpuzzle;
   InteractEnvironment intenv;
+  FactoryEnvironment FactEnv;
   InteractPuzzle intpuz;
+  FactoryPuzzle FactPuz;
   std::vector<std::string>* puzzles;
   bool* changeenv;
+
+
 };
 
 #endif
