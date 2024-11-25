@@ -7,7 +7,7 @@ Game::Game() {
 
 Game::~Game() {
   delete curenv;
-  //delete currentpuzzle;
+  delete currentpuzzle;
 }
 
 void Game::Start() {
@@ -24,7 +24,7 @@ void Game::gameLoop() {
   std::string userinput = puzzles[userInput(puzzles.size() + 2)];
   std::cout << userinput << std::endl;
   createPuzzle(userinput);
-  intpuz.startPuzzle(&player, &puzzles, &changeenv);
+  intpuz.startPuzzle(player, puzzles, changeenv);
   ischangeEnv();
 }
 
@@ -92,8 +92,7 @@ std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
 Puzzle* currentpuzzle = nullptr;
 InteractEnvironment intenv;
 FactoryEnvironment FactEnv;
-interactPuzzle intpuz;
+InteractPuzzle intpuz;
 FactoryPuzzle FactPuz;
 std::vector<std::string> puzzles;
 bool changeenv = false;
-

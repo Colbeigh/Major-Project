@@ -3,7 +3,7 @@
 #include <vector>
 #include "Environment.hpp"
 #include "InteractEnvironment.hpp"
-//#include "Interact_Puzzle.hpp"
+#include "InteractPuzzle.hpp"
 #include "FactoryEnvironment.hpp"
 #include "FactoryPuzzle.hpp"
 #include "Player.hpp"
