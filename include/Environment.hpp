@@ -11,12 +11,9 @@ class Environment {
     Environment();
     virtual ~Environment();
     std::string getDescription();
-    int getNPCPuzzle(int PuzzleID);
-    void addLootableItem(std::string item);
-    virtual std::vector<std::string> getPuzzles(std::string puzzles);
+    std::vector<std::string> getPuzzles(std::string puzzles);
     std::string getName();
-    virtual std::string getEnviroment();
-    virtual void help();
+    std::string help();
     std::string name;
     std::string environmentDescription;
     std::string helpInfo;
@@ -26,18 +23,13 @@ class Environment {
 class PassenegerCart : public Environment {
  public:
     PassenegerCart();
-    void help() override;
-    std::vector<std::string> getPuzzles(std::string puzzles) override;
     virtual ~PassenegerCart();
 };
-
 
 class DiningCart : public Environment {
  public:
     DiningCart();
-    void help() override;
     virtual ~DiningCart();
-    std::vector<std::string> getPuzzles(std::string puzzles) override;
 };
 
 #endif //ENVIRONMENT_H_INCLUDED
