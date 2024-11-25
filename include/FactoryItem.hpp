@@ -6,7 +6,7 @@
 
 class FactoryItem {
  public:
- static Item* createItem(const std::string& name);
+  static Item* createItem(const std::string& name);
 };
 
 #endif

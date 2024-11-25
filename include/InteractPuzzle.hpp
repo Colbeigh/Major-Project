@@ -12,8 +12,8 @@ class InteractPuzzle {
   InteractPuzzle();
   virtual ~InteractPuzzle();
   void setPuzzle(Puzzle* puz);
-  void startPuzzle(Player &player, 
-  std::vector<std::string> &puzzles, bool &changeenv);
+  void startPuzzle(Player* player,
+   std::vector<std::string>* puzzles,  bool* changeenv);
 
   Puzzle* puzzle;
 };

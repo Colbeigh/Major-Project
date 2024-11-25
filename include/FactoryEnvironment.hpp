@@ -6,7 +6,7 @@
 
 class FactoryEnvironment {
  public:
- static Environment* createEnvironment(const std::string& name);
+  static Environment* createEnvironment(const std::string& name);
 };
 
 #endif
