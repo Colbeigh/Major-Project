@@ -63,6 +63,8 @@ bouncer::bouncer() {
 bouncer::~bouncer() {}
 
 void bouncer::initializeDialogueOptions() {
-    dialogueLines.push_back("You need a gambling ticket to get into the casino");
-    dialogueLines.push_back("Alright you're good to go, don't go causing any trouble in there");
+    dialogueLines.push_back("You need a gambling ticket to "
+                             "get into the casino");
+    dialogueLines.push_back("Alright you're good to go, don't "
+                             "go causing any trouble in there");
 }

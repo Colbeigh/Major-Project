@@ -31,7 +31,7 @@ class ticketMaster : public NPC {
 
 class richLady : public NPC {
  public:
-  richLady(); 
+  richLady();
   ~richLady();
   void initializeDialogueOptions() override;
 };
