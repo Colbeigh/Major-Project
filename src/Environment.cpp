@@ -1,7 +1,8 @@
 #include <vector>
 #include "Environment.hpp"
-#include "PassengerCar.hpp"
-Environment::Environment(std::string) { // constructor
+Environment::Environment() { // constructor
+ name = "Unknowm Place";
+ environmentDescription = "You are in an unknown place.";
 }
 
 Environment::~Environment() {}
@@ -15,9 +16,7 @@ std::vector<int> Environment::getPuzzles() {
     return puzzles;
 }
 
-std::string Environment::getName() {
-    return name;
-}
+
 
 
 //std::vector<std::string> createNPC = {"Ticket Master"

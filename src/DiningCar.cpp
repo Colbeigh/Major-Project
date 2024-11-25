@@ -1,13 +1,9 @@
-#include "DiningCar.hpp"
+#include "Environment.hpp"
 
-DiningCar::DiningCar() {
-    name = "Dining Car";
-    environmentDescription = "Looking around the environment, "
-    "you see a dining car with a few tables and chairs\n";
-    puzzles = {"puzzle2", "puzzle3"};
+DiningCart::DiningCart() {
+    name = "Dining Cart";
+    environmentDescription = "You are in the dining cart. The smell of food fills the air.";
 }
 
 
-std::string DiningCar::getEnviroment() {
-    return "Dining Car: A place to eat and socialize";
-}
+
