@@ -37,6 +37,9 @@ void Inventory::remItem(std::string itemid) {
 }
 
 void Inventory::listItems() {
+  if (items.empty()) {
+    std::cout << "You currently have no items" << std::endl;
+  }
   for (int i = 0; i < items.size(); ++i) {
       std::cout << "* " << getName(items[i]) << std::endl;
       }
