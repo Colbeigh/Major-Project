@@ -5,17 +5,19 @@
 
 #include "Puzzle.hpp"
 
+ticketPuzzle::ticketPuzzle(){
+TM = new ticketMaster;
+chest = new Inventory;
+}
 void ticketPuzzle::startPuzzle(Player &player, std::vector<std::string>&puzzles
 , bool &changeenv) {
-NPC* TM = new ticketMaster;
-Inventory* chest = new Inventory;
-
+event();
 }
 
 void ticketPuzzle::event(){
 int playerchoice;
 std::cout << "The TicketMaster Approaches you\n";
-//dialogue
+TM->displayDialogue(0); 
 std::cout <<"What would you like to do?\n"<<
 "1. Give him the ticket.\n 2. Do not give him the ticket.\n"; 
     while (true) {
@@ -40,19 +42,19 @@ void ticketPuzzle::failPuzzle() {
 
 }
 
-void ticketPuzzle::solution() {
+void ticketPuzzle::solution(Player &player) {
 std::cout << "You give him the ticket\n" << 
-//use remove item for player
+player.remItem(1);
 "You watch him punch the ticket and hands back it to you\n";
-//dialogue
+TM->displayDialogue(1);
 giveReward();
 std::cout << "You notice something strange about the ticket\n" << 
 "Enter 4, to check Inventory\n";
 solved();
 }
 
-int ticketPuzzle::giveReward() {
-//use give to player
+void ticketPuzzle::giveReward(Player &player) {
+player.addItem(2);
 
 }
 
