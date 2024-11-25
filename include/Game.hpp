@@ -27,7 +27,7 @@ class Game {
   void ischangeEnv();
 
   Player* player;
-  Environment curenv;
+  Environment* curenv;
   std::vector<std::string> environments;
 
   Puzzle* currentpuzzle;
