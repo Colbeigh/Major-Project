@@ -21,4 +21,13 @@ class Ticket : public Item {
   Ticket();
 };
 
+class PunchedTicket : public Item {
+ public:
+  PunchedTicket();
+};
+
+class Quarter : public Item {
+ public:
+  Quarter();
+};
 #endif
