@@ -1,32 +1,19 @@
-/**
- * @author Jem Pineda <j.pineda@uleth.ca>
- * @date Fall 2024
- */
+#include <iostream>
+#include <string>
+#include <vector>
+#include "Puzzle.hpp"
 
-#include <iostream> 
+#ifndef INTERACT_PUZZLE_H_INCLUDED
+#define INTERACT_PUZZLE_H_INCLUDED
 
-#ifndef INTERACTPUZZLE_HPP_INCLUDED
-#define INTERACTPUZZLE_HPP_INCLUDED
-
-class interactPuzzle{
+class InteractPuzzle {
  public:
+  InteractPuzzle();
+  virtual ~InteractPuzzle();
+  void setPuzzle(Puzzle* puz);
+  void startPuzzle(&player, &puzzles, &changeenv);
 
-  void identifyPuzzle(int, int);
-  void attemptPuzzle();
-  void solvedPuzzle();
-
-
+  Puzzle* puzzle;
 };
-
-
-
-
-
-
-
-
-
-
-
 
 #endif

@@ -14,7 +14,7 @@ std::string Environment::getDescription() {
     return environmentDescription;
 }
 
-std::vector<std::string> Environment::getPuzzles(std::string puzzles) {
+std::vector<std::string> Environment::getPuzzles() {
     return { puzzles };
 }
 
@@ -25,7 +25,6 @@ std::string Environment::help() {
 std::string Environment::getName() {
     return name;
 }
-
 
 
 PassenegerCart::PassenegerCart() {
