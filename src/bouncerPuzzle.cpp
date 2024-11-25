@@ -15,8 +15,8 @@ delete B;
 delete chest;
 }
 
-void bouncerPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
-  bool* changeenv) {
+void bouncerPuzzle::startPuzzle(Player *player,
+std::vector<std::string >* puzzles, bool* changeenv) {
 p = puzzles;
 change = &changeenv;
 event(player);
@@ -58,7 +58,7 @@ void bouncerPuzzle::failPuzzle(Player* player) {
 
 void bouncerPuzzle::solution(Player* player) {
     std::cout << "You give him the Gambling ticket\n";
-    player->remItem ("GamblingTicket");
+    player->remItem("GamblingTicket");
     B->displayDialogue(2);
     solved("bouncerPuzzle");
     **change = true;
