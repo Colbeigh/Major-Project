@@ -2,7 +2,6 @@
 
 Game::Game() {
   curenv = FactEnv.createEnvironment(*environments.begin());
-  curenv -> getName();
 }
 
 Game::~Game() {
