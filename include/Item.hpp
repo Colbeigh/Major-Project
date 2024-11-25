@@ -31,3 +31,4 @@ class Quarter : public Item {
   Quarter();
 };
 #endif
+
