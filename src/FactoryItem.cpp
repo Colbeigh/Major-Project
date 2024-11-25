@@ -1,6 +1,6 @@
- #include "FactoryPuzzle.hpp"
+ #include "FactoryItem.hpp"
 
- Puzzle* FactoryPuzzle::createPuzzle(const std::string& type){
+ Item* FactoryItem::createItem(const std::string& type){
     if (type == "Ticket"){
         return new Ticket();
     } else if (type == "PunchedTicket") {
