@@ -11,7 +11,6 @@ Dining Car
     Rich Lady - Sweet talk to get ticket, or steal. Gives us a lucky quarter if you sweet talk
     Bouncer - Must have ticket to get into next gambling car or distract and sneak pass
 
-
 Gambling Car
     Helpful Passenger - Lets you know which die to pick to beat the outlaw
     Gambling Outlaw - lets you pass if you beat him in a dice game. He uses loaded dice. At the start he lets you choose 2 dice from 4, you must figure out 

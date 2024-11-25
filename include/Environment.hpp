@@ -11,7 +11,7 @@ class Environment {
     Environment();
     virtual ~Environment();
     std::string getDescription();
-    std::vector<std::string> getPuzzles(std::string puzzles);
+    std::vector<std::string> getPuzzles();
     std::string getName();
     std::string help();
     std::string name;
