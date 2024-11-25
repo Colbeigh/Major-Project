@@ -17,7 +17,7 @@ class Game {
   void Start();
   void gameLoop();
   Game(const Game&) = delete;
-  Game& operator=(const Game&) = delete
+  Game& operator=(const Game&) = delete;
   void gameLoop();
   void promptPuzzles(std::vector<int> puzzles);
   int userInput(int length);

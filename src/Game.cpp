@@ -55,14 +55,14 @@ int Game::userInput(int length) {
   }
 }
 
-//void Game::createPuzzle(int userinput) {
-// if (currentpuzzle != nullptr) {
-//     delete currentpuzzle;
-//    currentpuzzle = nullptr;
-//  }
-//  currentpuzzle = new Puzzle(puzzles[userinput]);
-//  intpuz.setPuzzle(currentpuzzle);
-//}
+void Game::createPuzzle(int userinput) {
+ if (currentpuzzle != nullptr) {
+     delete currentpuzzle;
+    currentpuzzle = nullptr;
+  }
+  currentpuzzle = FactEnv.createEnvironment(puzzles[userinput]);
+  intpuz.setPuzzle(currentpuzzle);
+}
 
 void Game::changeEnvironment() {
   if (curenv != nullptr) {
@@ -89,7 +89,7 @@ std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
 "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"
 };
 
-//Puzzle* currentpuzzle = nullptr;
+Puzzle* currentpuzzle = nullptr;
 InteractEnvironment intenv;
 FactoryEnvironment FactEnv;
 //interactPuzzle intpuz;
