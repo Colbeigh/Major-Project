@@ -37,8 +37,6 @@ class Game {
   FactoryPuzzle FactPuz;
   std::vector<std::string>* puzzles;
   bool* changeenv;
-
-
 };
 
 #endif
