@@ -43,6 +43,7 @@ class ticketPuzzle: public Puzzle {
   NPC* TM;
   Inventory* chest;
   std::vector<std::string>* p;
+  bool** change;
 };
 
 #endif//Puzzle_hpp_included
@@ -81,4 +82,5 @@ class bouncerPuzzle: public Puzzle {
  NPC* B;
  Inventory* chest;
  std::vector<std::string>* p;
+ bool** change;
 };
