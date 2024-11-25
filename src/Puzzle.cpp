@@ -34,13 +34,11 @@ std::cout <<"What would you like to do?\n"<<
             std::cout <<"Invalid choice \n";
         } else if (playerchoice < 1 || playerchoice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
-        } else if (playerchoice = 1) {
+        } else if (playerchoice == 1) {
             solution(player);
             break;
-            }
-          else if (playerchoice = 2) {
+            } else {
             failPuzzle(player);
-            
             }
     }
 }
