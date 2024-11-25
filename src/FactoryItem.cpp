@@ -1,6 +1,6 @@
 #include "FactoryItem.hpp"
 
-Item* FactoryItem::createItem(const std::string& type){
+Item* FactoryItem::createItem(const std::string& type) {
     if (type == "Ticket") {
         return new Ticket();
     } else if (type == "PunchedTicket") {

@@ -5,8 +5,8 @@
 #include "Environment.hpp"
 
 class FactoryEnvironment {
-    public:
-    static Environment* createEnvironment(const std::string& name);
+ public:
+  static Environment* createEnvironment(const std::string& name);
 };
 
 #endif
