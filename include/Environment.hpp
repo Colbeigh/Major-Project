@@ -11,16 +11,13 @@ class Environment {
     Environment();
     virtual ~Environment();
     std::string getDescription();
-    int getNPCPuzzle(int PuzzleID);
-    void addLootableItem(std::string item);
-    std::vector<int> getPuzzles();
-    virtual std::string getName();
-    virtual std::string getEnviroment();
-    virtual void help();
+    std::vector<std::string> getPuzzles(std::string puzzles);
+    std::string getName();
+    std::string help();
     std::string name;
     std::string environmentDescription;
     std::string helpInfo;
-    std::vector<int> puzzles;
+    std::vector<std::string> puzzles;
 };
 
 class PassenegerCart : public Environment {
@@ -28,7 +25,6 @@ class PassenegerCart : public Environment {
     PassenegerCart();
     virtual ~PassenegerCart();
 };
-
 
 class DiningCart : public Environment {
  public:
