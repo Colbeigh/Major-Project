@@ -5,7 +5,9 @@
 
 #include <iostream> 
 #include <string>
-#include<limits>
+#include <limits>
+#include "Inventory.hpp"
+#include "Player.hpp"
 
 #ifndef PUZZLE_HPP_INCLUDED
 #define PUZZLE_HPP_INCLUDED
@@ -14,7 +16,8 @@ class Puzzle {
  public:
   Puzzle() {};
   virtual ~Puzzle() {};
-  virtual void startPuzzle() =0;
+  virtual void startPuzzle(Player &player, std::vector<std::string >&puzzles
+  ,bool &changeenv) =0;
   virtual void event() = 0;
   virtual void failPuzzle() = 0;
   virtual void solution() = 0;
@@ -25,7 +28,8 @@ class Puzzle {
 class ticketPuzzle: public Puzzle {
 public:
 
-void startPuzzle() override;
+void startPuzzle(Player &player, std::vector<std::string >&puzzles,
+ bool &changeenv) override;
 void event () override;
 void failPuzzle() override;
 void solution() override;
