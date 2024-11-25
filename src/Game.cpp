@@ -21,7 +21,7 @@ void Game::Start() {
 
 void Game::gameLoop() {
   player->setAlive();
-  while (player->isAlive()) {
+  while (isRunning()) {
     std::cout << "You have entered into a new cart " <<
     intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
