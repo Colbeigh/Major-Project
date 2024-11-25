@@ -2,7 +2,7 @@
 
  Puzzle* FactoryPuzzle::createPuzzle(const std::string& type){
     if (type == "Talk to Ticket Master"){
-        return new TicketMaster();
+        return new ticketPuzzle();
     } else if (type == "Choose where to sit") {
         return new Sit();
     } else if (type == "Talk to Rich Lady") {
