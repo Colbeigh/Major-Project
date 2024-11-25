@@ -15,11 +15,9 @@ class NPC {
   std::string getName();
   
 
-  //pure virrtual functions that must be impleneted by derived classes
+  //pure virtual functions that must be impleneted by derived classes
   virtual void displayDialogue(int index) = 0;
   virtual void initializeDialogueOptions() = 0;
-
-
  protected:
   std::string name;
   //vector of dialogue options
@@ -31,8 +29,7 @@ class ticketMaster : public NPC {
   ticketMaster(); //constructor
   ~ticketMaster(); //destructor
   void initializeDialogueOptions() override;
-  void displayDialogue(int index) override;
-   
+  void displayDialogue(int index) override;  
 };
 
 #endif

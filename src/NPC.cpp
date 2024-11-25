@@ -23,16 +23,18 @@ ticketMaster::ticketMaster() {
     initializeDialogueOptions();
 }
 
-ticketMaster::~ticketMaster() {};
+ticketMaster::~ticketMaster() {}\
 
 void ticketMaster::initializeDialogueOptions() {
     dialogueLines.push_back("Welcome abord, may I see your ticket?");
-    dialogueLines.push_back("Thank you for travelling with us. Enjoy the ride!");
+    dialogueLines.push_back("Thank you for travelling with us. "
+                             "Enjoy the ride!");
 }
 
 void ticketMaster::displayDialogue(int index) {
     if (index >= 0 && index < dialogueLines.size()) {
         std::cout << dialogueLines[index];
     }
-    else std::cout << "That dialoggue line doesn't exist" << std::endl;
+    else 
+    std::cout << "That dialogue line doesn't exist" << std::endl;
 }
