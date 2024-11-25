@@ -1,17 +1,19 @@
 #include "Player.hpp"
 
-Player::Player() : name("Default") {}
+Player::Player() : name("Default") {
+  bool alive = true;
+}
 
 Player::~Player() {}
 
-bool Player::hasItem(int itemid) {
+bool Player::hasItem(std::string itemid) {
   return playerinv.hasItem(itemid);
 }
 
-void Player::addItem(int itemid) {
+void Player::addItem(std::string itemid) {
   playerinv.addItem(itemid);
 }
 
-void Player::remItem(int itemid) {
+void Player::remItem(std::string itemid) {
   playerinv.remItem(itemid);
 }
