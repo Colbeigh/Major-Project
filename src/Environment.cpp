@@ -1,29 +1,60 @@
 #include <vector>
 #include "Environment.hpp"
+
 Environment::Environment() { // constructor
  name = "Unknowm Place";
  environmentDescription = "You are in an unknown place.";
 }
 
-Environment::~Environment() {}
-
+Environment::~Environment() {} // destructor
 
 std::string Environment::getDescription() {
     return environmentDescription;
 }
 
-std::vector<int> Environment::getPuzzles() {
-    return puzzles;
+std::vector<std::string> Environment::getPuzzles(std::string puzzles) {
+    //return puzzles;
+}
+
+void Environment::help() {
+    std::cout << "Help is not implemented yet.\n";
+}
+
+
+PassenegerCart::PassenegerCart() {
+    name = "Passenger Cart";
+    environmentDescription = "Looking around the environment, "
+    "you see passeneger, and a ticket master walking around";
+    puzzles = {"puzzle2", "puzzle3"};
+}
+
+PassenegerCart::~PassenegerCart() {}
+
+void PassenegerCart::help() {
+    std::cout << "HELP! HELP! HELP! HELP!.\n";
+}
+
+std::vector<std::string> PassenegerCart::getPuzzles(std::string puzzles) {
+    //return puzzles;
+}
+
+
+DiningCart::DiningCart() {
+    name = "Dining Cart";
+    environmentDescription = "You are in the dining cart. The smell of food fills the air.";
+    puzzles = {"puzzle4", "puzzle5"};
+    
+};
+
+DiningCart::~DiningCart() {};
+
+void DiningCart::help() {
+    std::cout << "HELP! HELP! HELP! HELP!.\n";
+}
+
+std::vector<std::string> DiningCart::getPuzzles(std::string puzzles) {
+   // return puzzles;
 }
 
 
 
-
-//std::vector<std::string> createNPC = {"Ticket Master"
-//, "Rich Lady", "Bouncer"};  // vector of NPC names
-//std::vector<NPC> npcs; // vector of NPC objects
-    // for (int i = 0; i < createNPC.size(); i++)
-    //     addNPC(createNPC[i]);
-// void Environment::addNPC(const std::string& npcName) {
-//     npcs.emplace_back(npcName);
-// }
