@@ -5,6 +5,7 @@
 #include "InteractEnvironment.hpp"
 //#include "Interact_Puzzle.hpp"
 #include "FactoryEnvironment.hpp"
+#include "FactoryPuzzle.hpp"
 #include "Player.hpp"
 
 #ifndef GAME_H_INCLUDED
@@ -19,10 +20,10 @@ class Game {
   Game(const Game&) = delete;
   Game& operator=(const Game&) = delete;
   void gameLoop();
-  void promptPuzzles(std::vector<int> puzzles);
+  void promptPuzzles(std::vector<std::string> puzzles);
   int userInput(int length);
   //bool isRunning();
-  void createPuzzle();
+  void createPuzzle(std::string userinput);
   void changeEnvironment();
   void ischangeEnv();
 
@@ -31,7 +32,7 @@ class Game {
   std::vector<std::string> environments;
   InteractEnvironment intenv;
   //interactPuzzle intpuz;
-  std::vector<int> puzzles;
+  std::vector<std::string> puzzles;
   bool changeenv;
 };
 
