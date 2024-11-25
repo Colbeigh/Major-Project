@@ -28,7 +28,7 @@ class Puzzle {
 };
 
 class ticketPuzzle: public Puzzle {
-  public:
+ public:
   ticketPuzzle();
   ~ticketPuzzle();
   void startPuzzle(Player *player, std::vector<std::string >* puzzles,
@@ -39,8 +39,9 @@ class ticketPuzzle: public Puzzle {
   void giveReward(Player* player) override;
   bool solved();
 
-  private:
+ private:
   NPC* TM;
   Inventory* chest;
 };
+
 #endif//Puzzle_hpp_included

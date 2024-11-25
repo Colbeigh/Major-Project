@@ -19,7 +19,7 @@ void ticketPuzzle::startPuzzle(Player* player, std::vector<std::string>* puzzles
 event(player);
 }
 
-void ticketPuzzle::event(Player* player){
+void ticketPuzzle::event(Player* player) {
 int playerchoice;
 std::cout << "The TicketMaster Approaches you\n";
 TM->displayDialogue(0); 
