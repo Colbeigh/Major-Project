@@ -2,6 +2,7 @@
 
 Game::Game() {
   curenv = FactEnv.createEnvironment(*environments.begin());
+  changeenv = false;
 }
 
 Game::~Game() {
@@ -111,4 +112,4 @@ FactoryEnvironment FactEnv;
 InteractPuzzle intpuz;
 FactoryPuzzle FactPuz;
 std::vector<std::string>* puzzles;
-bool* changeenv = false;
+bool* changeenv;
