@@ -15,10 +15,9 @@ class Game {
  public:
   Game();
   virtual ~Game();
-  void Start();
-  void gameLoop();
   Game(const Game&) = delete;
   Game& operator=(const Game&) = delete;
+  void Start();
   void gameLoop();
   void promptPuzzles(std::vector<std::string> puzzles);
   int userInput(int length);
