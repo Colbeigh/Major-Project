@@ -59,7 +59,7 @@ void Inventory::createItem(std::string itemid) {
      delete item;
      item = nullptr;
   }
-  item = FacItem.createItem(itemid); 
+  item = FacItem.createItem(itemid);
 }
 
 std::vector<std::string> items;

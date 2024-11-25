@@ -20,10 +20,10 @@ bool Player::isAlive() {
   return alive;
 }
 
-void Player::setAlive(){
+void Player::setAlive() {
   alive = true;
 }
 
-void Player::setKill(){
+void Player::setKill() {
   alive = false;
 }

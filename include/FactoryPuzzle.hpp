@@ -6,7 +6,7 @@
 
 class FactoryPuzzle {
  public:
- static Puzzle* createPuzzle(const std::string& name);
+  static Puzzle* createPuzzle(const std::string& name);
 };
 
 #endif

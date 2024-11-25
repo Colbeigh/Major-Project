@@ -8,6 +8,9 @@ Game::Game() {
 Game::~Game() {
   delete curenv;
   delete currentpuzzle;
+  delete changeenv;
+  delete puzzles;
+  delete player;
 }
 
 void Game::Start() {
@@ -17,13 +20,17 @@ void Game::Start() {
 }
 
 void Game::gameLoop() {
-  while (isRunning) {
-    std::cout << "You have entered into a new cart " << intenv.getName() << "\n";
+  player->setAlive();
+  while (player->isAlive()) {
+    std::cout << "You have entered into a new cart " <<
+    intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
-    puzzles = intenv.getPuzzles();
-    while (ischangeEnv == false){
-      promptPuzzles(puzzles);
-      std::string userinput = puzzles[userInput(puzzles.size() + 1)];
+    delete puzzles;
+    puzzles = nullptr;
+    puzzles = new std::vector<std::string>(intenv.getPuzzles());
+    while (ischangeEnv == false) {
+      promptPuzzles(*puzzles);
+      std::string userinput = (*puzzles)[userInput(puzzles->size()) - 1];
       std::cout << userinput << std::endl;
       createPuzzle(userinput);
       intpuz.startPuzzle(player, puzzles, changeenv);
@@ -60,11 +67,11 @@ int Game::userInput(int length) {
 }
 
 bool isRunning() {
-  return player.isAlive();
+  return player-> isAlive();
 }
 
 void Game::createPuzzle(std::string userinput) {
- if (currentpuzzle != nullptr) {
+  if (currentpuzzle != nullptr) {
      delete currentpuzzle;
     currentpuzzle = nullptr;
   }
@@ -85,13 +92,15 @@ void Game::changeEnvironment() {
 }
 
 void Game::ischangeEnv() {
-  if (changeenv == true) {
+  if (*changeenv == true) {
     changeEnvironment();
-    changeenv = false;
+    delete changeenv;
+    changeenv = nullptr;
+    *changeenv = false;
   }
 }
 
-Player player;
+Player* player = new Player;
 Environment* curenv = nullptr;
 std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
 "Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"
@@ -102,5 +111,5 @@ InteractEnvironment intenv;
 FactoryEnvironment FactEnv;
 InteractPuzzle intpuz;
 FactoryPuzzle FactPuz;
-std::vector<std::string> puzzles;
-bool changeenv = false;
+std::vector<std::string>* puzzles;
+bool* changeenv = false;
