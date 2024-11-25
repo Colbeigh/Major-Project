@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include "Environment.hpp"
-#include "Player.hpp"
 
 #ifndef INTERACT_ENVIRONMENT_H_INCLUDED
 #define INTERACT_ENVIRONMENT_H_INCLUDED
@@ -14,8 +13,8 @@ class InteractEnvironment {
   void setEnvironment(Environment* env);
   std::string getName();
   std::string getDesc();
-  //std::string getHelp()
-  std::vector<int> getPuzzles();
+  std::string getHelp();
+  std::vector<std::string> getPuzzles();
 
   Environment* environment;
 };

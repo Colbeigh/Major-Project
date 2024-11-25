@@ -28,16 +28,16 @@ std::string InteractEnvironment::getDesc() {
   return environment ->getDescription();
   }
 
-//std::string InteractEnvironment::getHelp() {
-//     if (environment == nullptr) {
-// return ""
-//}
-//return environment -> getHelp()
-//}
+std::string InteractEnvironment::getHelp() {
+    if (environment == nullptr) {
+ return "";
+}
+return environment -> help();
+}
 
-std::vector<int> InteractEnvironment::getPuzzles() {
+std::vector<std::string> InteractEnvironment::getPuzzles() {
   if (environment == nullptr) {
-     return std::vector<int>();
+     return std::vector<std::string>();
   }
   return environment -> getPuzzles();
 }
