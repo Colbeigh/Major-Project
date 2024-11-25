@@ -1,7 +1,7 @@
 #include <vector>
 #include "Environment.hpp"
 #include "PassengerCar.hpp"
-Environment::Environment() { // constructor
+Environment::Environment(std::string) { // constructor
 }
 
 Environment::~Environment() {}
