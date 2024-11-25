@@ -17,3 +17,7 @@ void Player::addItem(std::string itemid) {
 void Player::remItem(std::string itemid) {
   playerinv.remItem(itemid);
 }
+
+bool Player::isAlive() {
+  return alive;
+}

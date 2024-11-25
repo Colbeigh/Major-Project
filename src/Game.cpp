@@ -60,11 +60,7 @@ int Game::userInput(int length) {
 }
 
 bool isRunning() {
-  if (player.alive == false) {
-    return false;
-  } else {
-    return true;
-  }
+  return player.isAlive();
 }
 
 void Game::createPuzzle(std::string userinput) {

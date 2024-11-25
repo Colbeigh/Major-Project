@@ -12,6 +12,7 @@ class Player {
   bool hasItem(std::string itemid);
   void addItem(std::string itemid);
   void remItem(std::string itemid);
+  bool isAlive();
 
   Inventory playerinv;
   std::string name;
