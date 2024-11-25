@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include <vector>
 #include "Inventory.hpp"
 #include "Player.hpp"
 #include "NPC.hpp"
@@ -23,24 +24,23 @@ class Puzzle {
   virtual void failPuzzle(Player *player) = 0;
   virtual void solution(Player *player) = 0;
   virtual void giveReward(Player *player) = 0;
-  
+//
 };
 
 class ticketPuzzle: public Puzzle {
-public:
-ticketPuzzle();
-~ticketPuzzle();
-void startPuzzle(Player *player, std::vector<std::string >* puzzles,
-bool* changeenv) override;
-void event (Player* player) override;
-void failPuzzle(Player* player) override;
-void solution(Player* player) override;
-void giveReward(Player* player) override;
-bool solved();
+  public:
+  ticketPuzzle();
+  ~ticketPuzzle();
+  void startPuzzle(Player *player, std::vector<std::string >* puzzles,
+  bool* changeenv) override;
+  void event(Player* player) override;
+  void failPuzzle(Player* player) override;
+  void solution(Player* player) override;
+  void giveReward(Player* player) override;
+  bool solved();
 
-private:
-NPC* TM;
-Inventory* chest;
+  private:
+  NPC* TM;
+  Inventory* chest;
 };
-
-#endif //Puzzle_hpp_included
+#endif//Puzzle_hpp_included
