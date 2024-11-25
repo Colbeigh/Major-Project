@@ -5,12 +5,12 @@
 
 #include "Puzzle.hpp"
 
-ticketPuzzle::ticketPuzzle(){
+ticketPuzzle::ticketPuzzle() {
 TM = new ticketMaster;
 chest = new Inventory;
 }
 
-ticketPuzzle::~ticketPuzzle(){
+ticketPuzzle::~ticketPuzzle() {
     delete TM;
     delete chest;
 }
@@ -22,9 +22,9 @@ event(player);
 void ticketPuzzle::event(Player* player) {
 int playerchoice;
 std::cout << "The TicketMaster Approaches you\n";
-TM->displayDialogue(0); 
+TM->displayDialogue(0);
 std::cout <<"What would you like to do?\n"<<
-"1. Give him the ticket.\n 2. Do not give him the ticket.\n"; 
+"1. Give him the ticket.\n 2. Do not give him the ticket.\n";
     while (true) {
         std::cin >> playerchoice;
         if (std::cin.fail()) {
@@ -51,12 +51,12 @@ player->setKill();
 }
 
 void ticketPuzzle::solution(Player* player) {
-std::cout << "You give him the ticket\n"; 
+std::cout << "You give him the ticket\n";
 player->remItem("Ticket");
 std::cout <<"You watch him punch the ticket and hands back it to you\n";
 TM->displayDialogue(1);
 giveReward(player);
-std::cout << "You notice something strange about the ticket\n" << 
+std::cout << "You notice something strange about the ticket\n" <<
 "Enter 4, to check Inventory\n";
 player->setAlive();
 solved();
@@ -64,7 +64,6 @@ solved();
 
 void ticketPuzzle::giveReward(Player* player) {
 player->addItem("PunchedTicket");
-
 }
 
 bool ticketPuzzle::solved() {
