@@ -67,4 +67,5 @@ void bouncer::initializeDialogueOptions() {
                              "get into the casino");
     dialogueLines.push_back("Alright you're good to go, don't "
                              "go causing any trouble in there");
+    dialogueLines.push_back("Ticket?");
 }
