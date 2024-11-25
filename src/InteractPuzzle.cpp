@@ -19,5 +19,5 @@ std::vector<std::string> &puzzles, bool &changeenv) {
   if (puzzle != nullptr) {
     delete puzzle;
   }
-  puzzle ->Start();
+  puzzle ->startPuzzle();
 }
