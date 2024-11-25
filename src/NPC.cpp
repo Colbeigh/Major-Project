@@ -46,5 +46,18 @@ richLady::richLady() {
 richLady::~richLady() {}
 
 void richLady::initializeDialogueOptions() {
-    dialogueLines.push_back("Hello Sweetie, I got a lot of money");
+    dialogueLines.push_back("Oh you're so sweet, you do know how to make a lady blush");
+    dialogueLines.push_back("Were you just trying to steal my lucky quarter? How dare you!");
+}
+
+//Bouncher implementations
+bouncer::bouncer() {
+    initializeDialogueOptions();
+}
+
+bouncer::~bouncer() {}
+
+void bouncer::initializeDialogueOptions() {
+    dialogueLines.push_back("You need a gambling ticket to get into the casino");
+    dialogueLines.push_back("Alright you're good to go, don't go causing any trouble in there");
 }

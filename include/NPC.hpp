@@ -35,4 +35,11 @@ class richLady : public NPC {
   ~richLady();
   void initializeDialogueOptions() override;
 };
+
+class bouncer : public NPC {
+ public:
+  bouncer();
+  ~bouncer();
+  void initializeDialogueOptions() override;
+};
 #endif
