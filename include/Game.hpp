@@ -38,5 +38,4 @@ class Game {
   std::vector<std::string>* puzzles;
   bool* changeenv;
 };
-
 #endif
