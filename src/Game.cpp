@@ -27,7 +27,7 @@ void Game::gameLoop() {
     delete puzzles;
     puzzles = nullptr;
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
-    while (ischangeEnv == false) {
+    while (!ischangeEnv()) {
       promptPuzzles(*puzzles);
       std::string userinput = (*puzzles)[userInput(puzzles->size()) - 1];
       std::cout << userinput << std::endl;
