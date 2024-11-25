@@ -5,8 +5,8 @@
 #include "Puzzle.hpp"
 
 class FactoryPuzzle {
-    public:
-    static Puzzle* createPuzzle(const std::string& name);
+ public:
+  static Puzzle* createPuzzle(const std::string& name);
 };
 
 #endif
