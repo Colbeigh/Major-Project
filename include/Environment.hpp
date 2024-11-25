@@ -23,7 +23,17 @@ class Environment {
     std::vector<int> puzzles;
 };
 
-#endif //ENVIRONMENT_H_INCLUDED
+class PassenegerCart : public Environment {
+ public:
+    PassenegerCart();
+    virtual ~PassenegerCart();
+};
 
-    //std::list<NPC> npcs;
-    //void addNPC(const std::string& npc)
+
+class DiningCart : public Environment {
+ public:
+    DiningCart();
+    virtual ~DiningCart();
+};
+
+#endif //ENVIRONMENT_H_INCLUDED
