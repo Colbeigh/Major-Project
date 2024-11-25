@@ -1,8 +1,6 @@
 #include "Player.hpp"
 
-Player::Player() : name("Default") {
-  bool alive = true;
-}
+Player::Player() : name("Default") {}
 
 Player::~Player() {}
 
@@ -20,4 +18,12 @@ void Player::remItem(std::string itemid) {
 
 bool Player::isAlive() {
   return alive;
+}
+
+void Player::setAlive(){
+  alive = true;
+}
+
+void Player::setKill(){
+  alive = false;
 }
