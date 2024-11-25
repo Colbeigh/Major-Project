@@ -6,15 +6,11 @@
 #include <iostream>
 #include <string>
 
-NPC::NPC() {
-    name = "Default NPC";
-    initializeDialogueOptions();
-}
+//NPC base class implementation
+NPC::NPC() : name("Default NPC") {}
 
-NPC::NPC(const std::string NPCname) {
-    name = NPCname;
-    initializeDialogueOptions();
-}
+
+NPC::NPC(const std::string NPCname) : name(NPCname) {}
 
 NPC::~NPC() {}
 
@@ -22,12 +18,21 @@ std::string NPC::getName() {
     return name;
 }
 
-void NPC::initializeDialogueOptions() {
-    dialogue[HAPPY] = "This dialogue is happy";
-    dialogue[SAD] = "This dialogue is sad";
-    dialogue[ANGRY] = "This dialogue is angry";
+//ticketMaster implementations
+ticketMaster::ticketMaster() {
+    initializeDialogueOptions();
 }
 
-void NPC::displayDialogue(dialogueOptions option) {
-    std::cout << dialogue[option] << std::endl;
+ticketMaster::~ticketMaster() {};
+
+void ticketMaster::initializeDialogueOptions() {
+    dialogueLines.push_back("Welcome abord, may I see your ticket?");
+    dialogueLines.push_back("Thank you for travelling with us. Enjoy the ride!");
+}
+
+void ticketMaster::displayDialogue(int index) {
+    if (index >= 0 && index < dialogueLines.size()) {
+        std::cout << dialogueLines[index];
+    }
+    else std::cout << "That dialoggue line doesn't exist" << std::endl;
 }

@@ -4,23 +4,35 @@
  */
 #include <iostream>
 #include <string>
-#include <map>
+#include <vector>
 #ifndef NPC_HPP_INCLUDED
 #define NPC_HPP_INCLUDED
 class NPC {
  public:
-  enum dialogueOptions {HAPPY, SAD, ANGRY}; //enum for our default dialogue
   NPC(); //default constructor
   NPC(const std::string NPCname); //name constructor
   virtual ~NPC(); //destructor
   std::string getName();
-  void initializeDialogueOptions();
-  void displayDialogue(dialogueOptions option);
+  
 
- private:
+  //pure virrtual functions that must be impleneted by derived classes
+  virtual void displayDialogue(int index) = 0;
+  virtual void initializeDialogueOptions() = 0;
+
+
+ protected:
   std::string name;
-  //map with dialogueOptions key and string value
-  std::map<dialogueOptions, std::string> dialogue;
+  //vector of dialogue options
+  std::vector<std::string> dialogueLines;
+};
+
+class ticketMaster : public NPC {
+ public:
+  ticketMaster(); //constructor
+  ~ticketMaster(); //destructor
+  void initializeDialogueOptions() override;
+  void displayDialogue(int index) override;
+   
 };
 
 #endif
