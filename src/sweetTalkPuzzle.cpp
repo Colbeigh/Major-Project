@@ -17,6 +17,7 @@
 
   void sweetTalkPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
   bool* changeenv) {
+    p= puzzles;
     event(player);
   }
 
@@ -24,7 +25,6 @@
     int playerchoice;
     std::cout << "You approach the Rich Lady.\n" <<
     "You notice the lady holding a ticket.\n";
-    //rich lady dialogue
     std::cout << "What would you like to do?\n" <<
     "1. Sweet talk the Rich Lady.\n 2. Try to steal ticket.\n";
     while (true) {
@@ -47,8 +47,8 @@
   }
 
   void sweetTalkPuzzle::failPuzzle(Player* player) {
-    std::cout << "You try to steal the ticket but failed.\n";
-    //richlady dialogue
+    std::cout << "You try to steal the ticket and the coin but failed.\n";
+    RL->displayDialogue(3);
     std::cout << "You watch her storm off and drop the ticket\n" <<
     "What would you like to do?\n";
     int playerchoice;
@@ -73,9 +73,9 @@
 
   void sweetTalkPuzzle::solution(Player* player) { 
     std::cout << "You decided to sweet talk the Rich Lady\n";
-    //rich lady dialogue
+    RL->displayDialogue(0);
     std::cout << "She hands you the ticket and her lucky coin\n";
-    //rich lady dialogue
+    RL->displayDialogue(1);
     player->setAlive();
     giveReward(player);
     solved("sweetTalkPuzzle");
