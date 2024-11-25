@@ -8,3 +8,4 @@ Environment* FactoryEnvironment::createEnvironment(const std::string& type) {
     }  else {
         return nullptr;
     }
+}
