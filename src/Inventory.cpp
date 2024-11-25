@@ -59,9 +59,9 @@ void Inventory::createItem(std::string itemid) {
      delete item;
      item = nullptr;
   }
-  item = new Item();
-  item ->
+  item = FacItem.createItem(itemid); 
 }
 
 std::vector<std::string> items;
 Item* item = nullptr;
+FactoryItem FacItem;

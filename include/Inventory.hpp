@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "FactoryItem.hpp"
 #include "Item.hpp"
 
 #ifndef INVENTORY_H_INCLUDED
@@ -19,6 +20,7 @@ class Inventory {
 
   std::vector<std::string> items;
   Item* item;
+  FactoryItem FacItem;
 };
 
 #endif
