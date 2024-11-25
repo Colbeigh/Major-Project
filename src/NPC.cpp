@@ -18,23 +18,33 @@ std::string NPC::getName() {
     return name;
 }
 
+void NPC::displayDialogue(int index) {
+     if (index >= 0 && index < dialogueLines.size()) {
+        std::cout << dialogueLines[index];
+    } else {
+        std::cout << "That dialogue line doesn't exist" << std::endl;
+    }
+}
+
 //ticketMaster implementations
 ticketMaster::ticketMaster() {
     initializeDialogueOptions();
 }
 
-ticketMaster::~ticketMaster() {}\
+ticketMaster::~ticketMaster() {}
 
 void ticketMaster::initializeDialogueOptions() {
-    dialogueLines.push_back("Welcome abord, may I see your ticket?");
+    dialogueLines.push_back("Welcome aboard, may I see your ticket?");
     dialogueLines.push_back("Thank you for travelling with us. "
                              "Enjoy the ride!");
 }
+//richlady Implementations
+richLady::richLady() {
+    initializeDialogueOptions();
+}
 
-void ticketMaster::displayDialogue(int index) {
-    if (index >= 0 && index < dialogueLines.size()) {
-        std::cout << dialogueLines[index];
-    } else {
-        std::cout << "That dialogue line doesn't exist" << std::endl;
-    }
+richLady::~richLady() {}
+
+void richLady::initializeDialogueOptions() {
+    dialogueLines.push_back("Hello Sweetie, I got a lot of money");
 }
