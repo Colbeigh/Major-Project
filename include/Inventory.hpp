@@ -14,6 +14,7 @@ class Inventory {
   bool hasItem(std::string itemid);
   void addItem(std::string itemid);
   void remItem(std::string itemid);
+  void listItems();
   std::string getName(std::string itemid);
   std::string getDesc(std::string itemid);
   void createItem(std::string itemid);

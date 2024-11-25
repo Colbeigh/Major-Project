@@ -36,6 +36,13 @@ void Inventory::remItem(std::string itemid) {
   std::cout << "You do not have" << getName(itemid) <<"\n";
 }
 
+void Inventory::listItems() {
+  for (int i = 0; i < items.size(); ++i) {
+      std::cout << "* " << getName(items[i]) << std::endl;
+      }
+}
+
+
 std::string Inventory::getName(std::string itemid) {
   createItem(itemid);
   std::string name;
