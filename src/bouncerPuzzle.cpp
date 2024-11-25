@@ -5,29 +5,29 @@
 
 #include "Puzzle.hpp"
 
-bouncerPuzzle::bouncerPuzzle(): p(nullptr), change(nullptr){
+bouncerPuzzle::bouncerPuzzle(): p(nullptr), change(nullptr) {
 B = new bouncer;
 chest = new Inventory;
 }
 
-bouncerPuzzle::~bouncerPuzzle(){
+bouncerPuzzle::~bouncerPuzzle() {
 delete B;
 delete chest;
 }
 
 void bouncerPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
-  bool* changeenv){
+  bool* changeenv) {
 p = puzzles;
 change = &changeenv;
 event(player);
 }
 
-void bouncerPuzzle::event(Player* player){
+void bouncerPuzzle::event(Player* player) {
 int playerchoice;
 std::cout << "You approach the Bouncer\n";
 B->displayDialogue(3);
 std::cout << "What would you like to do?\n";
-    if(player->hasItem("GamblingTicket") == false){
+    if (player->hasItem("GamblingTicket") == false) {
     failPuzzle(player);
     } else {
 "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
@@ -52,13 +52,13 @@ std::cout << "What would you like to do?\n";
 }
 
 void bouncerPuzzle::failPuzzle(Player* player) {
-    std::cout << "What ticket?\n"; 
+    std::cout << "What ticket?\n";
     B->displayDialogue(0);
 }
 
 void bouncerPuzzle::solution(Player* player) {
     std::cout << "You give him the Gambling ticket\n";
-    player->remItem("GamblingTicket");
+    player->remItem ("GamblingTicket");
     B->displayDialogue(2);
     solved("bouncerPuzzle");
     **change = true;
@@ -67,7 +67,7 @@ void bouncerPuzzle::solution(Player* player) {
 void bouncerPuzzle::giveReward(Player* player) {
 }
 
-bool bouncerPuzzle::solved(const std::string& puzzleId){
+bool bouncerPuzzle::solved(const std::string& puzzleId) {
     for (int i = 0; i < p->size(); ++i) {
        if (puzzleId == (*p)[i]) {
            p->erase(p->begin() + i);
