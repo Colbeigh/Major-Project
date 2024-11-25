@@ -13,8 +13,8 @@ class Player {
   void addItem(std::string itemid);
   void remItem(std::string itemid);
   bool isAlive();
-  void Player::setAlive();
-  void Player::setKill();
+  void setAlive();
+  void setKill();
 
   Inventory playerinv;
   std::string name;

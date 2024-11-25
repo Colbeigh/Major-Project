@@ -15,10 +15,9 @@ class Game {
  public:
   Game();
   virtual ~Game();
-  void Start();
-  void gameLoop();
   Game(const Game&) = delete;
   Game& operator=(const Game&) = delete;
+  void Start();
   void gameLoop();
   void promptPuzzles(std::vector<std::string> puzzles);
   int userInput(int length);
@@ -28,12 +27,15 @@ class Game {
   void ischangeEnv();
 
   Player* player;
-  Environment currentEnvironment;
+  Environment currenv;
   std::vector<std::string> environments;
+
+  Puzzle* currentpuzzle;
   InteractEnvironment intenv;
+  FactoryEnvironment FactEnv;
   InteractPuzzle intpuz;
+  FactoryPuzzle FactPuz;
   std::vector<std::string>* puzzles;
   bool* changeenv;
 };
-
 #endif

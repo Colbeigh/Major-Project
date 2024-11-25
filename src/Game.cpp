@@ -2,7 +2,7 @@
 
 Game::Game() {
   curenv = FactEnv.createEnvironment(*environments.begin());
-  curenv -> getName();
+  changeenv = false;
 }
 
 Game::~Game() {
@@ -21,14 +21,14 @@ void Game::Start() {
 
 void Game::gameLoop() {
   player->setAlive();
-  while (player->isAlive()) {
+  while (isRunning()) {
     std::cout << "You have entered into a new cart " <<
     intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
     delete puzzles;
     puzzles = nullptr;
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
-    while (ischangeEnv == false) {
+    while (*changeenv == true) {
       promptPuzzles(*puzzles);
       std::string userinput = (*puzzles)[userInput(puzzles->size()) - 1];
       std::cout << userinput << std::endl;
@@ -112,4 +112,4 @@ FactoryEnvironment FactEnv;
 InteractPuzzle intpuz;
 FactoryPuzzle FactPuz;
 std::vector<std::string>* puzzles;
-bool* changeenv = false;
+bool* changeenv;
