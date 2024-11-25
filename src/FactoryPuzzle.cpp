@@ -6,7 +6,7 @@ Puzzle* FactoryPuzzle::createPuzzle(const std::string& type) {
     } else if (type == "Choose where to sit") {
         return new Sit();
     } else if (type == "Talk to Rich Lady") {
-        return new RichLady();
+        return new sweetTalkPuzzle();
     }  else if (type == "Talk to bouncer") {
         return new Bouncer();
     } else {

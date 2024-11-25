@@ -37,11 +37,48 @@ class ticketPuzzle: public Puzzle {
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;
   void giveReward(Player* player) override;
-  bool solved();
+  bool solved(const std::string& puzzleId);
 
  private:
   NPC* TM;
   Inventory* chest;
+  std::vector<std::string>* p;
 };
 
 #endif//Puzzle_hpp_included
+
+class sweetTalkPuzzle: public Puzzle {
+ public:
+  sweetTalkPuzzle();
+  ~sweetTalkPuzzle();
+  void startPuzzle(Player *player, std::vector<std::string >* puzzles,
+  bool* changeenv) override;
+  void event(Player* player) override;
+  void failPuzzle(Player* player) override;
+  void solution(Player* player) override;
+  void giveReward(Player* player) override;
+  bool solved(const std::string& puzzleId);
+
+ private:
+ NPC* RL;
+ Inventory* chest;
+ std::vector<std::string>* p;
+};
+
+class bouncerPuzzle: public Puzzle {
+ public:
+ bouncerPuzzle();
+  ~bouncerPuzzle();
+  void startPuzzle(Player *player, std::vector<std::string >* puzzles,
+  bool* changeenv) override;
+  void event(Player* player) override;
+  void failPuzzle(Player* player) override;
+  void solution(Player* player) override;
+  void giveReward(Player* player) override;
+  bool solved(const std::string& puzzleId);
+
+ private:
+ NPC* B;
+ Inventory* chest;
+ std::vector<std::string>* p;
+};
