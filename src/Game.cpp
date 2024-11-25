@@ -19,10 +19,11 @@ void Game::Start() {
 void Game::gameLoop() {
   player.setAlive();
   while (player.isAlive()) {
-    std::cout << "You have entered into a new cart " << intenv.getName() << "\n";
+    std::cout << "You have entered into a new cart " <<
+    intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
     puzzles = intenv.getPuzzles();
-    while (ischangeEnv == false){
+    while (ischangeEnv == false) {
       promptPuzzles(puzzles);
       std::string userinput = puzzles[userInput(puzzles.size() + 1)];
       std::cout << userinput << std::endl;
@@ -65,7 +66,7 @@ bool isRunning() {
 }
 
 void Game::createPuzzle(std::string userinput) {
- if (currentpuzzle != nullptr) {
+  if (currentpuzzle != nullptr) {
      delete currentpuzzle;
     currentpuzzle = nullptr;
   }

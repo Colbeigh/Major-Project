@@ -5,8 +5,8 @@
 #include "Item.hpp"
 
 class FactoryItem {
- public:
- static Item* createItem(const std::string& name);
+    public:
+    static Item* createItem(const std::string& name);
 };
 
 #endif

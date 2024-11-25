@@ -30,7 +30,7 @@ std::string InteractEnvironment::getDesc() {
 
 std::string InteractEnvironment::getHelp() {
     if (environment == nullptr) {
- return "";
+      return "";
 }
 return environment -> help();
 }
