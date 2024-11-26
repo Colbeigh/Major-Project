@@ -11,8 +11,8 @@ InteractEnvironment::~InteractEnvironment() {
 
 void InteractEnvironment::setEnvironment(Environment* env) {
   if (environment != nullptr) {
-    environment = nullptr;
     delete environment;
+    environment = nullptr;
   }
   environment = env;
   }
