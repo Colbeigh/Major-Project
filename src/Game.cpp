@@ -47,8 +47,8 @@ void Game::gameLoop() {
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
     while (*changeenv == false) {
       promptPuzzles(*puzzles);
-      std::string userinput = (*puzzles)[userInput(puzzles->size()) - 1];
-      std::cout << userinput << std::endl;
+      std::string userinput = (*puzzles)[userInput(puzzles->size() + 1) - 1];
+      std::cout << "you chose " << userinput << std::endl;
       createPuzzle(userinput);
       intpuz.startPuzzle(player, puzzles, changeenv);
       ischangeEnv();
@@ -68,14 +68,14 @@ int Game::userInput(int length) {
      int userinput;
      std::cin >> userinput;
      if (std::cin.fail()) {
-       std::cin.clear(); // Clear the error flag
+       std::cin.clear();
        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
        std::cout << "Invalid input. Please enter an integer between 1 " <<
        "and " << length << ".\n";
-     } else if (userinput < length || userinput > length + 1) {
+     } else if (userinput < 1 || userinput > length ) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
          length + 1 << ".\n";
-      } else if (userinput == length + 1) {
+      } else if (userinput == length) {
          std::cout << intenv.getHelp() << "\n";
       } else {
           return userinput;
@@ -119,7 +119,6 @@ void Game::changeEnvironment() {
 void Game::ischangeEnv() {
   if (*changeenv == true) {
     changeEnvironment();
-    changeenv = nullptr;
     *changeenv = false;
   }
 }
