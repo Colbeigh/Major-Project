@@ -75,14 +75,14 @@ player->addItem("PunchedTicket");
 }
 
 bool ticketPuzzle::solved(const std::string& puzzleId) {
-     if (!p){
+     if (!p) {
     std::cout << "Puzzle is not initialized";
- }
+    }
     for (int i = 0; i < p->size(); ++i) {
        if (puzzleId == (*p)[i]) {
            p->erase(p->begin() + i);
       }
-  }
+    }
 return true;
 }
 
