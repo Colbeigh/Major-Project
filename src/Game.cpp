@@ -1,16 +1,16 @@
 #include "Game.hpp"
 
-Game::Game() : environments{"Passenger Cart", "DiningCart", "Gambling", "Luggage", "Baggage", 
-                   "Between", "Prison", "Medical", "Armory", "Engine"} {
+Game::Game() : environments{"Passenger Cart", "DiningCart",
+"Gambling", "Luggage", "Baggage", "Between", "Prison",
+"Medical", "Armory", "Engine"} {
   if (!environments.empty()) {
         curenv = FactEnv.createEnvironment(*environments.begin());
         if (curenv == nullptr) {
-            std::cerr << "Error: Environment creation failed for: " 
+            std::cerr << "Error: Environment creation failed for: "
                       << *environments.begin() << std::endl;
             exit(EXIT_FAILURE);
         }
-        intenv.setEnvironment(curenv); // Set the environment for InteractEnvironment
-        environments.erase(environments.begin());
+        intenv.setEnvironment(curenv);
     } else {
         std::cerr << "Error: No environments available." << std::endl;
         exit(EXIT_FAILURE);
@@ -73,7 +73,7 @@ int Game::userInput(int length) {
        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
        std::cout << "Invalid input. Please enter an integer between 1 " <<
        "and " << length << ".\n";
-     } else if (userinput < 1 || userinput > length ) {
+     } else if (userinput < 1 || userinput > length) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
          length + 1 << ".\n";
       } else if (userinput == length) {
@@ -97,7 +97,7 @@ void Game::createPuzzle(std::string userinput) {
   currentpuzzle = FactPuz.createPuzzle(userinput);
 
   if (currentpuzzle == nullptr) {
-    std::cerr << "Error: Puzzle creation failed for input: " << 
+    std::cerr << "Error: Puzzle creation failed for input: " <<
     userinput << std::endl;
     return;
   }
