@@ -101,7 +101,6 @@ class doorPuzzle: public Puzzle {
 
  private:
   std::vector<std::string>* p;
-  bool** change;
 };
 
 #endif//Puzzle_hpp_included
