@@ -33,7 +33,7 @@ PassenegerCart::PassenegerCart() {
     "you see passeneger, and a ticket master walking around";
     helpInfo = "You can ask the ticket master for help.";
     puzzles = {"Talk to Ticket Master", "Talk to Rich Lady", 
-    "Talk to bouncer"};
+    "Talk to bouncer", "Pick a seat"};
 }
 
 PassenegerCart::~PassenegerCart() {}
