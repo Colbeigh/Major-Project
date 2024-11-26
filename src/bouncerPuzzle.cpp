@@ -24,7 +24,7 @@ event(player);
 
 void bouncerPuzzle::event(Player* player) {
 std::cout << "You approach the Bouncer\n";
-B->displayDialogue(3);
+B->displayDialogue(2);
 std::cout << "What would you like to do?\n";
     if (player->hasItem("GamblingTicket") == false) {
     failPuzzle(player);
