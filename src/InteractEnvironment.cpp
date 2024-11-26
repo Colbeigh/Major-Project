@@ -2,7 +2,7 @@
 
 
 InteractEnvironment::InteractEnvironment() {
-  Environment* environment = nullptr;
+  environment = nullptr;
 }
 
 InteractEnvironment::~InteractEnvironment() {
@@ -10,13 +10,15 @@ InteractEnvironment::~InteractEnvironment() {
 }
 
 void InteractEnvironment::setEnvironment(Environment* env) {
-  delete environment;
-environment = env;
+  if (environment != nullptr) {
+    delete environment;  // Avoid double deletion if environment already holds a pointer
+  }
+  environment = env;
   }
 
 std::string InteractEnvironment::getName() {
   if (environment != nullptr) {
-    delete environment;
+    return "";
   }
   return environment ->getName();
 }
