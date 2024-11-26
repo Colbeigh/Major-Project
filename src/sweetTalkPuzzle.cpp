@@ -67,7 +67,6 @@
             break;
             }
     }
-    player->setAlive();
     solved("Talk to Rich Lady");
   }
 
@@ -76,7 +75,6 @@
     RL->displayDialogue(0);
     std::cout << "She hands you the ticket and her lucky coin\n";
     RL->displayDialogue(1);
-    player->setAlive();
     giveReward(player);
     solved("Talk to Rich Lady");
   }
@@ -87,6 +85,7 @@
   }
 
   void sweetTalkPuzzle::addPuzzle(const std::string& puzzleId) {
+
   }
 
   bool sweetTalkPuzzle::solved(const std::string& puzzleId) {

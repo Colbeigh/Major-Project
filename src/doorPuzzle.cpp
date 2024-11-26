@@ -47,6 +47,8 @@ std::cout << "You decided to stay!\n";
 
 void doorPuzzle::solution(Player* player)  {
 solved("Move to new cart");
+addPuzzle("Talk to Rich Lady");
+addPuzzle("Talk to bouncer");
 **change = true;
 }
 
@@ -54,6 +56,7 @@ void doorPuzzle::giveReward(Player* player)  {
 }
 
 void doorPuzzle::addPuzzle(const std::string& puzzleId) {
+p->push_back(puzzleId);
 }
 
  bool doorPuzzle::solved(const std::string& puzzleId) {
