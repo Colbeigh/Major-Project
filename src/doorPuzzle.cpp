@@ -5,7 +5,7 @@
 
 #include "Puzzle.hpp"
 
-doorPuzzle::doorPuzzle() : change(nullptr), p(nullptr) {
+doorPuzzle::doorPuzzle() : p(nullptr) {
 }
 
 doorPuzzle::~doorPuzzle() {
@@ -14,7 +14,6 @@ doorPuzzle::~doorPuzzle() {
 void doorPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
 bool* changeenv)  {
 p = puzzles;
-change = &changeenv;
 event(player);
 }
 
