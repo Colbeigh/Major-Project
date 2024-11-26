@@ -41,23 +41,43 @@ void Game::Start() {
 
 void Game::gameLoop() {
   player->setAlive();
+  bool temp = true;  // Declare temp once at the beginning
+
   while (isRunning()) {
     std::cout << "You have entered into a new cart " <<
     intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
-    changeEnvironment();
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
+    
+    std::cout << "Would you like to go to the next cart?\n" <<
+    "Press capital Y to continue: ";
+    
+    char userin2;
+    std::cin >> userin2;
+    int temp = 0;
 
-    while (*changeenv == false) {
+    if (userin2 == 'Y') {
+      if (temp == 0){
+        curenv = new DiningCart;
+        temp = 1;
+      } else {
+        curenv = new PassenegerCart();
+        temp = 0;
+      }
+      intenv.setEnvironment(curenv);
+      temp = false;
+    }
+
+    while (*changeenv == false && temp) {
       promptPuzzles(*puzzles);
       std::string userinput = (*puzzles)[userInput(puzzles->size() + 1) - 1];
-      std::cout << "you chose " << userinput << std::endl;
+      std::cout << "You chose: " << userinput << std::endl;
       createPuzzle(userinput);
       intpuz.startPuzzle(player, puzzles, changeenv);
-      std:: cout << changeenv << "\n";
+      std::cout << changeenv << "\n";
       ischangeEnv();
-      }
     }
+  }
 }
 
 void Game::promptPuzzles(std::vector<std::string> puzzles) {
