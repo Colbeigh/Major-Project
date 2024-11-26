@@ -29,7 +29,7 @@ std::cout << "What would you like to do?\n";
     if (player->hasItem("GamblingTicket") == false) {
     failPuzzle(player);
     } else {
-"1. Give him the ticket.\n 2. Do not give him the ticket.\n";
+std::cout << "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
     while (true) {
         int playerchoice;
         std::cin >> playerchoice;
