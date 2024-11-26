@@ -35,29 +35,55 @@ Game::~Game() {
 
 void Game::Start() {
   std::string prologue = "This is the prologue";
-  std::cout << prologue << "\n";
+  std::cout << prologue <<"\nProgram does not" << 
+  "currently have an exit and breaks at certain " <<
+  "points please rerun and change environment to see all" << 
+  "functions\n for this milestone\n";
   gameLoop();
 }
 
 void Game::gameLoop() {
   player->setAlive();
-  while (isRunning()) {
-    std::cout << "You have entered into a new cart " <<
-    intenv.getName() << "\n";
-    std::cout << intenv.getDesc() << "\n";
-    changeEnvironment();
-    puzzles = new std::vector<std::string>(intenv.getPuzzles());
 
-    while (*changeenv == false) {
+  while (isRunning()) {
+    bool temp = true;
+    std::cout << "You have entered into a new cart " << intenv.getName() << "\n";
+    std::cout << intenv.getDesc() << "\n";
+    puzzles = new std::vector<std::string>(intenv.getPuzzles());
+    
+    std::cout << "Would you like to go to the next cart?\n"
+              << "Press capital Y to change and anything else to not ";
+    
+    char userin2;
+    std::cin >> userin2;
+
+    static int tempnum = 0; 
+
+    if (userin2 == 'Y') {
+      if (tempnum == 0) {
+        delete curenv;
+        curenv = nullptr;
+        curenv = new DiningCart;
+      } else {
+        delete curenv;
+        curenv = nullptr;
+        curenv = new PassenegerCart();
+      }
+      temp = false;
+      intenv.setEnvironment(curenv);
+      tempnum = (tempnum + 1) % 2;
+    }
+
+    while (temp) {
       promptPuzzles(*puzzles);
       std::string userinput = (*puzzles)[userInput(puzzles->size() + 1) - 1];
-      std::cout << "you chose " << userinput << std::endl;
+      std::cout << "You chose: " << userinput << std::endl;
       createPuzzle(userinput);
       intpuz.startPuzzle(player, puzzles, changeenv);
-      std:: cout << changeenv << "\n";
+      std::cout << changeenv << "\n";
       ischangeEnv();
-      }
     }
+  }
 }
 
 void Game::promptPuzzles(std::vector<std::string> puzzles) {
