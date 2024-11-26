@@ -32,7 +32,7 @@ PassenegerCart::PassenegerCart() {
     environmentDescription = "Looking around the environment, "
     "you see passeneger, and a ticket master walking around";
     helpInfo = "You can ask the ticket master for help.";
-    puzzles = {"Talk to Ticket Master", "Choose where to sit"};
+    puzzles = {"Talk to Ticket Master"};
 }
 
 PassenegerCart::~PassenegerCart() {}
