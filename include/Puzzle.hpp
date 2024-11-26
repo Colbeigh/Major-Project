@@ -43,10 +43,7 @@ class ticketPuzzle: public Puzzle {
   NPC* TM;
   Inventory* chest;
   std::vector<std::string>* p;
-  bool** change;
 };
-
-#endif//Puzzle_hpp_included
 
 class sweetTalkPuzzle: public Puzzle {
  public:
@@ -84,3 +81,21 @@ class bouncerPuzzle: public Puzzle {
   std::vector<std::string>* p;
   bool** change;
 };
+
+class doorPuzzle: public Puzzle {
+ public:
+  doorPuzzle();
+  ~doorPuzzle();
+  void startPuzzle(Player *player, std::vector<std::string >* puzzles,
+  bool* changeenv) override;
+  void event(Player* player) override;
+  void failPuzzle(Player* player) override;
+  void solution(Player* player) override;
+  void giveReward(Player* player) override;
+  bool solved(const std::string& puzzleId);
+
+ private:
+  bool** change;
+};
+
+#endif//Puzzle_hpp_included

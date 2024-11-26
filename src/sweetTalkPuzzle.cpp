@@ -60,7 +60,7 @@
             std::streamsize>::max(), '\n');
             std::cout <<"You only have one choice!";
         } else if (playerchoice < 1 || playerchoice > 1) {
-                std::cout << " " << std::endl;
+                std::cout << "Enter 1 " << std::endl;
         } else {
             player->addItem("GamblingTicket");
             std::cout << "You pick up the ticket\n";

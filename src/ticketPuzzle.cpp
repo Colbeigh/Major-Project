@@ -5,7 +5,7 @@
 
 #include "Puzzle.hpp"
 
-ticketPuzzle::ticketPuzzle() : p(nullptr), change(nullptr) {
+ticketPuzzle::ticketPuzzle() : p(nullptr) {
 TM = new ticketMaster;
 chest = new Inventory;
 }
@@ -18,7 +18,6 @@ ticketPuzzle::~ticketPuzzle() {
 void ticketPuzzle::startPuzzle(Player* player, std::vector<std::string>* puzzles
 , bool* changeenv) {
 p = puzzles;
-change = &changeenv;
 event(player);
 }
 
@@ -68,7 +67,6 @@ std::cout << "You give him the ticket\n";
         "You look up and Ticket Master has already left\n";
         player->setAlive();
         solved("ticketPuzzle");
-        **change = true;
     }
 }
 
