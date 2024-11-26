@@ -45,8 +45,6 @@ class ticketPuzzle: public Puzzle {
   std::vector<std::string>* p;
 };
 
-#endif//Puzzle_hpp_included
-
 class sweetTalkPuzzle: public Puzzle {
  public:
   sweetTalkPuzzle();
@@ -82,3 +80,5 @@ class bouncerPuzzle: public Puzzle {
  Inventory* chest;
  std::vector<std::string>* p;
 };
+
+#endif//Puzzle_hpp_included
