@@ -46,8 +46,8 @@ std::cout << "You decided to stay!\n";
 }
 
 void doorPuzzle::solution(Player* player)  {
-**change = true;
 solved("Move to new cart");
+**change = true;
 }
 
 void doorPuzzle::giveReward(Player* player)  {
@@ -56,11 +56,14 @@ void doorPuzzle::giveReward(Player* player)  {
 void doorPuzzle::addPuzzle(const std::string& puzzleId) {
 }
 
-bool doorPuzzle::solved(const std::string& puzzleId) {
-for (int i = 0; i < p->size(); ++i) {
-       if (puzzleId == (*p)[i]) {
-           p->erase(p->begin() + i);
-      }
-  }
+ bool doorPuzzle::solved(const std::string& puzzleId) {
+ if (!p){
+    std::cout << "Puzzle is not initialized";
+ }
+ for (int i = 0; i < p->size(); ++i) {
+        if (puzzleId == (*p)[i]) {
+            p->erase(p->begin() + i);
+       }
+   }
 return true;
 }

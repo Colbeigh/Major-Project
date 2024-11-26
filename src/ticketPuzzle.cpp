@@ -65,7 +65,6 @@ std::cout << "You give him the ticket\n";
         std::cout << "You notice something strange about the ticket.\n" <<
         "On the back of the ticket, 'HELP' is written.\n" <<
         "You look up and Ticket Master has already left\n";
-        player->setAlive();
         solved("Talk to Ticket Master");
         addPuzzle("Move to new cart");
     }
@@ -76,6 +75,9 @@ player->addItem("PunchedTicket");
 }
 
 bool ticketPuzzle::solved(const std::string& puzzleId) {
+     if (!p){
+    std::cout << "Puzzle is not initialized";
+ }
     for (int i = 0; i < p->size(); ++i) {
        if (puzzleId == (*p)[i]) {
            p->erase(p->begin() + i);
