@@ -20,7 +20,7 @@ event(player);
 
 void doorPuzzle::event(Player* player)  {
 int playerchoice;
-std::cout <<"What would you like to do?\n"<<
+std::cout <<"Where would you like to sit?\n"<<
 "1. Sit on left \n 2. Sit on right\n";
     while (true) {
         std::cin >> playerchoice;
