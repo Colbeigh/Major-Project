@@ -45,6 +45,7 @@ void Game::gameLoop() {
     std::cout << "You have entered into a new cart " <<
     intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
+    changeEnvironment();
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
 
     while (*changeenv == false) {
@@ -110,14 +111,14 @@ void Game::createPuzzle(std::string userinput) {
 void Game::changeEnvironment() {
   std::cout << "Change Environment function is running\n";
   if (curenv != nullptr) {
+     curenv = nullptr;
      delete curenv;
-    curenv = nullptr;
   }
   if (!environments.empty()) {
       curenv = FactEnv.createEnvironment(*environments.begin());
       intenv.setEnvironment(curenv);
        environments.erase(environments.begin());
-       std::cout << "test env name " <<
+       std::cout << "test env name "<<
     intenv.getName() << "\n";
        std::cout << "zzzz ERNvironment Changed inside\n";
   }
