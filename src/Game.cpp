@@ -1,17 +1,35 @@
 #include "Game.hpp"
 
-Game::Game() {
-  curenv = FactEnv.createEnvironment(*environments.begin());
+Game::Game() : environments{"Passenger Cart", "DiningCart", "Gambling", "Luggage", "Baggage", 
+                   "Between", "Prison", "Medical", "Armory", "Engine"} {
+  if (!environments.empty()) {
+        curenv = FactEnv.createEnvironment(*environments.begin());
+        if (curenv == nullptr) {
+            std::cerr << "Error: Environment creation failed for: " 
+                      << *environments.begin() << std::endl;
+            exit(EXIT_FAILURE);
+        }
+        intenv.setEnvironment(curenv); // Set the environment for InteractEnvironment
+        environments.erase(environments.begin());
+    } else {
+        std::cerr << "Error: No environments available." << std::endl;
+        exit(EXIT_FAILURE);
+    }
   changeenv = new bool(false);
   player = new Player();
 }
 
 Game::~Game() {
-  delete curenv;
-  delete currentpuzzle;
-  delete changeenv;
-  delete puzzles;
-  delete player;
+    delete curenv;
+    delete currentpuzzle;
+    delete puzzles;
+    delete changeenv;
+    delete player;
+    curenv = nullptr;
+    currentpuzzle = nullptr;
+    puzzles = nullptr;
+    changeenv = nullptr;
+    player = nullptr;
 }
 
 void Game::Start() {
@@ -26,10 +44,8 @@ void Game::gameLoop() {
     std::cout << "You have entered into a new cart " <<
     intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
-    delete puzzles;
-    puzzles = nullptr;
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
-    while (*changeenv == true) {
+    while (*changeenv == false) {
       promptPuzzles(*puzzles);
       std::string userinput = (*puzzles)[userInput(puzzles->size()) - 1];
       std::cout << userinput << std::endl;
@@ -44,7 +60,7 @@ void Game::promptPuzzles(std::vector<std::string> puzzles) {
   for (int i = 0; i < puzzles.size(); ++i) {
       std::cout << i + 1 << ") " << puzzles[i] <<"\n";
     }
-    std::cout << puzzles.size() + 2 << ") Help\n";
+    std::cout << puzzles.size() + 1 << ") Help\n";
 }
 
 int Game::userInput(int length) {
@@ -56,10 +72,10 @@ int Game::userInput(int length) {
        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
        std::cout << "Invalid input. Please enter an integer between 1 " <<
        "and " << length << ".\n";
-     } else if (userinput < 1 || userinput > length) {
+     } else if (userinput < length || userinput > length + 1) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
-         length << ".\n";
-      } else if (userinput == length - 1) {
+         length + 1 << ".\n";
+      } else if (userinput == length + 1) {
          std::cout << intenv.getHelp() << "\n";
       } else {
           return userinput;
@@ -73,10 +89,18 @@ bool Game::isRunning() {
 
 void Game::createPuzzle(std::string userinput) {
   if (currentpuzzle != nullptr) {
-     delete currentpuzzle;
+    delete currentpuzzle;
     currentpuzzle = nullptr;
   }
+
   currentpuzzle = FactPuz.createPuzzle(userinput);
+
+  if (currentpuzzle == nullptr) {
+    std::cerr << "Error: Puzzle creation failed for input: " << 
+    userinput << std::endl;
+    return;
+  }
+
   intpuz.setPuzzle(currentpuzzle);
 }
 
@@ -95,7 +119,6 @@ void Game::changeEnvironment() {
 void Game::ischangeEnv() {
   if (*changeenv == true) {
     changeEnvironment();
-    delete changeenv;
     changeenv = nullptr;
     *changeenv = false;
   }
@@ -103,10 +126,7 @@ void Game::ischangeEnv() {
 
 Player* player;
 Environment* curenv = nullptr;
-std::vector<std::string> environments{"Passenger", "Dining", "Gambling",
-"Luggage", "Baggage", "Between", "Prison", "Medical", "Armory", "Engine"
-};
-
+std::vector<std::string> environments;
 Puzzle* currentpuzzle = nullptr;
 InteractEnvironment intenv;
 FactoryEnvironment FactEnv;
