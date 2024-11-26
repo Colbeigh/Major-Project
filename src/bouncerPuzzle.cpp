@@ -60,7 +60,7 @@ void bouncerPuzzle::solution(Player* player) {
     std::cout << "You give him the Gambling ticket\n";
     player->remItem("GamblingTicket");
     B->displayDialogue(2);
-    solved("bouncerPuzzle");
+    solved("Talk to bouncer");
     **change = true;
 }
 

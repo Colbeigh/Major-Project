@@ -68,7 +68,7 @@
             }
     }
     player->setAlive();
-    solved("sweetTalkPuzzle");
+    solved("Talk to Rich Lady");
   }
 
   void sweetTalkPuzzle::solution(Player* player) {
@@ -78,7 +78,7 @@
     RL->displayDialogue(1);
     player->setAlive();
     giveReward(player);
-    solved("sweetTalkPuzzle");
+    solved("Talk to Rich Lady");
   }
 
   void sweetTalkPuzzle::giveReward(Player* player) {
