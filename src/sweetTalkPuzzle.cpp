@@ -85,7 +85,6 @@
   }
 
   void sweetTalkPuzzle::addPuzzle(const std::string& puzzleId) {
-
   }
 
   bool sweetTalkPuzzle::solved(const std::string& puzzleId) {
