@@ -45,8 +45,9 @@ void Game::gameLoop() {
     intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
-    while (*changeenv == false) { // while environment is the same
-      promptPuzzles(*puzzles); //iterate through vector
+
+    while (*changeenv == false) {
+      promptPuzzles(*puzzles);
       std::string userinput = (*puzzles)[userInput(puzzles->size() + 1) - 1];
       std::cout << "you chose " << userinput << std::endl;
       createPuzzle(userinput);
