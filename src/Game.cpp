@@ -35,7 +35,10 @@ Game::~Game() {
 
 void Game::Start() {
   std::string prologue = "This is the prologue";
-  std::cout << prologue << "\n";
+  std::cout << prologue <<"\nProgram does not" << 
+  "currently have an exit and breaks at certain " <<
+  "points please rerun and change environment to see all" << 
+  "functions\n for this milestone\n";
   gameLoop();
 }
 
