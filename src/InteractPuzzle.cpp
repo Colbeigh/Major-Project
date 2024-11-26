@@ -21,6 +21,7 @@ std::vector<std::string>* puzzles, bool* changeenv) {
   if (puzzle != nullptr) {
     puzzle->startPuzzle(player, puzzles, changeenv);  // Start the puzzle
   } else {
-    std::cerr << "Error: No puzzle set!" << std::endl;  // Handle case where no puzzle is set
+    std::cerr << "Error: No puzzle set!" << std::endl;  
+    // Handle case where no puzzle is set
   }
 }

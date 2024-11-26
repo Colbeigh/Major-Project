@@ -6,11 +6,9 @@
 #include "Puzzle.hpp"
 
 doorPuzzle::doorPuzzle() : change(nullptr), p(nullptr) {
-
 }
 
 doorPuzzle::~doorPuzzle() {
-
 }
 
 void doorPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
@@ -50,15 +48,12 @@ std::cout << "You decided to stay!\n";
 void doorPuzzle::solution(Player* player)  {
 **change = true;
 solved("Move to new cart");
-
 }
 
 void doorPuzzle::giveReward(Player* player)  {
-
 }
 
 void doorPuzzle::addPuzzle(const std::string& puzzleId) {
-
 }
 
 bool doorPuzzle::solved(const std::string& puzzleId) {
