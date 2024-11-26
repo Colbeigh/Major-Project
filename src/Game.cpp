@@ -11,6 +11,7 @@ Game::Game() : environments{"Passenger Cart", "DiningCart",
             exit(EXIT_FAILURE);
         }
         intenv.setEnvironment(curenv);
+        environments.erase(environments.begin());
     } else {
         std::cerr << "Error: No environments available." << std::endl;
         exit(EXIT_FAILURE);
@@ -39,11 +40,12 @@ void Game::Start() {
 }
 
 void Game::gameLoop() {
-  player->setAlive(); // set player alive
-  while (isRunning()) { // while player is alive
+  player->setAlive();
+  while (isRunning()) {
     std::cout << "You have entered into a new cart " <<
     intenv.getName() << "\n";
     std::cout << intenv.getDesc() << "\n";
+    changeEnvironment();
     puzzles = new std::vector<std::string>(intenv.getPuzzles());
 
     while (*changeenv == false) {
@@ -52,9 +54,10 @@ void Game::gameLoop() {
       std::cout << "you chose " << userinput << std::endl;
       createPuzzle(userinput);
       intpuz.startPuzzle(player, puzzles, changeenv);
+      std:: cout << changeenv << "\n";
       ischangeEnv();
+      }
     }
-  }
 }
 
 void Game::promptPuzzles(std::vector<std::string> puzzles) {
@@ -106,21 +109,29 @@ void Game::createPuzzle(std::string userinput) {
 }
 
 void Game::changeEnvironment() {
+  std::cout << "Change Environment function is running\n";
   if (curenv != nullptr) {
+     curenv = nullptr;
      delete curenv;
-    curenv = nullptr;
   }
   if (!environments.empty()) {
       curenv = FactEnv.createEnvironment(*environments.begin());
       intenv.setEnvironment(curenv);
        environments.erase(environments.begin());
+       std::cout << "test env name "<<
+    intenv.getName() << "\n";
+       std::cout << "zzzz ERNvironment Changed inside\n";
   }
 }
 
 void Game::ischangeEnv() {
-  if (*changeenv == true) {
+  if (changeenv != nullptr && *changeenv) {
+    std::cout << "this is true to change env\n";
+    std::cout << changeenv << "\n";
     changeEnvironment();
     *changeenv = false;
+  } else {
+    std::cerr << "Error: changeenv is null or false\n";
   }
 }
 
