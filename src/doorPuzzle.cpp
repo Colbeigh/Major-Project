@@ -57,6 +57,10 @@ void doorPuzzle::giveReward(Player* player)  {
 
 }
 
+void doorPuzzle::addPuzzle(const std::string& puzzleId) {
+
+}
+
 bool doorPuzzle::solved(const std::string& puzzleId) {
 for (int i = 0; i < p->size(); ++i) {
        if (puzzleId == (*p)[i]) {
