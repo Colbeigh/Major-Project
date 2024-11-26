@@ -21,7 +21,7 @@ event(player);
 void doorPuzzle::event(Player* player)  {
 int playerchoice;
 std::cout <<"What would you like to do?\n"<<
-"1. Open and Enter\n 2. Nothing\n";
+"1. Sit on left \n 2. Sit on right\n";
     while (true) {
         std::cin >> playerchoice;
         if (std::cin.fail()) {
@@ -42,14 +42,11 @@ std::cout <<"What would you like to do?\n"<<
 }
 
 void doorPuzzle::failPuzzle(Player* player)  {
-std::cout << "You decided to stay!\n";
+std::cout << "You decided to sit on the right\n";
 }
 
 void doorPuzzle::solution(Player* player)  {
-solved("Move to new cart");
-addPuzzle("Talk to Rich Lady");
-addPuzzle("Talk to bouncer");
-**change = true;
+std::cout << "You decided to sit on the left seat\n";
 }
 
 void doorPuzzle::giveReward(Player* player)  {
