@@ -5,7 +5,7 @@
 
 #include "Puzzle.hpp"
 
-  sweetTalkPuzzle::sweetTalkPuzzle(): p(nullptr) {
+  sweetTalkPuzzle::sweetTalkPuzzle(): p(nullptr), RL(nullptr), chest(nullptr) {
     RL = new richLady;
     chest = new Inventory;
   }
