@@ -5,7 +5,7 @@
 
 #include "Puzzle.hpp"
 
-doorPuzzle::doorPuzzle() : change(nullptr) {
+doorPuzzle::doorPuzzle() : change(nullptr), p(nullptr) {
 
 }
 
@@ -15,6 +15,7 @@ doorPuzzle::~doorPuzzle() {
 
 void doorPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
 bool* changeenv)  {
+p = puzzles;
 change = &changeenv;
 event(player);
 }
@@ -43,10 +44,12 @@ std::cout <<"What would you like to do?\n"<<
 }
 
 void doorPuzzle::failPuzzle(Player* player)  {
-
+std::cout << "You decided to stay!\n";
 }
 
 void doorPuzzle::solution(Player* player)  {
+**change = true;
+solved("Move to new cart");
 
 }
 
@@ -55,5 +58,10 @@ void doorPuzzle::giveReward(Player* player)  {
 }
 
 bool doorPuzzle::solved(const std::string& puzzleId) {
-
+for (int i = 0; i < p->size(); ++i) {
+       if (puzzleId == (*p)[i]) {
+           p->erase(p->begin() + i);
+      }
+  }
+return true;
 }

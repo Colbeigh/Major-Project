@@ -66,7 +66,8 @@ std::cout << "You give him the ticket\n";
         "On the back of the ticket, 'HELP' is written.\n" <<
         "You look up and Ticket Master has already left\n";
         player->setAlive();
-        solved("ticketPuzzle");
+        solved("Talk to Ticket Master");
+        addPuzzle("Move to new cart");
     }
 }
 
@@ -83,3 +84,6 @@ bool ticketPuzzle::solved(const std::string& puzzleId) {
 return true;
 }
 
+void ticketPuzzle::addPuzzle(const std::string& puzzleId) {
+p->push_back(puzzleId);
+}

@@ -67,6 +67,9 @@ void bouncerPuzzle::solution(Player* player) {
 void bouncerPuzzle::giveReward(Player* player) {
 }
 
+void bouncerPuzzle::addPuzzle(const std::string& puzzleId) {
+}
+
 bool bouncerPuzzle::solved(const std::string& puzzleId) {
     for (int i = 0; i < p->size(); ++i) {
        if (puzzleId == (*p)[i]) {

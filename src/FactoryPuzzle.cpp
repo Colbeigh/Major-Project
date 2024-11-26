@@ -3,7 +3,7 @@
 Puzzle* FactoryPuzzle::createPuzzle(const std::string& type) {
     if (type == "Talk to Ticket Master") {
         return new ticketPuzzle();
-    } else if (type == "Choose where to sit") {
+    } else if (type == "Move to new cart") {
         return new doorPuzzle();
     } else if (type == "Talk to Rich Lady") {
         return new sweetTalkPuzzle();

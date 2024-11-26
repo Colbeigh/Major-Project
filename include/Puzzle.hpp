@@ -24,6 +24,7 @@ class Puzzle {
   virtual void failPuzzle(Player *player) = 0;
   virtual void solution(Player *player) = 0;
   virtual void giveReward(Player *player) = 0;
+  virtual void addPuzzle(const std::string& puzzleId) = 0;
 //
 };
 
@@ -37,6 +38,7 @@ class ticketPuzzle: public Puzzle {
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;
   void giveReward(Player* player) override;
+  void addPuzzle(const std::string& puzzleId) override;
   bool solved(const std::string& puzzleId);
 
  private:
@@ -55,6 +57,7 @@ class sweetTalkPuzzle: public Puzzle {
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;
   void giveReward(Player* player) override;
+  void addPuzzle(const std::string& puzzleId) override;
   bool solved(const std::string& puzzleId);
 
  private:
@@ -73,6 +76,7 @@ class bouncerPuzzle: public Puzzle {
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;
   void giveReward(Player* player) override;
+  void addPuzzle(const std::string& puzzleId) override;
   bool solved(const std::string& puzzleId);
 
  private:
@@ -92,9 +96,11 @@ class doorPuzzle: public Puzzle {
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;
   void giveReward(Player* player) override;
+  void addPuzzle(const std::string& puzzleId) override;
   bool solved(const std::string& puzzleId);
 
  private:
+  std::vector<std::string>* p;
   bool** change;
 };
 

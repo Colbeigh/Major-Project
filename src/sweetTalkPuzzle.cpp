@@ -86,6 +86,9 @@
     player->addItem("LuckyCoin");
   }
 
+  void sweetTalkPuzzle::addPuzzle(const std::string& puzzleId) {
+  }
+
   bool sweetTalkPuzzle::solved(const std::string& puzzleId) {
     for (int i = 0; i < p->size(); ++i) {
        if (puzzleId == (*p)[i]) {
