@@ -57,17 +57,21 @@ void Game::gameLoop() {
     char userin2;
     std::cin >> userin2;
 
-    static int tempnum = 0; 
+    int tempnum = 0;
 
     if (userin2 == 'Y') {
+      delete curenv;
+      curenv = nullptr;
+
       if (tempnum == 0) {
-        curenv = new DiningCart;
+        curenv = new DiningCart();
       } else {
         curenv = new PassenegerCart();
       }
-      temp = false;
+
       intenv.setEnvironment(curenv);
       tempnum = (tempnum + 1) % 2;
+      temp = false;
     }
 
     while (temp) {
