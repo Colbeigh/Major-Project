@@ -23,7 +23,6 @@ event(player);
 }
 
 void bouncerPuzzle::event(Player* player) {
-int playerchoice;
 std::cout << "You approach the Bouncer\n";
 B->displayDialogue(3);
 std::cout << "What would you like to do?\n";
@@ -32,6 +31,7 @@ std::cout << "What would you like to do?\n";
     } else {
 "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
     while (true) {
+        int playerchoice;
         std::cin >> playerchoice;
         if (std::cin.fail()) {
             std::cin.clear();
