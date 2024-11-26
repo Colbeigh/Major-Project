@@ -6,7 +6,7 @@ Game::Game() : environments{"Passenger Cart", "DiningCart",
   if (!environments.empty()) {
         curenv = FactEnv.createEnvironment(*environments.begin());
         if (curenv == nullptr) {
-            std::cerr << "Error: Environment creation failed for: " 
+            std::cerr << "Error: Environment creation failed for: "
                       << *environments.begin() << std::endl;
             exit(EXIT_FAILURE);
         }
