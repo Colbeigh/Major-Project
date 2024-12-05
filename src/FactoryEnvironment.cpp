@@ -3,7 +3,7 @@
 FactoryEnvironment::FactoryEnvironment() {
      environmentmap = {
         {"Passenger Cart", new PassenegerCart()},
-        {"Dining Cart", new DiningCart}
+        {"Dining Cart", new DiningCart()}
      };
 }
 
