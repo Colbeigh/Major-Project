@@ -1,21 +1,10 @@
 #include "Game.hpp"
 
-Game::Game() : environments{"Passenger Cart", "DiningCart",
-"Gambling", "Luggage", "Baggage", "Between", "Prison",
+Game::Game() : environments{"Passenger Cart", "Dining Cart",
+"Gambling Cart", "Luggage", "Baggage", "Between", "Prison",
 "Medical", "Armory", "Engine"} {
-  if (!environments.empty()) {
-        curenv = FactEnv.createEnvironment(*environments.begin());
-        if (curenv == nullptr) {
-            std::cerr << "Error: Environment creation failed for: "
-                      << *environments.begin() << std::endl;
-            exit(EXIT_FAILURE);
-        }
-        intenv.setEnvironment(curenv);
-        environments.erase(environments.begin());
-    } else {
-        std::cerr << "Error: No environments available." << std::endl;
-        exit(EXIT_FAILURE);
-    }
+  curenv = nullptr;
+  changeEnvironment();
   changeenv = new bool(false);
   player = new Player();
 }
@@ -35,10 +24,6 @@ Game::~Game() {
 
 void Game::Start() {
   std::string prologue = "This is the prologue";
-  std::cout << prologue <<"\nProgram does not" << 
-  "currently have an exit and breaks at certain " <<
-  "points please rerun and change environment to see all" << 
-  "functions\n for this milestone\n";
   gameLoop();
 }
 
@@ -47,9 +32,9 @@ void Game::gameLoop() {
 
   while (isRunning()) {
     bool temp = true;
-    std::cout << "You have entered into a new cart " << intenv.getName() << "\n";
-    std::cout << intenv.getDesc() << "\n";
-    puzzles = new std::vector<std::string>(intenv.getPuzzles());
+    std::cout << "You have entered into a new cart " << intenv.getName(curenv) << "\n";
+    std::cout << intenv.getDesc(curenv) << "\n";
+    puzzles = new std::vector<std::string>(intenv.getPuzzles(curenv));
     
     std::cout << "Would you like to go to the next cart?\n"
               << "Press capital Y to change and anything else to not ";
@@ -57,21 +42,9 @@ void Game::gameLoop() {
     char userin2;
     std::cin >> userin2;
 
-    static int tempnum = 0; 
-
     if (userin2 == 'Y') {
-      if (tempnum == 0) {
-        delete curenv;
-        curenv = nullptr;
-        curenv = new DiningCart;
-      } else {
-        delete curenv;
-        curenv = nullptr;
-        curenv = new PassenegerCart();
-      }
+        changeEnvironment();
       temp = false;
-      intenv.setEnvironment(curenv);
-      tempnum = (tempnum + 1) % 2;
     }
 
     while (temp) {
@@ -106,7 +79,7 @@ int Game::userInput(int length) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
          length + 1 << ".\n";
       } else if (userinput == length) {
-         std::cout << intenv.getHelp() << "\n";
+         std::cout << intenv.getHelp(curenv) << "\n";
       } else {
           return userinput;
     }
@@ -135,8 +108,6 @@ void Game::createPuzzle(std::string userinput) {
 }
 
 void Game::changeEnvironment() {
-  std::cout << "Change Environment function is running\n";
-  
   if (curenv != nullptr) {
      delete curenv;
      curenv = nullptr;
@@ -144,10 +115,10 @@ void Game::changeEnvironment() {
 
   if (!environments.empty()) {
       curenv = FactEnv.createEnvironment(*environments.begin());
-      intenv.setEnvironment(curenv);
+      if (curenv == nullptr) {
+        return;
+      }
       environments.erase(environments.begin());
-      std::cout << "test env name " << intenv.getName() << "\n";
-      std::cout << "zzzz Environment Changed inside\n";
   } else {
       std::cerr << "Error: No more environments available to change to.\n";
   }
@@ -165,7 +136,6 @@ void Game::ischangeEnv() {
 }
 
 Player* player;
-Environment* curenv = nullptr;
 std::vector<std::string> environments;
 Puzzle* currentpuzzle = nullptr;
 InteractEnvironment intenv;
