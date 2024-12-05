@@ -1,11 +1,18 @@
 #include "FactoryEnvironment.hpp"
 
+FactoryEnvironment::FactoryEnvironment() {
+     environmentmap = {
+        {"Passenger Cart", new PassenegerCart()},
+        {"Dining Cart", new DiningCart}
+     };
+}
+
 Environment* FactoryEnvironment::createEnvironment(const std::string& type) {
-    if (type == "Passenger Cart") {
-        return new PassenegerCart();
-    } else if (type == "Dining Cart") {
-        return new DiningCart();
-    }  else {
-        return new PassenegerCart();
+    auto it = environmentmap.find(type);
+
+    if (it != environmentmap.end()) {
+        return it->second;
+    } else {
+        return new PassenegerCart(); // temporary if it doesn't exist
     }
 }

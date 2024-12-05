@@ -2,11 +2,14 @@
 #define FACTORYENVIRONMENT_HPP
 
 #include <string>
+#include <map>
 #include "Environment.hpp"
 
 class FactoryEnvironment {
  public:
-  static Environment* createEnvironment(const std::string& name);
+  FactoryEnvironment();
+  Environment* createEnvironment(const std::string& name);
+  std::map<std::string, Environment*> environmentmap;
 };
 
 #endif
