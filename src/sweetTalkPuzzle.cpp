@@ -5,7 +5,7 @@
 
 #include "Puzzle.hpp"
 
-  sweetTalkPuzzle::sweetTalkPuzzle(): p(nullptr) {
+  sweetTalkPuzzle::sweetTalkPuzzle(): p(nullptr), RL(nullptr), chest(nullptr) {
     RL = new richLady;
     chest = new Inventory;
   }
@@ -67,7 +67,6 @@
             break;
             }
     }
-    player->setAlive();
     solved("Talk to Rich Lady");
   }
 
@@ -76,7 +75,6 @@
     RL->displayDialogue(0);
     std::cout << "She hands you the ticket and her lucky coin\n";
     RL->displayDialogue(1);
-    player->setAlive();
     giveReward(player);
     solved("Talk to Rich Lady");
   }
@@ -90,9 +88,9 @@
   }
 
   bool sweetTalkPuzzle::solved(const std::string& puzzleId) {
-     if (!p){
+     if (!p) {
     std::cout << "Puzzle is not initialized";
- }
+    }
     for (int i = 0; i < p->size(); ++i) {
        if (puzzleId == (*p)[i]) {
            p->erase(p->begin() + i);

@@ -29,6 +29,7 @@ class Game {
   Player* player;
   Environment* curenv;
   std::vector<std::string> environments;
+  std::vector<std::string> tempenvironments;
 
   Puzzle* currentpuzzle;
   InteractEnvironment intenv;

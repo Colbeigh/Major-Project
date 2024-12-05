@@ -6,6 +6,6 @@ Environment* FactoryEnvironment::createEnvironment(const std::string& type) {
     } else if (type == "Dining Cart") {
         return new DiningCart();
     }  else {
-        return nullptr;
+        return new PassenegerCart();
     }
 }

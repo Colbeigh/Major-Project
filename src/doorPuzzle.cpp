@@ -5,7 +5,7 @@
 
 #include "Puzzle.hpp"
 
-doorPuzzle::doorPuzzle() : change(nullptr), p(nullptr) {
+doorPuzzle::doorPuzzle() : p(nullptr) {
 }
 
 doorPuzzle::~doorPuzzle() {
@@ -14,14 +14,13 @@ doorPuzzle::~doorPuzzle() {
 void doorPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
 bool* changeenv)  {
 p = puzzles;
-change = &changeenv;
 event(player);
 }
 
 void doorPuzzle::event(Player* player)  {
 int playerchoice;
-std::cout <<"What would you like to do?\n"<<
-"1. Open and Enter\n 2. Nothing\n";
+std::cout <<"Where would you like to sit?\n"<<
+"1. Sit on left \n 2. Sit on right\n";
     while (true) {
         std::cin >> playerchoice;
         if (std::cin.fail()) {
@@ -42,28 +41,28 @@ std::cout <<"What would you like to do?\n"<<
 }
 
 void doorPuzzle::failPuzzle(Player* player)  {
-std::cout << "You decided to stay!\n";
+std::cout << "You decided to sit on the right\n";
 }
 
 void doorPuzzle::solution(Player* player)  {
-solved("Move to new cart");
-**change = true;
+std::cout << "You decided to sit on the left seat\n";
 }
 
 void doorPuzzle::giveReward(Player* player)  {
 }
 
 void doorPuzzle::addPuzzle(const std::string& puzzleId) {
+p->push_back(puzzleId);
 }
 
- bool doorPuzzle::solved(const std::string& puzzleId) {
- if (!p){
+bool doorPuzzle::solved(const std::string& puzzleId) {
+if (!p){
     std::cout << "Puzzle is not initialized";
- }
- for (int i = 0; i < p->size(); ++i) {
+}
+for (int i = 0; i < p->size(); ++i) {
         if (puzzleId == (*p)[i]) {
             p->erase(p->begin() + i);
        }
-   }
+}
 return true;
 }

@@ -8,14 +8,14 @@ Environment::Environment() { // constructor
     puzzles = {"Empty Puzzle"};
 }
 
-Environment::~Environment() {} // destructor
+Environment::~Environment() {}
 
 std::string Environment::getDescription() {
     return environmentDescription;
 }
 
 std::vector<std::string> Environment::getPuzzles() {
-    return puzzles; //was { puzzles }
+    return { puzzles };
 }
 
 std::string Environment::help() {
@@ -32,14 +32,15 @@ PassenegerCart::PassenegerCart() {
     environmentDescription = "Looking around the environment, "
     "you see passeneger, and a ticket master walking around";
     helpInfo = "You can ask the ticket master for help.";
-    puzzles = {"Talk to Ticket Master"};
+    puzzles = {"Talk to Ticket Master", "Talk to Rich Lady", 
+    "Talk to bouncer", "Pick a seat"};
 }
 
 PassenegerCart::~PassenegerCart() {}
 
 DiningCart::DiningCart() {
     name = "Dining Cart";
-    environmentDescription = "You are in the dining cart."
+    environmentDescription = "You are in the dining cart.";
     "The smell of food fills the air.";
     helpInfo = "You can ask the chef for help.";
     puzzles = {"Talk to Rich Lady", "Talk to bouncer"};
