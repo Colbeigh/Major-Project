@@ -11,8 +11,8 @@ InteractPuzzle::~InteractPuzzle() {
 
 void InteractPuzzle::setPuzzle(Puzzle* puz) {
   if (puzzle != nullptr) {
-    puzzle = nullptr;
     delete puzzle;
+    puzzle = nullptr;
   }
   puzzle = puz;
   }
