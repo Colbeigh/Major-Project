@@ -11,10 +11,10 @@ class InteractEnvironment {
   InteractEnvironment();
   virtual ~InteractEnvironment();
   void setEnvironment(Environment* env);
-  std::string getName();
-  std::string getDesc();
-  std::string getHelp();
-  std::vector<std::string> getPuzzles();
+  std::string getName(Environment* env);
+  std::string getDesc(Environment* env);
+  std::string getHelp(Environment* env);
+  std::vector<std::string> getPuzzles(Environment* env);
 
   Environment* environment;
 };

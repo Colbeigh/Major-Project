@@ -9,38 +9,30 @@ InteractEnvironment::~InteractEnvironment() {
   delete environment;
 }
 
-void InteractEnvironment::setEnvironment(Environment* env) {
-  if (environment != nullptr) {
-    delete environment;
-    environment = nullptr;
+std::string InteractEnvironment::getName(Environment* env) {
+  if (env == nullptr) {
+    return "null";
   }
-  environment = env;
-  }
-
-std::string InteractEnvironment::getName() {
-  if (environment == nullptr) {
-    return "";
-  }
-  return environment ->getName();
+  return env->getName();
 }
 
-std::string InteractEnvironment::getDesc() {
-  if (environment == nullptr) {
+std::string InteractEnvironment::getDesc(Environment* env) {
+  if (env == nullptr) {
      return "";
   }
-  return environment ->getDescription();
+  return env ->getDescription();
   }
 
-std::string InteractEnvironment::getHelp() {
-    if (environment == nullptr) {
+std::string InteractEnvironment::getHelp(Environment* env) {
+    if (env == nullptr) {
       return "";
 }
-return environment -> help();
+return env -> help();
 }
 
-std::vector<std::string> InteractEnvironment::getPuzzles() {
-  if (environment == nullptr) {
+std::vector<std::string> InteractEnvironment::getPuzzles(Environment* env) {
+  if (env == nullptr) {
      return std::vector<std::string>();
   }
-  return environment -> getPuzzles();
+  return env -> getPuzzles();
 }
