@@ -9,22 +9,35 @@ InteractPuzzle::~InteractPuzzle() {
   delete puzzle;
 }
 
-void InteractPuzzle::setPuzzle(Puzzle* puz) {
-  if (puzzle != nullptr) {
-    delete puzzle;
-    puzzle = nullptr;
+void InteractPuzzle::getPuzzle(Puzzle* puz) {
+  if(puz = nullptr) {
+    return "";
   }
-  puzzle = puz;
+  return puz->getPuzzle();
+}
+void InteractPuzzle::getPlayer(Puzzle* puz) {
+  if(puz = nullptr) {
+    return "";
   }
+  return puz->getPlayer();
+}
 
-void InteractPuzzle::startPuzzle(Player* player, std::vector<std::string>* puzzles, bool* changeenv) {
+void InteractPuzzle::getChangeEnv(Puzzle* puz) {
+  if(puz = nullptr) {
+    return ""
+  }
+  return puz->getChangeEnv();
+}
+
+void InteractPuzzle::startPuzzle(puz, player, puzzles, changeenv) {
   if (puzzle == nullptr) {
     std::cerr << "Error: No puzzle set!" << std::endl;
     return;
   }
-  if (player == nullptr || puzzles == nullptr || changeenv == nullptr) {
+  if (player == nullptr || puzzles == nullptr || changeenv == nullptr 
+  || curenv == nullptr) {
     std::cerr << "Error: Null argument passed to startPuzzle" << std::endl;
     return;
-  }
-  puzzle->startPuzzle(player, puzzles, changeenv);
+  
+  puzzle->startPuzzle(curenv, player, puzzles, changeenv);
 }
