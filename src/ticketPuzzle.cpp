@@ -12,7 +12,11 @@ ticketPuzzle::~ticketPuzzle() {
     delete TM;
 }
 
-void ticketPuzzle::startPuzzle(curenv, player , puzzles, changeenv) {
+void ticketPuzzle::startPuzzle(Player player, 
+  std::vector<std::string> puzzles, bool changeenv) {
+p = player;
+puzz = puzzles;
+env = changeenv;
 event();
 }
 
@@ -23,7 +27,7 @@ bool ticketPuzzle::failPuzzle() {
     return true;
 }
 
-bool ticketPuzzle::solution(player) {
+bool ticketPuzzle::solution(Player player) {
     if(player.hasItem("Train Ticket") == true ) {
     std::cout << "You give him the ticket\n";
     player.remItem("Train Ticket");
@@ -59,15 +63,15 @@ void ticketPuzzle::event() {
 }
 
 
-void ticketPuzzle::giveReward(player) {
+void ticketPuzzle::giveReward(Player player) {
 player.addItem("Punched Train Ticket");
 }
 
-void ticketPuzzle::playerCondition(player) {
+void ticketPuzzle::playerCondition(Player player) {
     if (failPuzzle() == true){
-    player.setKill;
+
         } else {
-            player.setAlive;
+            player.setAlive();
     }
 }
 
@@ -81,15 +85,16 @@ std::cin >> playerchoice;
     } else return playerchoice;
 }
 
-void ticketPuzzle::getPuzzle() {
-    return puzzle; 
+std::vector<std::string>Puzzle::getPuzzle() {
+
+    return puzz; 
 }
-void ticketPuzzle::getPlayer() {
-    return player;
+Player Puzzle::getPlayer() {
+    return p;
 }
 
-void ticketPuzzle::getChangeEnv() {
-    return changeenv;
+bool Puzzle::getChangeEnv() {
+    return env;
 }
 
 // ticketPuzzle::ticketPuzzle() : p(nullptr) {
