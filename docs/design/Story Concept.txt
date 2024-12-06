@@ -20,18 +20,6 @@ Luggage Car
     Search the car we find the gangs symbols of ta gang you locked away years ago
     We also have a choice between three items ( player must pick the right one to escape later)
     
-Between cars
-    As you are leaving the car you get hit in the back of the head, knocked out
-
-Prison car
-    we wake up here, you are hurt
-    search room and find a lock we can pick with the quarter if we have it, if not we lose
-
-Medical Car
-    Nurse - Tell Nurse what symptoms the poisoned npc has and they'll tell you what medicine to get
-    Poisoned NPC - Talk to nurse to figure out what medicine to get 
-    Nurse bandages us since we got hurt earlier, option to ignore both things if we do we lose
-
 Armory Car
     Ticket Master tied up in corner - actually a bad guy, says he has key to Armory
     Option to release or frisk,
@@ -46,3 +34,17 @@ Engine Room
 
     Puzzle Defuse bomb
     Must cut wires in order 
+
+
+
+    Between cars
+    As you are leaving the car you get hit in the back of the head, knocked out
+
+Prison car
+    we wake up here, you are hurt
+    search room and find a lock we can pick with the quarter if we have it, if not we lose
+
+Medical Car
+    Nurse - Tell Nurse what symptoms the poisoned npc has and they'll tell you what medicine to get
+    Poisoned NPC - Talk to nurse to figure out what medicine to get 
+    Nurse bandages us since we got hurt earlier, option to ignore both things if we do we lose
