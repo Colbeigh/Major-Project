@@ -53,8 +53,7 @@ class sweetTalkPuzzle: public Puzzle {
  public:
   sweetTalkPuzzle();
   ~sweetTalkPuzzle();
-  void startPuzzle(Player *player, std::vector<std::string >* puzzles,
-  bool* changeenv) override;
+  void startPuzzle(curenv, player, puzzles, changeenv) override;
   void event(Player* player) override;
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;
@@ -64,16 +63,13 @@ class sweetTalkPuzzle: public Puzzle {
 
  private:
   NPC* RL;
-  Inventory* chest;
-  std::vector<std::string>* p;
 };
 
 class bouncerPuzzle: public Puzzle {
  public:
   bouncerPuzzle();
   ~bouncerPuzzle();
-  void startPuzzle(Player *player, std::vector<std::string >* puzzles,
-  bool* changeenv) override;
+  void startPuzzle(curenv, player, puzzles, changeenv) override;
   void event(Player* player) override;
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;
@@ -83,17 +79,13 @@ class bouncerPuzzle: public Puzzle {
 
  private:
   NPC* B;
-  Inventory* chest;
-  std::vector<std::string>* p;
-  bool** change;
 };
 
 class doorPuzzle: public Puzzle {
  public:
   doorPuzzle();
   ~doorPuzzle();
-  void startPuzzle(Player *player, std::vector<std::string >* puzzles,
-  bool* changeenv) override;
+  void startPuzzle(curenv, player, puzzles, changeenv) override;
   void event(Player* player) override;
   void failPuzzle(Player* player) override;
   void solution(Player* player) override;

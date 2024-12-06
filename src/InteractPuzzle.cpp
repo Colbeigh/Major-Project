@@ -40,4 +40,5 @@ void InteractPuzzle::startPuzzle(puz, player, puzzles, changeenv) {
     return;
   
   puzzle->startPuzzle(curenv, player, puzzles, changeenv);
+  }
 }

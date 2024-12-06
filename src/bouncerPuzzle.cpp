@@ -5,20 +5,15 @@
 
 #include "Puzzle.hpp"
 
-bouncerPuzzle::bouncerPuzzle(): p(nullptr), change(nullptr) {
+bouncerPuzzle::bouncerPuzzle(): B(nullptr) {
 B = new bouncer;
-chest = new Inventory;
 }
 
 bouncerPuzzle::~bouncerPuzzle() {
 delete B;
-delete chest;
 }
 
-void bouncerPuzzle::startPuzzle(Player *player,
-std::vector<std::string >* puzzles, bool* changeenv) {
-p = puzzles;
-change = &changeenv;
+void bouncerPuzzle::startPuzzle(curenv, player, puzzles, changeenv) {
 event(player);
 }
 

@@ -5,19 +5,15 @@
 
 #include "Puzzle.hpp"
 
-  sweetTalkPuzzle::sweetTalkPuzzle(): p(nullptr), RL(nullptr), chest(nullptr) {
+  sweetTalkPuzzle::sweetTalkPuzzle(): RL(nullptr) {
     RL = new richLady;
-    chest = new Inventory;
   }
 
   sweetTalkPuzzle::~sweetTalkPuzzle() {
     delete RL;
-    delete chest;
   }
 
-  void sweetTalkPuzzle::startPuzzle(Player *player,
-  std::vector<std::string >* puzzles, bool* changeenv) {
-    p = puzzles;
+  void sweetTalkPuzzle::startPuzzle(curenv, player, puzzles, changeenv) {
     event(player);
   }
 

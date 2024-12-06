@@ -14,7 +14,7 @@ class InteractPuzzle {
   void getPuzzle(Puzzle* puz);
   void getPlayer(Puzzle* puz);
   void getChangeEnv(Puzzle* puz);
-  void startPuzzle(curenv, player, puzzles, changeenv);
+  void startPuzzle(puz, player, puzzles, changeenv);
   Puzzle* puzzle;
 };
 

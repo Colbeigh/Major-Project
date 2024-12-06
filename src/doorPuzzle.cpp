@@ -11,9 +11,7 @@ doorPuzzle::doorPuzzle() : p(nullptr) {
 doorPuzzle::~doorPuzzle() {
 }
 
-void doorPuzzle::startPuzzle(Player *player, std::vector<std::string >* puzzles,
-bool* changeenv)  {
-p = puzzles;
+void doorPuzzle::startPuzzle(curenv, player, puzzles, changeenv)  {
 event(player);
 }
 
