@@ -44,7 +44,7 @@ void Game::gameLoop() {
       std::string userinput = (puzzles)[userInput(puzzles.size() + 1) - 1];
       std::cout << "You chose: " << userinput << std::endl;
       createPuzzle(userinput);
-      intpuz.startPuzzle(player, puzzles, changeenv);
+      intpuz.startPuzzle(curenv, player, puzzles, changeenv);
       player = intpuz.getPlayer;
       puzzles intpuz.getPuzzles();
       changeenv intpuz.getchangeEnv();
