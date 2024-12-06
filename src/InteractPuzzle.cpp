@@ -39,6 +39,6 @@ void InteractPuzzle::startPuzzle(puz, player, puzzles, changeenv) {
     std::cerr << "Error: Null argument passed to startPuzzle" << std::endl;
     return;
   
-  puzzle->startPuzzle(curenv, player, puzzles, changeenv);
+  puz->startPuzzle(curenv, player, puzzles, changeenv);
   }
 }
