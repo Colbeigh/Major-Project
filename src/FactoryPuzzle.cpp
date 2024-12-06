@@ -1,15 +1,20 @@
 #include "FactoryPuzzle.hpp"
 
+FactoryPuzzle::FactoryPuzzle() {
+     puzzlemap = {
+        {"Talk to Ticket Master", new ticketPuzzle()},
+        {"Pick a seat", new doorPuzzle()},
+        {"Talk to Rich Lady", new sweetTalkPuzzle()},
+        {"Talk to bouncer", new bouncerPuzzle()}
+     };
+}
+
 Puzzle* FactoryPuzzle::createPuzzle(const std::string& type) {
-    if (type == "Talk to Ticket Master") {
-        return new ticketPuzzle();
-    } else if (type == "Pick a seat") {
-        return new doorPuzzle();
-    } else if (type == "Talk to Rich Lady") {
-        return new sweetTalkPuzzle();
-    }  else if (type == "Talk to bouncer") {
-        return new bouncerPuzzle();
+    auto it = puzzlemap.find(type);
+
+    if (it != puzzlemap.end()) {
+        return it->second;
     } else {
-        return nullptr;
+        return new ticketPuzzle();
     }
 }

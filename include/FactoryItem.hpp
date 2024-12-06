@@ -2,11 +2,14 @@
 #define FACTORYITEM_HPP
 
 #include <string>
+#include <map>
 #include "Item.hpp"
 
 class FactoryItem {
  public:
-  static Item* createItem(const std::string& name);
+  FactoryItem();
+  Item* createItem(const std::string& name);
+  std::map<std::string, Item*> itemmap;
 };
 
 #endif
