@@ -13,6 +13,6 @@ Environment* FactoryEnvironment::createEnvironment(const std::string& type) {
     if (it != environmentmap.end()) {
         return it->second;
     } else {
-        return new PassenegerCart(); // temporary if it doesn't exist
+        return new PassenegerCart();
     }
 }

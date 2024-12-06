@@ -2,11 +2,14 @@
 #define FACTORYPUZZLE_HPP
 
 #include <string>
+#include <map>
 #include "Puzzle.hpp"
 
 class FactoryPuzzle {
  public:
-  static Puzzle* createPuzzle(const std::string& name);
+  FactoryPuzzle();
+  Puzzle* createPuzzle(const std::string& name);
+  std::map<std::string, Puzzle*> puzzlemap;
 };
 
 #endif
