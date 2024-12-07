@@ -18,17 +18,3 @@ Item* FactoryItem::createItem(const std::string& type) {
         return new Ticket();
     }
 }
-
-Item* FactoryItem::createItem(const std::string& type) {
-    if (type == "Ticket") {
-        return new Ticket();
-    } else if (type == "PunchedTicket") {
-        return new PunchedTicket();
-    } else if (type == "GamblingTicket") {
-        return new GamblingTicket();
-    } else if (type == "Quarter") {
-        return new Quarter();
-    } else {
-        return nullptr;
-    }
-}
