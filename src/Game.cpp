@@ -27,14 +27,14 @@ void Game::gameLoop() {
     puzzles = intenv.getPuzzles(currentenvironment);
     
     while (!ischangeenv) {
-      promptPuzzles(*puzzles);
+      promptPuzzles(puzzles);
       std::string userinput = (puzzles)[userInput(puzzles.size() + 1) - 1];
       std::cout << "You chose: " << userinput << std::endl;
       createPuzzle(userinput);
-      intpuz.startPuzzle(currentpuzzle, player, puzzles, changeenv);
-      player = intpuz.getPlayer;
-      puzzles intpuz.getPuzzles();
-      changeenv intpuz.getchangeEnv();
+      intpuz.startPuzzle(currentpuzzle, player, puzzles, ischangeenv);
+      player = intpuz.getPlayer(currentpuzzle);
+      puzzles = intpuz.getPuzzle(currentpuzzle);
+      ischangeenv = intpuz.getChangeEnv(currentpuzzle);
     }
   }
 }
@@ -44,8 +44,8 @@ void Game::promptPuzzles(std::vector<std::string> puzzles) {
       std::cout << i + 1 << ") " << puzzles[i] <<"\n";
     }
     std::cout << puzzles.size() + 1 << ") Help\n";
-    std::cout << puzzles.size() + 2 << ") Inventory\n"
-    std::cout << puzzles.size() + 3 << ") Quit\n"
+    std::cout << puzzles.size() + 2 << ") Inventory\n";
+    std::cout << puzzles.size() + 3 << ") Quit\n";
 }
 
 int Game::userInput(int length) {
@@ -63,9 +63,9 @@ int Game::userInput(int length) {
       } else if (userinput == length) {
          std::cout << intenv.getHelp(currentenvironment) << "\n";
       }  else if (userinput == length + 1) {
-         player.listItem
+         player.listItem();
       }  else if (userinput == length + 2) {
-         std::cout << player. << "\n";
+         std::cout << "This will quit later\n";
       } else {
           return userinput;
       }
