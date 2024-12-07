@@ -13,7 +13,7 @@ Item* FactoryItem::createItem(const std::string& type) {
     auto it = itemmap.find(type);
 
     if (it != itemmap.end()) {
-        return it->second;
+        return it->second->clone();
     } else {
         return new Ticket();
     }
