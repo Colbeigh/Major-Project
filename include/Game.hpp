@@ -21,23 +21,20 @@ class Game {
   void gameLoop();
   void promptPuzzles(std::vector<std::string> puzzles);
   int userInput(int length);
-  bool isRunning();
   void createPuzzle(std::string userinput);
   void changeEnvironment();
-  void ischangeEnv();
 
   Player player;
-  Environment* curenv;
-  std::vector<std::string> environments;
-  std::vector<std::string> tempenvironments;
-
-  Puzzle* currentpuzzle;
-  InteractEnvironment intenv;
   FactoryEnvironment FactEnv;
-  InteractPuzzle intpuz;
+  Environment* currentenvironment;
+  InteractEnvironment intenv;
+  std::vector<std::string> environments;
+
   FactoryPuzzle FactPuz;
+  Puzzle* currentpuzzle;
+  InteractPuzzle intpuz;
   std::vector<std::string> puzzles;
-  bool changeenv;
+  bool ischangeenv;
 };
 
 #endif

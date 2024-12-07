@@ -3,53 +3,38 @@
 Game::Game() : environments{"Passenger Cart", "Dining Cart",
 "Gambling Cart", "Luggage", "Baggage", "Between", "Prison",
 "Medical", "Armory", "Engine"} {
-  curenv = nullptr;
+  currentenvironment = nullptr;
   currentpuzzle = nullptr;
   changeEnvironment();
-  changeenv = false;
 }
 
 Game::~Game() {
-    delete curenv;
+    delete currentenvironment;
     delete currentpuzzle;
 }
 
 void Game::Start() {
   std::string prologue = "This is the prologue";
+  player.setAlive();
   gameLoop();
 }
 
 void Game::gameLoop() {
-  player.setAlive();
-
-  while (isRunning()) {
-    bool temp = true;
-    std::cout << "You have entered into a new cart " << intenv.getName(curenv) << "\n";
-    std::cout << intenv.getDesc(curenv) << "\n";
-    puzzles = intenv.getPuzzles(curenv);
+  while (player.isAlive()) {
+    ischangeenv = false;
+    std::cout << "You have entered into a new cart " << intenv.getName(currentenvironment) << "\n";
+    std::cout << intenv.getDesc(currentenvironment) << "\n";
+    puzzles = intenv.getPuzzles(currentenvironment);
     
-    std::cout << "Would you like to go to the next cart?\n"
-              << "Press capital Y to change and anything else to not ";
-    
-    char userin2;
-    std::cin >> userin2;
-
-    if (userin2 == 'Y') {
-        changeEnvironment();
-      temp = false;
-    }
-
-    while (temp) {
+    while (!ischangeenv) {
       promptPuzzles(*puzzles);
       std::string userinput = (puzzles)[userInput(puzzles.size() + 1) - 1];
       std::cout << "You chose: " << userinput << std::endl;
       createPuzzle(userinput);
-      intpuz.startPuzzle(curenv, player, puzzles, changeenv);
+      intpuz.startPuzzle(currentpuzzle, player, puzzles, changeenv);
       player = intpuz.getPlayer;
       puzzles intpuz.getPuzzles();
       changeenv intpuz.getchangeEnv();
-      std::cout << changeenv << "\n";
-      ischangeEnv();
     }
   }
 }
@@ -59,6 +44,8 @@ void Game::promptPuzzles(std::vector<std::string> puzzles) {
       std::cout << i + 1 << ") " << puzzles[i] <<"\n";
     }
     std::cout << puzzles.size() + 1 << ") Help\n";
+    std::cout << puzzles.size() + 2 << ") Inventory\n"
+    std::cout << puzzles.size() + 3 << ") Quit\n"
 }
 
 int Game::userInput(int length) {
@@ -74,15 +61,15 @@ int Game::userInput(int length) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
          length + 1 << ".\n";
       } else if (userinput == length) {
-         std::cout << intenv.getHelp(curenv) << "\n";
+         std::cout << intenv.getHelp(currentenvironment) << "\n";
+      }  else if (userinput == length + 1) {
+         player.listItem
+      }  else if (userinput == length + 2) {
+         std::cout << player. << "\n";
       } else {
           return userinput;
-    }
+      }
   }
-}
-
-bool Game::isRunning() {
-  return player.isAlive();
 }
 
 void Game::createPuzzle(std::string userinput) {
@@ -98,34 +85,21 @@ void Game::createPuzzle(std::string userinput) {
     userinput << std::endl;
     return;
   }
-
-  intpuz.setPuzzle(currentpuzzle);
 }
 
 void Game::changeEnvironment() {
-  if (curenv != nullptr) {
-     delete curenv;
-     curenv = nullptr;
+  if (currentenvironment != nullptr) {
+     delete currentenvironment;
+     currentenvironment = nullptr;
   }
 
   if (!environments.empty()) {
-      curenv = FactEnv.createEnvironment(*environments.begin());
-      if (curenv == nullptr) {
+      currentenvironment = FactEnv.createEnvironment(*environments.begin());
+      if (currentenvironment == nullptr) {
         return;
       }
       environments.erase(environments.begin());
   } else {
       std::cerr << "Error: No more environments available to change to.\n";
-  }
-}
-
-void Game::ischangeEnv() {
-  if (changeenv) {
-    std::cout << "this is true to change env\n";
-    std::cout << changeenv << "\n";
-    changeEnvironment();
-    changeenv = false;
-  } else {
-    std::cerr << "Error: changeenv is null or false\n";
   }
 }
