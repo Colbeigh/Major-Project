@@ -17,6 +17,7 @@ void ticketPuzzle::startPuzzle(Player player,
 p = player;
 puzz = puzzles;
 env = changeenv;
+TM = new ticketMaster;
 event();
 }
 
@@ -27,12 +28,12 @@ bool ticketPuzzle::failPuzzle() {
     return true;
 }
 
-bool ticketPuzzle::solution(Player player) {
-    if(player.hasItem("Train Ticket") == true ) {
+bool ticketPuzzle::solution() {
+    if(p.hasItem("Train Ticket") == true ) {
     std::cout << "You give him the ticket\n";
-    player.remItem("Train Ticket");
+    p.remItem("Train Ticket");
     std::cout <<"You watch him punch the ticket and hands back it to you\n";
-    giveReward(player);
+    giveReward();
     TM->displayDialogue(1);
     std::cout << "You notice something strange about the ticket.\n" <<
     "On the back of the ticket, 'HELP' is written.\n" <<
@@ -41,6 +42,7 @@ bool ticketPuzzle::solution(Player player) {
         std::cout << "Player does not have the item.\n";
     return false;
         }
+        return true;
 }
 
 void ticketPuzzle::event() {
@@ -48,11 +50,12 @@ void ticketPuzzle::event() {
     TM->displayDialogue(0);
     std::cout <<"What would you like to do?\n"<<
     "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
+    int choice;
     while (true) {
-    pInput();
-        if (pInput() < 1 || pInput() > 2 ) {
+    choice = pInput();
+        if (choice < 1 || choice > 2 ) {
             std::cout << "Please pick between 1 or 2\n";
-        } else if (pInput() == 2) {
+        } else if (choice == 2) {
             failPuzzle();
             break;
         } else {
@@ -60,33 +63,38 @@ void ticketPuzzle::event() {
             break;
         }
     }
+    playerCondition();
 }
 
 
-void ticketPuzzle::giveReward(Player player) {
-player.addItem("Punched Train Ticket");
+void ticketPuzzle::giveReward() {
+p.addItem("Punched Train Ticket");
 }
 
-void ticketPuzzle::playerCondition(Player player) {
+void ticketPuzzle::playerCondition() {
     if (failPuzzle() == true){
-
+        p.setKill();
         } else {
-            player.setAlive();
+            p.setAlive();
     }
 }
 
 int ticketPuzzle::pInput() {
 int playerchoice;
-std::cin >> playerchoice;
+  while(true) {
+    std::cin >> playerchoice;
     if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<
             std::streamsize>::max(), '\n');
-    } else return playerchoice;
-}
+            std::cout << "Invalid input. Please try again.\n";
+    } else {
+        return playerchoice;
+    }
+  }
+}  
 
 std::vector<std::string>Puzzle::getPuzzle() {
-
     return puzz; 
 }
 Player Puzzle::getPlayer() {
