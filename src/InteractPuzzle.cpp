@@ -1,27 +1,26 @@
 #include "InteractPuzzle.hpp"
 
 
-InteractPuzzle::InteractPuzzle() : puzzle(nullptr) {
+InteractPuzzle::InteractPuzzle() {
 }
 
 InteractPuzzle::~InteractPuzzle() {
-  delete puzzle;
 }
 
- std::vector<std::string>InteractPuzzle::getPuzzle() {
+ std::vector<std::string>InteractPuzzle::getPuzzle(Puzzle* puzzle) {
   if(puzzle == nullptr) {
     return {};
   }
   return puzzle->getPuzzle();
 }
-Player InteractPuzzle::getPlayer() {
+Player InteractPuzzle::getPlayer(Puzzle* puzzle) {
   if(puzzle == nullptr) {
     return Player();
   }
   return puzzle->getPlayer();
 }
 
-bool InteractPuzzle::getChangeEnv() {
+bool InteractPuzzle::getChangeEnv(Puzzle* puzzle) {
   if(puzzle == nullptr) {
     return false;
   }
