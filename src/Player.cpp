@@ -18,6 +18,10 @@ void Player::remItem(std::string itemid) {
   playerinv.remItem(itemid);
 }
 
+void Player::listItem() {
+  playerinv.listItems();
+}
+
 bool Player::isAlive() {
   return alive;
 }
