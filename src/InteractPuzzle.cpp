@@ -1,35 +1,34 @@
 #include "InteractPuzzle.hpp"
 
 
-InteractPuzzle::InteractPuzzle() {
-  puzzle = nullptr;
+InteractPuzzle::InteractPuzzle() : puzzle(nullptr) {
 }
 
 InteractPuzzle::~InteractPuzzle() {
   delete puzzle;
 }
 
- std::vector<std::string>InteractPuzzle::getPuzzle(Puzzle* puz) {
-  if(puz = nullptr) {
-    return "awd";
+ std::vector<std::string>InteractPuzzle::getPuzzle() {
+  if(puzzle == nullptr) {
+    return {};
   }
-  return puz->getPuzzle();
+  return puzzle->getPuzzle();
 }
-Player InteractPuzzle::getPlayer(Puzzle* puz) {
-  if(puz = nullptr) {
-    return "asd";
+Player InteractPuzzle::getPlayer() {
+  if(puzzle == nullptr) {
+    return Player();
   }
-  return puz->getPlayer();
-}
-
-bool InteractPuzzle::getChangeEnv(Puzzle* puz) {
-  if(puz = nullptr) {
-    return "das";
-  return puz->getChangeEnv();
-  }
+  return puzzle->getPlayer();
 }
 
-void InteractPuzzle::startPuzzle(Puzzle* puz, Player player, 
+bool InteractPuzzle::getChangeEnv() {
+  if(puzzle == nullptr) {
+    return false;
+  }
+  return puzzle->getChangeEnv();
+}
+
+void InteractPuzzle::startPuzzle(Puzzle *puz, Player player, 
   std::vector<std::string> puzzles, bool changeenv) {
   if (puz == nullptr) {
     std::cerr << "Error: No puzzle set!" << std::endl;
