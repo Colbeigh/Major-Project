@@ -85,16 +85,6 @@ int playerchoice;
   }
 }  
 
-std::vector<std::string>Puzzle::getPuzzle() {
-    return puzz; 
-}
-Player Puzzle::getPlayer() {
-    return p;
-}
-
-bool Puzzle::getChangeEnv() {
-    return env;
-}
 // void bouncerPuzzle::addPuzzle(const std::string& puzzleId) {
 // }
 
