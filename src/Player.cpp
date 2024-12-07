@@ -1,10 +1,19 @@
 #include "Player.hpp"
 
-Player::Player() : name("Default") {
-  addItem("Ticket");
-}
+Player::Player() : name("Default") {}
 
 Player::~Player() {}
+
+Player& Player::operator=(const Player& other) {
+    if (this == &other) {
+        return *this;
+    }
+
+    name = other.name;
+    alive = other.alive;
+    playerinv = other.playerinv;
+    return *this;
+}
 
 bool Player::hasItem(std::string itemid) {
   return playerinv.hasItem(itemid);

@@ -9,10 +9,11 @@ class Player {
  public:
   Player();
   virtual ~Player();
+  Player& operator=(const Player& other);
   bool hasItem(std::string itemid);
   void addItem(std::string itemid);
   void remItem(std::string itemid);
-  void Player::listItem();
+  void listItem();
   bool isAlive();
   void setAlive();
   void setKill();

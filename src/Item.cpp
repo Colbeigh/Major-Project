@@ -22,10 +22,18 @@ Ticket::Ticket() {
   itemid = 1;
 }
 
+Item* Ticket::clone() const {
+  return new Ticket(*this);
+}
+
 PunchedTicket::PunchedTicket() {
   name = "Punched Train Ticket";
   desc = "The words help are punched into it";
   itemid = 2;
+}
+
+Item* PunchedTicket::clone() const {
+  return new PunchedTicket(*this);
 }
 
 GamblingTicket::GamblingTicket() {
@@ -34,8 +42,16 @@ GamblingTicket::GamblingTicket() {
   itemid = 3;
 }
 
+Item* GamblingTicket::clone() const {
+  return new GamblingTicket(*this);
+}
+
 Quarter::Quarter() {
   name = "Lucky Quarter";
   desc = "It's just an ordinary quarter, it kinda smells";
   itemid = 4;
+}
+
+Item* Quarter::clone() const {
+  return new Quarter(*this);
 }

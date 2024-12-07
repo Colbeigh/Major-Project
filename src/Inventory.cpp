@@ -6,6 +6,22 @@ Inventory::~Inventory() {
   delete item;
 }
 
+Inventory& Inventory::operator=(const Inventory& other) {
+    if (this == &other) {
+        return *this;
+    }
+    items = other.items;
+
+    if (other.item != nullptr) {
+        delete item;
+        item = nullptr;
+    } else {
+        item = nullptr;
+    }
+    FacItem = other.FacItem;
+    return *this;
+}
+
 bool Inventory::hasItem(std::string itemid) {
   for (int i = 0; i < items.size(); ++i) {
       if (itemid == items[i]) {
@@ -17,10 +33,12 @@ bool Inventory::hasItem(std::string itemid) {
 }
 
 void Inventory::addItem(std::string itemid) {
+  std::cout << "Start of add item ran\n";
   if (hasItem(itemid)) {
       std::cout << "You already have " << getName(itemid) <<"\n";
       return;
   }
+  std::cout << "end of add item ran\n";
   items.push_back(itemid);
   std:: cout << "Added " << getName(itemid) << " to inventory\n";
 }
@@ -50,8 +68,6 @@ std::string Inventory::getName(std::string itemid) {
   createItem(itemid);
   std::string name;
   name = item -> getName();
-  delete item;
-  item = nullptr;
   return name;
 }
 
@@ -59,8 +75,6 @@ std::string Inventory::getDesc(std::string itemid) {
   createItem(itemid);
   std::string name;
   name = item -> getDesc();
-  delete item;
-  item = nullptr;
   return name;
 }
 
@@ -71,7 +85,3 @@ void Inventory::createItem(std::string itemid) {
   }
   item = FacItem.createItem(itemid);
 }
-
-std::vector<std::string> items;
-Item* item = nullptr;
-FactoryItem FacItem;

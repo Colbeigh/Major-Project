@@ -11,6 +11,7 @@ class Inventory {
  public:
   Inventory();
   virtual ~Inventory();
+  Inventory& operator=(const Inventory& other);
   bool hasItem(std::string itemid);
   void addItem(std::string itemid);
   void remItem(std::string itemid);
