@@ -16,6 +16,7 @@ FactoryPuzzle::FactoryPuzzle() {
         []() { return new gambilingOutlawPuzzle(); }},
         {"Talk to HelpfullPassenger", 
         []() { return new helpfullPassengerPuzzle(); }},
+        {"Catch a breath", []() { return new searchRoomPuzzle(); }},
         {"Approach the luggage", []() { return new luggagePuzzle(); }}
     };
 }

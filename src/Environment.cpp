@@ -55,7 +55,7 @@ LuggageCart::LuggageCart() {
     name = "Luggage Cart";
     environmentDescription = "You are in the luggage cart.";
     helpInfo = "You can ask the porter for help.";
-    puzzles = {"SearchRoom", "Check Breifcase"}; // Search Room Puzzle and Interact with breifcase.
+    puzzles = {"Catch a breath"};
 }
 
 ArmoryCart::ArmoryCart() {
