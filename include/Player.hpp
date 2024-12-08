@@ -30,7 +30,7 @@ class Player {
   /**
   * @brief Returns users name
   */
-  std::string Player::getName();
+  std::string getName();
 
   /**
   * @brief Checks if player has the item in their inventory
