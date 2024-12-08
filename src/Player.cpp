@@ -7,8 +7,7 @@
 
 Player::Player() : name("Default") {}
 
-Player::~Player() {
-}
+Player::~Player() {}
 
 Player& Player::operator=(const Player& other) {
     if (this == &other) {
