@@ -20,10 +20,10 @@ class Environment {
     std::vector<std::string> puzzles;
 };
 
-class PassenegerCart : public Environment {
+class PassengerCart : public Environment {
  public:
-    PassenegerCart();
-    virtual ~PassenegerCart();
+    PassengerCart();
+    virtual ~PassengerCart();
 };
 
 class DiningCart : public Environment {

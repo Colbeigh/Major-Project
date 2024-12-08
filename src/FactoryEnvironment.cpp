@@ -7,7 +7,7 @@
 
 FactoryEnvironment::FactoryEnvironment() {
      environmentmap = {
-        {"Passenger Cart", []() { return new PassenegerCart(); }},
+        {"Passenger Cart", []() { return new PassengerCart(); }},
         {"Dining Cart", []() { return new DiningCart(); }},
         {"Gambling Cart", []() { return new GamblingCart(); }},
         {"Luggage Cart", []() { return new LuggageCart(); }},
@@ -26,6 +26,6 @@ Environment* FactoryEnvironment::createEnvironment(const std::string& type) {
     if (it != environmentmap.end()) {
         return it->second();
     } else {
-        return new PassenegerCart();
+        return new PassengerCart();
     }
 }

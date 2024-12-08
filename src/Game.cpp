@@ -35,7 +35,7 @@ void Game::gameLoop() {
     std::cout << intenv.getDesc(currentenvironment) << "\n";
     puzzles = intenv.getPuzzles(currentenvironment);
 
-    while (!ischangeenv) {
+    while (!ischangeenv && player.isAlive()) {
       promptPuzzles(puzzles);
       std::string userinput = (puzzles)[userInput(puzzles.size() + 1) - 1];
       std::cout << "You chose: " << userinput << std::endl;

@@ -29,7 +29,7 @@ bool ticketPuzzle::solution() {
     std::cout <<"You watch him punch the ticket and hands back it to you\n";
     giveReward();
     TM->displayDialogue(1);
-    std::cout << "You notice something strange about the ticket.\n" <<
+    std::cout << "\nYou notice something strange about the ticket.\n" <<
     "On the back of the ticket, 'HELP' is written.\n" <<
     "You look up and Ticket Master has already left\n";
     } else {
@@ -37,13 +37,14 @@ bool ticketPuzzle::solution() {
     return false;
         }
         remPuzzle("Talk to Ticket Master");
+        addPuzzle("Go to next cart");
         return true;
 }
 
 void ticketPuzzle::event() {
     std::cout << "The Ticket Master approaches you\n";
     TM->displayDialogue(0);
-    std::cout <<"What would you like to do?\n"<<
+    std::cout <<"\nWhat would you like to do?\n"<<
     "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
     while (true) {
     int choice;

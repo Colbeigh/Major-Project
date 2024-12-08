@@ -6,6 +6,7 @@
 #include "Puzzle.hpp"
 
 sweetTalkPuzzle::sweetTalkPuzzle(): RL(nullptr) {
+  RL = new richLady;
 }
 
 sweetTalkPuzzle::~sweetTalkPuzzle() {
@@ -34,17 +35,18 @@ void sweetTalkPuzzle::event() {
 
 bool sweetTalkPuzzle::failPuzzle() {
     std::cout << "You try to steal the ticket and the coin but failed.\n";
-    RL->displayDialogue(3);
-    std::cout << "You watch her storm off and drop the ticket\n" <<
-    "What would you like to do?\n";
+    RL->displayDialogue(2);
+    std::cout << "\nYou watch her storm off and drop the ticket\n" <<
+    "What would you like to do?\n" "1. Grab ticket\n";
     while (true) {
     int choice;
     choice = pInput();
       if (choice < 1 || choice > 1) {
-        std::cout <<"You only have one choice!"<< std::endl;
+        std::cout <<"You only have one choice!\n"<< std::endl;
       } else {
             p.addItem("GamblingTicket");
             std::cout << "You pick up the ticket\n";
+            remPuzzle("Talk to Rich Lady");
             break;
         }
     }
@@ -55,15 +57,17 @@ bool sweetTalkPuzzle::failPuzzle() {
 bool sweetTalkPuzzle::solution() {
     std::cout << "You decided to sweet talk the Rich Lady\n";
     RL->displayDialogue(0);
-    std::cout << "She hands you the ticket and her lucky coin\n";
+    std::cout << "\nShe hands you the ticket and her lucky coin\n";
     RL->displayDialogue(1);
+    std::cout << "\n";
     giveReward();
+    remPuzzle("Talk to Rich Lady");
     return true;
 }
 
 void sweetTalkPuzzle::giveReward() {
     p.addItem("GamblingTicket");
-    p.addItem("LuckyCoin");
+    p.addItem("Quarter");
 }
 
 
