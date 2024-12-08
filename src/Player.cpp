@@ -2,7 +2,9 @@
 
 Player::Player() : name("Default") {}
 
-Player::~Player() {}
+Player::~Player() {
+    std::cout << "Player destructor called\n";
+}
 
 Player& Player::operator=(const Player& other) {
     if (this == &other) {
