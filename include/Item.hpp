@@ -92,4 +92,12 @@ class PieceOfPaper : public Item {
   */
   PieceOfPaper();
 };
+
+class Plans: public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  Plans();
+};
 #endif
