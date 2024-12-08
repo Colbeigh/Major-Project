@@ -43,3 +43,10 @@ Quarter::Quarter() {
   desc = "It's just an ordinary quarter, it kinda smells";
   itemid = "Quarter";
 }
+
+PieceOfPaper::PieceOfPaper() {
+  name = "Outlaw's Bagage Number";
+  desc = "It's a piece of paper with a number on it"
+  "and a smudged symbole";
+  itemid = "PieceOfPaper";
+}

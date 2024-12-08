@@ -83,4 +83,13 @@ class Quarter : public Item {
   */
   Quarter();
 };
+
+
+class PieceOfPaper : public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  PieceOfPaper();
+};
 #endif
