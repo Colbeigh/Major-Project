@@ -36,7 +36,6 @@ PassenegerCart::PassenegerCart() {
     "Talk to bouncer", "Pick a seat"};
 }
 
-PassenegerCart::~PassenegerCart() {}
 
 DiningCart::DiningCart() {
     name = "Dining Cart";
@@ -46,4 +45,38 @@ DiningCart::DiningCart() {
     puzzles = {"Talk to Rich Lady", "Talk to bouncer"};
 }
 
+GamblingCart::GamblingCart() {
+    name = "Gambling Cart";
+    environmentDescription = "You are in the gambling cart.";
+    helpInfo = "You can ask the dealer for help.";
+    puzzles = {};
+}
+
+LuggageCart::LuggageCart() {
+    name = "Luggage Cart";
+    environmentDescription = "You are in the luggage cart.";
+    helpInfo = "You can ask the porter for help.";
+    puzzles = {"Puzzle1", "Puzzle2"};
+}
+
+ArmoryCart::ArmoryCart() {
+    name = "Armory Cart";
+    environmentDescription = "You are in the armory cart.";
+    helpInfo = "You can ask the guard for help.";
+    puzzles = {};
+}
+
+EngineCart::EngineCart() {
+    name = "Engine Cart";
+    environmentDescription = "Looking around you see the engine";
+    helpInfo = "You can ask the engineer for help.";
+    puzzles = {"Puzzle", "Puzzle"};
+}
+
+
+PassenegerCart::~PassenegerCart() {}
+GamblingCart::~GamblingCart() {}
+LuggageCart::~LuggageCart() {}
+ArmoryCart::~ArmoryCart() {}
+EngineCart::~EngineCart() {}
 DiningCart::~DiningCart() {}

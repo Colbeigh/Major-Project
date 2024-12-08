@@ -32,4 +32,28 @@ class DiningCart : public Environment {
     virtual ~DiningCart();
 };
 
+class GamblingCart : public Environment {
+ public:
+    GamblingCart();
+    virtual ~GamblingCart();
+};
+
+class LuggageCart : public Environment {
+ public:
+    LuggageCart();
+    virtual ~LuggageCart();
+};
+
+class ArmoryCart : public Environment {
+ public:
+    ArmoryCart();
+    virtual ~ArmoryCart();
+};
+
+class EngineCart : public Environment {
+ public:
+    EngineCart();
+    virtual ~EngineCart();
+};
+
 #endif //ENVIRONMENT_H_INCLUDED
