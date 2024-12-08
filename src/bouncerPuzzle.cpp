@@ -19,6 +19,9 @@ puzz = puzzles;
 env = changeenv;
 B = new bouncer;
 event();
+    if(solution()) {
+    env = true;
+    }
 }
 
 void bouncerPuzzle::event() {

@@ -14,6 +14,9 @@ doorPuzzle::~doorPuzzle() {
 void doorPuzzle::startPuzzle(Player player, 
   std::vector<std::string> puzzles, bool changeenv) {
 event();
+    if(solution()) {
+    env = true;
+    }
 }
 
 void doorPuzzle::event()  {

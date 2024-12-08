@@ -19,6 +19,9 @@ puzz = puzzles;
 env = changeenv;
 TM = new ticketMaster;
 event();
+    if(solution()) {
+    env = true;
+    }
 }
 
 bool ticketPuzzle::failPuzzle() {
