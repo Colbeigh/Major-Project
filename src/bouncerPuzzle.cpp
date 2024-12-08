@@ -6,6 +6,7 @@
 #include "Puzzle.hpp"
 
 bouncerPuzzle::bouncerPuzzle(): B(nullptr) {
+    B = new bouncer;
 }
 
 bouncerPuzzle::~bouncerPuzzle() {
@@ -15,7 +16,7 @@ delete B;
 void bouncerPuzzle::event() {
     std::cout << "You approach the Bouncer\n";
     B->displayDialogue(2);
-    std::cout << "What would you like to do?\n";
+    std::cout << "\nWhat would you like to do?\n";
         if (p.hasItem("GamblingTicket") == false) {
             failPuzzle();
             return;
@@ -41,13 +42,16 @@ void bouncerPuzzle::event() {
 bool bouncerPuzzle::failPuzzle() {
     std::cout << "What ticket?\n";
     B->displayDialogue(0);
+    std::cout << "\n";
     return false;
 }
 
 bool bouncerPuzzle::solution() {
     std::cout << "You give him the Gambling ticket\n";
     p.remItem("GamblingTicket");
-    B->displayDialogue(2);
+    B->displayDialogue(1);
+    std::cout << "\n";
+    env = true;
     return true;
 }
 

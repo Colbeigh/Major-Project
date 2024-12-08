@@ -12,7 +12,7 @@ doorPuzzle::~doorPuzzle() {
 }
 
 void doorPuzzle::event()  {
-std::cout << "Would you like to move to a new cart?"
+std::cout << "Would you like to move to a new cart?\n"
 "1.Yes \n 2. No, not yet.\n";
     while (true) {
     int choice;
