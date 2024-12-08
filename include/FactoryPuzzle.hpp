@@ -11,7 +11,7 @@
 #include <functional>
 #include "Puzzle.hpp"
 /**
-* @class FactoryPuzzle FactoryPuzzle.hpp 
+* @class FactoryPuzzle FactoryPuzzle.hpp
 * "FactoryPuzzle.hpp"
 * @brief Creates Puzzles
 */
@@ -29,7 +29,7 @@ class FactoryPuzzle {
   virtual ~FactoryPuzzle();
 
   /**
-   * @brief Goes through map and returns a new environment 
+   * @brief Goes through map and returns a new environment
    * based off input
    */
   Puzzle* createPuzzle(const std::string& name);

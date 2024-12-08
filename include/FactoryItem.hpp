@@ -11,7 +11,7 @@
 #include <functional>
 #include "Item.hpp"
 /**
-* @class FactoryItem FactoryItem.hpp 
+* @class FactoryItem FactoryItem.hpp
 * "FactoryItem.hpp"
 * @brief Creates items
 */

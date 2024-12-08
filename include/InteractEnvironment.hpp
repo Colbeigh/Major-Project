@@ -11,7 +11,7 @@
 #ifndef INTERACT_ENVIRONMENT_H_INCLUDED
 #define INTERACT_ENVIRONMENT_H_INCLUDED
 /**
-* @class InteractEnvironment InteractEnvironment.hpp 
+* @class InteractEnvironment InteractEnvironment.hpp
 * "InteractEnvironment.hpp"
 * @brief Holds logic to call environments functions
 */
@@ -45,7 +45,6 @@ class InteractEnvironment {
   * @param Environment to get help of
   */
  std::string getHelp(Environment* env);
-
 
   /**
   * @brief Return list of puzzles of environment
