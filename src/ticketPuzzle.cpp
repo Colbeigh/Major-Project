@@ -4,6 +4,7 @@
  */
 
 #include "Puzzle.hpp"
+
 void Puzzle::addPuzzle(std::string puzzleid){
     puzz.push_back(puzzleid);
 }
@@ -55,6 +56,7 @@ bool ticketPuzzle::solution() {
         std::cout << "Player does not have the item.\n";
     return false;
         }
+        remPuzzle("Talk to Ticket Master");
         return true;
 }
 
