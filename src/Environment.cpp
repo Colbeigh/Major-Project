@@ -32,8 +32,7 @@ PassenegerCart::PassenegerCart() {
     environmentDescription = "Looking around the environment, "
     "you see passeneger, and a ticket master walking around";
     helpInfo = "You can ask the ticket master for help.";
-    puzzles = {"Talk to Ticket Master", "Talk to Rich Lady",
-    "Talk to bouncer", "Pick a seat"};
+    puzzles = {"Talk to Ticket Master", "Pick a seat"};
 }
 
 
@@ -49,14 +48,14 @@ GamblingCart::GamblingCart() {
     name = "Gambling Cart";
     environmentDescription = "You are in the gambling cart.";
     helpInfo = "You can ask the dealer for help.";
-    puzzles = {};
+    puzzles = {"Talk To HelpfullPassenger", "Talk to GambilingOutlaw"};
 }
 
 LuggageCart::LuggageCart() {
     name = "Luggage Cart";
     environmentDescription = "You are in the luggage cart.";
     helpInfo = "You can ask the porter for help.";
-    puzzles = {"Puzzle1", "Puzzle2"};
+    puzzles = {"SearchRoom", "Check Breifcase"}; // Search Room Puzzle and Interact with breifcase.
 }
 
 ArmoryCart::ArmoryCart() {

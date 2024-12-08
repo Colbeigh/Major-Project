@@ -62,7 +62,7 @@ void ticketPuzzle::event() {
 
 
 void ticketPuzzle::giveReward() {
-p.addItem("PunchedTicket");
+    p.addItem("PunchedTicket");
 }
 
 // ticketPuzzle::ticketPuzzle() : p(nullptr) {
