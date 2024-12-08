@@ -70,17 +70,3 @@ bool helpfullPassengerPuzzle::solution() {
     }
     return true;
 }
-
-int helpfullPassengerPuzzle::pInput() {
-    int playerchoice;
-    while (true) {
-    std::cin >> playerchoice;
-    } if (std::cin.fail()) {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<
-        std::streamsize>::max(), '\n');
-        std::cout << "Invalid input. Please enter a number.\n";
-    } else {
-        return playerchoice;
-    }
-}
