@@ -5,18 +5,19 @@
 
 #include "Puzzle.hpp"
 
-SeatPuzzle::SeatPuzzle() {
+luggagePuzzle::luggagePuzzle() {
 }
 
-SeatPuzzle::~SeatPuzzle() {
+luggagePuzzle::~luggagePuzzle() {
 }
 
-void SeatPuzzle::event()  {
-std::cout << "Would you like to sit towards the front or back?\n"
-"1.Front \n 2. Back.\n";
+void luggagePuzzle::event()  {
+std::cout << "You approach the luggage and notice a familiar symbol\n"
+"It's the O'Driscoll gang! I thought I put them away years ago"
+"1. Open the luggage\n 2. Leave it be.\n";
     while (true) {
     int choice;
-        choice = pInput();
+        choice = pInput(3);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 1) {
@@ -29,20 +30,27 @@ std::cout << "Would you like to sit towards the front or back?\n"
     }
 }
 
-bool SeatPuzzle::failPuzzle()  {
-std::cout << "You sat towards the back.\n";
-addPuzzle("Talk to Ticket Master");
-remPuzzle("Pick a seat");
+bool luggagePuzzle::failPuzzle()  {
+std::cout << "You chose to not open the luggage.\n";
+remPuzzle("Approach the luggage");
+addPuzzle("Go to next cart");
 return false;
 }
 
-bool SeatPuzzle::solution()  {
-std::cout << "You sat near the front\n";
-addPuzzle("Talk to Ticket Master");
-remPuzzle("Pick a seat");
+bool luggagePuzzle::solution()  {
+std::cout << "The luggage is locked tight\n";
+    if (p.hasItem("Quarter")) {
+        std::cout << "In rage you throw the lucky quarter at the lock\n" <<
+        " and it opens up right up\n" "Guess the quarter was lucky\n";
+    p.remItem("Quarter");
+    giveReward();
+    }
+remPuzzle("Approach the luggage");
+addPuzzle("Go to next cart");
 return true;
 }
 
-void SeatPuzzle::giveReward()  {
+void luggagePuzzle::giveReward()  {
+    p.addItem("Plans");
 }
 
