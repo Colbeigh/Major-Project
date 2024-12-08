@@ -75,5 +75,16 @@ void helpfullPassenger::initializeDialogueOptions() {
 }
 
 void gambilingOutlaw::initializeDialogueOptions() {
-    dialogueLines.push_back("Blank Text");
+    initializeDialogueOptions();
+}
+
+void gambilingOutlaw::initializeDialogueOptions() {
+    dialogueLines.push_back("So you're that policeman that has been" 
+                            "causing trouble for us."); //[0]
+    dialogueLines.push_back("Okay but be ready to walk away with nothing"); //[1]
+    dialogueLines.push_back("wow good thorw. Who tought you to throw like that?"
+    "Your mother?"); // [2]
+    dialogueLines.push_back("Awww!. What the hell. I cant see anything"); // [3]
+    dialogueLines.push_back("You throwing skills is like my driking skills.\n HORRIBLE!"); // [4]
+
 }
