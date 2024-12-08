@@ -4,7 +4,18 @@
  */
 
 #include "Puzzle.hpp"
+void Puzzle::addPuzzle(std::string puzzleid){
+    puzz.push_back(puzzleid);
+}
 
+void Puzzle::remPuzzle(std::string puzzleid) {
+  for (int i = 0; i < puzz.size(); ++i) {
+       if (puzzleid == puzz[i]) {
+           puzz.erase(puzz.begin() + i);
+          return;
+      }
+  }
+}
 ticketPuzzle::ticketPuzzle() : TM(nullptr) {
 }
 

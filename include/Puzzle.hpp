@@ -25,6 +25,8 @@ class Puzzle {
   virtual bool solution() = 0;
   virtual void giveReward() = 0;
   virtual void playerCondition() = 0;
+  void addPuzzle(std::string puzzleid);
+  void remPuzzle(std::string puzzleid);
   Player getPlayer() {return p;}
   bool getChangeEnv () {return env;}
   std::vector<std::string> getPuzzle() {return puzz;}
