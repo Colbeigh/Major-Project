@@ -90,14 +90,6 @@ class doorPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  // void startPuzzle(Player player,
-  // std::vector<std::string> puzzles, bool changeenv) override;
-  // void event(Player player) override;
-  // void failPuzzle(Player player) override;
-  // void solution(Player player) override;
-  // void giveReward(Player player) override;
-  // void addPuzzle(const std::string& puzzleId) override;
-  // bool solved(const std::string& puzzleId);
 };
 
 class helpfullPassengerPuzzle : public Puzzle {
@@ -124,4 +116,13 @@ class gambilingOutlawPuzzle : public Puzzle {
   NPC* GO;
 };
 
-#endif//Puzzle_hpp_included
+class luggagePuzzle : public Puzzle {
+ public:
+  luggagePuzzle();
+  ~luggagePuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+};
+#endif

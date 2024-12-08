@@ -18,7 +18,7 @@ Gambling Car
 
 Luggage Car
     Search the car we find the gangs symbols of ta gang you locked away years ago
-    We also have a choice between three items ( player must pick the right one to escape later)
+    We also have a choice between three items
     
 Armory Car
     Ticket Master tied up in corner - actually a bad guy, says he has key to Armory
