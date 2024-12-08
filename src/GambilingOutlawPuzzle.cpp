@@ -19,7 +19,7 @@ void gambilingOutlawPuzzle::event() {
     "2. Turn away\n";
     while (true) {
     int choice;
-    choice = pInput();
+    choice = pInput(2);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 2) {
@@ -41,7 +41,7 @@ bool gambilingOutlawPuzzle::solution() {
         "2. Throw the die in the outlaws face\n";
         "3. Thow the die against the wall padding\n";
         while (true) {
-        int choice = pInput();
+        int choice = pInput(3);
         if (choice < 1 || choice > 3) {
             std::cout << "Pick between 1 or 3 " << std::endl;
             return true;
