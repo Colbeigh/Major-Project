@@ -5,17 +5,17 @@
 
 #include "Puzzle.hpp"
 
-luggagePuzzle::luggagePuzzle() {
+searchRoomPuzzle::searchRoomPuzzle() {
 }
 
-luggagePuzzle::~luggagePuzzle() {
+searchRoomPuzzle::~searchRoomPuzzle() {
 }
 
-void luggagePuzzle::event()  {
+void searchRoomPuzzle::event()  {
 std::cout << "You got away\n" <<
 "You take a breath and check the paper you picked up\n" <<
 p.getDesc("PieceOfPaper") << 
-"This must be the luggage number\n";
+"\nThis must be the luggage number\n"
 "\n1. Goto Luggage\n 2. Leave it be.\n";
     while (true) {
     int choice;
@@ -32,14 +32,14 @@ p.getDesc("PieceOfPaper") <<
     }
 }
 
-bool luggagePuzzle::failPuzzle()  {
+bool searchRoomPuzzle::failPuzzle()  {
 std::cout << "You chose to not goto the luggage.\n";
 std::cout << "You end up doing nothing and the train explodes\n";
 p.setKill();
 return false;
 }
 
-bool luggagePuzzle::solution()  {
+bool searchRoomPuzzle::solution()  {
 std::cout << "You decide to go look for the luggage\n";
 p.remItem("PieceOfPaper");
 remPuzzle("Catch a breath");
@@ -47,5 +47,5 @@ addPuzzle("Approach the luggage");
 return true;
 }
 
-void luggagePuzzle::giveReward()  {}
+void searchRoomPuzzle::giveReward()  {}
 

@@ -13,7 +13,7 @@ luggagePuzzle::~luggagePuzzle() {
 
 void luggagePuzzle::event()  {
 std::cout << "You approach the luggage and notice a familiar symbol\n"
-"It's the O'Driscoll gang! I thought I put them away years ago"
+"It's the O'Driscoll gang! I thought I put them away years ago!\n"
 "1. Open the luggage\n 2. Leave it be.\n";
     while (true) {
     int choice;
@@ -41,7 +41,7 @@ bool luggagePuzzle::solution()  {
 std::cout << "The luggage is locked tight\n";
     if (p.hasItem("Quarter")) {
         std::cout << "In rage you throw the lucky quarter at the lock\n" <<
-        " and it opens up right up\n" "Guess the quarter was lucky\n";
+        " and it somehow opens up\n" "Guess the quarter was lucky\n";
     p.remItem("Quarter");
     giveReward();
     }
