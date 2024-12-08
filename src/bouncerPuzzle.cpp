@@ -25,7 +25,7 @@ void bouncerPuzzle::event() {
             "2. Do not give him the ticket.\n";
             while (true) {
             int choice;
-            choice = pInput();
+            choice = pInput(2);
             if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
             } else if (choice == 2) {

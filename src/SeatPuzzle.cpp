@@ -16,7 +16,7 @@ std::cout << "Would you like to sit towards the front or back?\n"
 "1.Front \n 2. Back.\n";
     while (true) {
     int choice;
-        choice = pInput();
+        choice = pInput(2);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 1) {
