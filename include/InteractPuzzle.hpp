@@ -14,7 +14,7 @@ class InteractPuzzle {
   std::vector<std::string> getPuzzle(Puzzle* puzzle);
   Player getPlayer(Puzzle* puzzle);
   bool getChangeEnv(Puzzle* puzzle);
-  void startPuzzle(Puzzle* puz, const Player& player, 
+  void startPuzzle(Puzzle* puz, const Player& player,
   std::vector<std::string> puzzles, bool changeenv);
 };
 
