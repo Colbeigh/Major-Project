@@ -17,12 +17,12 @@ class FactoryEnvironment {
    * @brief Sets up map holding keys to which environment
    */
   FactoryEnvironment();
-    
+  
   /**
    * @brief Deletes map
    */
   virtual ~FactoryEnvironment();
-      
+ 
   /**
    * @brief Goes through map and returns a new environment 
    * based off input

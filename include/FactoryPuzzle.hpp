@@ -28,7 +28,7 @@ class FactoryPuzzle {
    * based off input
    */
   Puzzle* createPuzzle(const std::string& name);
-  
+
   /**
    * @brief Map holding all Puzzles that can be created
    */

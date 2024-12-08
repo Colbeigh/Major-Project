@@ -10,7 +10,6 @@ Game::Game() : environments{"Passenger Cart", "Dining Cart",
 "Medical", "Armory", "Engine"} {
   currentenvironment = nullptr;
   currentpuzzle = nullptr;
-  changeEnvironment();
 }
 
 Game::~Game() {
@@ -27,8 +26,9 @@ void Game::Start() {
 
 void Game::gameLoop() {
   while (player.isAlive()) {
+    changeEnvironment();
     ischangeenv = false;
-    std::cout << "You have entered into a new cart " << 
+    std::cout << "You have entered into a new cart " <<
     intenv.getName(currentenvironment) << "\n";
     std::cout << intenv.getDesc(currentenvironment) << "\n";
     puzzles = intenv.getPuzzles(currentenvironment);
@@ -37,6 +37,7 @@ void Game::gameLoop() {
       promptPuzzles(puzzles);
       std::string userinput = (puzzles)[userInput(puzzles.size() + 1) - 1];
       std::cout << "You chose: " << userinput << std::endl;
+
       createPuzzle(userinput);
       intpuz.startPuzzle(currentpuzzle, player, puzzles, ischangeenv);
       player = intpuz.getPlayer(currentpuzzle);
@@ -44,6 +45,7 @@ void Game::gameLoop() {
       ischangeenv = intpuz.getChangeEnv(currentpuzzle);
     }
   }
+  std::cout << "Thank you for playing the Iron Pursuit\n";
 }
 
 void Game::promptPuzzles(std::vector<std::string> puzzles) {

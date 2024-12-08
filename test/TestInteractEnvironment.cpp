@@ -21,15 +21,16 @@ TEST(InteractEnvironmentTest, GetDesc) {
     InteractEnvironment interactEnv;
 
     Environment validEnv;
-    EXPECT_EQ(interactEnv.getDesc(&validEnv), 
+    EXPECT_EQ(interactEnv.getDesc(&validEnv),
     "You are in an unknown place.");
 
     PassenegerCart passengerCart;
-    EXPECT_EQ(interactEnv.getDesc(&passengerCart), 
-    "Looking around the environment, you see passeneger, and a ticket master walking around");
+    std::string passengercartstring = std::string("Looking around the ") +
+    "environment, you see passeneger, and a ticket master walking around";
+    EXPECT_EQ(interactEnv.getDesc(&passengerCart),passengercartstring);
 
     DiningCart diningCart;
-    EXPECT_EQ(interactEnv.getDesc(&diningCart), 
+    EXPECT_EQ(interactEnv.getDesc(&diningCart),
     "You are in the dining cart.The smell of food fills the air.");
 
     EXPECT_EQ(interactEnv.getDesc(nullptr), "");
