@@ -50,3 +50,9 @@ PieceOfPaper::PieceOfPaper() {
   "and a smudged symbole";
   itemid = "PieceOfPaper";
 }
+
+Plans::Plans() {
+  name = "O'Driscoll gangs plans";
+  desc = "They plan to blow up the train to get back at me";
+  itemid = "Plans";
+}
