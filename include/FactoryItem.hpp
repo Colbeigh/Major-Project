@@ -12,9 +12,25 @@
 
 class FactoryItem {
  public:
+   /**
+   * @brief Sets up map holding keys to which environment
+   */
   FactoryItem();
+
+  /**
+   * @brief Deletes map
+   */
   virtual ~FactoryItem();
+
+  /**
+   * @brief Goes through map and returns a new item
+   * based off input
+   */
   Item* createItem(const std::string& name);
+
+  /**
+   * @brief Map holding all Items that can be created
+   */
   std::map<std::string, Item*> itemmap;
 };
 
