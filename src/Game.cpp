@@ -20,6 +20,7 @@ Game::~Game() {
 
 void Game::Start() {
   std::string prologue = "This is the prologue";
+  std::cout << prologue << "\n";
   player.setAlive();
   player.addItem("Ticket");
   gameLoop();

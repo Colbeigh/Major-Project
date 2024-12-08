@@ -39,7 +39,7 @@ PassenegerCart::PassenegerCart() {
 
 DiningCart::DiningCart() {
     name = "Dining Cart";
-    environmentDescription = "You are in the dining cart.";
+    environmentDescription = "You are in the dining cart. "
     "The smell of food fills the air.";
     helpInfo = "You can ask the chef for help.";
     puzzles = {"Talk to Rich Lady", "Talk to bouncer"};
