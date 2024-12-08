@@ -34,7 +34,6 @@ class Puzzle {
   Player p;
   std::vector<std::string> puzz;
   bool env;
-//
 };
 
 class SeatPuzzle: public Puzzle {
@@ -45,9 +44,6 @@ class SeatPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
-
- private:
 };
 
 class ticketPuzzle: public Puzzle {
@@ -58,8 +54,6 @@ class ticketPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
-
  private:
   NPC* TM;
 };
@@ -72,8 +66,6 @@ class sweetTalkPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
-
  private:
   NPC* RL;
 };
@@ -86,8 +78,6 @@ class bouncerPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
-
  private:
   NPC* B;
 };
@@ -100,7 +90,6 @@ class doorPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
   // void startPuzzle(Player player,
   // std::vector<std::string> puzzles, bool changeenv) override;
   // void event(Player player) override;
@@ -109,6 +98,30 @@ class doorPuzzle: public Puzzle {
   // void giveReward(Player player) override;
   // void addPuzzle(const std::string& puzzleId) override;
   // bool solved(const std::string& puzzleId);
+};
+
+class helpfullPassengerPuzzle : public Puzzle {
+ public:
+  helpfullPassengerPuzzle();
+  ~helpfullPassengerPuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+ private:
+  NPC* HP;
+};
+
+class gambilingOutlawPuzzle : public Puzzle {
+ public:
+  gambilingOutlawPuzzle();
+  ~gambilingOutlawPuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+ private:
+  NPC* GO;
 };
 
 #endif//Puzzle_hpp_included

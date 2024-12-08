@@ -28,7 +28,7 @@ event();
 
 int Puzzle::pInput() {
 int playerchoice;
-  while(true) {
+  while (true) {
     std::cin >> playerchoice;
     if (std::cin.fail()) {
             std::cin.clear();

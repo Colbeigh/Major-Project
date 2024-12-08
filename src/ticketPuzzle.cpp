@@ -62,14 +62,14 @@ void ticketPuzzle::event() {
 
 
 void ticketPuzzle::giveReward() {
-p.addItem("PunchedTicket");
+    p.addItem("PunchedTicket");
 }
 
 void ticketPuzzle::playerCondition() {
     if (failPuzzle() == true){
         p.setKill();
         } else {
-            p.setAlive();
+        p.setAlive();
     }
 }
 

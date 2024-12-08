@@ -69,3 +69,11 @@ void bouncer::initializeDialogueOptions() {
                              "go causing any trouble in there");
     dialogueLines.push_back("Ticket?");
 }
+
+void helpfullPassenger::initializeDialogueOptions() {
+    dialogueLines.push_back("Blank Text");
+}
+
+void gambilingOutlaw::initializeDialogueOptions() {
+    dialogueLines.push_back("Blank Text");
+}
