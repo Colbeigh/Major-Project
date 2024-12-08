@@ -11,11 +11,6 @@ doorPuzzle::doorPuzzle() {
 doorPuzzle::~doorPuzzle() {
 }
 
-void doorPuzzle::startPuzzle(Player player, 
-  std::vector<std::string> puzzles, bool changeenv) {
-event();
-}
-
 void doorPuzzle::event()  {
 std::cout << "Would you like to move to a new cart?"
 "1.Yes \n 2. No, not yet.\n";
@@ -44,28 +39,4 @@ std::cout << "You move to the next cart\n";
 return true;
 }
 
-void doorPuzzle::giveReward()  {
-}
-
-void doorPuzzle::playerCondition() {
-    if (failPuzzle() == true){
-        p.setKill();
-        } else {
-            p.setAlive();
-    }
-}
-
-int doorPuzzle::pInput() {
-int playerchoice;
-  while(true) {
-    std::cin >> playerchoice;
-    if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<
-            std::streamsize>::max(), '\n');
-            std::cout << "Invalid input. Please try again.\n";
-    } else {
-        return playerchoice;
-    }
-  }
-}
+void doorPuzzle::giveReward() {}

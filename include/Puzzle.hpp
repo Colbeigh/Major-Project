@@ -45,7 +45,6 @@ class SeatPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
 
  private:
 };
@@ -58,7 +57,6 @@ class ticketPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
 
  private:
   NPC* TM;
@@ -72,7 +70,6 @@ class sweetTalkPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
 
  private:
   NPC* RL;
@@ -86,7 +83,6 @@ class bouncerPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
 
  private:
   NPC* B;
@@ -100,7 +96,6 @@ class doorPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  void playerCondition() override;
   // void startPuzzle(Player player,
   // std::vector<std::string> puzzles, bool changeenv) override;
   // void event(Player player) override;

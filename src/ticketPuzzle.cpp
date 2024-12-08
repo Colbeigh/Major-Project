@@ -65,14 +65,6 @@ void ticketPuzzle::giveReward() {
 p.addItem("PunchedTicket");
 }
 
-void ticketPuzzle::playerCondition() {
-    if (failPuzzle() == true){
-        p.setKill();
-        } else {
-            p.setAlive();
-    }
-}
-
 // ticketPuzzle::ticketPuzzle() : p(nullptr) {
 // TM = new ticketMaster;
 // chest = new Inventory;
