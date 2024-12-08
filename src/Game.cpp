@@ -16,6 +16,7 @@ Game::~Game() {
 void Game::Start() {
   std::string prologue = "This is the prologue";
   player.setAlive();
+  player.addItem("Ticket");
   gameLoop();
 }
 
@@ -57,7 +58,7 @@ int Game::userInput(int length) {
        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
        std::cout << "Invalid input. Please enter an integer between 1 " <<
        "and " << length << ".\n";
-     } else if (userinput < 1 || userinput > length) {
+     } else if (userinput < 1 || userinput > length + 2) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
          length + 1 << ".\n";
       } else if (userinput == length) {
