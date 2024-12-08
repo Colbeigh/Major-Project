@@ -6,13 +6,9 @@
 #include "InteractEnvironment.hpp"
 
 
-InteractEnvironment::InteractEnvironment() {
-  environment = nullptr;
-}
+InteractEnvironment::InteractEnvironment() {}
 
-InteractEnvironment::~InteractEnvironment() {
-  delete environment;
-}
+InteractEnvironment::~InteractEnvironment() {}
 
 std::string InteractEnvironment::getName(Environment* env) {
   if (env == nullptr) {
