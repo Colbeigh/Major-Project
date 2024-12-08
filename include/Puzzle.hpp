@@ -44,11 +44,8 @@ class SeatPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-<<<<<<< HEAD
 
  private:
-=======
->>>>>>> e76751f5c0514858d4d39c9dfa2ad6dd0ebd0d26
 };
 
 class ticketPuzzle: public Puzzle {
@@ -59,10 +56,6 @@ class ticketPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-<<<<<<< HEAD
-
-=======
->>>>>>> e76751f5c0514858d4d39c9dfa2ad6dd0ebd0d26
  private:
   NPC* TM;
 };
@@ -75,10 +68,6 @@ class sweetTalkPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-<<<<<<< HEAD
-
-=======
->>>>>>> e76751f5c0514858d4d39c9dfa2ad6dd0ebd0d26
  private:
   NPC* RL;
 };
@@ -91,10 +80,6 @@ class bouncerPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-<<<<<<< HEAD
-
-=======
->>>>>>> e76751f5c0514858d4d39c9dfa2ad6dd0ebd0d26
  private:
   NPC* B;
 };
