@@ -25,13 +25,15 @@ bool ticketPuzzle::failPuzzle() {
     std::cout << "You refuse to give him the ticket and\n" <<
     " Ticket Master leaves you alone." <<
     " A few minutes later the train explodes.\n";
+    p.setKill();
     return true;
 }
 
 bool ticketPuzzle::solution() {
-    if(p.hasItem("Train Ticket") == true ) {
+    p.listItem();
+    if(p.hasItem("Ticket") == true ) {
     std::cout << "You give him the ticket\n";
-    p.remItem("Train Ticket");
+    p.remItem("Ticket");
     std::cout <<"You watch him punch the ticket and hands back it to you\n";
     giveReward();
     TM->displayDialogue(1);
@@ -63,12 +65,11 @@ void ticketPuzzle::event() {
             break;
         }
     }
-    playerCondition();
 }
 
 
 void ticketPuzzle::giveReward() {
-p.addItem("Punched Train Ticket");
+p.addItem("PunchedTicket");
 }
 
 void ticketPuzzle::playerCondition() {
