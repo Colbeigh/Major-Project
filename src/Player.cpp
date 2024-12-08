@@ -3,7 +3,6 @@
 Player::Player() : name("Default") {}
 
 Player::~Player() {
-    std::cout << "Player destructor called\n";
 }
 
 Player& Player::operator=(const Player& other) {
