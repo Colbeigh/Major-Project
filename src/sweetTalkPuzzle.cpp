@@ -26,8 +26,8 @@ void sweetTalkPuzzle::event() {
     "You notice the lady holding a ticket.\n";
   std::cout << "What would you like to do?\n" <<
     "1. Sweet talk the Rich Lady.\n 2. Try to steal ticket.\n";
-    int choice;
     while (true) {
+    int choice;
     choice = pInput();
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
@@ -46,8 +46,8 @@ bool sweetTalkPuzzle::failPuzzle() {
     RL->displayDialogue(3);
     std::cout << "You watch her storm off and drop the ticket\n" <<
     "What would you like to do?\n";
-    int choice;
     while (true) {
+    int choice;
     choice = pInput();
       if (choice < 1 || choice > 1) {
         std::cout <<"You only have one choice!"<< std::endl;

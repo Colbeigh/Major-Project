@@ -52,8 +52,8 @@ void ticketPuzzle::event() {
     TM->displayDialogue(0);
     std::cout <<"What would you like to do?\n"<<
     "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
-    int choice;
     while (true) {
+    int choice;
     choice = pInput();
         if (choice < 1 || choice > 2 ) {
             std::cout << "Please pick between 1 or 2\n";
