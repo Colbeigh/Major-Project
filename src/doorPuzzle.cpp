@@ -16,7 +16,7 @@ std::cout << "Would you like to move to a new cart?\n"
 "1.Yes \n 2. No, not yet.\n";
     while (true) {
     int choice;
-        choice = pInput();
+        choice = pInput(2);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 1) {

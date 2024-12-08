@@ -5,6 +5,7 @@
 #include "Puzzle.hpp"
 
 gambilingOutlawPuzzle::gambilingOutlawPuzzle() : GO(nullptr) {
+    GO = new gambilingOutlaw;
 }
 
 gambilingOutlawPuzzle::~gambilingOutlawPuzzle() {
@@ -18,7 +19,7 @@ void gambilingOutlawPuzzle::event() {
     "2. Turn away\n";
     while (true) {
     int choice;
-    choice = pInput();
+    choice = pInput(2);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 2) {
@@ -31,25 +32,6 @@ void gambilingOutlawPuzzle::event() {
     }
 }
 
-bool gambilingOutlawPuzzle::failPuzzle() {
-    std::cout << "Blank\n";
-    GO->displayDialogue(3);
-    std::cout << "BlankText\n";
-    p.setKill();
-    // while (true) {
-    // int choice;
-    // choice = pInput();
-    //   if (choice < 1 || choice > 1) {
-    //     std::cout <<"You only have one choice!"<< std::endl;
-    //   } else {
-    //         p.addItem("BlankText");
-    //         std::cout << "Blank";
-    //         break;
-    //     }
-    // }
-    return true;
-}
-
 bool gambilingOutlawPuzzle::solution() {
     GO->displayDialogue(0);
     std::cout << "No you must have me mistaken. How about we just focus on the game\n";
@@ -59,7 +41,7 @@ bool gambilingOutlawPuzzle::solution() {
         "2. Throw the die in the outlaws face\n";
         "3. Thow the die against the wall padding\n";
         while (true) {
-        int choice = pInput();
+        int choice = pInput(3);
         if (choice < 1 || choice > 3) {
             std::cout << "Pick between 1 or 3 " << std::endl;
             return true;
@@ -74,10 +56,10 @@ bool gambilingOutlawPuzzle::solution() {
             std::cout << "You throw the die in the outlaws face\n";
             GO->displayDialogue(3);
             std::cout << "The outlaw gets mad and pulls out a gun"
-            "He is holding his face and waving the gun like a madman\n";
+            " He is holding his face and waving the gun like a madman\n";
             std::cout << "In the act of waving the gun the outlaw drops a piece of paper"
-            "on the floor\n";
-            std::cout << "Run past the outlaw and grab the piece of paper\n"; 
+            " on the floor\n";
+            std::cout << "You Run past the outlaw and grab the piece of paper\n"; 
             giveReward();
             break;
         } else {
@@ -88,12 +70,15 @@ bool gambilingOutlawPuzzle::solution() {
         }
     }
     remPuzzle("Talk to GambilingOutlaw");
+    remPuzzle("Talk to HelpfullPassenger");
     addPuzzle("Go to next cart");
+    return true;
 }
 bool gambilingOutlawPuzzle::failPuzzle() {
     std::cout << "You tried playing the game normaly. But instead you kept loosing"
     "Now all your life saving are gone. Good Job!";
     p.setKill();
+    return true;
 }
 
 void gambilingOutlawPuzzle::giveReward() {

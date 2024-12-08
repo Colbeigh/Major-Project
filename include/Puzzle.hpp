@@ -26,10 +26,11 @@ class Puzzle {
   std::vector<std::string> puzzles, bool changeenv);
   void addPuzzle(std::string puzzleid);
   void remPuzzle(std::string puzzleid);
-  int pInput();
+  int pInput(int length);
   Player getPlayer() {return p;}
   bool getChangeEnv () {return env;}
   std::vector<std::string> getPuzzle() {return puzz;}
+  std::string help;
 
   Player p;
   std::vector<std::string> puzz;
