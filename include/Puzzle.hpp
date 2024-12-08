@@ -44,8 +44,6 @@ class SeatPuzzle: public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-
- private:
 };
 
 class ticketPuzzle: public Puzzle {
