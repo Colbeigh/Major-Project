@@ -72,7 +72,9 @@ int Game::userInput(int length) {
       }  else if (userinput == length + 1) {
          player.listItem();
       }  else if (userinput == length + 2) {
-         std::cout << "This will quit later\n";
+         std::cout << "Qutting...\n";
+         player.setAlive();
+         return 0;
       } else {
           return userinput;
       }
