@@ -12,7 +12,7 @@ SeatPuzzle::~SeatPuzzle() {
 }
 
 void SeatPuzzle::event()  {
-std::cout << "Would you like to sit towards the front or back?"
+std::cout << "Would you like to sit towards the front or back?\n"
 "1.Front \n 2. Back.\n";
     while (true) {
     int choice;

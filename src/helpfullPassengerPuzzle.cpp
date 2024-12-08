@@ -70,3 +70,6 @@ bool helpfullPassengerPuzzle::solution() {
     }
     return true;
 }
+
+void helpfullPassengerPuzzle::giveReward()  {
+}
