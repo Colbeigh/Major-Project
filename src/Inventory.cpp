@@ -3,7 +3,10 @@
 Inventory::Inventory() : item(nullptr) {}
 
 Inventory::~Inventory() {
-  delete item;
+  if (item == nullptr) {
+    delete item;
+    item = nullptr;
+  }
 }
 
 Inventory& Inventory::operator=(const Inventory& other) {
@@ -68,6 +71,8 @@ std::string Inventory::getName(std::string itemid) {
   createItem(itemid);
   std::string name;
   name = item -> getName();
+  delete item;
+  item = nullptr;
   return name;
 }
 
@@ -75,6 +80,8 @@ std::string Inventory::getDesc(std::string itemid) {
   createItem(itemid);
   std::string name;
   name = item -> getDesc();
+  delete item;
+  item = nullptr;
   return name;
 }
 
