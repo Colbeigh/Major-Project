@@ -12,7 +12,7 @@ FactoryEnvironment::FactoryEnvironment() {
         {"Gambling Cart", []() { return new GamblingCart(); }},
         {"Luggage Cart", []() { return new LuggageCart(); }},
         {"Armory Cart", []() { return new ArmoryCart(); }},
-        {"Engine Cart", []() { return new EngineCart(); }},
+        {"Engine Cart", []() { return new EngineCart(); }}
      };
 }
 
