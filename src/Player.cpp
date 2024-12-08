@@ -36,6 +36,10 @@ void Player::remItem(std::string itemid) {
   playerinv.remItem(itemid);
 }
 
+std::string Player::getDesc(std::string itemid) {
+  playerinv.getDesc(itemid);
+}
+
 void Player::listItem() {
   playerinv.listItems();
 }
