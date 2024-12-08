@@ -10,6 +10,11 @@
 
 #ifndef INTERACT_ENVIRONMENT_H_INCLUDED
 #define INTERACT_ENVIRONMENT_H_INCLUDED
+/**
+* @class InteractEnvironment InteractEnvironment.hpp 
+* "InteractEnvironment.hpp"
+* @brief Holds logic to call environments functions
+*/
 
 class InteractEnvironment {
  public:

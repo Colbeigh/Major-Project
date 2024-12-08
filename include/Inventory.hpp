@@ -11,7 +11,10 @@
 
 #ifndef INVENTORY_H_INCLUDED
 #define INVENTORY_H_INCLUDED
-
+/**
+* @class Inventory Inventory.hpp "Inventory.hpp"
+* @brief Holds and interacts with items
+*/
 class Inventory {
  public:
   /**

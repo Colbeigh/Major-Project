@@ -10,6 +10,11 @@
 #include <map>
 #include <functional>
 #include "Puzzle.hpp"
+/**
+* @class FactoryPuzzle FactoryPuzzle.hpp 
+* "FactoryPuzzle.hpp"
+* @brief Creates Puzzles
+*/
 
 class FactoryPuzzle {
  public:

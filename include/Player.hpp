@@ -9,6 +9,10 @@
 
 #ifndef PLAYER_H_INCLUDED
 #define PLAYER_H_INCLUDED
+/**
+* @class Player Player.hpp "Player.hpp"
+* @brief Player object holding players data
+*/
 
 class Player {
  public:

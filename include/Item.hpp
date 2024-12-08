@@ -8,6 +8,10 @@
 
 #ifndef ITEM_H_INCLUDED
 #define ITEM_H_INCLUDED
+/**
+* @class Item Item.hpp "Item.hpp"
+* @brief Item object
+*/
 
 class Item {
  public:

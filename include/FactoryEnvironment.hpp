@@ -10,6 +10,11 @@
 #include <map>
 #include <functional>
 #include "Environment.hpp"
+/**
+* @class FactoryEnvironment FactoryEnvironment.hpp 
+* "FactoryEnvironment.hpp"
+* @brief Creates Environments
+*/
 
 class FactoryEnvironment {
  public:
