@@ -37,6 +37,7 @@ bool ticketPuzzle::solution() {
     return false;
         }
         remPuzzle("Talk to Ticket Master");
+        addPuzzle("Go to next cart");
         return true;
 }
 
