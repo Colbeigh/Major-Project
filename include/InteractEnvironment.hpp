@@ -18,5 +18,4 @@ class InteractEnvironment {
 
   Environment* environment;
 };
-
 #endif

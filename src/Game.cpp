@@ -23,10 +23,11 @@ void Game::Start() {
 void Game::gameLoop() {
   while (player.isAlive()) {
     ischangeenv = false;
-    std::cout << "You have entered into a new cart " << intenv.getName(currentenvironment) << "\n";
+    std::cout << "You have entered into a new cart " << 
+    intenv.getName(currentenvironment) << "\n";
     std::cout << intenv.getDesc(currentenvironment) << "\n";
     puzzles = intenv.getPuzzles(currentenvironment);
-    
+
     while (!ischangeenv) {
       promptPuzzles(puzzles);
       std::string userinput = (puzzles)[userInput(puzzles.size() + 1) - 1];
