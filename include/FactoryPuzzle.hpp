@@ -8,6 +8,7 @@
 
 #include <string>
 #include <map>
+#include <functional>
 #include "Puzzle.hpp"
 
 class FactoryPuzzle {
@@ -31,7 +32,7 @@ class FactoryPuzzle {
   /**
    * @brief Map holding all Puzzles that can be created
    */
-  std::map<std::string, Puzzle*> puzzlemap;
+  std::map<std::string, std::function<Puzzle*()>> puzzlemap;
 };
 
 #endif

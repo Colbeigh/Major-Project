@@ -8,6 +8,7 @@
 
 #include <string>
 #include <map>
+#include <functional>
 #include "Environment.hpp"
 
 class FactoryEnvironment {
@@ -31,7 +32,7 @@ class FactoryEnvironment {
   /**
    * @brief Map holding all environments that can be created
    */
-  std::map<std::string, Environment*> environmentmap;
+  std::map<std::string, std::function<Environment*()>> environmentmap;
 };
 
 #endif

@@ -8,6 +8,7 @@
 
 #include <string>
 #include <map>
+#include <functional>
 #include "Item.hpp"
 
 class FactoryItem {
@@ -31,7 +32,7 @@ class FactoryItem {
   /**
    * @brief Map holding all Items that can be created
    */
-  std::map<std::string, Item*> itemmap;
+  std::map<std::string, std::function<Item*()>> itemmap;
 };
 
 #endif
