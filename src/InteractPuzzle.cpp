@@ -27,7 +27,7 @@ bool InteractPuzzle::getChangeEnv(Puzzle* puzzle) {
   return puzzle->getChangeEnv();
 }
 
-void InteractPuzzle::startPuzzle(Puzzle *puz, Player player, 
+void InteractPuzzle::startPuzzle(Puzzle *puz, const Player& player, 
   std::vector<std::string> puzzles, bool changeenv) {
   if (puz == nullptr) {
     std::cerr << "Error: No puzzle set!" << std::endl;
