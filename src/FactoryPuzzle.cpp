@@ -13,7 +13,7 @@ FactoryPuzzle::FactoryPuzzle() {
         {"Talk to Rich Lady", []() { return new sweetTalkPuzzle(); }},
         {"Talk to bouncer", []() { return new bouncerPuzzle(); }},
         {"Talk to GambilingOutlaw", []() { return new gambilingOutlawPuzzle(); }},
-        {"Talk to HelpfullPassenger", []() { return new helpfullPassengerPuzzle(); }}
+        {"Talk To HelpfullPassenger", []() { return new helpfullPassengerPuzzle(); }}
     };
 }
 

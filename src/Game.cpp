@@ -6,8 +6,7 @@
 #include "Game.hpp"
 
 Game::Game() : environments{"Passenger Cart", "Dining Cart",
-"Gambling Cart", "Luggage", "Baggage", "Between", "Prison",
-"Medical", "Armory", "Engine"} {
+"Gambling Cart", "Luggage Cart", "Armory Cart", "Engine Cart"} {
   currentenvironment = nullptr;
   currentpuzzle = nullptr;
   std::cout << "Temp\n";

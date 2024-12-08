@@ -13,13 +13,12 @@ gambilingOutlawPuzzle::~gambilingOutlawPuzzle() {
 }
 
 void gambilingOutlawPuzzle::event() {
-    std::cout << "Approching the outlaw you feel bad enegry coming off of him\n";
-    std::cout << "What would you like to do?\n" <<
-    "1. Talk to the outlaw\n"
-    "2. Turn away\n";
+    std::cout << "Looking at the gambling Out Law you feel a sense of dread\n";
+    std::cout <<"1. Talk to the outlaw\n" 
+                "2. Turn away\n";
     while (true) {
     int choice;
-    choice = pInput(2);
+    choice = pInput(3);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 2) {
@@ -38,10 +37,10 @@ bool gambilingOutlawPuzzle::solution() {
     GO->displayDialogue(1);
     std::cout << "You get two dies.\n" 
         "1. roll the dies and see what happens\n"
-        "2. Throw the die in the outlaws face\n";
+        "2. Throw the die in the outlaws face\n"
         "3. Thow the die against the wall padding\n";
         while (true) {
-        int choice = pInput(3);
+        int choice = pInput(4);
         if (choice < 1 || choice > 3) {
             std::cout << "Pick between 1 or 3 " << std::endl;
             return true;
@@ -71,12 +70,12 @@ bool gambilingOutlawPuzzle::solution() {
     }
     remPuzzle("Talk to GambilingOutlaw");
     remPuzzle("Talk to HelpfullPassenger");
-    addPuzzle("Go to next cart");
+    env = true;
     return true;
 }
 bool gambilingOutlawPuzzle::failPuzzle() {
-    std::cout << "You tried playing the game normaly. But instead you kept loosing"
-    "Now all your life saving are gone. Good Job!";
+    std::cout << "You tried playing the game normally. But instead you kept loosing"
+    " Now all your life saving are gone.\nGood Job!\n";
     p.setKill();
     return true;
 }
