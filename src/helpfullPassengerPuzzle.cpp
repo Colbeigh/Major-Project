@@ -6,6 +6,7 @@
 #include "Puzzle.hpp"
 
 helpfullPassengerPuzzle::helpfullPassengerPuzzle(): HP(nullptr) {
+    HP = new helpfullPassenger;
 }
 
 helpfullPassengerPuzzle::~helpfullPassengerPuzzle() {
@@ -13,18 +14,16 @@ helpfullPassengerPuzzle::~helpfullPassengerPuzzle() {
 }
 
 void helpfullPassengerPuzzle::event() {
-  std::cout << "You approach the Helpfull Passenger.\n" <<
-    "You notice the passenger holding a ticket.\n";
-  std::cout << "What would you like to do?\n" <<
-    "1. Ask the Helpfull Passenger for help.\n"
-    "2. Try to steal ticket.\n";
+  std::cout << "Looking at the helpfull Passenger you feel a sense of hope.\n";
+    std::cout << "1. Ask the Helpfull Passenger for help.\n"
+                "2. Turn away.\n";
     while (true) {
     int choice;
-    choice = pInput(2);
+    choice = pInput(3);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 2) {
-            failPuzzle();
+            std::cout << " You looked at the helpfull Passenger but decided to look away\n";
             break;
         } else {
             solution();
@@ -34,7 +33,7 @@ void helpfullPassengerPuzzle::event() {
 }
 
 bool helpfullPassengerPuzzle::failPuzzle() {
-    std::cout << "You try to steal the ticket and the coin but failed.\n";
+    std::cout << ".\n";
     HP->displayDialogue(3);
     std::cout << "You watch her storm off and drop the ticket\n" <<
     "What would you like to do?\n";
@@ -53,23 +52,16 @@ bool helpfullPassengerPuzzle::failPuzzle() {
 }
 
 bool helpfullPassengerPuzzle::solution() {
-    std::cout << "You ask the Helpfull Passenger for help.\n";
+    std::cout << "Player: You ask the Helpfull Passenger for help.\n";
+    HP->displayDialogue(0);
+    std::cout << "Player: Yes I do. I need to win this gambling game.\n";
     HP->displayDialogue(1);
-    std::cout << "You watch her storm off and drop the ticket\n" <<
-    "What would you like to do?\n";
-    while (true) {
-    int choice;
-    choice = pInput(2);
-      if (choice < 1 || choice > 1) {
-        std::cout <<"You only have one choice!"<< std::endl;
-      } else {
-            p.addItem("GamblingTicket");
-            std::cout << "You pick up the ticket\n";
-            break;
-        }
-    }
+    std::cout << "Player: What? How does that even help me?\n"
+    "Before you could realise what is going on"
+    " the Helpfull Passenger is gone.\n";
+    remPuzzle("Talk To HelpfullPassenger");
     return true;
 }
 
-void helpfullPassengerPuzzle::giveReward()  {
+void helpfullPassengerPuzzle::giveReward() {
 }
