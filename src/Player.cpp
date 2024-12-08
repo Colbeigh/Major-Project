@@ -1,3 +1,8 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @date Fall 2024
+ */
+
 #include "Player.hpp"
 
 Player::Player() : name("Default") {}

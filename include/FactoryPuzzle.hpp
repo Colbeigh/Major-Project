@@ -1,3 +1,8 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @date Fall 2024
+ */
+
 #ifndef FACTORYPUZZLE_HPP
 #define FACTORYPUZZLE_HPP
 

@@ -1,3 +1,7 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca> & Todd 
+ * @date Fall 2024
+ */
 #include "Inventory.hpp"
 
 Inventory::Inventory() : item(nullptr) {}

@@ -1,3 +1,8 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @date Fall 2024
+ */
+
 #ifndef FACTORYENVIRONMENT_HPP
 #define FACTORYENVIRONMENT_HPP
 
