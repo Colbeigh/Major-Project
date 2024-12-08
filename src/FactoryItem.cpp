@@ -14,6 +14,12 @@ FactoryItem::FactoryItem() {
      };
 }
 
+FactoryItem::~FactoryItem() {
+    for (auto& pair : itemmap) {
+        delete pair.second;
+    }
+}
+
 Item* FactoryItem::createItem(const std::string& type) {
     auto it = itemmap.find(type);
 

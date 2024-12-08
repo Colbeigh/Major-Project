@@ -14,6 +14,12 @@ FactoryPuzzle::FactoryPuzzle() {
      };
 }
 
+FactoryPuzzle::~FactoryPuzzle() {
+    for (auto& pair : puzzlemap) {
+        delete pair.second;
+    }
+}
+
 Puzzle* FactoryPuzzle::createPuzzle(const std::string& type) {
     auto it = puzzlemap.find(type);
 

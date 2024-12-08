@@ -12,6 +12,12 @@ FactoryEnvironment::FactoryEnvironment() {
      };
 }
 
+FactoryEnvironment::~FactoryEnvironment() {
+    for (auto& pair : environmentmap) {
+        delete pair.second;
+    }
+}
+
 Environment* FactoryEnvironment::createEnvironment(const std::string& type) {
     auto it = environmentmap.find(type);
 

@@ -13,6 +13,7 @@
 class FactoryPuzzle {
  public:
   FactoryPuzzle();
+  virtual ~FactoryPuzzle();
   Puzzle* createPuzzle(const std::string& name);
   std::map<std::string, Puzzle*> puzzlemap;
 };

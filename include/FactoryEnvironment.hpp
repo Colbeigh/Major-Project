@@ -13,6 +13,7 @@
 class FactoryEnvironment {
  public:
   FactoryEnvironment();
+  virtual ~FactoryEnvironment();
   Environment* createEnvironment(const std::string& name);
   std::map<std::string, Environment*> environmentmap;
 };

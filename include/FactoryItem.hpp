@@ -13,6 +13,7 @@
 class FactoryItem {
  public:
   FactoryItem();
+  virtual ~FactoryItem();
   Item* createItem(const std::string& name);
   std::map<std::string, Item*> itemmap;
 };
