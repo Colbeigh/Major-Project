@@ -18,15 +18,15 @@ class Puzzle {
  public:
   Puzzle() {}
   virtual ~Puzzle() {}
-  virtual void startPuzzle(Player player,
-  std::vector<std::string> puzzles, bool changeenv) = 0;
   virtual void event() = 0;
   virtual bool failPuzzle() = 0;
   virtual bool solution() = 0;
   virtual void giveReward() = 0;
-  virtual void playerCondition() = 0;
+  void startPuzzle(Player player,
+  std::vector<std::string> puzzles, bool changeenv);
   void addPuzzle(std::string puzzleid);
   void remPuzzle(std::string puzzleid);
+  int pInput();
   Player getPlayer() {return p;}
   bool getChangeEnv () {return env;}
   std::vector<std::string> getPuzzle() {return puzz;}
@@ -37,18 +37,28 @@ class Puzzle {
 //
 };
 
-class ticketPuzzle: public Puzzle {
+class SeatPuzzle: public Puzzle {
  public:
-  ticketPuzzle();
-  ~ticketPuzzle();
-  void startPuzzle(Player player,
-  std::vector<std::string> puzzles, bool changeenv) override;
+  SeatPuzzle();
+  ~SeatPuzzle();
   void event() override;
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
   void playerCondition() override;
-  int pInput();
+
+ private:
+};
+
+class ticketPuzzle: public Puzzle {
+ public:
+  ticketPuzzle();
+  ~ticketPuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+  void playerCondition() override;
 
  private:
   NPC* TM;
@@ -58,14 +68,11 @@ class sweetTalkPuzzle: public Puzzle {
  public:
   sweetTalkPuzzle();
   ~sweetTalkPuzzle();
-  void startPuzzle(Player player,
-  std::vector<std::string> puzzles, bool changeenv) override;
   void event() override;
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
   void playerCondition() override;
-  int pInput();
 
  private:
   NPC* RL;
@@ -75,14 +82,11 @@ class bouncerPuzzle: public Puzzle {
  public:
   bouncerPuzzle();
   ~bouncerPuzzle();
-  void startPuzzle(Player player,
-  std::vector<std::string> puzzles, bool changeenv) override;
   void event() override;
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
   void playerCondition() override;
-  int pInput();
 
  private:
   NPC* B;
@@ -92,14 +96,11 @@ class doorPuzzle: public Puzzle {
  public:
   doorPuzzle();
   ~doorPuzzle();
-  void startPuzzle(Player player,
-  std::vector<std::string> puzzles, bool changeenv) override;
   void event() override;
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
   void playerCondition() override;
-  int pInput();
   // void startPuzzle(Player player,
   // std::vector<std::string> puzzles, bool changeenv) override;
   // void event(Player player) override;

@@ -12,15 +12,6 @@ sweetTalkPuzzle::~sweetTalkPuzzle() {
    delete RL;
 }
 
-void sweetTalkPuzzle::startPuzzle(Player player, 
-  std::vector<std::string> puzzles, bool changeenv) {
-p = player;
-puzz = puzzles;
-env = changeenv;
-RL = new richLady;
-event();
-}
-
 void sweetTalkPuzzle::event() {
   std::cout << "You approach the Rich Lady.\n" <<
     "You notice the lady holding a ticket.\n";
@@ -74,32 +65,6 @@ void sweetTalkPuzzle::giveReward() {
     p.addItem("GamblingTicket");
     p.addItem("LuckyCoin");
 }
-
-void sweetTalkPuzzle::playerCondition() {
-    if (failPuzzle() == true){
-        p.setKill();
-        } else {
-            p.setAlive();
-    }
-}
-
-int sweetTalkPuzzle::pInput() {
-int playerchoice;
-  while(true) {
-std::cin >> playerchoice;
-    if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<
-            std::streamsize>::max(), '\n');
-            std::cout << "Invalid input. Please try again.\n";
-    } else {
-        return playerchoice;
-    }
-  }
-}  
-
-
-
 
   // void sweetTalkPuzzle::addPuzzle(const std::string& puzzleId) {
   // }

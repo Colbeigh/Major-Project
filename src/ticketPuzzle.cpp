@@ -5,32 +5,12 @@
 
 #include "Puzzle.hpp"
 
-void Puzzle::addPuzzle(std::string puzzleid){
-    puzz.push_back(puzzleid);
-}
-
-void Puzzle::remPuzzle(std::string puzzleid) {
-  for (int i = 0; i < puzz.size(); ++i) {
-       if (puzzleid == puzz[i]) {
-           puzz.erase(puzz.begin() + i);
-          return;
-      }
-  }
-}
-ticketPuzzle::ticketPuzzle() : TM(nullptr) {
+ticketPuzzle::ticketPuzzle() {
+    TM = new ticketMaster;
 }
 
 ticketPuzzle::~ticketPuzzle() {
     delete TM;
-}
-
-void ticketPuzzle::startPuzzle(Player player, 
-  std::vector<std::string> puzzles, bool changeenv) {
-p = player;
-puzz = puzzles;
-env = changeenv;
-TM = new ticketMaster;
-event();
 }
 
 bool ticketPuzzle::failPuzzle() {
@@ -92,21 +72,6 @@ void ticketPuzzle::playerCondition() {
             p.setAlive();
     }
 }
-
-int ticketPuzzle::pInput() {
-int playerchoice;
-  while(true) {
-    std::cin >> playerchoice;
-    if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<
-            std::streamsize>::max(), '\n');
-            std::cout << "Invalid input. Please try again.\n";
-    } else {
-        return playerchoice;
-    }
-  }
-}  
 
 // ticketPuzzle::ticketPuzzle() : p(nullptr) {
 // TM = new ticketMaster;

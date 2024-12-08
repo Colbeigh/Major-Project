@@ -69,19 +69,3 @@ int playerchoice;
     }
   }
 }
-
-// void doorPuzzle::addPuzzle(const std::string& puzzleId) {
-// p->push_back(puzzleId);
-// }
-
-// bool doorPuzzle::solved(const std::string& puzzleId) {
-// if (!p){
-//     std::cout << "Puzzle is not initialized";
-// }
-// for (int i = 0; i < p->size(); ++i) {
-//         if (puzzleId == (*p)[i]) {
-//             p->erase(p->begin() + i);
-//        }
-// }
-// return true;
-// }
