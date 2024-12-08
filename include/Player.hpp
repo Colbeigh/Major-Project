@@ -10,6 +10,7 @@ class Player {
   Player();
   virtual ~Player();
   Player& operator=(const Player& other);
+  std::string Player::getName();
   bool hasItem(std::string itemid);
   void addItem(std::string itemid);
   void remItem(std::string itemid);

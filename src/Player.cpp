@@ -16,6 +16,10 @@ Player& Player::operator=(const Player& other) {
     return *this;
 }
 
+std::string Player::getName() {
+  return name;
+}
+
 bool Player::hasItem(std::string itemid) {
   return playerinv.hasItem(itemid);
 }
