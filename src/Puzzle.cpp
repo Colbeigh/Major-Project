@@ -26,17 +26,28 @@ env = changeenv;
 event();
 }
 
-int Puzzle::pInput() {
+int Puzzle::pInput(int length) {
 int playerchoice;
-  while (true) {
-    std::cin >> playerchoice;
-    if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<
-            std::streamsize>::max(), '\n');
-            std::cout << "Invalid input. Please try again.\n";
-    } else {
-        return playerchoice;
-    }
+while (true) {
+     int playerchoice;
+     std::cin >> playerchoice;
+     if (std::cin.fail()) {
+       std::cin.clear();
+       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+       std::cout << "Invalid input. Please enter an integer between 1 " <<
+       "and " << length << ".\n";
+     } else if (playerchoice < 1 || playerchoice > length + 2) {
+         std::cout << "Invalid input. Please enter an integer between 1 and " <<
+         length + 1 << ".\n";
+      } else if (playerchoice == length) {
+         std::cout << help << "\n";
+      }  else if (playerchoice == length + 1) {
+         p.listItem();
+      }  else if (playerchoice == length + 2) {
+         std::cout << "Qutting...\n";
+         exit(0);
+      } else {
+          return playerchoice;
+      }
   }
 }  

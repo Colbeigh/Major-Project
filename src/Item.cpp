@@ -45,7 +45,7 @@ Quarter::Quarter() {
 }
 
 PieceOfPaper::PieceOfPaper() {
-  name = "Outlaw's Bagage Number";
+  name = "Outlaw's Piece of Paper";
   desc = "It's a piece of paper with a number on it"
   "and a smudged symbole";
   itemid = "PieceOfPaper";
