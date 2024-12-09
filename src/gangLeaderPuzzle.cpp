@@ -44,12 +44,12 @@ bool gangLeaderPuzzle::solution() {
     std::string message = "YOU WIN";
     for (char c : message) {
         std::cout << "\033[32;5m" << c << "\033[0m" << std::flush; // Red blinking text
-        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 300ms delay per letter
+        Sleep(300); // 300ms delay per lette 
     }
     std::cout << "\n";
 
     // Delay after the "YOU WIN" message
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    Sleep(3000); 
 
     // Clear screen again
     std::cout << "\033[2J\033[H";
@@ -60,19 +60,19 @@ bool gangLeaderPuzzle::solution() {
 bool gangLeaderPuzzle::failPuzzle() {
     GL->displayDialogue(0);
     std::cout << "As he finishes repeating himself the train explodes\n";
-      // Dramatically print "YOU BLEW UP" one letter at a time
     std::string message = "YOU BLEW UP";
     for (char c : message) {
         std::cout << "\033[31;5m" << c << "\033[0m" << std::flush; // Red blinking text
-        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 300ms delay per letter
+        Sleep(300); // 300ms delay per letter
     }
     std::cout << "\n";
 
     // Delay after the "YOU BLEW UP" message
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    Sleep(3000); // 3-second delay
 
     // Clear screen again
     std::cout << "\033[2J\033[H";
+
     p.setKill();
     return true;
 }

@@ -34,16 +34,15 @@ bool fakeDoorPuzzle::failPuzzle()  {
     std::cout << "You decided you weren't ready yet.\n";
     std::cout << "But the ticket master didn't like that\n";
     std::cout << "The ticket master then hits on the head with a metal pipe\n";
-    // Dramatically print "YOU DIED" one letter at a time
     std::string message = "YOU DIED";
     for (char c : message) {
         std::cout << "\033[31;5m" << c << "\033[0m" << std::flush; // Red blinking text
-        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 300ms delay per letter
+        Sleep(300); // 300ms delay per letter
     }
     std::cout << "\n";
 
     // Delay after the "YOU DIED" message
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    Sleep(3000); // 3-second delay
 
     // Clear screen again
     std::cout << "\033[2J\033[H";
@@ -58,16 +57,15 @@ bool fakeDoorPuzzle::solution()  {
     std::cout << "You turn around to shoot him with the pistol he gave you\n"
     "But you realize it's a fake gun after trying to shoot him twice.\n";
     std::cout << "The ticket master laughs at you and kills you\n";
-    // Dramatically print "YOU DIED" one letter at a time
     std::string message = "YOU DIED";
     for (char c : message) {
         std::cout << "\033[31;5m" << c << "\033[0m" << std::flush; // Red blinking text
-        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 300ms delay per letter
+        Sleep(300); // 300ms delay per letter
     }
     std::cout << "\n";
 
     // Delay after the "YOU DIED" message
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    Sleep(3000); // 3-second delay
 
     // Clear screen again
     std::cout << "\033[2J\033[H";
