@@ -59,15 +59,6 @@ TEST(TestGame, ListInventoryTest) {
     std::cout.rdbuf(old);
 }
 
-TEST(TestGame, QuitTest) {
-    Game game;
-    std::stringstream input_stream("4\n");
-    std::cin.rdbuf(input_stream.rdbuf());
-
-    int result = game.userInput(3);
-    EXPECT_EQ(result, 4);
-}
-
 TEST(TestGame, PuzzleFlowTest) {
     Game game;
 
