@@ -170,4 +170,5 @@ class gangLeaderPuzzle : public Puzzle {
  private:
   NPC* GL;
 };
+
 #endif

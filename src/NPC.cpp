@@ -133,7 +133,7 @@ gangLeader::~gangLeader() {}
 
 void gangLeader::initializeDialogueOptions() {
     dialogueLines.push_back(name + 
-    "Well, well, Sheriff, ain't this a sight? You thought\n"
+    ": Well, well, Sheriff, ain't this a sight? You thought\n"
     "you could lock me up, toss the key, and forget ol\n"
     "O'Driscoll, didn't ya? Thought you were the big\n"
     "man, ridin high on that shiny badge. But here I am,\n"

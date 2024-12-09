@@ -37,9 +37,10 @@ void gangLeaderPuzzle::event() {
 bool gangLeaderPuzzle::solution() {
     std::cout << "You shoot him and he begins to stumble\n";
     GL->displayDialogue(1);
-    std::cout << "He falls off the train and dies\n";
-    remPuzzle("Approach the Gang Leader");
-    addPuzzle("Defuse the bomb");
+    std::cout << "He falls straight onto the bomb hitting"
+    " the big red button\n";
+    std::cout << "Nothing happens\nPlayer: Well this was lame\n";
+    p.setKill();
     return true;
 }
 
