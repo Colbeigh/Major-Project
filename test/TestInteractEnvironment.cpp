@@ -21,17 +21,22 @@ TEST(InteractEnvironmentTest, GetDesc) {
     InteractEnvironment interactEnv;
 
     Environment validEnv;
-    EXPECT_EQ(interactEnv.getDesc(&validEnv), "You are in an unknown place.");
+    EXPECT_EQ(interactEnv.getDesc(&validEnv),
+              "You are in an unknown place.");
 
     PassengerCart passengerCart;
-    std::string passengercartstring = std::string("Looking around the ") +
-        "environment, you see passeneger, and a ticket master walking around";
+    std::string passengercartstring =
+        std::string("Looking around the ") +
+        "environment, you see passeneger, and a "
+        "ticket master walking around";
     EXPECT_EQ(interactEnv.getDesc(&passengerCart), passengercartstring);
 
     DiningCart diningCart;
-    EXPECT_EQ(interactEnv.getDesc(&diningCart), "The smell of food fills the air.\n"
-        "You see a Rich looking lady eating food and a bouncer"
-        " across the cart guarding a door\n");
+    EXPECT_EQ(interactEnv.getDesc(&diningCart),
+              "The smell of food fills the air.\n"
+              "You see a Rich looking lady "
+              "eating food and a bouncer across "
+              "the cart guarding a door\n");
 
     EXPECT_EQ(interactEnv.getDesc(nullptr), "");
 }
@@ -40,7 +45,8 @@ TEST(InteractEnvironmentTest, GetHelp) {
     InteractEnvironment interactEnv;
 
     Environment validEnv;
-    EXPECT_EQ(interactEnv.getHelp(&validEnv), "Help is not implemented yet.");
+    EXPECT_EQ(interactEnv.getHelp(&validEnv),
+              "Help is not implemented yet.");
 
     PassengerCart passengerCart;
     EXPECT_EQ(interactEnv.getHelp(&passengerCart), "Give him your Ticket.\n");
