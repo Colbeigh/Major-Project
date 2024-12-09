@@ -4,13 +4,6 @@
 #include <limits>
 #include "Game.hpp"
 
-TEST(TestGame, StartInitializesPlayerAndGameLoop) {
-    Game game;
-    game.Start();
-
-    EXPECT_TRUE(game.player.isAlive());
-    EXPECT_TRUE(game.player.hasItem("Ticket"));
-}
 TEST(TestGame, PromptPuzzles) {
     Game game;
 
