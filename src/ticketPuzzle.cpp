@@ -48,7 +48,7 @@ void ticketPuzzle::event() {
     "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
     while (true) {
     int choice;
-    choice = pInput(2);
+    choice = pInput(3);
         if (choice < 1 || choice > 2 ) {
             std::cout << "Please pick between 1 or 2\n";
         } else if (choice == 2) {

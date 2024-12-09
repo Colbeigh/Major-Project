@@ -20,7 +20,7 @@ void sweetTalkPuzzle::event() {
     "1. Sweet talk the Rich Lady.\n 2. Try to steal ticket.\n";
     while (true) {
     int choice;
-    choice = pInput(2);
+    choice = pInput(3);
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 2) {
@@ -40,7 +40,7 @@ bool sweetTalkPuzzle::failPuzzle() {
     "What would you like to do?\n" "1. Grab ticket\n";
     while (true) {
     int choice;
-    choice = pInput(2);
+    choice = pInput(3);
       if (choice < 1 || choice > 1) {
         std::cout <<"You only have one choice!\n"<< std::endl;
       } else {
