@@ -5,7 +5,6 @@
 #include "gtest/gtest.h"
 #include "Puzzle.hpp"
 #include "FactoryPuzzle.hpp"
-#include <vector>
 
 TEST(PuzzleTest, TicketMasterPuzzleTest) {
 Player player;
@@ -17,7 +16,6 @@ EXPECT_TRUE(puzzle.failPuzzle());
 
 player.addItem("Ticket");
 EXPECT_TRUE(puzzle.solution());
-
 }
 
 TEST(PuzzleTest, AddPuzzleTest) {
@@ -59,4 +57,3 @@ std::vector<std::string> puzzles = {"puz1", "puz2", "puz3"};
     EXPECT_EQ(puzzle.puzz[1], "puz2");
     EXPECT_EQ(puzzle.puzz[2], "puz3");
 }
-

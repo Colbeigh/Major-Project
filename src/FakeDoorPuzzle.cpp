@@ -35,7 +35,7 @@ bool fakeDoorPuzzle::failPuzzle()  {
     std::cout << "You decided you weren't ready yet.\n";
     std::cout << "But the ticket master didn't like that\n";
     std::cout << "The ticket master then hits on the head with a metal pipe\n";
-    std::cout << "\033[31;5m" << 
+    std::cout << "\033[31;5m" <<
     "YOU DIED" << "\033[0m" << std::endl;
     p.setKill();
     return false;
@@ -48,8 +48,8 @@ bool fakeDoorPuzzle::solution()  {
     "But you realize it's a fake gun"
     " after trying to shoot him twice.\n";
     std::cout << "The ticket master laughs at you and kills you\n";
-    std::cout << "\033[31;5m" << 
-    "YOU DIED" << "\033[0m" << std::endl; 
+    std::cout << "\033[31;5m" <<
+    "YOU DIED" << "\033[0m" << std::endl;
     p.setKill();
     return true;
 }
