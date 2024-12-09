@@ -27,19 +27,18 @@ std::string Environment::getName() {
 }
 
 
-PassenegerCart::PassenegerCart() {
+PassengerCart::PassengerCart() {
     name = "Passenger Cart";
     environmentDescription = "Looking around the environment, "
     "you see passeneger, and a ticket master walking around";
     helpInfo = "You can ask the ticket master for help.";
-    puzzles = {"Talk to Ticket Master", "Talk to Rich Lady", 
-    "Talk to bouncer", "Pick a seat"};
+    puzzles = {"Pick a seat"};
 }
 
 
 DiningCart::DiningCart() {
     name = "Dining Cart";
-    environmentDescription = "You are in the dining cart.";
+    environmentDescription = "You are in the dining cart. "
     "The smell of food fills the air.";
     helpInfo = "You can ask the chef for help.";
     puzzles = {"Talk to Rich Lady", "Talk to bouncer"};
@@ -49,32 +48,31 @@ GamblingCart::GamblingCart() {
     name = "Gambling Cart";
     environmentDescription = "You are in the gambling cart.";
     helpInfo = "You can ask the dealer for help.";
-    puzzles = {};
+    puzzles = {"Talk to HelpfullPassenger", "Talk to GambilingOutlaw"};
 }
 
 LuggageCart::LuggageCart() {
     name = "Luggage Cart";
     environmentDescription = "You are in the luggage cart.";
     helpInfo = "You can ask the porter for help.";
-    puzzles = {"Puzzle1", "Puzzle2"};
+    puzzles = {"Catch a breath"};
 }
 
 ArmoryCart::ArmoryCart() {
     name = "Armory Cart";
     environmentDescription = "You are in the armory cart.";
     helpInfo = "You can ask the guard for help.";
-    puzzles = {};
+    puzzles = {"Look around the armory"};
 }
 
 EngineCart::EngineCart() {
     name = "Engine Cart";
     environmentDescription = "Looking around you see the engine";
     helpInfo = "You can ask the engineer for help.";
-    puzzles = {"Puzzle", "Puzzle"};
+    puzzles = {"Approach the Gang Leader"};
 }
 
-
-PassenegerCart::~PassenegerCart() {}
+PassengerCart::~PassengerCart() {}
 GamblingCart::~GamblingCart() {}
 LuggageCart::~LuggageCart() {}
 ArmoryCart::~ArmoryCart() {}

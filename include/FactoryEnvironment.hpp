@@ -10,6 +10,11 @@
 #include <map>
 #include <functional>
 #include "Environment.hpp"
+/**
+* @class FactoryEnvironment FactoryEnvironment.hpp
+* "FactoryEnvironment.hpp"
+* @brief Creates Environments
+*/
 
 class FactoryEnvironment {
  public:
@@ -17,14 +22,14 @@ class FactoryEnvironment {
    * @brief Sets up map holding keys to which environment
    */
   FactoryEnvironment();
-  
+
   /**
    * @brief Deletes map
    */
   virtual ~FactoryEnvironment();
- 
+
   /**
-   * @brief Goes through map and returns a new environment 
+   * @brief Goes through map and returns a new environment
    * based off input
    */
   Environment* createEnvironment(const std::string& name);

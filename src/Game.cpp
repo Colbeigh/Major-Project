@@ -6,10 +6,10 @@
 #include "Game.hpp"
 
 Game::Game() : environments{"Passenger Cart", "Dining Cart",
-"Gambling Cart", "Luggage", "Baggage", "Between", "Prison",
-"Medical", "Armory", "Engine"} {
+"Gambling Cart", "Luggage Cart", "Armory Cart", "Engine Cart"} {
   currentenvironment = nullptr;
   currentpuzzle = nullptr;
+  std::cout << "Temp\n";
 }
 
 Game::~Game() {
@@ -19,6 +19,7 @@ Game::~Game() {
 
 void Game::Start() {
   std::string prologue = "This is the prologue";
+  std::cout << prologue << "\n";
   player.setAlive();
   player.addItem("Ticket");
   gameLoop();
@@ -33,7 +34,7 @@ void Game::gameLoop() {
     std::cout << intenv.getDesc(currentenvironment) << "\n";
     puzzles = intenv.getPuzzles(currentenvironment);
 
-    while (!ischangeenv) {
+    while (!ischangeenv && player.isAlive()) {
       promptPuzzles(puzzles);
       std::string userinput = (puzzles)[userInput(puzzles.size() + 1) - 1];
       std::cout << "You chose: " << userinput << std::endl;
@@ -98,6 +99,7 @@ void Game::createPuzzle(std::string userinput) {
 }
 
 void Game::changeEnvironment() {
+  std::cout << "\n\n\n";
   if (currentenvironment != nullptr) {
      delete currentenvironment;
      currentenvironment = nullptr;

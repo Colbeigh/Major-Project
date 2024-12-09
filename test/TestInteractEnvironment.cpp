@@ -4,7 +4,7 @@
 
 TEST(InteractEnvironmentTest, GetName) {
     InteractEnvironment interactEnv;
-    
+
     Environment validEnv;
     EXPECT_EQ(interactEnv.getName(&validEnv), "Unknowm Place");
 
@@ -27,7 +27,7 @@ TEST(InteractEnvironmentTest, GetDesc) {
     PassenegerCart passengerCart;
     std::string passengercartstring = std::string("Looking around the ") +
     "environment, you see passeneger, and a ticket master walking around";
-    EXPECT_EQ(interactEnv.getDesc(&passengerCart),passengercartstring);
+    EXPECT_EQ(interactEnv.getDesc(&passengerCart), passengercartstring);
 
     DiningCart diningCart;
     EXPECT_EQ(interactEnv.getDesc(&diningCart),

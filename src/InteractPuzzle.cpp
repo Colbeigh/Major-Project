@@ -8,20 +8,20 @@ InteractPuzzle::~InteractPuzzle() {
 }
 
 std::vector<std::string>InteractPuzzle::getPuzzle (Puzzle* puzzle) {
-  if(puzzle == nullptr) {
+  if (puzzle == nullptr) {
     return {};
   }
   return puzzle->getPuzzle();
 }
 Player InteractPuzzle::getPlayer (Puzzle* puzzle) {
-  if(puzzle == nullptr) {
+  if (puzzle == nullptr) {
     return Player();
   }
   return puzzle->getPlayer();
 }
 
 bool InteractPuzzle::getChangeEnv (Puzzle* puzzle) {
-  if(puzzle == nullptr) {
+  if (puzzle == nullptr) {
     return false;
   }
   return puzzle->getChangeEnv();

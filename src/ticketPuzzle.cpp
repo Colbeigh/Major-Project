@@ -5,23 +5,12 @@
 
 #include "Puzzle.hpp"
 
-ticketPuzzle::ticketPuzzle() : TM(nullptr) {
+ticketPuzzle::ticketPuzzle() {
+    TM = new ticketMaster;
 }
 
 ticketPuzzle::~ticketPuzzle() {
     delete TM;
-}
-
-void ticketPuzzle::startPuzzle(Player player, 
-  std::vector<std::string> puzzles, bool changeenv) {
-p = player;
-puzz = puzzles;
-env = changeenv;
-TM = new ticketMaster;
-event();
-    if(solution()) {
-    env = true;
-    }
 }
 
 bool ticketPuzzle::failPuzzle() {
@@ -40,24 +29,26 @@ bool ticketPuzzle::solution() {
     std::cout <<"You watch him punch the ticket and hands back it to you\n";
     giveReward();
     TM->displayDialogue(1);
-    std::cout << "You notice something strange about the ticket.\n" <<
+    std::cout << "\nYou notice something strange about the ticket.\n" <<
     "On the back of the ticket, 'HELP' is written.\n" <<
     "You look up and Ticket Master has already left\n";
     } else {
         std::cout << "Player does not have the item.\n";
     return false;
         }
+        remPuzzle("Talk to Ticket Master");
+        addPuzzle("Go to next cart");
         return true;
 }
 
 void ticketPuzzle::event() {
     std::cout << "The Ticket Master approaches you\n";
     TM->displayDialogue(0);
-    std::cout <<"What would you like to do?\n"<<
+    std::cout <<"\nWhat would you like to do?\n"<<
     "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
-    int choice;
     while (true) {
-    choice = pInput();
+    int choice;
+    choice = pInput(3);
         if (choice < 1 || choice > 2 ) {
             std::cout << "Please pick between 1 or 2\n";
         } else if (choice == 2) {
@@ -72,31 +63,8 @@ void ticketPuzzle::event() {
 
 
 void ticketPuzzle::giveReward() {
-p.addItem("PunchedTicket");
+    p.addItem("PunchedTicket");
 }
-
-void ticketPuzzle::playerCondition() {
-    if (failPuzzle() == true){
-        p.setKill();
-        } else {
-            p.setAlive();
-    }
-}
-
-int ticketPuzzle::pInput() {
-int playerchoice;
-  while(true) {
-    std::cin >> playerchoice;
-    if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<
-            std::streamsize>::max(), '\n');
-            std::cout << "Invalid input. Please try again.\n";
-    } else {
-        return playerchoice;
-    }
-  }
-}  
 
 // ticketPuzzle::ticketPuzzle() : p(nullptr) {
 // TM = new ticketMaster;

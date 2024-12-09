@@ -9,6 +9,10 @@
 
 #ifndef PLAYER_H_INCLUDED
 #define PLAYER_H_INCLUDED
+/**
+* @class Player Player.hpp "Player.hpp"
+* @brief Player object holding players data
+*/
 
 class Player {
  public:
@@ -50,6 +54,11 @@ class Player {
   */
   void remItem(std::string itemid);
 
+
+  /**
+  * @brief returns description string of item in players inventory
+  */
+  std::string getDesc(std::string itemid);
   /**
   * @brief Lists all items in players inventory
   */

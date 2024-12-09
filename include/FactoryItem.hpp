@@ -10,6 +10,11 @@
 #include <map>
 #include <functional>
 #include "Item.hpp"
+/**
+* @class FactoryItem FactoryItem.hpp
+* "FactoryItem.hpp"
+* @brief Creates items
+*/
 
 class FactoryItem {
  public:

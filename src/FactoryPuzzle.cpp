@@ -8,9 +8,17 @@
 FactoryPuzzle::FactoryPuzzle() {
     puzzlemap = {
         {"Talk to Ticket Master", []() { return new ticketPuzzle(); }},
-        {"Pick a seat", []() { return new doorPuzzle(); }},
+        {"Pick a seat", []() { return new SeatPuzzle(); }},
+        {"Go to next cart", []() { return new doorPuzzle(); }},
         {"Talk to Rich Lady", []() { return new sweetTalkPuzzle(); }},
-        {"Talk to bouncer", []() { return new bouncerPuzzle(); }}
+        {"Talk to bouncer", []() { return new bouncerPuzzle(); }},
+        {"Talk to GambilingOutlaw", []() { return new gambilingOutlawPuzzle(); }},
+        {"Talk to HelpfullPassenger", []() { return new helpfullPassengerPuzzle(); }},
+        {"Catch a breath", []() { return new searchRoomPuzzle(); }},
+        {"Approach the luggage", []() { return new luggagePuzzle(); }},
+        {"Look around the armory", []() { return new tiedUpTicketMasterPuzzle(); }},
+        {"Leave the Armory", []() { return new fakeDoorPuzzle(); }},
+        {"Approach the Gang Leader", []() { return new gangLeaderPuzzle(); }}
     };
 }
 

@@ -28,44 +28,123 @@ void NPC::displayDialogue(int index) {
 
 //ticketMaster implementations
 ticketMaster::ticketMaster() {
+    name = "Ticket Master";
     initializeDialogueOptions();
 }
 
 ticketMaster::~ticketMaster() {}
 
 void ticketMaster::initializeDialogueOptions() {
-    dialogueLines.push_back("Welcome aboard, may I see your ticket?");
-    dialogueLines.push_back("Thank you for travelling with us. "
+    dialogueLines.push_back(name + 
+    ": Welcome aboard, may I see your ticket?");
+    dialogueLines.push_back(name + 
+    "Thank you for travelling with us. "
                              "Enjoy the ride!");
 }
 //richlady Implementations
 richLady::richLady() {
+    name = "Rich Lady";
     initializeDialogueOptions();
 }
 
 richLady::~richLady() {}
 
 void richLady::initializeDialogueOptions() {
-    dialogueLines.push_back("Oh you're so sweet, you do know "
+    dialogueLines.push_back(name + ": Oh you're so sweet, you do know "
                              "how to make a lady blush");
-    dialogueLines.push_back("Here take this ticket to the gambling car, and "
+    dialogueLines.push_back(name + 
+    ": Here take this ticket to the gambling car, and "
                             "my lucky quarter. It's brought me much "
                             "luck I hope it does the same for you");
-    dialogueLines.push_back("Were you just trying to steal my lucky "
+    dialogueLines.push_back(name + 
+    ": Were you just trying to steal my lucky "
                              "quarter? How dare you!");
 }
 
 //Bouncher implementations
 bouncer::bouncer() {
+    name = "Bouncer";
     initializeDialogueOptions();
 }
 
 bouncer::~bouncer() {}
 
 void bouncer::initializeDialogueOptions() {
-    dialogueLines.push_back("You need a gambling ticket to "
+    dialogueLines.push_back(name + ": You need a gambling ticket to "
                              "get into the casino");
-    dialogueLines.push_back("Alright you're good to go, don't "
+    dialogueLines.push_back(name + ": Alright you're good to go, don't "
                              "go causing any trouble in there");
-    dialogueLines.push_back("Ticket?");
+    dialogueLines.push_back(name + ": Ticket?");
+}
+
+helpfullPassenger::helpfullPassenger() {
+    name = "Helpful Passenger";
+    initializeDialogueOptions();
+}
+
+helpfullPassenger::~helpfullPassenger() {}
+
+void helpfullPassenger::initializeDialogueOptions() {
+   dialogueLines.push_back(name + 
+   ": Oh! Hey there. You need my help?\n"); // [0]
+    dialogueLines.push_back(name + 
+    ": I'll give you a hint: The game is not what you think it is. \n"); // [1]
+}
+gambilingOutlaw::gambilingOutlaw() {
+    name = "Gambling Outlaw";
+    initializeDialogueOptions();
+}
+
+gambilingOutlaw::~gambilingOutlaw() {}
+
+void gambilingOutlaw::initializeDialogueOptions() {
+    dialogueLines.push_back(name + ": So you're that policeman that has been" 
+                            "causing trouble for us."); //[0]
+    dialogueLines.push_back(name + ": Okay but be ready to walk away with nothing\n"); //[1]
+    dialogueLines.push_back(name + ": wow good thorw. Who tought you to throw like that?"
+    "Your mother?"); // [2]
+    dialogueLines.push_back(name + ": Awww!. What the hell. I cant see anything"); // [3]
+    dialogueLines.push_back(name + ": You throwing skills is like my driking skills.\n HORRIBLE!"); // [4]
+
+}
+
+tiedUpTicketMaster::tiedUpTicketMaster() {
+    name = "Tied Up Ticket Master";
+    initializeDialogueOptions();
+}
+
+tiedUpTicketMaster::~tiedUpTicketMaster() {}
+
+void tiedUpTicketMaster::initializeDialogueOptions() {
+    std::string name2 = "Ticket Master";
+    dialogueLines.push_back(name + ": MMM! MMM! \n"); // [0]
+    dialogueLines.push_back(name + ": You're leaving me here?\n"); // [1]
+    dialogueLines.push_back(name2 + ": Thank you for unting me. I thought I was going to die here\n"); //[2]
+    dialogueLines.push_back(name2 + ": So what now?\n"); // [3]
+    dialogueLines.push_back(name2 + ": Hey!. Is this what you looking for?\n"); // [4]
+}
+
+gangLeader::gangLeader() {
+    name = "O'Driscoll Leader";
+    initializeDialogueOptions();
+}
+
+gangLeader::~gangLeader() {}
+
+void gangLeader::initializeDialogueOptions() {
+    dialogueLines.push_back(name + 
+    "Well, well, Sheriff, ain't this a sight? You thought\n"
+    "you could lock me up, toss the key, and forget ol\n"
+    "O'Driscoll, didn't ya? Thought you were the big\n"
+    "man, ridin high on that shiny badge. But here I am,\n"
+    "free as a bird and twice as mean. While you’re out\n"
+    "there twiddlin your thumbs, I've been plannin somethin\n"
+    "spectacular. This train? Oh, it's gonna be my\n"
+    "masterpiece. You ever wonder what it feels like to\n"
+    "watch your whole world burn?\n");
+
+    dialogueLines.push_back(name + ": You're too late!\n"
+    "I have already armed the bomb\n");
+ 
+
 }

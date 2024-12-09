@@ -16,9 +16,9 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 /**
- * @class Game Game.hpp "Game.hpp"
- * @brief Manages main loop and stores paramaters
- */
+* @class Game Game.hpp "Game.hpp"
+* @brief Manages main loop and stores paramaters
+*/
 
 class Game {
  public:
@@ -70,7 +70,7 @@ class Game {
    * @brief Player object
    */
   Player player;
- 
+
   /**
    * @brief Object to create Environments
    */

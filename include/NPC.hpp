@@ -42,4 +42,32 @@ class bouncer : public NPC {
   ~bouncer();
   void initializeDialogueOptions() override;
 };
+
+class helpfullPassenger : public NPC {
+ public:
+  helpfullPassenger();
+  ~helpfullPassenger();
+  void initializeDialogueOptions() override;
+};
+
+class gambilingOutlaw : public NPC {
+ public:
+  gambilingOutlaw();
+  ~gambilingOutlaw();
+  void initializeDialogueOptions() override;
+};
+
+class tiedUpTicketMaster : public NPC {
+ public:
+  tiedUpTicketMaster();
+  ~tiedUpTicketMaster();
+  void initializeDialogueOptions() override;
+};
+
+class gangLeader : public NPC {
+ public:
+  gangLeader();
+  ~gangLeader();
+  void initializeDialogueOptions() override;
+};
 #endif

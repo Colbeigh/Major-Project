@@ -8,6 +8,10 @@
 
 #ifndef ITEM_H_INCLUDED
 #define ITEM_H_INCLUDED
+/**
+* @class Item Item.hpp "Item.hpp"
+* @brief Item object
+*/
 
 class Item {
  public:
@@ -78,5 +82,38 @@ class Quarter : public Item {
   * @brief Sets name, description, and itemid
   */
   Quarter();
+};
+
+
+class PieceOfPaper : public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  PieceOfPaper();
+};
+
+class Plans: public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  Plans();
+};
+
+class Fakegun : public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  Fakegun();
+};
+
+class Gun : public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  Gun();
 };
 #endif
