@@ -18,7 +18,7 @@ void gangLeaderPuzzle::event() {
     std:: cout << "He rambles on and on\n"
         "What would you like to do?\n";
     std::cout <<"1. Shoot him\n" 
-                "2. Let him ramble\n";
+                "2. Sorry I couldn't hear you\n";
     while (true) {
     int choice;
     choice = pInput(3);
@@ -37,14 +37,16 @@ void gangLeaderPuzzle::event() {
 bool gangLeaderPuzzle::solution() {
     std::cout << "You shoot him and he begins to stumble\n";
     GL->displayDialogue(1);
-    std::cout << "He falls off the train and dies\n";
-    remPuzzle("Approach the Gang Leader");
-    addPuzzle("Defuse the bomb");
+    std::cout << "He falls straight onto the bomb hitting"
+    " the big red button\n";
+    std::cout << "Nothing happens\nPlayer: Well this was lame\n";
+    p.setKill();
     return true;
 }
 
 bool gangLeaderPuzzle::failPuzzle() {
-    std::cout << "He talks your ear off until the train explodes";
+    GL->displayDialogue(0);
+    std::cout << "As he finishes repeating himself the train explodes\n";
     p.setKill();
     return true;
 }
