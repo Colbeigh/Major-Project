@@ -10,6 +10,7 @@
 class NPC {
  public:
   NPC(); //default constructor
+  NPC(const std::string NPCname); //name constructor
   virtual ~NPC(); //destructor
   std::string getName();
   void displayDialogue(int index);
