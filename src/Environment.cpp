@@ -69,7 +69,7 @@ EngineCart::EngineCart() {
     name = "Engine Cart";
     environmentDescription = "Looking around you see the engine";
     helpInfo = "You can ask the engineer for help.";
-    puzzles = {"Puzzle", "Puzzle"};
+    puzzles = {"Approach the Gang Leader"};
 }
 
 PassengerCart::~PassengerCart() {}
