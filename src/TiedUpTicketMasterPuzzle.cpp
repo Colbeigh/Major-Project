@@ -22,7 +22,7 @@ void tiedUpTicketMasterPuzzle::event() {
     std::cout << "1. Untine the Ticket Master\n"
                 "2. Leave the Ticket Master\n";
     while (true) {
-        int choice = pInput(2);
+        int choice = pInput(3);
         if (choice < 1 || choice > 2) { 
             std::cout << "Pick between 1 or 2" << std::endl;
         } else if (choice == 1) { 
@@ -35,10 +35,46 @@ void tiedUpTicketMasterPuzzle::event() {
     }
 }
 
-bool tiedUpTicketMasterPuzzle::failPuzzle() {
-    std::cout << "You leave the Ticket Master tied up\n";
-    TM->displayDialogue(2); 
-    std::cout << "You walk away from the Ticket Master\n";
-
+bool tiedUpTicketMasterPuzzle::solution(){ 
+    std::cout << "You decide to leave the ticket master tied up\n";
+    std::cout << "You start looking around the armory\n"
+                "After some time of searching around\n";
+    std::cout << "Player: I give up! I can't find anything\n";
+    std::cout << "In frustration you punch a box above you\n";
+    std::cout << "The box falls down and hits you on the head\n";
+    std::cout << "Player: Ouch! That hurt\n";
+    std::cout << "While rubbing you head you see a gun sticking out the box\n";
+    std::cout << "Player: wow! must be my lucky day\n";
+    giveReward();
+    remPuzzle("Look around the armory");
+    addPuzzle("Go to next cart");
+    
+    
     return true;
+    }
+
+bool tiedUpTicketMasterPuzzle::failPuzzle() {
+    std::cout << "You decide to help the ticket master\n";
+    TM->displayDialogue(2); 
+    std::cout << "Player: I couldn't leave you here\n";
+    TM->displayDialogue(3);
+    std::cout << "Player: First We need to arm ourselves\n"
+                "Player: Lets look around the armory and find a gun\n";
+    std::cout << "You look around the armory\n"
+                "After looking for a while you couldn't find anything\n";
+    TM->displayDialogue(4);
+    std::cout << "You look at what the ticket master is holding in his hands\n"
+                "That looks like a gun\n";
+    std::cout << "Player: Yes! That is exactly what I was looking for\n";
+    std::cout << "You take the gun from the ticket master\n";
+    p.addItem("Fakegun");
+    std::cout << "Player: Thank you\n";
+    std:: cout << "Player: We should get going. And stop these outlaws!\n";
+    remPuzzle("Look around the armory");
+    addPuzzle("Leave the Armory");
+    return true;
+}
+
+void tiedUpTicketMasterPuzzle::giveReward() { 
+    p.addItem("Gun");
 }

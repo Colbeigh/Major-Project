@@ -149,6 +149,16 @@ class searchRoomPuzzle : public Puzzle {
   void giveReward() override;
 };
 
+class fakeDoorPuzzle : public Puzzle {
+ public:
+    fakeDoorPuzzle();
+    ~fakeDoorPuzzle();
+    void event() override;
+    bool failPuzzle() override;
+    bool solution() override;
+    void giveReward() override;
+};
+
 class gangLeaderPuzzle : public Puzzle {
  public:
   gangLeaderPuzzle();
