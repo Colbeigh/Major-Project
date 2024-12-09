@@ -88,10 +88,10 @@ void helpfullPassenger::initializeDialogueOptions() {
     dialogueLines.push_back(name +
     ": Oh! Hey there. You need my help?\n");
     dialogueLines.push_back(name +
-    ": I'll give you a hint: The game is not what you think it is. \n");
+    ": I'll give you a hint:" "\x1B[5;38;5;193m" + " The game is not what you think it is.\x1B[0m\n");
 }
 gamblingOutlaw::gamblingOutlaw() {
-    name = "Gambling Outlaw";
+    name = "\x1B[38;5;124mGambling Outlaw\x1B[0m";
     initializeDialogueOptions();
 }
 
@@ -113,14 +113,14 @@ void gamblingOutlaw::initializeDialogueOptions() {
 }
 
 tiedUpTicketMaster::tiedUpTicketMaster() {
-    name = "Tied Up Ticket Master";
+    name = "\033[95mTied Up Ticket Master\033[0m";
     initializeDialogueOptions();
 }
 
 tiedUpTicketMaster::~tiedUpTicketMaster() {}
 
 void tiedUpTicketMaster::initializeDialogueOptions() {
-    std::string name2 = "Ticket Master";
+    std::string name2 = "\x1B[38;5;196mTicket Master\x1B[0m";
     dialogueLines.push_back(name + ": MMM! MMM! \n"); // [0]
     dialogueLines.push_back(name + ": You're leaving me here?\n"); // [1]
     dialogueLines.push_back(name2 + ": Thank you for unting me. I thought I was going to die here\n"); //[2]
@@ -129,7 +129,7 @@ void tiedUpTicketMaster::initializeDialogueOptions() {
 }
 
 gangLeader::gangLeader() {
-    name = "O'Driscoll Leader";
+    name = "\x1B[38;5;130mO'Driscoll Leader\x1B[0m";
     initializeDialogueOptions();
 }
 
