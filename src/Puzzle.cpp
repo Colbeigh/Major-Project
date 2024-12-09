@@ -5,7 +5,7 @@
 
 #include "Puzzle.hpp"
 
-void Puzzle::addPuzzle(std::string puzzleid){
+void Puzzle::addPuzzle(std::string puzzleid) {
     puzz.push_back(puzzleid);
 }
 
@@ -18,7 +18,7 @@ void Puzzle::remPuzzle(std::string puzzleid) {
   }
 }
 
-void Puzzle::startPuzzle(Player player, 
+void Puzzle::startPuzzle(Player player,
   std::vector<std::string> puzzles, bool changeenv) {
 p = player;
 puzz = puzzles;
@@ -51,4 +51,4 @@ while (true) {
           return playerchoice;
       }
   }
-}  
+}

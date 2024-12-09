@@ -15,7 +15,7 @@ TEST(PassenegerCartTest, DefaultConstructor) {
     PassenegerCart cart;
     EXPECT_EQ(cart.getDescription(), "Looking around the environment,"
     "you see passeneger, and a ticket master walking around");
-    EXPECT_EQ(cart.getPuzzles(), {"Talk to Ticket Master", "Talk to Rich Lady", 
+    EXPECT_EQ(cart.getPuzzles(), {"Talk to Ticket Master", "Talk to Rich Lady",
     "Talk to bouncer", "Pick a seat"});
     EXPECT_EQ(cart.getName(), "Passenger Cart");
     EXPECT_EQ(cart.help(), "You can ask the ticket master for help.");

@@ -53,11 +53,11 @@ richLady::~richLady() {}
 void richLady::initializeDialogueOptions() {
     dialogueLines.push_back(name + ": Oh you're so sweet, you do know "
                              "how to make a lady blush");
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": Here take this ticket to the gambling car, and "
                             "my lucky quarter. It's brought me much "
                             "luck I hope it does the same for you");
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": Were you just trying to steal my lucky "
                              "quarter? How dare you!");
 }
@@ -98,17 +98,17 @@ gamblingOutlaw::gamblingOutlaw() {
 gamblingOutlaw::~gamblingOutlaw() {}
 
 void gamblingOutlaw::initializeDialogueOptions() {
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": So you're that policeman that has been"
     " causing trouble for us.");
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": Okay but be ready to walk away with nothing\n");
     dialogueLines.push_back(name + 
     ": wow good throw. Who tought you to throw like that?\n"
     "Your mother?\n"); // [2]
     dialogueLines.push_back(name + 
     ": Awww!. What the hell. I cant see anything");
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": You throwing skills is like my driking skills.\n HORRIBLE!");
 }
 
@@ -120,12 +120,14 @@ tiedUpTicketMaster::tiedUpTicketMaster() {
 tiedUpTicketMaster::~tiedUpTicketMaster() {}
 
 void tiedUpTicketMaster::initializeDialogueOptions() {
-    std::string name2 = "\x1B[38;5;196mTicket Master\x1B[0m";
-    dialogueLines.push_back(name + ": MMM! MMM! \n"); // [0]
-    dialogueLines.push_back(name + ": You're leaving me here?\n"); // [1]
-    dialogueLines.push_back(name2 + ": Thank you for unting me. I thought I was going to die here\n"); //[2]
-    dialogueLines.push_back(name2 + ": So what now?\n"); // [3]
-    dialogueLines.push_back(name2 + ": Hey!. Is this what you looking for?\n"); // [4]
+    std::string name2 = "Ticket Master";
+    dialogueLines.push_back(name + ": MMM! MMM! \n");
+    dialogueLines.push_back(name + ": You're leaving me here?\n");
+    dialogueLines.push_back(name2 + 
+    ": Thank you for unting me. I thought I was going to die here\n");
+    dialogueLines.push_back(name2 + ": So what now?\n");
+    dialogueLines.push_back(name2 + 
+    ": Hey!. Is this what you looking for?\n");
 }
 
 gangLeader::gangLeader() {

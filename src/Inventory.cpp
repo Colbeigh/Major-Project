@@ -64,7 +64,7 @@ void Inventory::listItems() {
     std::cout << "You currently have no items" << std::endl;
   }
   for (int i = 0; i < items.size(); ++i) {
-      std::cout << "* " << getName(items[i]) << "\n   -" 
+      std::cout << "* " << getName(items[i]) << "\n   -"
       << getDesc(items[i]) << std::endl;
       }
 }

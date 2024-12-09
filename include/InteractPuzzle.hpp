@@ -15,7 +15,6 @@
   */
 class InteractPuzzle {
  public:
-
    /**
   * @brief Default constructor
   */
