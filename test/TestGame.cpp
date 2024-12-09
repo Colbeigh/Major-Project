@@ -40,5 +40,5 @@ TEST(GameTest, PuzzleCreation) {
     Game game;
     game.createPuzzle("Talk to Ticket Master");
 
-    EXPECT_NE(game.currentPuzzle, nullptr);
+    EXPECT_NE(game.currentpuzzle, nullptr);
 }
