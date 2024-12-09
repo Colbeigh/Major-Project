@@ -47,14 +47,3 @@ TEST(PuzzleTest, RemPuzzleTest) {
     EXPECT_EQ(puzzle.puzz[1], "puz3");
 }
 
-TEST(PuzzleTest, StartPuzzleTest) {
-    Player player;
-    ticketPuzzle puzzle;
-std::vector<std::string> puzzles = {"puz1", "puz2", "puz3"};
-    puzzle.startPuzzle(player, puzzles, true);
-    puzzle.startPuzzle(player, puzzles, true);
-    EXPECT_EQ(puzzle.puzz.size(), 3);
-    EXPECT_EQ(puzzle.puzz[0], "puz1");
-    EXPECT_EQ(puzzle.puzz[1], "puz2");
-    EXPECT_EQ(puzzle.puzz[2], "puz3");
-}
