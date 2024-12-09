@@ -35,8 +35,10 @@ ticketMaster::ticketMaster() {
 ticketMaster::~ticketMaster() {}
 
 void ticketMaster::initializeDialogueOptions() {
-    dialogueLines.push_back(name + ": Welcome aboard, may I see your ticket?");
-    dialogueLines.push_back(name + "Thank you for travelling with us. "
+    dialogueLines.push_back(name + 
+    ": Welcome aboard, may I see your ticket?");
+    dialogueLines.push_back(name + 
+    "Thank you for travelling with us. "
                              "Enjoy the ride!");
 }
 //richlady Implementations
@@ -50,10 +52,12 @@ richLady::~richLady() {}
 void richLady::initializeDialogueOptions() {
     dialogueLines.push_back(name + ": Oh you're so sweet, you do know "
                              "how to make a lady blush");
-    dialogueLines.push_back(name + ": Here take this ticket to the gambling car, and "
+    dialogueLines.push_back(name + 
+    ": Here take this ticket to the gambling car, and "
                             "my lucky quarter. It's brought me much "
                             "luck I hope it does the same for you");
-    dialogueLines.push_back(name + ": Were you just trying to steal my lucky "
+    dialogueLines.push_back(name + 
+    ": Were you just trying to steal my lucky "
                              "quarter? How dare you!");
 }
 
@@ -73,9 +77,18 @@ void bouncer::initializeDialogueOptions() {
     dialogueLines.push_back(name + ": Ticket?");
 }
 
+helpfullPassenger::helpfullPassenger() {
+    name = "Helpful Passenger";
+    initializeDialogueOptions();
+}
+
+helpfullPassenger::~helpfullPassenger() {}
+
 void helpfullPassenger::initializeDialogueOptions() {
-   dialogueLines.push_back("Helpfull Passenger: Oh! Hey there. You need my help?\n"); // [0]
-    dialogueLines.push_back("Helpfull Passenger: I'll give you a hint: The game is not what you think it is. \n"); // [1]
+   dialogueLines.push_back(name + 
+   ": Helpfull Passenger: Oh! Hey there. You need my help?\n"); // [0]
+    dialogueLines.push_back(name + 
+    ": Helpfull Passenger: I'll give you a hint: The game is not what you think it is. \n"); // [1]
 }
 gambilingOutlaw::gambilingOutlaw() {
     name = "Gambling Outlaw";
