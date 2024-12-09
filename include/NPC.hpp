@@ -57,4 +57,11 @@ class gambilingOutlaw : public NPC {
   void initializeDialogueOptions() override;
 };
 
+class tiedUpTicketMaster : public NPC {
+ public:
+  tiedUpTicketMaster();
+  ~tiedUpTicketMaster();
+  void initializeDialogueOptions() override;
+};
+
 #endif
