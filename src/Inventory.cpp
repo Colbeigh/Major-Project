@@ -1,5 +1,6 @@
 /**
- * @author Colby Hanna <Colby.Hanna@uleth.ca> & Todd 
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @author Todd Across The Mountain <t.acrossthemountain@uleth.ca>
  * @date Fall 2024
  */
 #include "Inventory.hpp"

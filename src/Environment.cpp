@@ -1,3 +1,8 @@
+/**
+ * @author Nikita Evtushenko <nikita.evtushenko@uleth.ca>
+ * @date Fall 2024
+ */
+
 #include <vector>
 #include "Environment.hpp"
 

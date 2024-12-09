@@ -11,6 +11,11 @@
 #include <vector>
 #include "NPC.hpp"
 
+/**
+* @class Environment Environment.hpp
+* "Environment.hpp"
+* @brief Holds Information of environments
+*/
 class Environment {
  public:
     /**
