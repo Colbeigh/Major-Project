@@ -149,7 +149,6 @@ class searchRoomPuzzle : public Puzzle {
   void giveReward() override;
 };
 
-
 class fakeDoorPuzzle : public Puzzle {
  public:
     fakeDoorPuzzle();
@@ -160,4 +159,15 @@ class fakeDoorPuzzle : public Puzzle {
     void giveReward() override;
 };
 
+class gangLeaderPuzzle : public Puzzle {
+ public:
+  gangLeaderPuzzle();
+  ~gangLeaderPuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+ private:
+  NPC* GL;
+};
 #endif

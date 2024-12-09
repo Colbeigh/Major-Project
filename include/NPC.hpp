@@ -64,4 +64,10 @@ class tiedUpTicketMaster : public NPC {
   void initializeDialogueOptions() override;
 };
 
+class gangLeader : public NPC {
+ public:
+  gangLeader();
+  ~gangLeader();
+  void initializeDialogueOptions() override;
+};
 #endif

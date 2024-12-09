@@ -99,6 +99,7 @@ void Game::createPuzzle(std::string userinput) {
 }
 
 void Game::changeEnvironment() {
+  std::cout << "\n\n\n";
   if (currentenvironment != nullptr) {
      delete currentenvironment;
      currentenvironment = nullptr;
