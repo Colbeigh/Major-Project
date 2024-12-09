@@ -12,12 +12,18 @@ FactoryPuzzle::FactoryPuzzle() {
         {"Go to next cart", []() { return new doorPuzzle(); }},
         {"Talk to Rich Lady", []() { return new sweetTalkPuzzle(); }},
         {"Talk to bouncer", []() { return new bouncerPuzzle(); }},
+<<<<<<< HEAD
         {"Talk to GambilingOutlaw",
         []() { return new gambilingOutlawPuzzle(); }},
         {"Talk to HelpfullPassenger",
         []() { return new helpfullPassengerPuzzle(); }},
         {"Catch a breath",
         []() { return new searchRoomPuzzle(); }},
+=======
+        {"Talk to GamblingOutlaw", []() { return new gamblingOutlawPuzzle(); }},
+        {"Talk to HelpfullPassenger", []() { return new helpfullPassengerPuzzle(); }},
+        {"Catch a breath", []() { return new searchRoomPuzzle(); }},
+>>>>>>> 77dbe328300c44afa4f36fe73fa42e2e9ff1cd39
         {"Approach the luggage", []() { return new luggagePuzzle(); }},
         {"Look around the armory", []() { return new tiedUpTicketMasterPuzzle(); }},
         {"Leave the Armory", []() { return new fakeDoorPuzzle(); }},

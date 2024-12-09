@@ -45,7 +45,7 @@ bool tiedUpTicketMasterPuzzle::solution(){
     std::cout << "In frustration you punch a box above you\n";
     std::cout << "The box falls down and hits you on the head\n";
     std::cout << "Player: Ouch! That hurt\n";
-    std::cout << "While rubbing you head you see a gun sticking out the box\n";
+    std::cout << "While rubbing your head you see a gun sticking out the box\n";
     std::cout << "Player: wow! must be my lucky day\n";
     giveReward();
     remPuzzle("Look around the armory");

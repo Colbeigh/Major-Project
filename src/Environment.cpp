@@ -51,7 +51,7 @@ GamblingCart::GamblingCart() {
     "You notice a gruff looking dealer and a friendly looking passenger"
     " smiling at you\n";
     helpInfo = "You should talk to the friendly looking passenger.\n";
-    puzzles = {"Talk to HelpfulPassenger", "Talk to GambilingOutlaw"};
+    puzzles = {"Talk to HelpfulPassenger", "Talk to GamblingOutlaw"};
 }
 
 LuggageCart::LuggageCart() {

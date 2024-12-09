@@ -4,18 +4,24 @@
  */
 #include "Puzzle.hpp"
 
-gambilingOutlawPuzzle::gambilingOutlawPuzzle() : GO(nullptr) {
-    GO = new gambilingOutlaw;
+gamblingOutlawPuzzle::gamblingOutlawPuzzle() : GO(nullptr) {
+    GO = new gamblingOutlaw;
 }
 
-gambilingOutlawPuzzle::~gambilingOutlawPuzzle() {
+gamblingOutlawPuzzle::~gamblingOutlawPuzzle() {
     delete GO;
 }
 
+<<<<<<< HEAD:src/GambilingOutlawPuzzle.cpp
 void gambilingOutlawPuzzle::event() {
     std::cout << "Looking at the gambling Out Law you"
     "feel a sense of dread\n";
     std::cout <<"1. Talk to the outlaw\n"
+=======
+void gamblingOutlawPuzzle::event() {
+    std::cout << "Looking at the gambling OutLaw you feel a sense of dread\n";
+    std::cout <<"1. Talk to the outlaw\n" 
+>>>>>>> 77dbe328300c44afa4f36fe73fa42e2e9ff1cd39:src/GamblingOutlawPuzzle.cpp
                 "2. Turn away\n";
     while (true) {
     int choice;
@@ -33,7 +39,7 @@ void gambilingOutlawPuzzle::event() {
     }
 }
 
-bool gambilingOutlawPuzzle::solution() {
+bool gamblingOutlawPuzzle::solution() {
     GO->displayDialogue(0);
     std::cout << "No you must have me mistaken."
     " How about we just focus on the game\n";
@@ -41,7 +47,7 @@ bool gambilingOutlawPuzzle::solution() {
     std::cout << "You get two dies.\n" 
         "1. roll the dies and see what happens\n"
         "2. Throw the die in the outlaws face\n"
-        "3. Thow the die against the wall padding\n";
+        "3. Throw the die against the wall padding\n";
         while (true) {
         int choice = pInput(4);
         if (choice < 1 || choice > 3) {
@@ -78,14 +84,19 @@ bool gambilingOutlawPuzzle::solution() {
     env = true;
     return true;
 }
+<<<<<<< HEAD:src/GambilingOutlawPuzzle.cpp
 bool gambilingOutlawPuzzle::failPuzzle() {
     std::cout << "You tried playing the game normally. "
     "But instead you kept losing"
+=======
+bool gamblingOutlawPuzzle::failPuzzle() {
+    std::cout << "You tried playing the game normally. But instead you kept loosing"
+>>>>>>> 77dbe328300c44afa4f36fe73fa42e2e9ff1cd39:src/GamblingOutlawPuzzle.cpp
     " Now all your life saving are gone.\nGood Job!\n";
     p.setKill();
     return true;
 }
 
-void gambilingOutlawPuzzle::giveReward() {
+void gamblingOutlawPuzzle::giveReward() {
     p.addItem("PieceOfPaper");
 }

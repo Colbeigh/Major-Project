@@ -50,10 +50,10 @@ class helpfullPassenger : public NPC {
   void initializeDialogueOptions() override;
 };
 
-class gambilingOutlaw : public NPC {
+class gamblingOutlaw : public NPC {
  public:
-  gambilingOutlaw();
-  ~gambilingOutlaw();
+  gamblingOutlaw();
+  ~gamblingOutlaw();
   void initializeDialogueOptions() override;
 };
 
