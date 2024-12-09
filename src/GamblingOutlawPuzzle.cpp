@@ -82,6 +82,20 @@ bool gamblingOutlawPuzzle::failPuzzle() {
     std::cout << "You tried playing the game normally. "
     "But instead you kept losing"
     " Now all your life saving are gone.\nGood Job!\n";
+    // Dramatically print "YOU'RE BROKE" one letter at a time
+    std::string message = "YOU'RE BROKE";
+    for (char c : message) {
+        std::cout << "\033[31;5m" << c << "\033[0m" << std::flush; // Red blinking text
+        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 300ms delay per letter
+    }
+    std::cout << "\n";
+
+    // Delay after the "YOU'RE BROKE" message
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    // Clear screen again
+    std::cout << "\033[2J\033[H";
+
     p.setKill();
     return true;
 }
