@@ -135,8 +135,8 @@ class tiedUpTicketMasterPuzzle : public Puzzle {
   bool failPuzzle() override;
   bool solution() override;
   void giveReward() override;
-  private:
-  NPC* TM;
+ private:
+    NPC* TM;
 };
 
 class searchRoomPuzzle : public Puzzle {

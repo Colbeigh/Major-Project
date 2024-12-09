@@ -107,3 +107,15 @@ void gambilingOutlaw::initializeDialogueOptions() {
     dialogueLines.push_back(name + ": You throwing skills is like my driking skills.\n HORRIBLE!"); // [4]
 
 }
+
+tiedUpTicketMaster::tiedUpTicketMaster() {
+    initializeDialogueOptions();
+}
+
+tiedUpTicketMaster::~tiedUpTicketMaster() {}
+
+void tiedUpTicketMaster::initializeDialogueOptions() {
+    dialogueLines.push_back(name + ": MMM! MMM!"); // [0]
+    dialogueLines.push_back(name + ": You're leaving me here?"); // [1]
+    dialogueLines.push_back(name + ": Thank you for unting me. I thought I was going to die here"); //[2]
+}
