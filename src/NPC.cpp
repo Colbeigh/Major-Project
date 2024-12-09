@@ -104,8 +104,8 @@ void gamblingOutlaw::initializeDialogueOptions() {
     dialogueLines.push_back(name + 
     ": Okay but be ready to walk away with nothing\n");
     dialogueLines.push_back(name + 
-    ": wow good thorw. Who tought you to throw like that?"
-    "Your mother?"); // [2]
+    ": wow good throw. Who tought you to throw like that?\n"
+    "Your mother?\n"); // [2]
     dialogueLines.push_back(name + 
     ": Awww!. What the hell. I cant see anything");
     dialogueLines.push_back(name + 
