@@ -61,7 +61,8 @@ TEST(ArmoryCartTest, DefaultConstructor) {
     EXPECT_EQ(cart.getDescription(),
 "Has a heavy open door with metal barricades, has a metal rack full of stuff "
               "on the top shelf\n");
-    EXPECT_EQ(cart.getPuzzles(), (std::vector<std::string>{"Look around the armory"}));
+    EXPECT_EQ(cart.getPuzzles(),
+    (std::vector<std::string>{"Look around the armory"}));
     EXPECT_EQ(cart.getName(), "Armory Cart");
     EXPECT_EQ(cart.help(), "Think twice before choosing\n");
 }
@@ -79,7 +80,6 @@ TEST(EngineCartTest, DefaultConstructor) {
 
 TEST(FailedEngineCartTests, DefaultConstructor) {
     EngineCart cart;
-    
     // Test that the description does not match an incorrect value
     EXPECT_NE(cart.getDescription(),
      "You see a silhouette and plumes of smoke.\n");
