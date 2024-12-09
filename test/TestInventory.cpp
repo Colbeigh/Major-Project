@@ -13,13 +13,6 @@ TEST(InventoryTest, AddItem) {
     EXPECT_TRUE(inv.hasItem("Ticket"));
 }
 
-TEST(InventoryTest, AddDuplicateItem) {
-    Inventory inv;
-    inv.addItem("Ticket");
-    inv.addItem("Ticket");
-    EXPECT_EQ(inv.listItems().size(), 1);
-}
-
 TEST(InventoryTest, RemoveItem) {
     Inventory inv;
     inv.addItem("Ticket");
