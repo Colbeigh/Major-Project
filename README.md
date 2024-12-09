@@ -10,9 +10,10 @@ Abstract of npc, ticketMaster, Bouncer & Richlady.
 Did no tests
 
 [Jem Pineda]
- -Classes
-
- -Tests
+-Classes
+Puzzle, InteractPuzzle, ticketPuzzle, doorPuzzle, bouncerPuzzle, sweetTalkPuzzle
+-Tests
+TestPuzzle
 
 Contributed to final UML & ReadMe
 
@@ -24,8 +25,6 @@ Contributed to final UML & ReadMe
   TestEnvironment
 
 Contributed to final UML & ReadMe
-
-[Jem Pineda] Puzzle and PuzzleItem
 
 [Colby Hanna] 
  -Classes
