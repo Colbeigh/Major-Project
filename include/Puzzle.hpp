@@ -148,5 +148,4 @@ class searchRoomPuzzle : public Puzzle {
   bool solution() override;
   void giveReward() override;
 };
-
 #endif
