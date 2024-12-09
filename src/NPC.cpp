@@ -78,7 +78,7 @@ helpfullPassenger::~helpfullPassenger() {}
 
 void helpfullPassenger::initializeDialogueOptions() {
    dialogueLines.push_back("Helpfull Passenger: Oh! Hey there. You need my help?\n"); // [0]
-    dialogueLines.push_back("Helpfull Passenger: I'll give you a hint: The game is not what you think it is.\n"); // [1]
+    dialogueLines.push_back("Helpfull Passenger: I'll give you a hint: The game is not what you think it is. \n"); // [1]
 }
 
 gambilingOutlaw::gambilingOutlaw() {
