@@ -22,13 +22,13 @@ TEST(RichLadyTest, DefaultConstructor) {
 }
 
 TEST(BouncerTest, DefaultConstructor) {
-    NPC* bouncer = new bouncer();
-    EXPECT_EQ(bouncer->getName(), "Bouncer");
+    NPC* bounce = new bouncer();
+    EXPECT_EQ(bounce->getName(), "Bouncer");
     testing::internal::CaptureStdout();
-    bouncer->displayDialogue(0);
+    bounce->displayDialogue(0);
     std::string output = testing::internal::GetCapturedStdout();
     EXPECT_EQ(output, "Bouncer: Ticket?\n");
-    delete bouncer;
+    delete bounce;
 }
 
 TEST(HelpfulPassengerTest, DefaultConstructor) {

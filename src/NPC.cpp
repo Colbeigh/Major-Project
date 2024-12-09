@@ -27,7 +27,6 @@ void NPC::displayDialogue(int index) {
     }
 }
 
-//ticketMaster implementations
 ticketMaster::ticketMaster() {
     name = "\033[95mTicket Master\033[0m";
     initializeDialogueOptions();
