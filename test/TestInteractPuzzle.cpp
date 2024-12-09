@@ -21,36 +21,33 @@ TEST(InteractPuzzleTest, GetPuzzleValid) {
 
 TEST(InteractPuzzleTest, GetPuzzleNull) {
     std::vector<std::string> actual = interactPuzzle.getPuzzle(nullptr);
-    EXPECT_TRUE(actual.empty());  // Expecting an empty vector when puzzle is null
+    EXPECT_TRUE(actual.empty());
 }
 
 TEST(InteractPuzzleTest, GetPlayerValid) {
     Player actual = interactPuzzle.getPlayer(&mockPuzzle);
-    EXPECT_EQ(actual, player);  // Assuming Player has a comparison operator or comparing relevant attributes
+    EXPECT_EQ(actual, player);
 }
-
 TEST(InteractPuzzleTest, GetPlayerNull) {
     Player actual = interactPuzzle.getPlayer(nullptr);
-    Player nullPlay;  // Default-constructed player
-    EXPECT_EQ(actual, nullPlay);  // Expect default player if puzzle is null
+    Player nullPlay;
+    EXPECT_EQ(actual, nullPlay);
 }
 
 TEST(InteractPuzzleTest, GetChangeEnvFalse) {
     bool actual = interactPuzzle.getChangeEnv(&mockPuzzle);
-    EXPECT_FALSE(actual);  // Expecting false for getChangeEnv with valid puzzle
+    EXPECT_FALSE(actual);
 }
 
 TEST(InteractPuzzleTest, GetChangeEnvTrue) {
     bool actual = interactPuzzle.getChangeEnv(nullptr);
-    EXPECT_FALSE(actual);  // Expecting false when puzzle is null, should fix this
+    EXPECT_FALSE(actual);
 }
 
 TEST(InteractPuzzleTest, TestStartPuzzleValid) {
     std::vector<std::string> puzzles = {"puz1", "puz2"};
     bool changeEnv = false;
 
-    // We can't easily test side effects of this function without some output or behavior to check.
-    // Assuming it works fine as we just call startPuzzle, no assertion needed here unless behavior is needed.
     interactPuzzle.startPuzzle(&mockPuzzle, player, puzzles, changeEnv);
 }
 
@@ -58,13 +55,6 @@ TEST(InteractPuzzleTest, TestStartPuzzleNull) {
     std::vector<std::string> puzzles = {"puz1", "puz2"};
     bool changeEnv = false;
 
-    // Capture stderr to check error output
-    testing::internal::CaptureStderr();
-
-    // Call with null puzzle (expected to print error)
     interactPuzzle.startPuzzle(nullptr, player, puzzles, changeEnv);
-
-    // Get captured stderr and check for the expected error message
-    std::string output = testing::internal::GetCapturedStderr();
     EXPECT_TRUE(output.find("Error: No puzzle set!") != std::string::npos);
 }
