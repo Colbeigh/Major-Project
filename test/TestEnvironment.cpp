@@ -33,12 +33,14 @@ TEST(DiningCartTest, DefaultConstructor) {
 // Test GamblingCart class
 TEST(GamblingCartTest, DefaultConstructor) {
     GamblingCart cart;
-    EXPECT_EQ(cart.getDescription(), "It riques of ciggarettes and beer "
+    EXPECT_EQ(cart.getDescription(), "It riques of ciggarettes and beer"
     "You notice a gruff looking dealer and a friendly looking passenger"
-    " smiling at you\n");
-    EXPECT_EQ(cart.getPuzzles(), {"Talk to HelpfulPassenger", "Talk to GamblingOutlaw"});
+    "smiling at you\n");
+    EXPECT_EQ(cart.getPuzzles(), {"Talk to HelpfulPassenger",
+    " Talk to GamblingOutlaw"});
     EXPECT_EQ(cart.getName(), "Gambling Cart");
-    EXPECT_EQ(cart.help(), "You should talk to the friendly looking passenger.");
+    EXPECT_EQ(cart.help(), "You should talk to the" 
+    " friendly looking passenger.");
 }
 
 // Test LuggageCart class
@@ -57,7 +59,7 @@ TEST(ArmoryCartTest, DefaultConstructor) {
     "barricades, has a metal rack full of stuff on the top shelf\n");
     EXPECT_EQ(cart.getPuzzles(), {"Look around the armory"});
     EXPECT_EQ(cart.getName(), "Armory Cart");
-    EXPECT_EQ(cart.help(),"Think twice before choosing\n");
+    EXPECT_EQ(cart.help(), "Think twice before choosing\n");
 }
 
 // Test EngineCart class
