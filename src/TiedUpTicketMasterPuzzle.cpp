@@ -16,10 +16,10 @@ void tiedUpTicketMasterPuzzle::event() {
     std::cout << "Looking around the armory you hear a strage noise\n";
     std::cout << "Player: Is there someone in here?\n";
     TM->displayDialogue(0);
-    std::cout << "You hear a faint noice in the corner of the armory\n" 
+    std::cout << "You hear a faint noise in the corner of the armory\n" 
                 "Getting closer to the source of the noise you see a person tied up\n";  
     std::cout << "You crouch closer to the person to realise it's the Ticket Master\n";
-    std::cout << "1. Untine the Ticket Master\n"
+    std::cout << "1. Untie the Ticket Master\n"
                 "2. Leave the Ticket Master\n";
     while (true) {
         int choice = pInput(3);
@@ -43,7 +43,7 @@ bool tiedUpTicketMasterPuzzle::solution(){
     std::cout << "In frustration you punch a box above you\n";
     std::cout << "The box falls down and hits you on the head\n";
     std::cout << "Player: Ouch! That hurt\n";
-    std::cout << "While rubbing you head you see a gun sticking out the box\n";
+    std::cout << "While rubbing your head you see a gun sticking out the box\n";
     std::cout << "Player: wow! must be my lucky day\n";
     giveReward();
     remPuzzle("Look around the armory");

@@ -105,10 +105,10 @@ class helpfullPassengerPuzzle : public Puzzle {
   NPC* HP;
 };
 
-class gambilingOutlawPuzzle : public Puzzle {
+class gamblingOutlawPuzzle : public Puzzle {
  public:
-  gambilingOutlawPuzzle();
-  ~gambilingOutlawPuzzle();
+  gamblingOutlawPuzzle();
+  ~gamblingOutlawPuzzle();
   void event() override;
   bool failPuzzle() override;
   bool solution() override;
