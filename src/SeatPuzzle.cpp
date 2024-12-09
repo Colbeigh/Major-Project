@@ -13,7 +13,7 @@ SeatPuzzle::~SeatPuzzle() {
 
 void SeatPuzzle::event()  {
 std::cout << "Would you like to sit towards the front or back?\n"
-"1.Front \n 2. Back.\n"
+"1.Front \n2. Back.\n"
 "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
     int choice;
@@ -43,7 +43,3 @@ addPuzzle("Talk to Ticket Master");
 remPuzzle("Pick a seat");
 return true;
 }
-
-void SeatPuzzle::giveReward()  {
-}
-

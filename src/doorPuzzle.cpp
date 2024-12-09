@@ -13,7 +13,7 @@ doorPuzzle::~doorPuzzle() {
 
 void doorPuzzle::event()  {
 std::cout << "Would you like to move to a new cart?\n"
-"1.Yes \n 2. No, not yet.\n" <<  
+"1.Yes \n2. No, not yet.\n" <<  
 "3. Help\n"
 "4. Inventory\n"
 "5. Quit\n";
@@ -42,5 +42,3 @@ std::cout << "You move to the next cart\n";
 env = true;
 return true;
 }
-
-void doorPuzzle::giveReward() {}

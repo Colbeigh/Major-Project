@@ -57,5 +57,3 @@ bool bouncerPuzzle::solution() {
     env = true;
     return true;
 }
-
-void bouncerPuzzle::giveReward() {}

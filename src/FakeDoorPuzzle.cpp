@@ -13,10 +13,14 @@ fakeDoorPuzzle::~fakeDoorPuzzle() {
 
 void fakeDoorPuzzle::event()  {
 std::cout << "Would you like to move to a new cart?\n"
+<<<<<<< HEAD
+"1.Yes \n2. No, not yet.\n";
+=======
 "1.Yes \n 2. No, not yet.\n" << 
 "3. Help\n"
 "4. Inventory\n"
 "5. Quit\n";
+>>>>>>> e1df4a86a7865ebb8db8855474819e643439d83f
     while (true) {
     int choice;
         choice = pInput(3);
@@ -50,5 +54,3 @@ bool fakeDoorPuzzle::solution()  {
     p.setKill();
     return true;
 }
-
-void fakeDoorPuzzle::giveReward() {}

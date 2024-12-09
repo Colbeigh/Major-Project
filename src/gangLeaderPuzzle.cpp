@@ -53,5 +53,3 @@ bool gangLeaderPuzzle::failPuzzle() {
     p.setKill();
     return true;
 }
-
-void gangLeaderPuzzle::giveReward() {}
