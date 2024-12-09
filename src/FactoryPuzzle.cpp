@@ -14,7 +14,7 @@ FactoryPuzzle::FactoryPuzzle() {
         {"Talk to bouncer", []() { return new bouncerPuzzle(); }},
         {"Talk to GamblingOutlaw",
         []() { return new gamblingOutlawPuzzle(); }},
-        {"Talk to HelpfullPassenger",
+        {"Talk to HelpfulPassenger",
         []() { return new helpfullPassengerPuzzle(); }},
         {"Catch a breath",
         []() { return new searchRoomPuzzle(); }},

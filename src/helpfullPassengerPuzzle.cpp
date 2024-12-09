@@ -64,6 +64,6 @@ bool helpfullPassengerPuzzle::solution() {
     "that even help me?\n"
     "Before you could realise what is going on"
     " the Helpfull Passenger is gone.\n";
-    remPuzzle("Talk to HelpfullPassenger");
+    remPuzzle("Talk to HelpfulPassenger");
     return true;
 }

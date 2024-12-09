@@ -88,10 +88,10 @@ void helpfullPassenger::initializeDialogueOptions() {
     dialogueLines.push_back(name +
     ": Oh! Hey there. You need my help?\n");
     dialogueLines.push_back(name +
-    ": I'll give you a hint: The game is not what you think it is. \n");
+    ": I'll give you a hint:" "\x1B[5;38;5;193m" + " The game is not what you think it is.\x1B[0m\n");
 }
 gamblingOutlaw::gamblingOutlaw() {
-    name = "Gambling Outlaw";
+    name = "\x1B[38;5;124mGambling Outlaw\x1B[0m";
     initializeDialogueOptions();
 }
 
@@ -113,7 +113,7 @@ void gamblingOutlaw::initializeDialogueOptions() {
 }
 
 tiedUpTicketMaster::tiedUpTicketMaster() {
-    name = "Tied Up Ticket Master";
+    name = "\033[95mTied Up Ticket Master\033[0m";
     initializeDialogueOptions();
 }
 
@@ -131,7 +131,7 @@ void tiedUpTicketMaster::initializeDialogueOptions() {
 }
 
 gangLeader::gangLeader() {
-    name = "O'Driscoll Leader";
+    name = "\x1B[38;5;130mO'Driscoll Leader\x1B[0m";
     initializeDialogueOptions();
 }
 
