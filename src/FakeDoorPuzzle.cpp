@@ -13,7 +13,7 @@ fakeDoorPuzzle::~fakeDoorPuzzle() {
 
 void fakeDoorPuzzle::event()  {
 std::cout << "Would you like to move to a new cart?\n"
-"1.Yes \n 2. No, not yet.\n";
+"1.Yes \n2. No, not yet.\n";
     while (true) {
     int choice;
         choice = pInput(3);
