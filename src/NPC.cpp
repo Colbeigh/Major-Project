@@ -119,3 +119,28 @@ void tiedUpTicketMaster::initializeDialogueOptions() {
     dialogueLines.push_back(name + ": You're leaving me here?"); // [1]
     dialogueLines.push_back(name + ": Thank you for unting me. I thought I was going to die here"); //[2]
 }
+
+gangLeader::gangLeader() {
+    name = "O'Driscoll Leader";
+    initializeDialogueOptions();
+}
+
+gangLeader::~gangLeader() {}
+
+void gangLeader::initializeDialogueOptions() {
+    dialogueLines.push_back(name + 
+    "Well, well, Sheriff, ain't this a sight? You thought\n"
+    "you could lock me up, toss the key, and forget ol\n"
+    "O'Driscoll, didn't ya? Thought you were the big\n"
+    "man, ridin high on that shiny badge. But here I am,\n"
+    "free as a bird and twice as mean. While you’re out\n"
+    "there twiddlin your thumbs, I've been plannin somethin\n"
+    "spectacular. This train? Oh, it's gonna be my\n"
+    "masterpiece. You ever wonder what it feels like to\n"
+    "watch your whole world burn?\n");
+
+    dialogueLines.push_back(name + ": You're too late!\n"
+    "I have already armed the bomb\n");
+ 
+
+}

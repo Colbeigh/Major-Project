@@ -148,4 +148,16 @@ class searchRoomPuzzle : public Puzzle {
   bool solution() override;
   void giveReward() override;
 };
+
+class gangLeaderPuzzle : public Puzzle {
+ public:
+  gangLeaderPuzzle();
+  ~gangLeaderPuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+ private:
+  NPC* GL;
+};
 #endif
