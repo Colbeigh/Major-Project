@@ -1,12 +1,13 @@
 /**
  * @author Todd Across The Mountain <t.acrossthemountain@uleth.ca>
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @author Nikita Evtushenko <nikita.evtushenko@uleth.ca>
  * @date Fall 2024
  */
 #include "NPC.hpp"
 #include <iostream>
 #include <string>
 
-//NPC base class implementation
 NPC::NPC() : name("Default NPC") {}
 
 
@@ -41,7 +42,7 @@ void ticketMaster::initializeDialogueOptions() {
     "Thank you for travelling with us. "
                              "Enjoy the ride!");
 }
-//richlady Implementations
+
 richLady::richLady() {
     name = "Rich Lady";
     initializeDialogueOptions();
@@ -61,7 +62,6 @@ void richLady::initializeDialogueOptions() {
                              "quarter? How dare you!");
 }
 
-//Bouncher implementations
 bouncer::bouncer() {
     name = "Bouncer";
     initializeDialogueOptions();
