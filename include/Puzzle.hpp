@@ -79,6 +79,7 @@ class Puzzle {
   std::vector<std::string> puzz;
   bool env;
 };
+
 class puzzleWithReward : public Puzzle{
  public:
  /**
@@ -89,61 +90,27 @@ class puzzleWithReward : public Puzzle{
   * @brief Default deconstructor
   */
   virtual ~puzzleWithReward() {}
-   /**
-  * @brief Creates and sets up the event of each puzzle.
+  /**
+  * @brief an override to set up a specific
+  * event of the current puzzle.
   */
-  virtual void event() = 0;
-   /**
-  * @brief Describes and sets the fail condition of a puzzle.
+  void event() override = 0;
+  /**
+  * @brief an override to set up a specific
+  * fail condition of the current puzzle.
   */
-  virtual bool failPuzzle() = 0;
-   /**
-  * @brief Describes and sets the solved condition of a puzzle.
+  bool failPuzzle() override = 0;
+  /**
+  * @brief an override to set up a specific
+  * win condition of the current puzzle.
   */
-  virtual bool solution() = 0;
-   /**
-  * @brief Gives the player an item when puzzle solved.
+  bool solution() override = 0;
+  /**
+  * @brief an override that gives player
+  * an item reward for solving specific 
+  * puzzle.
   */
   virtual void giveReward() = 0;
-   /**
-  * @brief Sets up the puzzle and calls event.
-  * @param player object being passed on, vector for puzzles,
-  * a bool for changing the environment
-  */
-  void startPuzzle(Player player,
-  std::vector<std::string> puzzles, bool changeenv);
-   /**
-  * @brief Adds current puzzle into the vector
-  * @param String for puzzle id of the current puzzle.
-  */
-  void addPuzzle(std::string puzzleid);
-   /**
-  * @brief Removes current puzzle from the vector
-  * @param String for puzzle id of the current puzzle.
-  */
-  void remPuzzle(std::string puzzleid);
-   /**
-  * @brief Accepts player input
-  * @param int length sets the limit of the user input.
-  */
-  int pInput(int length);
-   /**
-  * @brief returns the player 
-  */
-  Player getPlayer() {return p;}
-   /**
-  * @brief returns env that changes environment
-  */
-  bool getChangeEnv () {return env;}
-   /**
-  * @brief a vector function that returns the puzzle
-  */
-  std::vector<std::string> getPuzzle() {return puzz;}
-  std::string help;
-
-  Player p;
-  std::vector<std::string> puzz;
-  bool env;
 };
 
 class SeatPuzzle: public Puzzle {
