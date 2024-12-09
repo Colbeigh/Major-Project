@@ -67,10 +67,10 @@ int Game::userInput(int length) {
        std::cin.clear();
        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
        std::cout << "Invalid input. Please enter an integer between 1 " <<
-       "and " << length + 3 << ".\n";
+       "and " << length + 2 << ".\n";
      } else if (userinput < 1 || userinput > length + 2) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
-         length + 3 << ".\n";
+         length + 2 << ".\n";
       } else if (userinput == length) {
          std::cout << intenv.getHelp(currentenvironment) << "\n";
          std:: cout << "Please select an option\n";

@@ -34,10 +34,10 @@ while (true) {
        std::cin.clear();
        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
        std::cout << "Invalid input. Please enter an integer between 1 " <<
-       "and " << length + 3 << ".\n";
+       "and " << length + 2 << ".\n";
      } else if (playerchoice < 1 || playerchoice > length + 2) {
          std::cout << "Invalid input. Please enter an integer between 1 and " <<
-         length + 3 << ".\n";
+         length + 2 << ".\n";
       } else if (playerchoice == length) {
          std::cout << help << "\n";
          std:: cout << "Please select an option\n";
