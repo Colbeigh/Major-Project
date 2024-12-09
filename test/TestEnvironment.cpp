@@ -39,7 +39,7 @@ TEST(GamblingCartTest, DefaultConstructor) {
     EXPECT_EQ(cart.getPuzzles(), {"Talk to HelpfulPassenger",
     " Talk to GamblingOutlaw"});
     EXPECT_EQ(cart.getName(), "Gambling Cart");
-    EXPECT_EQ(cart.help(), "You should talk to the" 
+    EXPECT_EQ(cart.help(), "You should talk to the"
     " friendly looking passenger.");
 }
 
