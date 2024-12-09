@@ -38,7 +38,7 @@ bool gamblingOutlawPuzzle::solution() {
     std::cout << "No you must have me mistaken."
     " How about we just focus on the game\n";
     GO->displayDialogue(1);
-    std::cout << "You get two dies.\n" 
+    std::cout << "You get two dies.\n"
         "1. roll the dies and see what happens\n"
         "2. Throw the die in the outlaws face\n"
         "3. Throw the die against the wall padding\n";

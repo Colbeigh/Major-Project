@@ -88,7 +88,8 @@ void helpfullPassenger::initializeDialogueOptions() {
     dialogueLines.push_back(name +
     ": Oh! Hey there. You need my help?\n");
     dialogueLines.push_back(name +
-    ": I'll give you a hint:" "\x1B[5;38;5;193m" + " The game is not what you think it is.\x1B[0m\n");
+    ": I'll give you a hint:" "\x1B[5;38;5;193m" +
+    " The game is not what you think it is.\x1B[0m\n");
 }
 gamblingOutlaw::gamblingOutlaw() {
     name = "\x1B[38;5;124mGambling Outlaw\x1B[0m";
@@ -123,10 +124,10 @@ void tiedUpTicketMaster::initializeDialogueOptions() {
     std::string name2 = "Ticket Master";
     dialogueLines.push_back(name + ": MMM! MMM! \n");
     dialogueLines.push_back(name + ": You're leaving me here?\n");
-    dialogueLines.push_back(name2 + 
+    dialogueLines.push_back(name2 +
     ": Thank you for unting me. I thought I was going to die here\n");
     dialogueLines.push_back(name2 + ": So what now?\n");
-    dialogueLines.push_back(name2 + 
+    dialogueLines.push_back(name2 +
     ": Hey!. Is this what you looking for?\n");
 }
 
