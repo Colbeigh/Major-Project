@@ -29,8 +29,8 @@ std::string Environment::getName() {
 
 PassengerCart::PassengerCart() {
     name = "Passenger Cart";
-    environmentDescription = "Looking around the environment, "
-    "you see lots of passengers, and a ticket master walking around\n";
+    environmentDescription = "Looking around, you see lots"
+    " of passengers, and a ticket master walking around\n";
     helpInfo = "Give him your Ticket.\n";
     puzzles = {"Pick a seat"};
 }
