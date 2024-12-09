@@ -104,10 +104,10 @@ void gamblingOutlaw::initializeDialogueOptions() {
     " causing trouble for us.");
     dialogueLines.push_back(name +
     ": Okay but be ready to walk away with nothing\n");
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": wow good throw. Who tought you to throw like that?\n"
     "Your mother?\n"); // [2]
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": Awww!. What the hell. I cant see anything");
     dialogueLines.push_back(name +
     ": You throwing skills is like my driking skills.\n HORRIBLE!");
