@@ -6,29 +6,29 @@
 TEST(FactoryPuzzleTest, CreatePuzzle) {
     FactoryPuzzle factory;
 
-    Puzzle* ticketPuzzleItem = factory.createPuzzle("Talk to Ticket Master");
-    EXPECT_NE(ticketPuzzleItem, nullptr);
-    EXPECT_TRUE(dynamic_cast<ticketPuzzle*>(ticketPuzzleItem) != nullptr);
+    Puzzle* ticketPuzzle = factory.createPuzzle("Talk to Ticket Master");
+    EXPECT_NE(ticketPuzzle, nullptr);
+    EXPECT_TRUE(dynamic_cast<ticketPuzzle*>(ticketPuzzle) != nullptr);
 
-    Puzzle* doorPuzzleItem = factory.createPuzzle("Pick a seat");
-    EXPECT_NE(doorPuzzleItem, nullptr);
-    EXPECT_TRUE(dynamic_cast<doorPuzzle*>(doorPuzzleItem) != nullptr);
+    Puzzle* doorPuzzle = factory.createPuzzle("Pick a seat");
+    EXPECT_NE(doorPuzzle, nullptr);
+    EXPECT_TRUE(dynamic_cast<doorPuzzle*>(doorPuzzle) != nullptr);
 
-    Puzzle* sweetTalkPuzzleItem = factory.createPuzzle("Talk to Rich Lady");
-    EXPECT_NE(sweetTalkPuzzleItem, nullptr);
-    EXPECT_TRUE(dynamic_cast<sweetTalkPuzzle*>(sweetTalkPuzzleItem) != nullptr);
+    Puzzle* sweetTalkPuzzle = factory.createPuzzle("Talk to Rich Lady");
+    EXPECT_NE(sweetTalkPuzzle, nullptr);
+    EXPECT_TRUE(dynamic_cast<sweetTalkPuzzle*>(sweetTalkPuzzle) != nullptr);
 
-    Puzzle* bouncerPuzzleItem = factory.createPuzzle("Talk to bouncer");
-    EXPECT_NE(bouncerPuzzleItem, nullptr);
-    EXPECT_TRUE(dynamic_cast<bouncerPuzzle*>(bouncerPuzzleItem) != nullptr);
+    Puzzle* bouncerPuzzle = factory.createPuzzle("Talk to bouncer");
+    EXPECT_NE(bouncerPuzzle, nullptr);
+    EXPECT_TRUE(dynamic_cast<bouncerPuzzle*>(bouncerPuzzle) != nullptr);
 
     Puzzle* defaultPuzzle = factory.createPuzzle("InvalidPuzzle");
     EXPECT_NE(defaultPuzzle, nullptr);
     EXPECT_TRUE(dynamic_cast<ticketPuzzle*>(defaultPuzzle) != nullptr);
 
-    delete ticketPuzzleItem;
-    delete doorPuzzleItem;
-    delete sweetTalkPuzzleItem;
-    delete bouncerPuzzleItem;
+    delete ticketPuzzle;
+    delete doorPuzzle;
+    delete sweetTalkPuzzle;
+    delete bouncerPuzzle;
     delete defaultPuzzle;
 }
