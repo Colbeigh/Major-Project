@@ -69,18 +69,3 @@ void sweetTalkPuzzle::giveReward() {
     p.addItem("GamblingTicket");
     p.addItem("Quarter");
 }
-
-
-  // void sweetTalkPuzzle::addPuzzle(const std::string& puzzleId) {
-  // }
-  // bool sweetTalkPuzzle::solved(const std::string& puzzleId) {
-  //    if (!p) {
-  //   std::cout << "Puzzle is not initialized";
-  //   }
-  //   for (int i = 0; i < p->size(); ++i) {
-  //      if (puzzleId == (*p)[i]) {
-  //          p->erase(p->begin() + i);
-  //     }
-  // }
-  //   return true;
-  // }

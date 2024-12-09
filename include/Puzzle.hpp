@@ -13,22 +13,64 @@
 
 #ifndef PUZZLE_HPP_INCLUDED
 #define PUZZLE_HPP_INCLUDED
-
+/**
+ * @class Puzzle Puzzle.hpp "Puzzle.hpp";
+ * @brief A base class for puzzles, removes puzzles and add puzzles
+ */
 class Puzzle {
  public:
+ /**
+  * @brief Default constructor that 
+  */
   Puzzle() {}
+   /**
+  * @brief 
+  */
   virtual ~Puzzle() {}
+   /**
+  * @brief 
+  */
   virtual void event() = 0;
+   /**
+  * @brief 
+  */
   virtual bool failPuzzle() = 0;
+   /**
+  * @brief 
+  */
   virtual bool solution() = 0;
+   /**
+  * @brief 
+  */
   virtual void giveReward() = 0;
+   /**
+  * @brief 
+  */
   void startPuzzle(Player player,
   std::vector<std::string> puzzles, bool changeenv);
+   /**
+  * @brief 
+  */
   void addPuzzle(std::string puzzleid);
+   /**
+  * @brief 
+  */
   void remPuzzle(std::string puzzleid);
+   /**
+  * @brief 
+  */
   int pInput(int length);
+   /**
+  * @brief 
+  */
   Player getPlayer() {return p;}
+   /**
+  * @brief 
+  */
   bool getChangeEnv () {return env;}
+   /**
+  * @brief 
+  */
   std::vector<std::string> getPuzzle() {return puzz;}
   std::string help;
 
