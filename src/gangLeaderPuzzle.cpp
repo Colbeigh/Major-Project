@@ -17,7 +17,7 @@ void gangLeaderPuzzle::event() {
     GL->displayDialogue(0);
     std:: cout << "He rambles on and on\n"
         "What would you like to do?\n";
-    std::cout <<"1. Shoot him\n" 
+    std::cout <<"1. Shoot him\n"
                 "2. Sorry I couldn't hear you\n";
     while (true) {
     int choice;

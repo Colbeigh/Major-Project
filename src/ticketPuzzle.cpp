@@ -23,7 +23,7 @@ bool ticketPuzzle::failPuzzle() {
 
 bool ticketPuzzle::solution() {
     p.listItem();
-    if(p.hasItem("Ticket") == true ) {
+    if (p.hasItem("Ticket") == true) {
     std::cout << "You give him the ticket\n";
     p.remItem("Ticket");
     std::cout <<"You watch him punch the ticket and hands back it to you\n";
@@ -49,7 +49,7 @@ void ticketPuzzle::event() {
     while (true) {
     int choice;
     choice = pInput(3);
-        if (choice < 1 || choice > 2 ) {
+        if (choice < 1 || choice > 2) {
             std::cout << "Please pick between 1 or 2\n";
         } else if (choice == 2) {
             failPuzzle();

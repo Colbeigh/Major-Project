@@ -36,9 +36,9 @@ ticketMaster::ticketMaster() {
 ticketMaster::~ticketMaster() {}
 
 void ticketMaster::initializeDialogueOptions() {
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": Welcome aboard, may I see your ticket?");
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     "Thank you for travelling with us. "
                              "Enjoy the ride!");
 }
@@ -85,10 +85,10 @@ helpfullPassenger::helpfullPassenger() {
 helpfullPassenger::~helpfullPassenger() {}
 
 void helpfullPassenger::initializeDialogueOptions() {
-   dialogueLines.push_back(name + 
-   ": Oh! Hey there. You need my help?\n"); // [0]
-    dialogueLines.push_back(name + 
-    ": I'll give you a hint: The game is not what you think it is. \n"); // [1]
+    dialogueLines.push_back(name +
+    ": Oh! Hey there. You need my help?\n");
+    dialogueLines.push_back(name +
+    ": I'll give you a hint: The game is not what you think it is. \n");
 }
 gambilingOutlaw::gambilingOutlaw() {
     name = "Gambling Outlaw";
@@ -98,14 +98,18 @@ gambilingOutlaw::gambilingOutlaw() {
 gambilingOutlaw::~gambilingOutlaw() {}
 
 void gambilingOutlaw::initializeDialogueOptions() {
-    dialogueLines.push_back(name + ": So you're that policeman that has been" 
-                            "causing trouble for us."); //[0]
-    dialogueLines.push_back(name + ": Okay but be ready to walk away with nothing\n"); //[1]
-    dialogueLines.push_back(name + ": wow good thorw. Who tought you to throw like that?"
+    dialogueLines.push_back(name + 
+    ": So you're that policeman that has been"
+    " causing trouble for us.");
+    dialogueLines.push_back(name + 
+    ": Okay but be ready to walk away with nothing\n");
+    dialogueLines.push_back(name + 
+    ": wow good thorw. Who tought you to throw like that?"
     "Your mother?"); // [2]
-    dialogueLines.push_back(name + ": Awww!. What the hell. I cant see anything"); // [3]
-    dialogueLines.push_back(name + ": You throwing skills is like my driking skills.\n HORRIBLE!"); // [4]
-
+    dialogueLines.push_back(name + 
+    ": Awww!. What the hell. I cant see anything");
+    dialogueLines.push_back(name + 
+    ": You throwing skills is like my driking skills.\n HORRIBLE!");
 }
 
 tiedUpTicketMaster::tiedUpTicketMaster() {
@@ -117,11 +121,13 @@ tiedUpTicketMaster::~tiedUpTicketMaster() {}
 
 void tiedUpTicketMaster::initializeDialogueOptions() {
     std::string name2 = "Ticket Master";
-    dialogueLines.push_back(name + ": MMM! MMM! \n"); // [0]
-    dialogueLines.push_back(name + ": You're leaving me here?\n"); // [1]
-    dialogueLines.push_back(name2 + ": Thank you for unting me. I thought I was going to die here\n"); //[2]
-    dialogueLines.push_back(name2 + ": So what now?\n"); // [3]
-    dialogueLines.push_back(name2 + ": Hey!. Is this what you looking for?\n"); // [4]
+    dialogueLines.push_back(name + ": MMM! MMM! \n");
+    dialogueLines.push_back(name + ": You're leaving me here?\n");
+    dialogueLines.push_back(name2 + 
+    ": Thank you for unting me. I thought I was going to die here\n");
+    dialogueLines.push_back(name2 + ": So what now?\n");
+    dialogueLines.push_back(name2 + 
+    ": Hey!. Is this what you looking for?\n");
 }
 
 gangLeader::gangLeader() {
@@ -132,7 +138,7 @@ gangLeader::gangLeader() {
 gangLeader::~gangLeader() {}
 
 void gangLeader::initializeDialogueOptions() {
-    dialogueLines.push_back(name + 
+    dialogueLines.push_back(name +
     ": Well, well, Sheriff, ain't this a sight? You thought\n"
     "you could lock me up, toss the key, and forget ol\n"
     "O'Driscoll, didn't ya? Thought you were the big\n"
@@ -145,6 +151,4 @@ void gangLeader::initializeDialogueOptions() {
 
     dialogueLines.push_back(name + ": You're too late!\n"
     "I have already armed the bomb\n");
- 
-
 }

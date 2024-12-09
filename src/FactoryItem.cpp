@@ -11,11 +11,10 @@ FactoryItem::FactoryItem() {
         {"PunchedTicket", []() { return new PunchedTicket(); }},
         {"GamblingTicket", []() { return new GamblingTicket(); }},
         {"Quarter", []() { return new Quarter(); }},
-        {"PieceOfPaper", []() { return new PieceOfPaper(); }},  
+        {"PieceOfPaper", []() { return new PieceOfPaper(); }},
         {"Plans", []() { return new PieceOfPaper(); }},
         {"Fakegun", []() { return new Fakegun(); }},
         {"Gun", []() { return new Gun(); }}
-
     };
 }
 

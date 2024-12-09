@@ -10,7 +10,7 @@ helpfullPassengerPuzzle::helpfullPassengerPuzzle(): HP(nullptr) {
 }
 
 helpfullPassengerPuzzle::~helpfullPassengerPuzzle() {
-   delete HP;
+    delete HP;
 }
 
 void helpfullPassengerPuzzle::event() {
@@ -23,7 +23,8 @@ void helpfullPassengerPuzzle::event() {
         if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
         } else if (choice == 2) {
-            std::cout << " You looked at the helpfull Passenger but decided to look away\n";
+            std::cout << " You looked at the helpful "
+            "Passenger but decided to look away\n";
             break;
         } else {
             solution();

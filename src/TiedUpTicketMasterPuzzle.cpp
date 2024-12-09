@@ -16,16 +16,18 @@ void tiedUpTicketMasterPuzzle::event() {
     std::cout << "Looking around the armory you hear a strage noise\n";
     std::cout << "Player: Is there someone in here?\n";
     TM->displayDialogue(0);
-    std::cout << "You hear a faint noice in the corner of the armory\n" 
-                "Getting closer to the source of the noise you see a person tied up\n";  
-    std::cout << "You crouch closer to the person to realise it's the Ticket Master\n";
+    std::cout << "You hear a faint noice in the corner of the armory\n"
+                "Getting closer to the source of the "
+                "noise you see a person tied up\n";
+    std::cout << "You crouch closer to the person to "
+                 "realise it's the Ticket Master\n";
     std::cout << "1. Untine the Ticket Master\n"
                 "2. Leave the Ticket Master\n";
     while (true) {
         int choice = pInput(3);
-        if (choice < 1 || choice > 2) { 
+        if (choice < 1 || choice > 2) {
             std::cout << "Pick between 1 or 2" << std::endl;
-        } else if (choice == 1) { 
+        } else if (choice == 1) {
             failPuzzle();
             break;
         } else {
@@ -35,7 +37,7 @@ void tiedUpTicketMasterPuzzle::event() {
     }
 }
 
-bool tiedUpTicketMasterPuzzle::solution(){ 
+bool tiedUpTicketMasterPuzzle::solution(){
     std::cout << "You decide to leave the ticket master tied up\n";
     std::cout << "You start looking around the armory\n"
                 "After some time of searching around\n";
@@ -48,14 +50,13 @@ bool tiedUpTicketMasterPuzzle::solution(){
     giveReward();
     remPuzzle("Look around the armory");
     addPuzzle("Go to next cart");
-    
-    
+
     return true;
     }
 
 bool tiedUpTicketMasterPuzzle::failPuzzle() {
     std::cout << "You decide to help the ticket master\n";
-    TM->displayDialogue(2); 
+    TM->displayDialogue(2);
     std::cout << "Player: I couldn't leave you here\n";
     TM->displayDialogue(3);
     std::cout << "Player: First We need to arm ourselves\n"
@@ -75,6 +76,6 @@ bool tiedUpTicketMasterPuzzle::failPuzzle() {
     return true;
 }
 
-void tiedUpTicketMasterPuzzle::giveReward() { 
+void tiedUpTicketMasterPuzzle::giveReward() {
     p.addItem("Gun");
 }

@@ -10,7 +10,7 @@ sweetTalkPuzzle::sweetTalkPuzzle(): RL(nullptr) {
 }
 
 sweetTalkPuzzle::~sweetTalkPuzzle() {
-   delete RL;
+  delete RL;
 }
 
 void sweetTalkPuzzle::event() {

@@ -14,7 +14,7 @@ searchRoomPuzzle::~searchRoomPuzzle() {
 void searchRoomPuzzle::event()  {
 std::cout << "You got away\n" <<
 "You take a breath and check the paper you picked up\n" <<
-p.getDesc("PieceOfPaper") << 
+p.getDesc("PieceOfPaper") <<
 "\nThis must be the luggage number\n"
 "\n1. Goto Luggage\n 2. Leave it be.\n";
     while (true) {
