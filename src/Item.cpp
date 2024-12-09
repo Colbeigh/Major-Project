@@ -56,3 +56,16 @@ Plans::Plans() {
   desc = "They plan to blow up the train to get back at me";
   itemid = "Plans";
 }
+
+Fakegun::Fakegun() {
+  name = "Gun";
+  desc = "A gun with a wooden handle and a silver barrel, with two bullets";
+  itemid = "Fakegun";
+}
+
+Gun::Gun() {
+  name = "Gun";
+  desc = "A gun with a wooden handle and a silver barrel"
+  " and a engraved symbol on the handle";
+  itemid = "Gun";
+}

@@ -86,9 +86,9 @@ helpfullPassenger::~helpfullPassenger() {}
 
 void helpfullPassenger::initializeDialogueOptions() {
    dialogueLines.push_back(name + 
-   ": Helpfull Passenger: Oh! Hey there. You need my help?\n"); // [0]
+   ": Oh! Hey there. You need my help?\n"); // [0]
     dialogueLines.push_back(name + 
-    ": Helpfull Passenger: I'll give you a hint: The game is not what you think it is. \n"); // [1]
+    ": I'll give you a hint: The game is not what you think it is. \n"); // [1]
 }
 gambilingOutlaw::gambilingOutlaw() {
     name = "Gambling Outlaw";
@@ -109,13 +109,17 @@ void gambilingOutlaw::initializeDialogueOptions() {
 }
 
 tiedUpTicketMaster::tiedUpTicketMaster() {
+    name = "Tied Up Ticket Master";
     initializeDialogueOptions();
 }
 
 tiedUpTicketMaster::~tiedUpTicketMaster() {}
 
 void tiedUpTicketMaster::initializeDialogueOptions() {
-    dialogueLines.push_back(name + ": MMM! MMM!"); // [0]
-    dialogueLines.push_back(name + ": You're leaving me here?"); // [1]
-    dialogueLines.push_back(name + ": Thank you for unting me. I thought I was going to die here"); //[2]
+    std::string name2 = "Ticket Master";
+    dialogueLines.push_back(name + ": MMM! MMM! \n"); // [0]
+    dialogueLines.push_back(name + ": You're leaving me here?\n"); // [1]
+    dialogueLines.push_back(name2 + ": Thank you for unting me. I thought I was going to die here\n"); //[2]
+    dialogueLines.push_back(name2 + ": So what now?\n"); // [3]
+    dialogueLines.push_back(name2 + ": Hey!. Is this what you looking for?\n"); // [4]
 }

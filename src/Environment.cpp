@@ -62,7 +62,7 @@ ArmoryCart::ArmoryCart() {
     name = "Armory Cart";
     environmentDescription = "You are in the armory cart.";
     helpInfo = "You can ask the guard for help.";
-    puzzles = {};
+    puzzles = {"Look around the armory"};
 }
 
 EngineCart::EngineCart() {

@@ -100,4 +100,20 @@ class Plans: public Item {
   */
   Plans();
 };
+
+class Fakegun : public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  Fakegun();
+};
+
+class Gun : public Item {
+ public:
+  /**
+  * @brief Sets name, description, and itemid
+  */
+  Gun();
+};
 #endif
