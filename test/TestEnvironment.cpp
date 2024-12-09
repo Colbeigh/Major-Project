@@ -58,7 +58,7 @@ TEST(LuggageCartTest, DefaultConstructor) {
 TEST(ArmoryCartTest, DefaultConstructor) {
     ArmoryCart cart;
     EXPECT_EQ(cart.getDescription(), "Has a heavy open door with metal "
-    "barricades, has a metal rack full" 
+    "barricades, has a metal rack full"
     " of stuff on the top shelf\n");
     EXPECT_EQ(cart.getPuzzles(), (std::vector<std::string>
     {"Look around the armory"}));
@@ -69,8 +69,8 @@ TEST(ArmoryCartTest, DefaultConstructor) {
 // Test EngineCart class
 TEST(EngineCartTest, DefaultConstructor) {
     EngineCart cart;
-    EXPECT_EQ(cart.getDescription(), "You see a silhouette
-    and plumes of smoke\n");
+    EXPECT_EQ(cart.getDescription(), "You see a silhouette"
+    " and plumes of smoke\n");
     EXPECT_EQ(cart.getPuzzles(), (std::vector<std::string>
     {"Approach the Gang Leader"}));
     EXPECT_EQ(cart.getName(), "Engine Cart");
