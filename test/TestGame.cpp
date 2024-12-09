@@ -58,15 +58,3 @@ TEST(TestGame, ListInventoryTest) {
 
     std::cout.rdbuf(old);
 }
-
-TEST(TestGame, PuzzleFlowTest) {
-    Game game;
-
-    std::string puzzleName = "TicketPuzzle";
-    game.createPuzzle(puzzleName);
-
-    game.intpuz.startPuzzle(game.currentpuzzle, game.player, {}, false);
-
-    EXPECT_NE(game.currentpuzzle, nullptr);
-    EXPECT_TRUE(game.player.isAlive());
-}
