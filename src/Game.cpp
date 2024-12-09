@@ -17,7 +17,9 @@ Game::~Game() {
 }
 
 void Game::Start() {
-  std::string prologue = "This is the prologue";
+  std::string prologue = "You are a sherrif who has not "
+  "went on a vacation for years finally getting some time off "
+  "and heading to his vacation spot by train";
   std::cout << prologue << "\n";
   player.setAlive();
   player.addItem("Ticket");
