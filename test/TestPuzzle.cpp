@@ -5,6 +5,7 @@
 #include "gtest/gtest.h"
 #include "Puzzle.hpp"
 #include "FactoryPuzzle.hpp"
+#include <algorithm>
 
 TEST(PuzzleTest, TicketMasterPuzzleTest) {
 Player player;
