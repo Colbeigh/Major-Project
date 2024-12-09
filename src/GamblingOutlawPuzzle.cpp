@@ -17,6 +17,9 @@ void gamblingOutlawPuzzle::event() {
     "feel a sense of dread\n";
     std::cout <<"1. Talk to the outlaw\n"
                 "2. Turn away\n";
+                "3. Help\n"
+                "4. Inventory\n"
+                "5. Quit\n";
     while (true) {
     int choice;
     choice = pInput(3);

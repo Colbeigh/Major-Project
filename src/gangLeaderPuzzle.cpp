@@ -19,6 +19,9 @@ void gangLeaderPuzzle::event() {
         "What would you like to do?\n";
     std::cout <<"1. Shoot him\n"
                 "2. Sorry I couldn't hear you\n";
+                "3. Help\n"
+                "4. Inventory\n"
+                "5. Quit\n";
     while (true) {
     int choice;
     choice = pInput(3);
