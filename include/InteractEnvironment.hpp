@@ -44,7 +44,7 @@ class InteractEnvironment {
   * @brief Return help of environment
   * @param Environment to get help of
   */
- std::string getHelp(Environment* env);
+  std::string getHelp(Environment* env);
 
   /**
   * @brief Return list of puzzles of environment

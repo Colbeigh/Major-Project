@@ -19,7 +19,8 @@ FactoryPuzzle::FactoryPuzzle() {
         {"Catch a breath",
         []() { return new searchRoomPuzzle(); }},
         {"Approach the luggage", []() { return new luggagePuzzle(); }},
-        {"Look around the armory", []() { return new tiedUpTicketMasterPuzzle(); }},
+        {"Look around the armory",
+        []() { return new tiedUpTicketMasterPuzzle(); }},
         {"Leave the Armory", []() { return new fakeDoorPuzzle(); }},
         {"Approach the Gang Leader", []() { return new gangLeaderPuzzle(); }}
     };

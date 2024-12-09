@@ -171,7 +171,7 @@ class ticketPuzzle: public puzzleWithReward {
   * puzzle.
   */
   void giveReward() override;
- private:
+private:
   NPC* TM;
 };
 
@@ -235,6 +235,7 @@ class bouncerPuzzle: public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
+
  private:
   NPC* B;
 };
@@ -291,6 +292,7 @@ class helpfullPassengerPuzzle : public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
+
  private:
   NPC* HP;
 };
@@ -326,6 +328,7 @@ class gamblingOutlawPuzzle : public puzzleWithReward {
   * puzzle.
   */
   void giveReward() override;
+
  private:
   NPC* GO;
 };
@@ -394,6 +397,7 @@ class tiedUpTicketMasterPuzzle : public puzzleWithReward {
   * puzzle.
   */
   void giveReward() override;
+
  private:
     NPC* TM;
 };
@@ -477,6 +481,7 @@ class gangLeaderPuzzle : public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
+
  private:
   NPC* GL;
 };
