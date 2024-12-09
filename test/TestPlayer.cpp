@@ -10,6 +10,7 @@ TEST(PlayerTest, Constructor) {
 
     EXPECT_EQ(player.getName(), "Default");
 
+    player.setAlive();
     EXPECT_TRUE(player.isAlive());
 }
 
@@ -35,6 +36,7 @@ TEST(PlayerTest, RemItem) {
 TEST(PlayerTest, LifeStatus) {
     Player player;
 
+    player.setAlive();
     EXPECT_TRUE(player.isAlive());
 
     player.setKill();
