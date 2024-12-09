@@ -1,7 +1,11 @@
+/**
+ * @author Nikita Evtushenko <nikita.evtushenko@uleth.ca>
+ * @date Fall 2024
+ */
+
 #include <gtest/gtest.h>
 #include "Environment.hpp"
 
-// Test Environment class
 TEST(EnvironmentTest, DefaultConstructor) {
     Environment env;
     EXPECT_EQ(env.getDescription(), "You are in an unknown place.");
@@ -10,7 +14,6 @@ TEST(EnvironmentTest, DefaultConstructor) {
     EXPECT_EQ(env.help(), "Help is not implemented yet.");
 }
 
-// Test PassengerCart class
 TEST(PassengerCartTest, DefaultConstructor) {
     PassengerCart cart;
     EXPECT_EQ(cart.getDescription(),
@@ -21,7 +24,6 @@ TEST(PassengerCartTest, DefaultConstructor) {
     EXPECT_EQ(cart.help(), "Give him your Ticket.\n");
 }
 
-// Test DiningCart class
 TEST(DiningCartTest, DefaultConstructor) {
     DiningCart cart;
     EXPECT_EQ(cart.getDescription(),
@@ -32,7 +34,6 @@ TEST(DiningCartTest, DefaultConstructor) {
     EXPECT_EQ(cart.help(), "Talk to the bouncer.");
 }
 
-// Test GamblingCart class
 TEST(GamblingCartTest, DefaultConstructor) {
     GamblingCart cart;
     EXPECT_EQ(cart.getDescription(),
@@ -44,7 +45,6 @@ TEST(GamblingCartTest, DefaultConstructor) {
     EXPECT_EQ(cart.help(), "You should talk to the friendly looking passenger.\n");
 }
 
-// Test LuggageCart class
 TEST(LuggageCartTest, DefaultConstructor) {
     LuggageCart cart;
     EXPECT_EQ(cart.getDescription(), "Its full of luggage\n");
@@ -53,7 +53,6 @@ TEST(LuggageCartTest, DefaultConstructor) {
     EXPECT_EQ(cart.help(), "Look for the luggage on the piece of paper");
 }
 
-// Test ArmoryCart class
 TEST(ArmoryCartTest, DefaultConstructor) {
     ArmoryCart cart;
     EXPECT_EQ(cart.getDescription(),
@@ -64,7 +63,6 @@ TEST(ArmoryCartTest, DefaultConstructor) {
     EXPECT_EQ(cart.help(), "Think twice before choosing\n");
 }
 
-// Test EngineCart class
 TEST(EngineCartTest, DefaultConstructor) {
     EngineCart cart;
     EXPECT_EQ(cart.getDescription(),
@@ -77,15 +75,11 @@ TEST(EngineCartTest, DefaultConstructor) {
 TEST(FailedEngineCartTests, DefaultConstructor) {
     EngineCart cart;
     
-    // Test that the description does not match an incorrect value
     EXPECT_NE(cart.getDescription(), "You see a silhouette and plumes of smoke.\n");
 
-    // Test that puzzles do not match an incorrect value
     EXPECT_NE(cart.getPuzzles(), std::vector<std::string>{"Approach the Gang Leader."});
 
-    // Test that the name does not match an incorrect value
     EXPECT_NE(cart.getName(), "Engine Cart.");
 
-    // Test that the help message does not match an incorrect value
     EXPECT_NE(cart.help(), "Remember you have a gun.\n");
 }

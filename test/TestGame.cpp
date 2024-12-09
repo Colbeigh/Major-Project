@@ -1,3 +1,7 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @date Fall 2024
+ */
 #include <gtest/gtest.h>
 #include <iostream>
 #include <sstream>
