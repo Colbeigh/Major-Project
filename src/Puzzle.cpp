@@ -27,7 +27,6 @@ event();
 }
 
 int Puzzle::pInput(int length) {
-int playerchoice;
 while (true) {
      int playerchoice;
      std::cin >> playerchoice;
