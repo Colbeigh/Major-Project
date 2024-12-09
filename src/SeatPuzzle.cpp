@@ -43,7 +43,3 @@ addPuzzle("Talk to Ticket Master");
 remPuzzle("Pick a seat");
 return true;
 }
-
-void SeatPuzzle::giveReward()  {
-}
-

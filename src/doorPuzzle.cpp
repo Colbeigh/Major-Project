@@ -39,5 +39,3 @@ std::cout << "You move to the next cart\n";
 env = true;
 return true;
 }
-
-void doorPuzzle::giveReward() {}

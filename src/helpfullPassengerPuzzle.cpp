@@ -64,6 +64,3 @@ bool helpfullPassengerPuzzle::solution() {
     remPuzzle("Talk To HelpfullPassenger");
     return true;
 }
-
-void helpfullPassengerPuzzle::giveReward() {
-}

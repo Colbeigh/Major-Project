@@ -40,6 +40,68 @@ class Puzzle {
   */
   virtual bool solution() = 0;
    /**
+  * @brief Sets up the puzzle and calls event.
+  * @param player object being passed on, vector for puzzles,
+  * a bool for changing the environment
+  */
+  void startPuzzle(Player player,
+  std::vector<std::string> puzzles, bool changeenv);
+   /**
+  * @brief Adds current puzzle into the vector
+  * @param String for puzzle id of the current puzzle.
+  */
+  void addPuzzle(std::string puzzleid);
+   /**
+  * @brief Removes current puzzle from the vector
+  * @param String for puzzle id of the current puzzle.
+  */
+  void remPuzzle(std::string puzzleid);
+   /**
+  * @brief Accepts player input
+  * @param int length sets the limit of the user input.
+  */
+  int pInput(int length);
+   /**
+  * @brief returns the player 
+  */
+  Player getPlayer() {return p;}
+   /**
+  * @brief returns env that changes environment
+  */
+  bool getChangeEnv () {return env;}
+   /**
+  * @brief a vector function that returns the puzzle
+  */
+  std::vector<std::string> getPuzzle() {return puzz;}
+  std::string help;
+
+  Player p;
+  std::vector<std::string> puzz;
+  bool env;
+};
+class puzzleWithReward : public Puzzle{
+ public:
+ /**
+  * @brief Default constructor
+  */
+  puzzleWithReward() {}
+   /**
+  * @brief Default deconstructor
+  */
+  virtual ~puzzleWithReward() {}
+   /**
+  * @brief Creates and sets up the event of each puzzle.
+  */
+  virtual void event() = 0;
+   /**
+  * @brief Describes and sets the fail condition of a puzzle.
+  */
+  virtual bool failPuzzle() = 0;
+   /**
+  * @brief Describes and sets the solved condition of a puzzle.
+  */
+  virtual bool solution() = 0;
+   /**
   * @brief Gives the player an item when puzzle solved.
   */
   virtual void giveReward() = 0;
@@ -109,15 +171,9 @@ class SeatPuzzle: public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
-  /**
-  * @brief an override that gives player
-  * an item reward for solving specific 
-  * puzzle.
-  */
-  void giveReward() override;
 };
 
-class ticketPuzzle: public Puzzle {
+class ticketPuzzle: public puzzleWithReward {
  public:
   /**
   * @brief Constructor
@@ -152,7 +208,7 @@ class ticketPuzzle: public Puzzle {
   NPC* TM;
 };
 
-class sweetTalkPuzzle: public Puzzle {
+class sweetTalkPuzzle: public puzzleWithReward {
  public:
   /**
   * @brief Constructor
@@ -212,12 +268,6 @@ class bouncerPuzzle: public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
-  /**
-  * @brief an override that gives player
-  * an item reward for solving specific 
-  * puzzle.
-  */
-  void giveReward() override;
  private:
   NPC* B;
 };
@@ -247,12 +297,6 @@ class doorPuzzle: public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
-  /**
-  * @brief an override that gives player
-  * an item reward for solving specific 
-  * puzzle.
-  */
-  void giveReward() override;
 };
 
 class helpfullPassengerPuzzle : public Puzzle {
@@ -280,17 +324,11 @@ class helpfullPassengerPuzzle : public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
-  /**
-  * @brief an override that gives player
-  * an item reward for solving specific 
-  * puzzle.
-  */
-  void giveReward() override;
  private:
   NPC* HP;
 };
 
-class gamblingOutlawPuzzle : public Puzzle {
+class gamblingOutlawPuzzle : public puzzleWithReward {
  public:
   /**
   * @brief Constructor
@@ -325,7 +363,7 @@ class gamblingOutlawPuzzle : public Puzzle {
   NPC* GO;
 };
 
-class luggagePuzzle : public Puzzle {
+class luggagePuzzle : public puzzleWithReward {
  public:
   /**
   * @brief Constructor
@@ -358,7 +396,7 @@ class luggagePuzzle : public Puzzle {
   void giveReward() override;
 };
 
-class tiedUpTicketMasterPuzzle : public Puzzle {
+class tiedUpTicketMasterPuzzle : public puzzleWithReward {
  public:
   /**
   * @brief Constructor
@@ -418,12 +456,6 @@ class searchRoomPuzzle : public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
-  /**
-  * @brief an override that gives player
-  * an item reward for solving specific 
-  * puzzle.
-  */
-  void giveReward() override;
 };
 
 class fakeDoorPuzzle : public Puzzle {
@@ -451,12 +483,6 @@ class fakeDoorPuzzle : public Puzzle {
   * win condition of the current puzzle.
   */
     bool solution() override;
-    /**
-  * @brief an override that gives player
-  * an item reward for solving specific 
-  * puzzle.
-  */
-    void giveReward() override;
 };
 
 class gangLeaderPuzzle : public Puzzle {
@@ -484,12 +510,6 @@ class gangLeaderPuzzle : public Puzzle {
   * win condition of the current puzzle.
   */
   bool solution() override;
-  /**
-  * @brief an override that gives player
-  * an item reward for solving specific 
-  * puzzle.
-  */
-  void giveReward() override;
  private:
   NPC* GL;
 };

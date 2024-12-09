@@ -47,6 +47,3 @@ remPuzzle("Catch a breath");
 addPuzzle("Approach the luggage");
 return true;
 }
-
-void searchRoomPuzzle::giveReward()  {}
-

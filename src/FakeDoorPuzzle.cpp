@@ -47,5 +47,3 @@ bool fakeDoorPuzzle::solution()  {
     p.setKill();
     return true;
 }
-
-void fakeDoorPuzzle::giveReward() {}
