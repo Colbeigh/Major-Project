@@ -42,7 +42,8 @@ TEST(HelpfulPassengerTest, DefaultConstructor) {
     testing::internal::CaptureStdout();
     passenger->displayDialogue(0);
     std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_EQ(output, "Helpful Passenger: Need any help?\n");
+    EXPECT_EQ(output, "Helpful Passenger: "
+    "Need any help?\n");
     delete passenger;
 }
 
@@ -71,7 +72,9 @@ TEST(TiedUpTicketMasterTest, DefaultConstructor) {
     EXPECT_EQ(tm->getName(), "Tied Up Ticket Master");
     testing::internal::CaptureStdout();
     tm->displayDialogue(0);
-    std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_EQ(output, "Tied Up Ticket Master: Help me!\n");
+    std::string output =
+    testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output,
+    "Tied Up Ticket Master: Help me!\n");
     delete tm;
 }
