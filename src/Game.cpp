@@ -9,7 +9,6 @@ Game::Game() : environments{"Passenger Cart", "Dining Cart",
 "Gambling Cart", "Luggage Cart", "Armory Cart", "Engine Cart"} {
   currentenvironment = nullptr;
   currentpuzzle = nullptr;
-  std::cout << "Temp\n";
 }
 
 Game::~Game() {
