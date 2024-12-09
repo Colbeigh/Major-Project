@@ -7,6 +7,7 @@
 
 sweetTalkPuzzle::sweetTalkPuzzle(): RL(nullptr) {
   RL = new richLady;
+  help = "Talk to the Bouncer\n";
 }
 
 sweetTalkPuzzle::~sweetTalkPuzzle() {

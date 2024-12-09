@@ -6,6 +6,7 @@
 #include "Puzzle.hpp"
 
 SeatPuzzle::SeatPuzzle() {
+    help = "Pick a seat\n";
 }
 
 SeatPuzzle::~SeatPuzzle() {

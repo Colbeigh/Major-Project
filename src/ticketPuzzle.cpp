@@ -7,6 +7,7 @@
 
 ticketPuzzle::ticketPuzzle() {
     TM = new ticketMaster;
+    help = "Give him the ticket!\n";
 }
 
 ticketPuzzle::~ticketPuzzle() {

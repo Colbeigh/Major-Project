@@ -6,6 +6,7 @@
 #include "Puzzle.hpp"
 
 doorPuzzle::doorPuzzle() {
+    help = "There's no going back!\n";
 }
 
 doorPuzzle::~doorPuzzle() {

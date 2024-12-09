@@ -6,6 +6,7 @@
 #include "Puzzle.hpp"
 
 fakeDoorPuzzle::fakeDoorPuzzle() {
+    help = "You feel good about yourself for helping the Ticket Master\n";
 }
 
 fakeDoorPuzzle::~fakeDoorPuzzle() {

@@ -7,6 +7,7 @@
 
 bouncerPuzzle::bouncerPuzzle(): B(nullptr) {
     B = new bouncer;
+    help = "Talk to the Rich Lady for the ticket\n";
 }
 
 bouncerPuzzle::~bouncerPuzzle() {

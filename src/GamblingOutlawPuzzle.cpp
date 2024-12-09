@@ -6,6 +6,7 @@
 
 gamblingOutlawPuzzle::gamblingOutlawPuzzle() : GO(nullptr) {
     GO = new gamblingOutlaw;
+    help = "You should've talked to the helpful passenger\n";
 }
 
 gamblingOutlawPuzzle::~gamblingOutlawPuzzle() {

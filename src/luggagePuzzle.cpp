@@ -6,6 +6,7 @@
 #include "Puzzle.hpp"
 
 luggagePuzzle::luggagePuzzle() {
+    help = "Look at the paper again! Maybe it'll help you out\n";
 }
 
 luggagePuzzle::~luggagePuzzle() {

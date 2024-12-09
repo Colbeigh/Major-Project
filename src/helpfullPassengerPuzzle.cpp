@@ -35,21 +35,7 @@ void helpfullPassengerPuzzle::event() {
 }
 
 bool helpfullPassengerPuzzle::failPuzzle() {
-    std::cout << ".\n";
-    HP->displayDialogue(3);
-    std::cout << "You watch her storm off and drop the ticket\n" <<
-    "What would you like to do?\n";
-    while (true) {
-    int choice;
-    choice = pInput(2);
-      if (choice < 1 || choice > 1) {
-        std::cout <<"You only have one choice!"<< std::endl;
-      } else {
-            p.addItem("GamblingTicket");
-            std::cout << "You pick up the ticket\n";
-            break;
-        }
-    }
+    std::cout << "You failed!\n"; 
     return true;
 }
 

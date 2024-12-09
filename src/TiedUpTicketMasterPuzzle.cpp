@@ -6,6 +6,7 @@
 
 tiedUpTicketMasterPuzzle::tiedUpTicketMasterPuzzle() : TM(nullptr) {
     TM = new tiedUpTicketMaster;
+    help = "Maybe being tied up isn't such a bad thing\n";
 }
 
 tiedUpTicketMasterPuzzle::~tiedUpTicketMasterPuzzle() {

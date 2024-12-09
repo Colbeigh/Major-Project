@@ -6,6 +6,7 @@
 
 gangLeaderPuzzle::gangLeaderPuzzle() : GL(nullptr) {
     GL = new gangLeader;
+    help = "Just get it over with.\n";
 }
 
 gangLeaderPuzzle::~gangLeaderPuzzle() {
