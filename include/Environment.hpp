@@ -22,7 +22,7 @@ class Environment {
      * @brief virtual Deconstructor
      */
     virtual ~Environment();
-    
+
     /**
      * @brief description of current environment.
      */
@@ -42,7 +42,7 @@ class Environment {
      * @brief get help that is relevent to current eviorment.
      */
     std::string help();
-    
+
     /**
      * @brief set the name of the current environment.
      */
@@ -92,7 +92,7 @@ class GamblingCart : public Environment {
      * @brief Constructor
      */
     GamblingCart();
-    
+
     /**
      * @brief virtual Deconstructor
      */
@@ -129,7 +129,7 @@ class EngineCart : public Environment {
      * @brief Constructor
      */
     EngineCart();
-    
+
     /**
      * @brief virtual Deconstructor
      */

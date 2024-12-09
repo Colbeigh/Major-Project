@@ -171,7 +171,8 @@ class ticketPuzzle: public puzzleWithReward {
   * puzzle.
   */
   void giveReward() override;
-private:
+
+ private:
   NPC* TM;
 };
 
@@ -206,6 +207,7 @@ class sweetTalkPuzzle: public puzzleWithReward {
   * puzzle.
   */
   void giveReward() override;
+
  private:
   NPC* RL;
 };
