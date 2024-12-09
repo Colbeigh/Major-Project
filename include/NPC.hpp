@@ -8,7 +8,6 @@
 #ifndef NPC_HPP_INCLUDED
 #define NPC_HPP_INCLUDED
 class NPC {
-  
   /**
   * @class NPC NPC.hpp "NPC.hpp"
   * @brief Holds Dialogue & names for npcs
@@ -46,7 +45,6 @@ class NPC {
   */
   virtual void initializeDialogueOptions() = 0;
  protected:
-
   /**
   * @brief NPC's Name
   */
