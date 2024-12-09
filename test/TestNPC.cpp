@@ -23,7 +23,7 @@ TEST(RichLadyTest, DefaultConstructor) {
 
 TEST(BouncerTest, DefaultConstructor) {
     NPC* bounce = new bouncer();
-    EXPECT_EQ(bouncer->getName(), "Bouncer");
+    EXPECT_EQ(bounce->getName(), "Bouncer");
     testing::internal::CaptureStdout();
     bounce->displayDialogue(0);
     std::string output = testing::internal::GetCapturedStdout();
