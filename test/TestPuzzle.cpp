@@ -13,14 +13,15 @@ std::vector<std::string> puzzles = {"Talk to Ticket Master"};
 ticketPuzzle puzzle;
 
 puzzle.startPuzzle(player, puzzles, true);
-
 EXPECT_TRUE(puzzle.failPuzzle());
+
 player.addItem("Ticket");
 EXPECT_TRUE(puzzle.solution());
 
 }
 
 TEST(PuzzleTest, AddPuzzleTest) {
+    ticketPuzle puzzle;
     puzzle.addPuzzle("puz1");
     puzzle.addPuzzle("puz2");
     std::cout << "adding puzzles\n";
@@ -30,6 +31,7 @@ TEST(PuzzleTest, AddPuzzleTest) {
 }
 
 TEST(PuzzleTest, RemPuzzleTest) {
+    ticketPuzle puzzle;
     puzzle.addPuzzle("puz1");
     puzzle.addPuzzle("puz2");
     puzzle.addPuzzle("puz3");
@@ -47,6 +49,8 @@ TEST(PuzzleTest, RemPuzzleTest) {
 }
 
 TEST(PuzzleTest, StartPuzzleTest) {
+    Player player;
+    ticketPuzle puzzle;
 std::vector<std::string> puzzles = {"puz1", "puz2", "puz3"};
     puzzle.startPuzzle(player, puzzles, true);
     puzzle.startPuzzle(player, puzzles, true);
