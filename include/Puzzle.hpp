@@ -292,23 +292,18 @@ class helpfullPassengerPuzzle : public Puzzle {
 
 class gamblingOutlawPuzzle : public Puzzle {
  public:
-<<<<<<< HEAD
   /**
   * @brief Constructor
   */
-  gambilingOutlawPuzzle();
+  gamblingOutlawPuzzle();
   /**
   * @brief virtual Deconstructor
   */
-  ~gambilingOutlawPuzzle();
+  ~gamblingOutlawPuzzle();
   /**
   * @brief an override to set up a specific
   * win condition of the current puzzle.
   */
-=======
-  gamblingOutlawPuzzle();
-  ~gamblingOutlawPuzzle();
->>>>>>> 77dbe328300c44afa4f36fe73fa42e2e9ff1cd39
   void event() override;
   /**
   * @brief an override to set up a specific
