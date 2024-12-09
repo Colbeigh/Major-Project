@@ -14,8 +14,8 @@ helpfullPassengerPuzzle::~helpfullPassengerPuzzle() {
 }
 
 void helpfullPassengerPuzzle::event() {
-  std::cout << "Looking at the helpfull Passenger you feel a sense of hope.\n";
-    std::cout << "1. Ask the Helpfull Passenger for help.\n"
+  std::cout << "Looking at the helpful Passenger you feel a sense of hope.\n";
+    std::cout << "1. Ask the Helpful Passenger for help.\n"
                 "2. Turn away.\n"
                 "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
@@ -54,7 +54,7 @@ bool helpfullPassengerPuzzle::failPuzzle() {
 }
 
 bool helpfullPassengerPuzzle::solution() {
-    std::cout << "\033[32mPlayer:\033[0m You ask the Helpfull "
+    std::cout << "\033[32mPlayer:\033[0m You ask the Helpful "
     "Passenger for help.\n";
     HP->displayDialogue(0);
     std::cout << "\033[32mPlayer:\033[0m Yes I do. I need to win "
@@ -63,7 +63,7 @@ bool helpfullPassengerPuzzle::solution() {
     std::cout << "\033[32mPlayer:\033[0m What? How does "
     "that even help me?\n"
     "Before you could realise what is going on"
-    " the Helpfull Passenger is gone.\n";
+    " the Helpful Passenger is gone.\n";
     remPuzzle("Talk to HelpfulPassenger");
     return true;
 }

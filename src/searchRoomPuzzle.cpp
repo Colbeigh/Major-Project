@@ -36,6 +36,19 @@ p.getDesc("PieceOfPaper") <<
 bool searchRoomPuzzle::failPuzzle()  {
 std::cout << "You chose to not goto the luggage.\n";
 std::cout << "You end up doing nothing and the train explodes\n";
+  // Dramatically print "YOU BLEW UP" one letter at a time
+    std::string message = "YOU BLEW UP";
+    for (char c : message) {
+        std::cout << "\033[31;5m" << c << "\033[0m" << std::flush; // Red blinking text
+        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // 300ms delay per letter
+    }
+    std::cout << "\n";
+
+    // Delay after the "YOU DIED" message
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+
+    // Clear screen again
+    std::cout << "\033[2J\033[H";
 p.setKill();
 return false;
 }
