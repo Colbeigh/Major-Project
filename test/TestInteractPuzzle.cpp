@@ -32,7 +32,7 @@ TEST(InteractPuzzleTest, GetPlayerValid) {
 TEST(InteractPuzzleTest, GetPlayerNull) {
     Player actual = interactPuzzle.getPlayer(nullptr);
     Player nullPlay;
-    EXPECT_EQ(actual, nullPlay);   
+    EXPECT_EQ(actual, nullPlay);
 }
 
 TEST(InteractPuzzleTest, GetChangeEnvFalse) {
