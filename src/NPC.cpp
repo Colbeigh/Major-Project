@@ -117,11 +117,11 @@ tiedUpTicketMaster::~tiedUpTicketMaster() {}
 
 void tiedUpTicketMaster::initializeDialogueOptions() {
     std::string name2 = "Ticket Master";
-    dialogueLines.push_back(name + ": MMM! MMM! \n"); // [0]
-    dialogueLines.push_back(name + ": You're leaving me here?\n"); // [1]
-    dialogueLines.push_back(name2 + ": Thank you for Untying me. I thought I was going to die here\n"); //[2]
-    dialogueLines.push_back(name2 + ": So what now?\n"); // [3]
-    dialogueLines.push_back(name2 + ": Hey!. Is this what you looking for?\n"); // [4]
+    dialogueLines.push_back(name + " : MMM! MMM! \n"); // [0]
+    dialogueLines.push_back(name + " : You're leaving me here?\n"); // [1]
+    dialogueLines.push_back(name2 + " : Thank you for Untying me. I thought I was going to die here\n"); //[2]
+    dialogueLines.push_back(name2 + " : So what now?\n"); // [3]
+    dialogueLines.push_back(name2 + " : Hey!. Is this what you looking for?\n"); // [4]
 }
 
 gangLeader::gangLeader() {

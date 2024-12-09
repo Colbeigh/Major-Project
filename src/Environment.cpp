@@ -48,7 +48,7 @@ GamblingCart::GamblingCart() {
     name = "Gambling Cart";
     environmentDescription = "You are in the gambling cart.";
     helpInfo = "You can ask the dealer for help.";
-    puzzles = {"Talk to HelpfullPassenger", "Talk to GambilingOutlaw"};
+    puzzles = {"Talk to HelpfullPassenger", "Talk to GamblingOutlaw"};
 }
 
 LuggageCart::LuggageCart() {
