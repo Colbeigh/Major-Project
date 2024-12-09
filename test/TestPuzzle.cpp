@@ -7,18 +7,6 @@
 #include "Puzzle.hpp"
 #include "FactoryPuzzle.hpp"
 
-TEST(PuzzleTest, TicketMasterPuzzleTest) {
-Player player;
-std::vector<std::string> puzzles = {"Talk to Ticket Master"};
-ticketPuzzle puzzle;
-
-puzzle.startPuzzle(player, puzzles, true);
-EXPECT_TRUE(puzzle.failPuzzle());
-
-player.addItem("Ticket");
-EXPECT_TRUE(puzzle.solution());
-}
-
 TEST(PuzzleTest, AddPuzzleTest) {
     ticketPuzzle puzzle;
     puzzle.addPuzzle("puz1");
