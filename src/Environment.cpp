@@ -1,3 +1,8 @@
+/**
+ * @author Nikita Evtushenko <nikita.evtushenko@uleth.ca>
+ * @date Fall 2024
+ */
+
 #include <vector>
 #include "Environment.hpp"
 
@@ -15,7 +20,7 @@ std::string Environment::getDescription() {
 }
 
 std::vector<std::string> Environment::getPuzzles() {
-    return { puzzles };
+    return puzzles;
 }
 
 std::string Environment::help() {
@@ -27,23 +32,59 @@ std::string Environment::getName() {
 }
 
 
-PassenegerCart::PassenegerCart() {
+PassengerCart::PassengerCart() {
     name = "Passenger Cart";
-    environmentDescription = "Looking around the environment, "
-    "you see passeneger, and a ticket master walking around";
-    helpInfo = "You can ask the ticket master for help.";
-    puzzles = {"Talk to Ticket Master", "Talk to Rich Lady", 
-    "Talk to bouncer", "Pick a seat"};
+    environmentDescription = "Looking around, you see lots"
+    " of passengers, and a ticket master walking around\n";
+    helpInfo = "Give him your Ticket.\n";
+    puzzles = {"Pick a seat"};
 }
 
-PassenegerCart::~PassenegerCart() {}
 
 DiningCart::DiningCart() {
     name = "Dining Cart";
-    environmentDescription = "You are in the dining cart.";
-    "The smell of food fills the air.";
-    helpInfo = "You can ask the chef for help.";
+    environmentDescription = "The smell of food fills the air.\n"
+    "You see a Rich looking lady eating food and a bouncer"
+    " across the cart guarding a door\n";
+    helpInfo = "Talk to the bouncer.";
     puzzles = {"Talk to Rich Lady", "Talk to bouncer"};
 }
 
+GamblingCart::GamblingCart() {
+    name = "Gambling Cart";
+    environmentDescription = "It riques of ciggarettes and beer "
+    "You notice a gruff looking dealer and a friendly looking passenger"
+    " smiling at you\n";
+    helpInfo = "You should talk to the friendly looking passenger.\n";
+    puzzles = {"Talk to HelpfulPassenger", "Talk to GamblingOutlaw"};
+}
+
+LuggageCart::LuggageCart() {
+    name = "Luggage Cart";
+    environmentDescription = "Its full of luggage\n";
+    helpInfo = "Look for the luggage on the piece of paper";
+    puzzles = {"Catch a breath"};
+}
+
+ArmoryCart::ArmoryCart() {
+    name = "Armory Cart";
+    environmentDescription = "Has a heavy open door with metal "
+    "barricades, has a metal rack full of stuff on the top shelf\n";
+    helpInfo = "Think twice before choosing\n";
+    puzzles = {"Look around the armory"};
+}
+
+EngineCart::EngineCart() {
+    name = "Engine Cart";
+    environmentDescription = "You see a silhouette and plumes "
+    "of smoke\n";
+    helpInfo = "Remember you have a gun\n";
+    puzzles = {"Approach the Gang Leader"};
+}
+
+PassengerCart::~PassengerCart() {}
+GamblingCart::~GamblingCart() {}
+LuggageCart::~LuggageCart() {}
+ArmoryCart::~ArmoryCart() {}
+EngineCart::~EngineCart() {}
 DiningCart::~DiningCart() {}

@@ -1,9 +1,33 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @author Todd Across The Mountain <t.acrossthemountain@uleth.ca>
+ * @date Fall 2024
+ */
 #include "Inventory.hpp"
 
 Inventory::Inventory() : item(nullptr) {}
 
 Inventory::~Inventory() {
-  delete item;
+  if (item == nullptr) {
+    delete item;
+    item = nullptr;
+  }
+}
+
+Inventory& Inventory::operator=(const Inventory& other) {
+    if (this == &other) {
+        return *this;
+    }
+    items = other.items;
+
+    if (other.item != nullptr) {
+        delete item;
+        item = nullptr;
+    } else {
+        item = nullptr;
+    }
+    FacItem = other.FacItem;
+    return *this;
 }
 
 bool Inventory::hasItem(std::string itemid) {
@@ -12,7 +36,6 @@ bool Inventory::hasItem(std::string itemid) {
            return true;
       }
   }
-  std::cout << "You do not have " << getName(itemid) << "\n";
   return false;
 }
 
@@ -33,7 +56,6 @@ void Inventory::remItem(std::string itemid) {
           return;
       }
   }
-  std::cout << "You do not have" << getName(itemid) <<"\n";
 }
 
 void Inventory::listItems() {
@@ -41,7 +63,8 @@ void Inventory::listItems() {
     std::cout << "You currently have no items" << std::endl;
   }
   for (int i = 0; i < items.size(); ++i) {
-      std::cout << "* " << getName(items[i]) << std::endl;
+      std::cout << "* " << getName(items[i]) << "\n   -"
+      << getDesc(items[i]) << std::endl;
       }
 }
 
@@ -71,7 +94,3 @@ void Inventory::createItem(std::string itemid) {
   }
   item = FacItem.createItem(itemid);
 }
-
-std::vector<std::string> items;
-Item* item = nullptr;
-FactoryItem FacItem;

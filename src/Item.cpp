@@ -1,3 +1,7 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @date Fall 2024
+ */
 #include "Item.hpp"
 
 Item::Item() {
@@ -19,23 +23,49 @@ std::string Item::getDesc() {
 Ticket::Ticket() {
   name = "Train Ticket";
   desc = "Unpunched ticket";
-  itemid = 1;
+  itemid = "Ticket";
 }
 
 PunchedTicket::PunchedTicket() {
   name = "Punched Train Ticket";
   desc = "The words help are punched into it";
-  itemid = 2;
+  itemid = "PunchedTicket";
 }
 
 GamblingTicket::GamblingTicket() {
   name = "Gambling Ticket";
   desc = "VIP Access to the gambling car";
-  itemid = 3;
+  itemid = "GamblingTicket";
 }
 
 Quarter::Quarter() {
   name = "Lucky Quarter";
   desc = "It's just an ordinary quarter, it kinda smells";
-  itemid = 4;
+  itemid = "Quarter";
+}
+
+PieceOfPaper::PieceOfPaper() {
+  name = "Outlaw's Piece of Paper";
+  desc = "It's a piece of paper with a number on it"
+  "and a smudged symbole";
+  itemid = "PieceOfPaper";
+}
+
+Plans::Plans() {
+  name = "O'Driscoll gangs plans";
+  desc = "They plan to blow up the train to get back at me";
+  itemid = "Plans";
+}
+
+Fakegun::Fakegun() {
+  name = "Gun";
+  desc = "A gun with a wooden handle and a silver barrel, with two bullets";
+  itemid = "Fakegun";
+}
+
+Gun::Gun() {
+  name = "Gun";
+  desc = "A gun with a wooden handle and a silver barrel"
+  " and a engraved symbol on the handle";
+  itemid = "Gun";
 }

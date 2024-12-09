@@ -1,15 +1,33 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @date Fall 2024
+ */
+
 #include "FactoryItem.hpp"
 
+FactoryItem::FactoryItem() {
+    itemmap = {
+        {"Ticket", []() { return new Ticket(); }},
+        {"PunchedTicket", []() { return new PunchedTicket(); }},
+        {"GamblingTicket", []() { return new GamblingTicket(); }},
+        {"Quarter", []() { return new Quarter(); }},
+        {"PieceOfPaper", []() { return new PieceOfPaper(); }},
+        {"Plans", []() { return new PieceOfPaper(); }},
+        {"Fakegun", []() { return new Fakegun(); }},
+        {"Gun", []() { return new Gun(); }}
+    };
+}
+
+FactoryItem::~FactoryItem() {
+    itemmap.clear();
+}
+
 Item* FactoryItem::createItem(const std::string& type) {
-    if (type == "Ticket") {
-        return new Ticket();
-    } else if (type == "PunchedTicket") {
-        return new PunchedTicket();
-    } else if (type == "GamblingTicket") {
-        return new GamblingTicket();
-    } else if (type == "Quarter") {
-        return new Quarter();
+    auto it = itemmap.find(type);
+
+    if (it != itemmap.end()) {
+        return it->second();
     } else {
-        return nullptr;
+        return new Ticket();
     }
 }

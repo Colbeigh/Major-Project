@@ -1,30 +1,44 @@
+/**
+ * @author Jem Pineda <j.pineda@uleth.ca>
+ * @date Fall 2024
+ */
+
 #include "InteractPuzzle.hpp"
-
-
 InteractPuzzle::InteractPuzzle() {
-  puzzle = nullptr;
 }
 
 InteractPuzzle::~InteractPuzzle() {
-  delete puzzle;
 }
 
-void InteractPuzzle::setPuzzle(Puzzle* puz) {
-  if (puzzle != nullptr) {
-    puzzle = nullptr;
-    delete puzzle;
-  }
-  puzzle = puz;
-  }
-
-void InteractPuzzle::startPuzzle(Player* player, std::vector<std::string>* puzzles, bool* changeenv) {
+std::vector<std::string>InteractPuzzle::getPuzzle(Puzzle* puzzle) {
   if (puzzle == nullptr) {
+    return {};
+  }
+  return puzzle->getPuzzle();
+}
+Player InteractPuzzle::getPlayer(Puzzle* puzzle) {
+  if (puzzle == nullptr) {
+    return Player();
+  }
+  return puzzle->getPlayer();
+}
+
+bool InteractPuzzle::getChangeEnv(Puzzle* puzzle) {
+  if (puzzle == nullptr) {
+    return false;
+  }
+  return puzzle->getChangeEnv();
+}
+
+void InteractPuzzle::startPuzzle(Puzzle *puz, const Player& player,
+  std::vector<std::string> puzzles, bool changeenv) {
+  if (puz == nullptr) {
     std::cerr << "Error: No puzzle set!" << std::endl;
     return;
   }
-  if (player == nullptr || puzzles == nullptr || changeenv == nullptr) {
-    std::cerr << "Error: Null argument passed to startPuzzle" << std::endl;
-    return;
+
+  puz->startPuzzle(player, puzzles, changeenv);
+  if (puz->getChangeEnv()) {
+    changeenv = true;
   }
-  puzzle->startPuzzle(player, puzzles, changeenv);
 }

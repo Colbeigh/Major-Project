@@ -5,76 +5,56 @@
 
 #include "Puzzle.hpp"
 
-bouncerPuzzle::bouncerPuzzle(): p(nullptr), change(nullptr) {
-B = new bouncer;
-chest = new Inventory;
+bouncerPuzzle::bouncerPuzzle(): B(nullptr) {
+    B = new bouncer;
+    help = "Talk to the Rich Lady for the ticket\n";
 }
 
 bouncerPuzzle::~bouncerPuzzle() {
 delete B;
-delete chest;
 }
 
-void bouncerPuzzle::startPuzzle(Player *player,
-std::vector<std::string >* puzzles, bool* changeenv) {
-p = puzzles;
-change = &changeenv;
-event(player);
-}
-
-void bouncerPuzzle::event(Player* player) {
-std::cout << "You approach the Bouncer\n";
-B->displayDialogue(2);
-std::cout << "What would you like to do?\n";
-    if (player->hasItem("GamblingTicket") == false) {
-    failPuzzle(player);
-    } else {
-std::cout << "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
-    while (true) {
-        int playerchoice;
-        std::cin >> playerchoice;
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<
-            std::streamsize>::max(), '\n');
-            std::cout <<"Please pick between 1 or 2 \n";
-        } else if (playerchoice < 1 || playerchoice > 2) {
+void bouncerPuzzle::event() {
+    std::cout << "You approach the Bouncer\n";
+    B->displayDialogue(2);
+    std::cout << "\nWhat would you like to do?\n";
+        if (p.hasItem("GamblingTicket") == false) {
+            failPuzzle();
+            return;
+        } else {
+            std::cout << "1. Give him the ticket.\n"
+            "2. Do not give him the ticket.\n" <<
+            "3. Help\n"
+            "4. Inventory\n"
+            "5. Quit\n";
+            while (true) {
+            int choice;
+            choice = pInput(3);
+            if (choice < 1 || choice > 2) {
                 std::cout << "Pick between 1 or 2 " << std::endl;
-        } else if (playerchoice == 1) {
-            solution(player);
-            break;
+            } else if (choice == 2) {
+                failPuzzle();
+                break;
             } else {
-            failPuzzle(player);
-            break;
+                solution();
+                break;
             }
         }
     }
 }
 
-void bouncerPuzzle::failPuzzle(Player* player) {
+bool bouncerPuzzle::failPuzzle() {
     std::cout << "What ticket?\n";
     B->displayDialogue(0);
+    std::cout << "\n";
+    return false;
 }
 
-void bouncerPuzzle::solution(Player* player) {
+bool bouncerPuzzle::solution() {
     std::cout << "You give him the Gambling ticket\n";
-    player->remItem("GamblingTicket");
-    B->displayDialogue(2);
-    solved("Talk to bouncer");
-    **change = true;
-}
-
-void bouncerPuzzle::giveReward(Player* player) {
-}
-
-void bouncerPuzzle::addPuzzle(const std::string& puzzleId) {
-}
-
-bool bouncerPuzzle::solved(const std::string& puzzleId) {
-    for (int i = 0; i < p->size(); ++i) {
-       if (puzzleId == (*p)[i]) {
-           p->erase(p->begin() + i);
-      }
-  }
+    p.remItem("GamblingTicket");
+    B->displayDialogue(1);
+    std::cout << "\n";
+    env = true;
     return true;
 }

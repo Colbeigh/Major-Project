@@ -1,46 +1,39 @@
+/**
+ * @author Colby Hanna <Colby.Hanna@uleth.ca>
+ * @date Fall 2024
+ */
+
 #include "InteractEnvironment.hpp"
 
 
-InteractEnvironment::InteractEnvironment() {
-  environment = nullptr;
+InteractEnvironment::InteractEnvironment() {}
+
+InteractEnvironment::~InteractEnvironment() {}
+
+std::string InteractEnvironment::getName(Environment* env) {
+  if (env == nullptr) {
+    return "null";
+  }
+  return env->getName();
 }
 
-InteractEnvironment::~InteractEnvironment() {
-  delete environment;
-}
-
-void InteractEnvironment::setEnvironment(Environment* env) {
-  if (environment != nullptr) {
-    environment = nullptr;
-    delete environment;
-  }
-  environment = env;
-  }
-
-std::string InteractEnvironment::getName() {
-  if (environment == nullptr) {
-    return "";
-  }
-  return environment ->getName();
-}
-
-std::string InteractEnvironment::getDesc() {
-  if (environment == nullptr) {
+std::string InteractEnvironment::getDesc(Environment* env) {
+  if (env == nullptr) {
      return "";
   }
-  return environment ->getDescription();
+  return env ->getDescription();
   }
 
-std::string InteractEnvironment::getHelp() {
-    if (environment == nullptr) {
+std::string InteractEnvironment::getHelp(Environment* env) {
+    if (env == nullptr) {
       return "";
 }
-return environment -> help();
+return env -> help();
 }
 
-std::vector<std::string> InteractEnvironment::getPuzzles() {
-  if (environment == nullptr) {
+std::vector<std::string> InteractEnvironment::getPuzzles(Environment* env) {
+  if (env == nullptr) {
      return std::vector<std::string>();
   }
-  return environment -> getPuzzles();
+  return env -> getPuzzles();
 }
