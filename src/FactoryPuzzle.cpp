@@ -14,12 +14,13 @@ FactoryPuzzle::FactoryPuzzle() {
         {"Talk to bouncer", []() { return new bouncerPuzzle(); }},
         {"Talk to GamblingOutlaw",
         []() { return new gamblingOutlawPuzzle(); }},
-        {"Talk to HelpfullPassenger",
+        {"Talk to HelpfulPassenger",
         []() { return new helpfullPassengerPuzzle(); }},
         {"Catch a breath",
         []() { return new searchRoomPuzzle(); }},
         {"Approach the luggage", []() { return new luggagePuzzle(); }},
-        {"Look around the armory", []() { return new tiedUpTicketMasterPuzzle(); }},
+        {"Look around the armory",
+        []() { return new tiedUpTicketMasterPuzzle(); }},
         {"Leave the Armory", []() { return new fakeDoorPuzzle(); }},
         {"Approach the Gang Leader", []() { return new gangLeaderPuzzle(); }}
     };

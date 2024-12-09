@@ -38,7 +38,7 @@ void InteractPuzzle::startPuzzle(Puzzle *puz, const Player& player,
   }
 
   puz->startPuzzle(player, puzzles, changeenv);
-  if(puz->getChangeEnv()) {
+  if (puz->getChangeEnv()) {
     changeenv = true;
   }
 }

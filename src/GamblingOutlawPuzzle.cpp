@@ -15,11 +15,8 @@ gamblingOutlawPuzzle::~gamblingOutlawPuzzle() {
 void gamblingOutlawPuzzle::event() {
     std::cout << "Looking at the gambling Out Law you"
     "feel a sense of dread\n";
-    std::cout <<"1. Talk to the outlaw\n"
-                "2. Turn away\n";
-                "3. Help\n"
-                "4. Inventory\n"
-                "5. Quit\n";
+    std::cout <<"1. Talk to the outlaw\n2. Turn away\n"
+    "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
     int choice;
     choice = pInput(3);
@@ -41,7 +38,7 @@ bool gamblingOutlawPuzzle::solution() {
     std::cout << "No you must have me mistaken."
     " How about we just focus on the game\n";
     GO->displayDialogue(1);
-    std::cout << "You get two dies.\n" 
+    std::cout << "You get two dies.\n"
         "1. roll the dies and see what happens\n"
         "2. Throw the die in the outlaws face\n"
         "3. Throw the die against the wall padding\n";

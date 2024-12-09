@@ -38,7 +38,7 @@ void tiedUpTicketMasterPuzzle::event() {
     }
 }
 
-bool tiedUpTicketMasterPuzzle::solution(){
+bool tiedUpTicketMasterPuzzle::solution() {
     std::cout << "You decide to leave the ticket master tied up\n";
     std::cout << "You start looking around the armory\n"
                 "After some time of searching around\n";
@@ -60,7 +60,7 @@ bool tiedUpTicketMasterPuzzle::failPuzzle() {
     TM->displayDialogue(2);
     std::cout << "Player: I couldn't leave you here\n";
     TM->displayDialogue(3);
-    std::cout << "Player: First We need to arm ourselves\n"  
+    std::cout << "Player: First We need to arm ourselves\n"
                 "Player: Lets look around the armory and find a gun\n";
     std::cout << "You look around the armory\n"
                 "After looking for a while you couldn't find anything\n";

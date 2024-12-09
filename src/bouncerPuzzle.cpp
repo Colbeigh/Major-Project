@@ -22,7 +22,7 @@ void bouncerPuzzle::event() {
             return;
         } else {
             std::cout << "1. Give him the ticket.\n"
-            "2. Do not give him the ticket.\n" << 
+            "2. Do not give him the ticket.\n" <<
             "3. Help\n"
             "4. Inventory\n"
             "5. Quit\n";
@@ -57,5 +57,3 @@ bool bouncerPuzzle::solution() {
     env = true;
     return true;
 }
-
-void bouncerPuzzle::giveReward() {}
