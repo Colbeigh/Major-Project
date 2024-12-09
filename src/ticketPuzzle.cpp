@@ -51,7 +51,7 @@ void ticketPuzzle::event() {
     "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
     int choice;
-    choice = pInput(3);
+    choice = pInput(5);
         if (choice < 1 || choice > 2) {
             std::cout << "Please pick between 1 or 2\n";
         } else if (choice == 2) {
