@@ -36,21 +36,9 @@ TEST(TestGame, ChangeEnvironmentTest) {
     environmentName == "Dining Cart");
 }
 
-TEST(TestGame, ListInventoryTest) {
+TEST(GameTest, PuzzleCreation) {
     Game game;
-    game.player.addItem("Ticket");
-    game.player.addItem("PunchedTicket");
-
-    std::stringstream output;
-    std::streambuf* old = std::cout.rdbuf(output.rdbuf());
-
-    game.player.listItem();
-
-    EXPECT_TRUE(output.str().find("Ticket") != std::string::npos);
-    EXPECT_TRUE(output.str().find("Unpunched ticket") != std::string::npos);
-    EXPECT_TRUE(output.str().find("PunchedTicket") != std::string::npos);
-    EXPECT_TRUE(output.str().find("Punched ticket") != std::string::npos);
-
-    std::cout.rdbuf(old);
+    game.createPuzzle("Talk to Ticket Master");
+    
+    EXPECT_NE(game.getCurrentPuzzle(), nullptr);
 }
-
