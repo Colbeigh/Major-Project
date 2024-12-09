@@ -12,6 +12,7 @@
 #define INTERACT_PUZZLE_H_INCLUDED
   /**
   * @class InteractPuzzle InteractPuzzle.hpp Interact
+  * @brief Calls Puzzles Functions
   */
 class InteractPuzzle {
  public:
