@@ -4,48 +4,69 @@
 TEST(NPCTest, DefaultConstructor) {
     NPC* npc = new ticketMaster();
     EXPECT_EQ(npc->getName(), "Ticket Master");
-    EXPECT_EQ(npc->displayDialogue(0), "Ticket Master: Welcome aboard!");
+    testing::internal::CaptureStdout();
+    npc->displayDialogue(0); 
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Ticket Master: Welcome aboard!\n");
     delete npc;
 }
 
 TEST(RichLadyTest, DefaultConstructor) {
     NPC* lady = new richLady();
     EXPECT_EQ(lady->getName(), "Rich Lady");
-    EXPECT_EQ(lady->displayDialogue(0), "Rich Lady: Would you like some tea?");
+    testing::internal::CaptureStdout();
+    lady->displayDialogue(0);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Rich Lady: Would you like some tea?\n");
     delete lady;
 }
 
 TEST(BouncerTest, DefaultConstructor) {
     NPC* bouncer = new bouncer();
     EXPECT_EQ(bouncer->getName(), "Bouncer");
-    EXPECT_EQ(bouncer->displayDialogue(0), "Bouncer: Ticket?");
+    testing::internal::CaptureStdout();
+    bouncer->displayDialogue(0);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Bouncer: Ticket?\n");
     delete bouncer;
 }
 
 TEST(HelpfulPassengerTest, DefaultConstructor) {
     NPC* passenger = new helpfullPassenger();
     EXPECT_EQ(passenger->getName(), "Helpful Passenger");
-    EXPECT_EQ(passenger->displayDialogue(0), "Helpful Passenger: Need any help?");
+    testing::internal::CaptureStdout();
+    passenger->displayDialogue(0);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Helpful Passenger: Need any help?\n");
     delete passenger;
 }
 
 TEST(GamblingOutlawTest, DefaultConstructor) {
     NPC* outlaw = new gamblingOutlaw();
     EXPECT_EQ(outlaw->getName(), "Gambling Outlaw");
-    EXPECT_EQ(outlaw->displayDialogue(0), "Gambling Outlaw: Care for a game?");
+    testing::internal::CaptureStdout();
+    outlaw->displayDialogue(0);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Gambling Outlaw: Care for a game?\n");
     delete outlaw;
 }
 
 TEST(GangLeaderTest, DefaultConstructor) {
     NPC* leader = new gangLeader();
     EXPECT_EQ(leader->getName(), "Gang Leader");
-    EXPECT_EQ(leader->displayDialogue(0), "Gang Leader: You're in the wrong place!");
+    testing::internal::CaptureStdout();
+    leader->displayDialogue(0);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Gang Leader: You're in the wrong place!\n");
     delete leader;
 }
 
 TEST(TiedUpTicketMasterTest, DefaultConstructor) {
     NPC* tm = new tiedUpTicketMaster();
     EXPECT_EQ(tm->getName(), "Tied Up Ticket Master");
-    EXPECT_EQ(tm->displayDialogue(0), "Tied Up Ticket Master: Help me!");
+    testing::internal::CaptureStdout();
+    tm->displayDialogue(0);
+    std::string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "Tied Up Ticket Master: Help me!\n");
     delete tm;
 }
