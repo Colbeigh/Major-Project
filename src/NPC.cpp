@@ -29,7 +29,7 @@ void NPC::displayDialogue(int index) {
 
 //ticketMaster implementations
 ticketMaster::ticketMaster() {
-    name = "Ticket Master";
+    name = "\033[95mTicket Master\033[0m";
     initializeDialogueOptions();
 }
 
@@ -44,7 +44,7 @@ void ticketMaster::initializeDialogueOptions() {
 }
 
 richLady::richLady() {
-    name = "Rich Lady";
+    name = "\033[33mRich Lady\033[0m";
     initializeDialogueOptions();
 }
 
@@ -63,14 +63,14 @@ void richLady::initializeDialogueOptions() {
 }
 
 bouncer::bouncer() {
-    name = "Bouncer";
+    name = "\x1B[38;5;200mBouncer\x1B[0m";
     initializeDialogueOptions();
 }
 
 bouncer::~bouncer() {}
 
 void bouncer::initializeDialogueOptions() {
-    dialogueLines.push_back(name + ": You need a gambling ticket to "
+    dialogueLines.push_back(name +  ": You need a gambling ticket to "
                              "get into the casino");
     dialogueLines.push_back(name + ": Alright you're good to go, don't "
                              "go causing any trouble in there");
@@ -78,7 +78,7 @@ void bouncer::initializeDialogueOptions() {
 }
 
 helpfullPassenger::helpfullPassenger() {
-    name = "Helpful Passenger";
+    name = "\x1B[38;5;193mHelpful Passenger\x1B[0m";
     initializeDialogueOptions();
 }
 

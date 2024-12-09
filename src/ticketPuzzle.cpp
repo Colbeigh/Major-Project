@@ -30,7 +30,7 @@ bool ticketPuzzle::solution() {
     giveReward();
     TM->displayDialogue(1);
     std::cout << "\nYou notice something strange about the ticket.\n" <<
-    "On the back of the ticket, 'HELP' is written.\n" <<
+    "On the back of the ticket, \033[31m'HELP'\033[0m is written.\n" <<
     "You look up and Ticket Master has already left\n";
     } else {
         std::cout << "Player does not have the item.\n";
