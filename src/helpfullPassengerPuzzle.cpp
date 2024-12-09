@@ -1,5 +1,5 @@
 /**
- * @author Nikita Evtushenko <nikita.evtushenko@uleth.ca>alignas
+ * @author Nikita Evtushenko <nikita.evtushenko@uleth.ca>
  * @date Fall 2024
  */
 
