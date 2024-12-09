@@ -6,7 +6,7 @@
 #include "InteractPuzzle.hpp"
 
 InteractPuzzle interactPuzzle;
-Player player {"Bob"};
+Player player;
 
 std::vector<std::string> puzzleData{"puz1", "puz2"};
 bool changeEnv false;
