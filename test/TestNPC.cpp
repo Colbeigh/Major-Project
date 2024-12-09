@@ -10,7 +10,7 @@ TEST(NPCTest, DefaultConstructor) {
     NPC* npc = new ticketMaster();
     EXPECT_EQ(npc->getName(), "Ticket Master");
     testing::internal::CaptureStdout();
-    npc->displayDialogue(0); 
+    npc->displayDialogue(0);
     std::string output = testing::internal::GetCapturedStdout();
     EXPECT_EQ(output, "Ticket Master: Welcome aboard!\n");
     delete npc;

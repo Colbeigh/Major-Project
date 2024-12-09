@@ -35,7 +35,7 @@ void helpfullPassengerPuzzle::event() {
 }
 
 bool helpfullPassengerPuzzle::failPuzzle() {
-    std::cout << "You failed!\n"; 
+    std::cout << "You failed!\n";
     return true;
 }
 

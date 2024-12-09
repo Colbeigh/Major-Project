@@ -1,4 +1,4 @@
-# Template for CPSC2720 Major Project: Text Based Adventure Game
+# CPSC 2720 Major Project: Text Based Adventure Game. Group 20.
 Last Updated: 2024-12-09 by Colby Hanna &lt;colby.hanna@uleth.ca&gt;
 
 Notes:  
@@ -16,10 +16,12 @@ Did no tests
 
 Contributed to final UML & ReadMe
 
-[Nikita Evtushenko] Enviornment and KeyForTrain
+[Nikita Evtushenko] 
  -Classes
-
+  Enviornment, helpfullPassenger, gamblingOutlaw, tiedUpTicketMaster, helpfullPassengerPuzzle, gamblingOutlawPuzzle,
+  tiedUpTicketMasterPuzzle, fakeDoorPuzzle, PassengerCart, DiningCart, GamblingCart, LuggageCart, ArmoryCart, EngineCart
  -Tests
+  TestEnvironment
 
 Contributed to final UML & ReadMe
 

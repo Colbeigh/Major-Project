@@ -17,7 +17,7 @@ TEST(EnvironmentTest, DefaultConstructor) {
 TEST(PassengerCartTest, DefaultConstructor) {
     PassengerCart cart;
     EXPECT_EQ(cart.getDescription(),
-              "Looking around, you see lots of passengers, and a ticket master walking "
+"Looking around, you see lots of passengers, and a ticket master walking "
               "around\n");
     EXPECT_EQ(cart.getPuzzles(), (std::vector<std::string>{"Pick a seat"}));
     EXPECT_EQ(cart.getName(), "Passenger Cart");
@@ -27,9 +27,10 @@ TEST(PassengerCartTest, DefaultConstructor) {
 TEST(DiningCartTest, DefaultConstructor) {
     DiningCart cart;
     EXPECT_EQ(cart.getDescription(),
-              "The smell of food fills the air.\nYou see a Rich looking lady eating food "
+"The smell of food fills the air.\nYou see a Rich looking lady eating food "
               "and a bouncer across the cart guarding a door\n");
-    EXPECT_EQ(cart.getPuzzles(), (std::vector<std::string>{"Talk to Rich Lady", "Talk to bouncer"}));
+    EXPECT_EQ(cart.getPuzzles(),
+    (std::vector<std::string>{"Talk to Rich Lady", "Talk to bouncer"}));
     EXPECT_EQ(cart.getName(), "Dining Cart");
     EXPECT_EQ(cart.help(), "Talk to the bouncer.");
 }
@@ -37,12 +38,13 @@ TEST(DiningCartTest, DefaultConstructor) {
 TEST(GamblingCartTest, DefaultConstructor) {
     GamblingCart cart;
     EXPECT_EQ(cart.getDescription(),
-              "It riques of ciggarettes and beer You notice a gruff looking dealer and a "
+"It riques of ciggarettes and beer You notice a gruff looking dealer and a "
               "friendly looking passenger smiling at you\n");
     EXPECT_EQ(cart.getPuzzles(),
-              (std::vector<std::string>{"Talk to HelpfulPassenger", "Talk to GamblingOutlaw"}));
+              (std::vector<std::string>
+              {"Talk to HelpfulPassenger", "Talk to GamblingOutlaw"}));
     EXPECT_EQ(cart.getName(), "Gambling Cart");
-    EXPECT_EQ(cart.help(), "You should talk to the friendly looking passenger.\n");
+EXPECT_EQ(cart.help(), "You should talk to the friendly looking passenger.\n");
 }
 
 TEST(LuggageCartTest, DefaultConstructor) {
@@ -56,9 +58,10 @@ TEST(LuggageCartTest, DefaultConstructor) {
 TEST(ArmoryCartTest, DefaultConstructor) {
     ArmoryCart cart;
     EXPECT_EQ(cart.getDescription(),
-              "Has a heavy open door with metal barricades, has a metal rack full of stuff "
+"Has a heavy open door with metal barricades, has a metal rack full of stuff "
               "on the top shelf\n");
-    EXPECT_EQ(cart.getPuzzles(), (std::vector<std::string>{"Look around the armory"}));
+    EXPECT_EQ(cart.getPuzzles(),
+    (std::vector<std::string>{"Look around the armory"}));
     EXPECT_EQ(cart.getName(), "Armory Cart");
     EXPECT_EQ(cart.help(), "Think twice before choosing\n");
 }
@@ -67,19 +70,27 @@ TEST(EngineCartTest, DefaultConstructor) {
     EngineCart cart;
     EXPECT_EQ(cart.getDescription(),
               "You see a silhouette and plumes of smoke\n");
-    EXPECT_EQ(cart.getPuzzles(), (std::vector<std::string>{"Approach the Gang Leader"}));
+    EXPECT_EQ(cart.getPuzzles(),
+     (std::vector<std::string>{"Approach the Gang Leader"}));
     EXPECT_EQ(cart.getName(), "Engine Cart");
     EXPECT_EQ(cart.help(), "Remember you have a gun\n");
 }
 
 TEST(FailedEngineCartTests, DefaultConstructor) {
     EngineCart cart;
-    
-    EXPECT_NE(cart.getDescription(), "You see a silhouette and plumes of smoke.\n");
+    // Test that the description does not match an incorrect value
+    EXPECT_NE(cart.getDescription(),
+     "You see a silhouette and plumes of smoke.\n");
 
-    EXPECT_NE(cart.getPuzzles(), std::vector<std::string>{"Approach the Gang Leader."});
+    // Test that puzzles do not match an incorrect value
+    EXPECT_NE(cart.getPuzzles(),
+     std::vector<std::string>{"Approach the Gang Leader."});
 
-    EXPECT_NE(cart.getName(), "Engine Cart.");
+    // Test that the name does not match an incorrect value
+    EXPECT_NE(cart.getName(),
+     "Engine Cart.");
 
-    EXPECT_NE(cart.help(), "Remember you have a gun.\n");
+    // Test that the help message does not match an incorrect value
+    EXPECT_NE(cart.help(),
+     "Remember you have a gun.\n");
 }

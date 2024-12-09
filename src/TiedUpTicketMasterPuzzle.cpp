@@ -70,7 +70,8 @@ bool tiedUpTicketMasterPuzzle::failPuzzle() {
     TM->displayDialogue(4);
     std::cout << "You look at what the ticket master is holding in his hands\n"
                 "That looks like a gun\n";
-    std::cout << "\033[32mPlayer:\033[0m Yes! That is exactly what I was looking for\n";
+    std::cout <<
+     "\033[32mPlayer:\033[0m Yes! That is exactly what I was looking for\n";
     std::cout << "You take the gun from the ticket master\n";
     p.addItem("Fakegun");
     std::cout << "\033[32mPlayer:\033[0m Thank you\n";
