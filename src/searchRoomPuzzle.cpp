@@ -35,23 +35,11 @@ p.getDesc("PieceOfPaper") <<
 }
 
 bool searchRoomPuzzle::failPuzzle()  {
-std::cout << "You chose to not go to the luggage.\n";
-std::cout << "You end up doing nothing and the train explodes\n";
-  // Dramatically print "YOU BLEW UP" one letter at a time
-    std::string message = "YOU BLEW UP";
-    for (char c : message) {
-        std::cout << "\033[31;5m" << c << "\033[0m" << std::flush; // Red blinking text
-        Sleep(300);
-    }
-    std::cout << "\n";
-
-    // Delay after the "YOU DIED" message
-    Sleep(3000);
-
-    // Clear screen again
-    std::cout << "\033[2J\033[H";
-p.setKill();
-return false;
+    std::cout << "You chose to not goto the luggage.\n";
+    std::cout << "You end up doing nothing and the train explodes\n";
+    std::cout << "\033[31;5m" << "YOU BLEW UP" << "\033[0m" << std::endl;
+    p.setKill();
+    return false;
 }
 
 bool searchRoomPuzzle::solution()  {

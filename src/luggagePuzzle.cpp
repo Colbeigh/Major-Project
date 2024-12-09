@@ -14,7 +14,7 @@ luggagePuzzle::~luggagePuzzle() {
 
 void luggagePuzzle::event()  {
 std::cout << "You approach the luggage and notice a familiar symbol\n"
-"It's the O'Driscoll gang! I thought I put them away years ago!\n"
+"Player: It's the O'Driscoll gang! I thought I put them away years ago!\n"
 "1. Open the luggage\n2. Leave it be.\n"
 "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {

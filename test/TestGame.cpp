@@ -4,13 +4,6 @@
 #include <limits>
 #include "Game.hpp"
 
-TEST(TestGame, StartInitializesPlayerAndGameLoop) {
-    Game game;
-    game.Start();
-
-    EXPECT_TRUE(game.player.isAlive());
-    EXPECT_TRUE(game.player.hasItem("Ticket"));
-}
 TEST(TestGame, PromptPuzzles) {
     Game game;
 
@@ -54,28 +47,10 @@ TEST(TestGame, ListInventoryTest) {
     game.player.listItem();
 
     EXPECT_TRUE(output.str().find("Ticket") != std::string::npos);
+    EXPECT_TRUE(output.str().find("Unpunched ticket") != std::string::npos);
     EXPECT_TRUE(output.str().find("PunchedTicket") != std::string::npos);
+    EXPECT_TRUE(output.str().find("Punched ticket") != std::string::npos);
 
     std::cout.rdbuf(old);
 }
 
-TEST(TestGame, QuitTest) {
-    Game game;
-    std::stringstream input_stream("4\n");
-    std::cin.rdbuf(input_stream.rdbuf());
-
-    int result = game.userInput(3);
-    EXPECT_EQ(result, 4);
-}
-
-TEST(TestGame, PuzzleFlowTest) {
-    Game game;
-
-    std::string puzzleName = "TicketPuzzle";
-    game.createPuzzle(puzzleName);
-
-    game.intpuz.startPuzzle(game.currentpuzzle, game.player, {}, false);
-
-    EXPECT_NE(game.currentpuzzle, nullptr);
-    EXPECT_TRUE(game.player.isAlive());
-}

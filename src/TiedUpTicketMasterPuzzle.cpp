@@ -62,9 +62,11 @@ bool tiedUpTicketMasterPuzzle::failPuzzle() {
     std::cout << "\033[32mPlayer:\033[0m I couldn't leave you here\n";
     TM->displayDialogue(3);
     std::cout << "\033[32mPlayer:\033[0m First We need to arm ourselves\n"
-                "\033[32mPlayer:\033[0m Lets look around the armory and find a gun\n";
+                "\033[32mPlayer:\033[0m"
+                " Lets look around the armory and find a gun\n";
     std::cout << "You look around the armory\n"
-                "After looking for a while you couldn't find anything\n";
+                "After looking for a while"
+                " you couldn't find anything\n";
     TM->displayDialogue(4);
     std::cout << "You look at what the ticket master is holding in his hands\n"
                 "That looks like a gun\n";
@@ -72,7 +74,8 @@ bool tiedUpTicketMasterPuzzle::failPuzzle() {
     std::cout << "You take the gun from the ticket master\n";
     p.addItem("Fakegun");
     std::cout << "\033[32mPlayer:\033[0m Thank you\n";
-    std:: cout << "\033[32mPlayer:\033[0m We should get going. And stop these outlaws!\n";
+    std:: cout << "\033[32mPlayer:\033[0m We should get going."
+    "And stop these outlaws!\n";
     remPuzzle("Look around the armory");
     addPuzzle("Leave the Armory");
     return true;

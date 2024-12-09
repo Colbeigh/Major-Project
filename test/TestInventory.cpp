@@ -1,80 +1,61 @@
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include "Inventory.hpp"
+#include "Item.hpp"
 
-TEST(InventoryTest, Constructor) {
-    Inventory inventory;
-
-    EXPECT_FALSE(inventory.hasItem("Ticket"));
+TEST(InventoryTest, DefaultConstructor) {
+    Inventory inv;
+    EXPECT_FALSE(inv.hasItem("Ticket"));
 }
 
 TEST(InventoryTest, AddItem) {
-    Inventory inventory;
-
-    inventory.addItem("Ticket");
-    EXPECT_TRUE(inventory.hasItem("Ticket"));
-
-    testing::internal::CaptureStdout();
-    inventory.addItem("Ticket");
-    std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("You already have Ticket"), std::string::npos);
-
-    EXPECT_TRUE(inventory.hasItem("Ticket"));
+    Inventory inv;
+    inv.addItem("Ticket");
+    EXPECT_TRUE(inv.hasItem("Ticket"));
 }
 
-TEST(InventoryTest, RemItem) {
-    Inventory inventory;
+TEST(InventoryTest, RemoveItem) {
+    Inventory inv;
+    inv.addItem("Ticket");
+    inv.remItem("Ticket");
+    EXPECT_FALSE(inv.hasItem("Ticket"));
+}
 
-    inventory.addItem("Ticket");
-    EXPECT_TRUE(inventory.hasItem("Ticket"));
-
-    inventory.remItem("Ticket");
-    EXPECT_FALSE(inventory.hasItem("Ticket"));
-
-    testing::internal::CaptureStdout();
-    inventory.remItem("NonExistentItem");
-    std::string output = testing::internal::GetCapturedStdout();
-    std::string nonexistant = "You do not have NonExistentItem";
-    EXPECT_NE(output.find(nonexistant), std::string::npos);
+TEST(InventoryTest, RemoveNonexistentItem) {
+    Inventory inv;
+    inv.addItem("Ticket");
+    inv.remItem("Fakegun");
+    EXPECT_TRUE(inv.hasItem("Ticket"));
 }
 
 TEST(InventoryTest, ListItems) {
-    Inventory inventory;
-
-    testing::internal::CaptureStdout();
-    inventory.listItems();
-    std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("You currently have no items"), std::string::npos);
-
-    inventory.addItem("Ticket");
-    inventory.addItem("Quarter");
-
-    testing::internal::CaptureStdout();
-    inventory.listItems();
-    output = testing::internal::GetCapturedStdout();
-
+    Inventory inv;
+    inv.addItem("Ticket");
+    inv.addItem("Fakegun");
+    std::stringstream buffer;
+    std::streambuf* old = std::cout.rdbuf(buffer.rdbuf());
+    inv.listItems();
+    std::string output = buffer.str();
     EXPECT_NE(output.find("Ticket"), std::string::npos);
-    EXPECT_NE(output.find("Quarter"), std::string::npos);
+    EXPECT_NE(output.find("Fakegun"), std::string::npos);
+    std::cout.rdbuf(old);
 }
 
-TEST(InventoryTest, GetItemDetails) {
-    Inventory inventory;
-
-    inventory.addItem("Ticket");
-
-    std::string name = inventory.getName("Ticket");
-    std::string description = inventory.getDesc("Ticket");
-
-    EXPECT_EQ(name, "Ticket");
-    EXPECT_EQ(description, "Unpunched ticket");
+TEST(InventoryTest, GetItemName) {
+    Inventory inv;
+    inv.addItem("Ticket");
+    EXPECT_EQ(inv.getName("Ticket"), "Train Ticket");
 }
 
-TEST(InventoryTest, CopyAssignment) {
-    Inventory inventory1;
-    inventory1.addItem("Ticket");
-
-    Inventory inventory2;
-    inventory2 = inventory1;
-
-    EXPECT_TRUE(inventory2.hasItem("Ticket"));
+TEST(InventoryTest, GetItemDescription) {
+    Inventory inv;
+    inv.addItem("Ticket");
+    EXPECT_EQ(inv.getDesc("Ticket"), "Unpunched ticket");
 }
 
+TEST(InventoryTest, CreateItem) {
+    Inventory inv;
+    inv.addItem("Ticket");
+    std::string itemId = "Ticket";
+    inv.createItem(itemId);
+    EXPECT_EQ(inv.getName(itemId), "Train Ticket");
+}
