@@ -21,8 +21,9 @@ void tiedUpTicketMasterPuzzle::event() {
                 "noise you see a person tied up\n";
     std::cout << "You crouch closer to the person to "
                  "realise it's the Ticket Master\n";
-    std::cout << "1. Untine the Ticket Master\n"
-                "2. Leave the Ticket Master\n";
+    std::cout << "1. Untie the Ticket Master\n"
+                "2. Leave the Ticket Master\n"
+                "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
         int choice = pInput(3);
         if (choice < 1 || choice > 2) {

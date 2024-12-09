@@ -45,7 +45,8 @@ void ticketPuzzle::event() {
     std::cout << "The Ticket Master approaches you\n";
     TM->displayDialogue(0);
     std::cout <<"\nWhat would you like to do?\n"<<
-    "1. Give him the ticket.\n 2. Do not give him the ticket.\n";
+    "1. Give him the ticket.\n2. Do not give him the ticket.\n"
+    "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
     int choice;
     choice = pInput(3);

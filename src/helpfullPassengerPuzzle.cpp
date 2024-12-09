@@ -16,7 +16,8 @@ helpfullPassengerPuzzle::~helpfullPassengerPuzzle() {
 void helpfullPassengerPuzzle::event() {
   std::cout << "Looking at the helpfull Passenger you feel a sense of hope.\n";
     std::cout << "1. Ask the Helpfull Passenger for help.\n"
-                "2. Turn away.\n";
+                "2. Turn away.\n"
+                "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
     int choice;
     choice = pInput(3);

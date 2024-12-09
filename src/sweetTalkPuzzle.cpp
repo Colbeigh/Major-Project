@@ -17,7 +17,8 @@ void sweetTalkPuzzle::event() {
   std::cout << "You approach the Rich Lady.\n" <<
     "You notice the lady holding a ticket.\n";
   std::cout << "What would you like to do?\n" <<
-    "1. Sweet talk the Rich Lady.\n 2. Try to steal ticket.\n";
+    "1. Sweet talk the Rich Lady.\n 2. Try to steal ticket.\n"
+    "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
     int choice;
     choice = pInput(3);
