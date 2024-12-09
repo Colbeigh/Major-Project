@@ -6,7 +6,9 @@
 
 #ifndef INTERACT_PUZZLE_H_INCLUDED
 #define INTERACT_PUZZLE_H_INCLUDED
-
+  /**
+  * @class InteractPuzzle InteractPuzzle.hpp Interact
+  */
 class InteractPuzzle {
  public:
   InteractPuzzle();
