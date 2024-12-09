@@ -17,6 +17,7 @@ bool ticketPuzzle::failPuzzle() {
     std::cout << "You refuse to give him the ticket and\n" <<
     " Ticket Master leaves you alone." <<
     " A few minutes later the train explodes.\n";
+    std::cout << "\033[31;5m" << "YOU BLEW UP" << "\033[0m" << std::endl;
     p.setKill();
     return true;
 }

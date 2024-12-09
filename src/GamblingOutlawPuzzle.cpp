@@ -82,6 +82,8 @@ bool gamblingOutlawPuzzle::failPuzzle() {
     std::cout << "You tried playing the game normally. "
     "But instead you kept losing"
     " Now all your life saving are gone.\nGood Job!\n";
+    std::cout << "\033[31;5m" << 
+    "YOU'RE BROKE"<< "\033[0m" << std::endl; 
     p.setKill();
     return true;
 }

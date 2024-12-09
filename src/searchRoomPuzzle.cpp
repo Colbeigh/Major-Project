@@ -34,10 +34,11 @@ p.getDesc("PieceOfPaper") <<
 }
 
 bool searchRoomPuzzle::failPuzzle()  {
-std::cout << "You chose to not goto the luggage.\n";
-std::cout << "You end up doing nothing and the train explodes\n";
-p.setKill();
-return false;
+    std::cout << "You chose to not goto the luggage.\n";
+    std::cout << "You end up doing nothing and the train explodes\n";
+    std::cout << "\033[31;5m" << "YOU BLEW UP" << "\033[0m" << std::endl;
+    p.setKill();
+    return false;
 }
 
 bool searchRoomPuzzle::solution()  {
