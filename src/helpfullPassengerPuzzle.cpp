@@ -54,14 +54,14 @@ bool helpfullPassengerPuzzle::failPuzzle() {
 }
 
 bool helpfullPassengerPuzzle::solution() {
-    std::cout << "Player: You ask the Helpfull Passenger for help.\n";
+    std::cout << "\033[32mPlayer:\033[0m You ask the Helpfull Passenger for help.\n";
     HP->displayDialogue(0);
-    std::cout << "Player: Yes I do. I need to win this gambling game.\n";
+    std::cout << "\033[32mPlayer:\033[0m Yes I do. I need to win this gambling game.\n";
     HP->displayDialogue(1);
-    std::cout << "Player: What? How does that even help me?\n"
+    std::cout << "\033[32mPlayer:\033[0m What? How does that even help me?\n"
     "Before you could realise what is going on"
     " the Helpfull Passenger is gone.\n";
-    remPuzzle("Talk To HelpfullPassenger");
+    remPuzzle("Talk to HelpfullPassenger");
     return true;
 }
 
