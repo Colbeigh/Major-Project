@@ -40,12 +40,10 @@ bool Inventory::hasItem(std::string itemid) {
 }
 
 void Inventory::addItem(std::string itemid) {
-  std::cout << "Start of add item ran\n";
   if (hasItem(itemid)) {
       std::cout << "You already have " << getName(itemid) <<"\n";
       return;
   }
-  std::cout << "end of add item ran\n";
   items.push_back(itemid);
   std:: cout << "Added " << getName(itemid) << " to inventory\n";
 }
@@ -66,8 +64,8 @@ void Inventory::listItems() {
     std::cout << "You currently have no items" << std::endl;
   }
   for (int i = 0; i < items.size(); ++i) {
-      std::cout << "* " << getName(items[i]) << 
-      getDesc(items[i]) << std::endl;
+      std::cout << "* " << getName(items[i]) << "\n   -" 
+      << getDesc(items[i]) << std::endl;
       }
 }
 
