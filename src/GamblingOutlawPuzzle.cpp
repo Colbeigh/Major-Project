@@ -15,11 +15,8 @@ gamblingOutlawPuzzle::~gamblingOutlawPuzzle() {
 void gamblingOutlawPuzzle::event() {
     std::cout << "Looking at the gambling Out Law you"
     "feel a sense of dread\n";
-    std::cout <<"1. Talk to the outlaw\n"
-                "2. Turn away\n";
-                "3. Help\n"
-                "4. Inventory\n"
-                "5. Quit\n";
+    std::cout <<"1. Talk to the outlaw\n2. Turn away\n"
+    "3. Help\n4. Inventory\n5. Quit\n";
     while (true) {
     int choice;
     choice = pInput(3);
