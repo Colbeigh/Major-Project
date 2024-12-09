@@ -44,6 +44,7 @@ class NPC {
   * @brief Abstract function to fill vector with dialogue
   */
   virtual void initializeDialogueOptions() = 0;
+
  protected:
   /**
   * @brief NPC's Name
