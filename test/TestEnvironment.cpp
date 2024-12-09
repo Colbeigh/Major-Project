@@ -12,7 +12,7 @@ TEST(EnvironmentTest, DefaultConstructor) {
 
 // Test PassenegerCart class
 TEST(PassenegerCartTest, DefaultConstructor) {
-    PassenegerCart cart;
+    PassengerCart cart;
     EXPECT_EQ(cart.getDescription(), "Looking around the environment,"
     "you see passeneger, and a ticket master walking around");
     EXPECT_EQ(cart.getPuzzles(), std::vector<std::string>{"Pick a seat"});
