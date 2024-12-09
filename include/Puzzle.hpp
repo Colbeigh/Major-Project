@@ -7,8 +7,7 @@
 #include <string>
 #include <limits>
 #include <vector>
-#include <chrono>
-#include <thread>
+#include <unistd.h>
 #include "Inventory.hpp"
 #include "Player.hpp"
 #include "NPC.hpp"
