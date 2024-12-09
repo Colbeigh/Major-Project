@@ -2,6 +2,7 @@
  * @author Jem Pineda <j.pineda@uleth.ca>
  * @date Fall 2024
  */
+#include <algorithm>
 #include "gtest/gtest.h"
 #include "Puzzle.hpp"
 #include "FactoryPuzzle.hpp"
