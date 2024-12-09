@@ -120,7 +120,7 @@ tiedUpTicketMaster::tiedUpTicketMaster() {
 tiedUpTicketMaster::~tiedUpTicketMaster() {}
 
 void tiedUpTicketMaster::initializeDialogueOptions() {
-    std::string name2 = "Ticket Master";
+    std::string name2 = "\x1B[38;5;196mTicket Master\x1b[0m";
     dialogueLines.push_back(name + ": MMM! MMM! \n");
     dialogueLines.push_back(name + ": You're leaving me here?\n");
     dialogueLines.push_back(name2 +
