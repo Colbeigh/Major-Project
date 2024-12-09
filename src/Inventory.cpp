@@ -36,7 +36,6 @@ bool Inventory::hasItem(std::string itemid) {
            return true;
       }
   }
-  std::cout << "You do not have " << getName(itemid) << "\n";
   return false;
 }
 
@@ -57,7 +56,6 @@ void Inventory::remItem(std::string itemid) {
           return;
       }
   }
-  std::cout << "You do not have" << getName(itemid) <<"\n";
 }
 
 void Inventory::listItems() {
