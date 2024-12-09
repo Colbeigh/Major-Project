@@ -54,6 +54,11 @@ class Player {
   */
   void remItem(std::string itemid);
 
+
+  /**
+  * @brief returns description string of item in players inventory
+  */
+  std::string getDesc(std::string itemid);
   /**
   * @brief Lists all items in players inventory
   */

@@ -48,14 +48,14 @@ GamblingCart::GamblingCart() {
     name = "Gambling Cart";
     environmentDescription = "You are in the gambling cart.";
     helpInfo = "You can ask the dealer for help.";
-    puzzles = {"Talk To HelpfullPassenger", "Talk to GambilingOutlaw"};
+    puzzles = {"Talk to HelpfullPassenger", "Talk to GambilingOutlaw"};
 }
 
 LuggageCart::LuggageCart() {
     name = "Luggage Cart";
     environmentDescription = "You are in the luggage cart.";
     helpInfo = "You can ask the porter for help.";
-    puzzles = {"SearchRoom", "Check Breifcase"}; // Search Room Puzzle and Interact with breifcase.
+    puzzles = {"Catch a breath"};
 }
 
 ArmoryCart::ArmoryCart() {

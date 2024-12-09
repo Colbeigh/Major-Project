@@ -12,8 +12,11 @@ FactoryPuzzle::FactoryPuzzle() {
         {"Go to next cart", []() { return new doorPuzzle(); }},
         {"Talk to Rich Lady", []() { return new sweetTalkPuzzle(); }},
         {"Talk to bouncer", []() { return new bouncerPuzzle(); }},
-        {"Talk to GambilingOutlaw", []() { return new gambilingOutlawPuzzle(); }},
-        {"Talk to HelpfullPassenger", []() { return new helpfullPassengerPuzzle(); }},
+        {"Talk to GambilingOutlaw", 
+        []() { return new gambilingOutlawPuzzle(); }},
+        {"Talk to HelpfullPassenger", 
+        []() { return new helpfullPassengerPuzzle(); }},
+        {"Catch a breath", []() { return new searchRoomPuzzle(); }},
         {"Approach the luggage", []() { return new luggagePuzzle(); }}
     };
 }

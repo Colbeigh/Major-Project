@@ -126,4 +126,14 @@ class luggagePuzzle : public Puzzle {
   bool solution() override;
   void giveReward() override;
 };
+
+class searchRoomPuzzle : public Puzzle {
+ public:
+  searchRoomPuzzle();
+  ~searchRoomPuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+};
 #endif
