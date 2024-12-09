@@ -127,6 +127,18 @@ class luggagePuzzle : public Puzzle {
   void giveReward() override;
 };
 
+class tiedUpTicketMasterPuzzle : public Puzzle {
+ public:
+  tiedUpTicketMasterPuzzle();
+  ~tiedUpTicketMasterPuzzle();
+  void event() override;
+  bool failPuzzle() override;
+  bool solution() override;
+  void giveReward() override;
+  private:
+  NPC* TM;
+};
+
 class searchRoomPuzzle : public Puzzle {
  public:
   searchRoomPuzzle();
