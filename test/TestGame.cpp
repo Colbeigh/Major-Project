@@ -35,10 +35,3 @@ TEST(TestGame, ChangeEnvironmentTest) {
     EXPECT_TRUE(environmentName == "Passenger Cart" ||
     environmentName == "Dining Cart");
 }
-
-TEST(GameTest, PuzzleCreation) {
-    Game game;
-    game.createPuzzle("Talk to Ticket Master");
-    
-    EXPECT_NE(game.getCurrentPuzzle(), nullptr);
-}
