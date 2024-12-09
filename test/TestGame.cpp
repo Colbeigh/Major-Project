@@ -47,7 +47,10 @@ TEST(TestGame, ListInventoryTest) {
     game.player.listItem();
 
     EXPECT_TRUE(output.str().find("Ticket") != std::string::npos);
+    EXPECT_TRUE(output.str().find("Unpunched ticket") != std::string::npos);
     EXPECT_TRUE(output.str().find("PunchedTicket") != std::string::npos);
+    EXPECT_TRUE(output.str().find("Punched ticket") != std::string::npos);
 
     std::cout.rdbuf(old);
 }
+

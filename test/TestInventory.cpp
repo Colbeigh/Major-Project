@@ -53,7 +53,9 @@ TEST(InventoryTest, ListItems) {
     output = testing::internal::GetCapturedStdout();
 
     EXPECT_NE(output.find("Ticket"), std::string::npos);
+    EXPECT_NE(output.find("Unpunched ticket"), std::string::npos);
     EXPECT_NE(output.find("Quarter"), std::string::npos);
+    EXPECT_NE(output.find("Quarter description"), std::string::npos);
 }
 
 TEST(InventoryTest, GetItemDetails) {
