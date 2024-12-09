@@ -72,8 +72,10 @@ int Game::userInput(int length) {
          length + 1 << ".\n";
       } else if (userinput == length) {
          std::cout << intenv.getHelp(currentenvironment) << "\n";
+         std:: cout << "Please select an option\n";
       }  else if (userinput == length + 1) {
          player.listItem();
+         std:: cout << "Please select an option\n";
       }  else if (userinput == length + 2) {
          std::cout << "Qutting...\n";
          exit(0);

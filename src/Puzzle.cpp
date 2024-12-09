@@ -40,8 +40,10 @@ while (true) {
          length + 1 << ".\n";
       } else if (playerchoice == length) {
          std::cout << help << "\n";
+         std:: cout << "Please select an option\n";
       }  else if (playerchoice == length + 1) {
          p.listItem();
+         std:: cout << "Please select an option\n";
       }  else if (playerchoice == length + 2) {
          std::cout << "Qutting...\n";
          exit(0);
