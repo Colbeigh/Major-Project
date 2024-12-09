@@ -1,33 +1,108 @@
-# Template for CPSC2720 Major Project: Text Based Adventure Game
-Last Updated: 2024-10-21 by Nicole Wilson &lt;n.wilson@uleth.ca&gt;
+# CPSC 2720 Major Project: Text Based Adventure Game. Group 20.
+Last Updated: 2024-12-09 by Colby Hanna &lt;colby.hanna@uleth.ca&gt;
 
 Notes:  
-[Todd Across The Mountain] Player and NPC  
+[Todd Across The Mountain] 
+ -Classes
+Abstract of npc, ticketMaster, Bouncer & Richlady.
 
-[Nikita Evtushenko] Enviorment and KeyForTrain
+ -Tests
+Did no tests
 
-[Colby Hanna] Game and Interaction and Inventory and Items Inside of the UML
+[Jem Pineda]
+ -Classes
+
+ -Tests
+
+Contributed to final UML & ReadMe
+
+[Nikita Evtushenko] 
+ -Classes
+  Enviornment, helpfullPassenger, gamblingOutlaw, tiedUpTicketMaster, helpfullPassengerPuzzle, gamblingOutlawPuzzle,
+  tiedUpTicketMasterPuzzle, fakeDoorPuzzle, PassengerCart, DiningCart, GamblingCart, LuggageCart, ArmoryCart, EngineCart
+ -Tests
+  TestEnvironment
+
+Contributed to final UML & ReadMe
 
 [Jem Pineda] Puzzle and PuzzleItem
 
-Everyone also Contributed to the Class Descriptions in the Large Project Document.
+[Colby Hanna] 
+ -Classes
+FactoryEnvironment, FactoryPuzzle, FactoryItem, Game,InteractEnvironment, 
+Inventory, Item, Puzzle, gangLeaderPuzzle, luggagePuzzle, searchRoomPuzzle,
+& SeatPuzzle
 
-* The Makefile and .gitlab-ci.yml files are set up to run on Ubuntu.
-* The .gitlab-ci.yml file uses the targets in the Makefile.
-* These are the tools/commands/apps used:
-  * Compiler: g++
-  * Style Check: cpplint
-  * Static Check: cppcheck
-  * Coverage Check: gcov/lcov
-  * Memory Check: valgrind
-  * Unit Test: gtest 
-  * Documentation: doxygen
-* See the version report on the pipeline.
+ -Tests
+TestFactoryEnvironment, TestFactoryItem, TestGame TestInventory, TestItem &
+TestPuzzle.
 
-Certain assumptions have been made:
-* One repo contains the files for one project.
-* All unit testing files are found in <code>test/</code> including <code>main.cpp</code>.
-* All header files for the project are found in <code>include/</code> and named <code>*.hpp</code>, every class must have a header file.
-* All project source files for the project are named <code>*.cpp</code>.
-  * Any needed source files that correspond to header files are found in <code>src/</code>.
-  * There is a <code>main.cpp</code> found in <code>src/project/</code>.
+Contributed to final UML & ReadMe
+
+Everyone also Contributed to the Class Descriptions in the Large Project Document first mile stone.
+
+NPCs (names or descriptions)
+  richLady
+  ticketMaster
+  bouncer
+  helpfullPassenger
+  tiedUpTicketMaster
+  gamblingOutlaw
+  gangLeader
+
+Environments
+  PassengerCart
+  DiningCart
+  GamblingCart
+  LuggageCart
+  ArmoryCart
+  EngineCart
+
+Usable Items
+  Ticket
+  PunchedTicket
+  GamblingTIcket
+  Quarter
+  PieceOfPaper
+  Plans
+  Fakegun
+  Gun
+
+Puzzles
+  bouncerPuzzle
+  doorPuzzle
+  FakeDoorPuzzle
+  GamblingOutlawPuzzle
+  gangLeaderPuzzle
+  helpfullPassengerPuzzle
+  LuggagePuzzle
+  searchRoomPuzzle
+  sweetTalkPuzzle
+  TicketPuzzle
+  TiedUpTicketMasterPuzzle
+
+How to lose the game
+  -Don't Give Ticket to ticket master - in PassengerCart
+  -Throw the dice against the padding wall - in GamblingCart
+  -Throw the dice and see what happens - in GamblingCart
+  -Leave the luggage be in luggage cart - in LuggageCart
+  -Untie the ticket master makes you lose
+   when you leave armory cart when you choose yes or no - in ArmoryCart
+  -say Sorry I couldn't Hear you to O'driscoll leader - in EngineCart
+
+Player actions
+  Pick a seat
+  Give Item
+  Use Item
+  Check Inventory
+  Get Help
+  Talk to Npcs
+  Open Door 
+  Close Door
+  Move Environments
+  Steal
+  Pickup Items
+  Roll Die
+  Throw Die
+  Inspect Items
+  Shoot Gun
